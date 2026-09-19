@@ -48,7 +48,7 @@ jobs:
       - name: Build packages
         run: renpy-launcher distribute . --dest ../dists
 
-      # e.g., "../dists/renpy-template-1.2.3-linux.tar.bz2" -> "../dists/linux.tar.bz2"
+      # e.g., "../dists/death-by-midnight-1.2.3-linux.tar.bz2" -> "../dists/linux.tar.bz2"
       - name: Rename packages
         run: |
           for filename in ../dists/*; do
