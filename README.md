@@ -24,7 +24,7 @@ Or download for desktop:
 
 ### Art
 
-- [Uncle Mugen](https://lemmasoft.renai.us/forums/viewtopic.php?t=17302)
+- [Visual Novel Horror Asset Pack](https://kalaverita.itch.io/visual-novel-horror-asset-pack)
 
 ### Audio
 
