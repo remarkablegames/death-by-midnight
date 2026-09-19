@@ -154,6 +154,37 @@ define config.save_directory = "death-by-midnight-1768026360"
 define config.window_icon = "gui/window_icon.png"
 
 
+## Rollback ####################################################################
+##
+## Whether the user is allowed to rollback the game.
+
+define config.rollback_enabled = False
+
+
+## Game menu ####################################################################
+##
+## This controls which screen is shown when the game menu is accessed (e.g., by
+## pressing Esc or right-click). By default, it shows the save screen. Change
+## this to show a different screen instead.
+
+define config.game_menu_action = ShowMenu("history")
+
+
+## Disable save/load keyboard shortcuts.
+define config.keymap["save"] = []
+define config.keymap["load"] = []
+define config.keymap["quick_save"] = []
+define config.keymap["quick_load"] = []
+
+
+## Disable quicksave slots.
+define config.has_quicksave = False
+
+
+## Disable autosaves.
+define config.has_autosave = False
+
+
 ## Build configuration #########################################################
 ##
 ## This section controls how Ren'Py turns your project into distribution files.
