@@ -37,7 +37,7 @@ label intro_butler_greet:
     call screen intro_mansion_gate
 
 
-screen intro_mansion_gate:
+screen intro_mansion_gate():
 
     textbutton "↑":
         text_style "arrow_button"
