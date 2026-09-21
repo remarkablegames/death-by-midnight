@@ -1,6 +1,6 @@
 label intro:
 
-    scene bg mansion gate evening
+    scene bg manor gate evening
     show screen intro_butler_greet(enabled=False)
     with fade
 
@@ -39,7 +39,7 @@ label intro_butler_greet:
 
 label intro_butler_door:
 
-    scene bg mansion door evening
+    scene bg manor door evening
     show butler neutral at character_speak
     with dissolve
 
