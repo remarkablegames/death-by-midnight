@@ -4,8 +4,8 @@ label intro:
     show screen intro_butler_greet(enabled=False)
     with fade
 
-    player "Looks like the butler is waiting for me."
-    player "I should go speak to him."
+    player "Looks like the butler’s waiting for me."
+    player "I should go speak with him."
 
     call screen intro_butler_greet(enabled=True)
 
@@ -13,6 +13,7 @@ label intro:
 screen intro_butler_greet(enabled):
 
     imagebutton:
+        style "character_button"
         idle "images/butler/butler neutral.webp"
         at character_button(xalign=0.15)
         sensitive enabled
@@ -24,6 +25,22 @@ label intro_butler_greet:
     show butler neutral at character_speak
     with dissolve
 
-    butler "How may I help you?"
+    butler "You must be the detective."
 
-    jump end
+    player "That’s correct."
+
+    butler "Follow me inside."
+
+    hide butler
+    with dissolve
+
+    call screen intro_mansion_gate
+
+
+screen intro_mansion_gate:
+
+    textbutton "↑":
+        text_style "arrow_button"
+        xalign 0.53
+        yalign 0.85
+        action Jump("end")
