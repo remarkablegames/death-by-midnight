@@ -24,6 +24,8 @@ Or download for desktop:
 
 ### Art
 
+- [Free Visual Novel Backgrounds (Mansion Pack)](https://potat0master.itch.io/free-visual-novel-backgrounds-mansion-pack)
+- [Tea Stained Paper Textures](https://majcher.itch.io/tea-stained-paper-textures)
 - [Visual Novel Horror Asset Pack](https://kalaverita.itch.io/visual-novel-horror-asset-pack)
 
 ### Audio
