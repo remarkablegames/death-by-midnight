@@ -1,7 +1,8 @@
 label end:
 
     scene black
+    with fade
 
-    "{b}End{/b}."
+    "End."
 
     return
