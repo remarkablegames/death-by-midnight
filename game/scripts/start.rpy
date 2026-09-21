@@ -13,30 +13,4 @@ label start:
 
     player "My name’s [player_name],{w=.1} and I’m a detective."
 
-    scene bg mansion gate evening
-    show screen start_butler_greet(enabled=False)
-    with fade
-
-    player "Looks like the butler is waiting for me."
-    player "I should go speak to him."
-
-    call screen start_butler_greet(enabled=True)
-
-
-screen start_butler_greet(enabled):
-
-    imagebutton:
-        idle "images/butler/butler neutral.webp"
-        at character_button(xalign=0.15)
-        sensitive enabled
-        action [Hide("start_butler_greet"), Jump("start_butler_greet")]
-
-
-label start_butler_greet:
-
-    show butler neutral at character_speak
-    with dissolve
-
-    butler "How may I help you?"
-
-    jump end
+    jump intro
