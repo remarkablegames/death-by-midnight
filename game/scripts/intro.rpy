@@ -34,13 +34,19 @@ label intro_butler_greet:
     hide butler
     with dissolve
 
-    call screen intro_mansion_gate
+    call screen arrow_up_button(label="intro_butler_door", xalign=0.53, yalign=0.85)
 
 
-screen intro_mansion_gate():
+label intro_butler_door:
 
-    textbutton "↑":
-        text_style "arrow_button"
-        xalign 0.53
-        yalign 0.85
-        action Jump("end")
+    scene bg mansion door evening
+    show butler neutral at character_speak
+    with dissolve
+
+    butler "Please come in."
+    player "Thanks."
+
+    hide butler
+    with dissolve
+
+    call screen arrow_up_button(label="end", xalign=0.491, yalign=0.6)
