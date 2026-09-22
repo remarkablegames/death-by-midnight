@@ -5,5 +5,5 @@ label explore_manor_door:
 
     show screen arrow_left_button(label="explore_pond", xalign=.05, yalign=.6)
     show screen arrow_right_button(label="explore_backyard", xalign=.95, yalign=.6)
-    show screen arrow_up_button(label="end", xalign=.491, yalign=.6)
+    show screen arrow_up_button(label="explore_interior_entrance", xalign=.491, yalign=.6)
     call screen arrow_down_button(label="explore_manor_gate", xalign=.491, yalign=.95)
