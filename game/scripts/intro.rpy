@@ -49,4 +49,4 @@ label intro_butler_door:
     hide butler
     with dissolve
 
-    call screen arrow_up_button(label="end", xalign=.491, yalign=.6)
+    call screen arrow_up_button(label="end", xalign=.491, yalign=.65)
