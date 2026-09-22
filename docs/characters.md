@@ -18,7 +18,7 @@
 - **Secret he does not know:** Mia is the Owner's biological daughter, making Ben her uncle rather than her father
 - **Fear:** Losing his position, authority, and the family's respect
 - **Misbelief:** He believes controlling the family is the same as protecting it
-- **Personality:** Ambitious, controlling, confident, and pragmatic
+- **Personality:** Ambitious, controlling, confident, pragmatic, and curt
 - **Relationship with Nora:** Married to her, but increasingly distant and resentful
 - **Relationship with Madelyn:** Romantically involved with her, though he may see the relationship as temporary
 - **Relationship with Mia:** Believes she is his daughter and wants her loyalty
@@ -48,7 +48,7 @@
 - **Secret she does not know:** The Owner is her biological father, while Ben is her uncle
 - **Fear:** Losing her family or discovering that her identity is based on a lie
 - **Misbelief:** She believes that if she is perfect enough, her parents will finally love her openly
-- **Personality:** Jealous, sensitive, impulsive, and desperate for reassurance
+- **Personality:** Haughty, sensitive, impulsive, and desperate for reassurance
 - **Relationship with Ben:** Sees him as her father and constantly seeks his approval
 - **Relationship with Nora:** Loves her mother but resents being protected and treated like a child
 - **Relationship with the Owner:** Feels strangely connected to him without understanding why
