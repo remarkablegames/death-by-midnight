@@ -1,8 +1,8 @@
 label explore_hallway_right:
 
-    if is_night_dark():
+    if clock.is_night_dark:
         scene bg hallway right night dark
-    elif is_night_light():
+    elif clock.is_night_light:
         scene bg hallway right night light
     else:
         scene bg hallway right evening

@@ -5,7 +5,7 @@ screen arrow_button(arrow, label, xalign, yalign, minutes=0):
         xalign xalign 
         yalign yalign
         action [
-            Function(advance_clock, minutes),
+            Function(clock.advance, minutes),
             Hide("arrow_button"),
             Hide("arrow_up_button"),
             Hide("arrow_right_button"),

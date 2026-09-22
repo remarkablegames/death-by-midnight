@@ -1,8 +1,8 @@
 label explore_interior_entrance:
 
-    if is_night_dark():
+    if clock.is_night_dark:
         scene bg interior entrance night dark
-    elif is_night_light():
+    elif clock.is_night_light:
         scene bg interior entrance night light
     else:
         scene bg interior entrance evening

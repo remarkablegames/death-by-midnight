@@ -1,8 +1,8 @@
 label explore_manor_gate:
 
-    if is_night_dark():
+    if clock.is_night_dark:
         scene bg manor gate night dark
-    elif is_night_light():
+    elif clock.is_night_light:
         scene bg manor gate night light
     else:
         scene bg manor gate evening

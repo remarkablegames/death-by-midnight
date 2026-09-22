@@ -1,6 +1,6 @@
 label explore_bedroom:
 
-    if is_night_light():
+    if clock.is_night_light:
         scene bg bedroom night
     else:
         scene bg bedroom evening

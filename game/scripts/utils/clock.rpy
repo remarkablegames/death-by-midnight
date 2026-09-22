@@ -1,36 +1,43 @@
-default clock_minutes = 18 * 60 # 6pm
-
-define MIDNIGHT_MINUTES = 24 * 60 # 12pm
-define TIME_NIGHT_LIGHT_START = 20 * 60 # 8pm
-define TIME_NIGHT_DARK_START = 22 * 60 # 10pm
-
-
 init python:
 
-    def is_night_light():
-        return clock_minutes >= TIME_NIGHT_LIGHT_START
+    class Clock:
 
-    def is_night_dark():
-        return clock_minutes >= TIME_NIGHT_DARK_START
+        MIDNIGHT_MINUTES = 24 * 60 # 12am
+        TIME_NIGHT_LIGHT_START = 20 * 60 # 8pm
+        TIME_NIGHT_DARK_START = 22 * 60 # 10pm
 
-    def advance_clock(minutes=0):
-        global clock_minutes
-        if minutes <= 0:
-            return
-        clock_minutes = max(0, clock_minutes + minutes)
-        if clock_minutes >= MIDNIGHT_MINUTES:
-            renpy.jump("end")
+        def __init__(self, minutes=18 * 60): # 6pm
+            self.minutes = minutes
 
-    def clock_string():
-        total = clock_minutes % (24 * 60)
-        suffix = "PM" if total // 60 >= 12 else "AM"
-        hour12 = (total // 60) % 12 or 12
-        return "{}:{:02d} {}".format(hour12, total % 60, suffix)
+        @property
+        def is_night_light(self):
+            return self.minutes >= self.TIME_NIGHT_LIGHT_START
+
+        @property
+        def is_night_dark(self):
+            return self.minutes >= self.TIME_NIGHT_DARK_START
+
+        def advance(self, minutes=0):
+            if minutes <= 0:
+                return
+            self.minutes = max(0, self.minutes + minutes)
+            if self.minutes >= self.MIDNIGHT_MINUTES:
+                renpy.jump("end")
+
+        @property
+        def display(self):
+            total = self.minutes % (24 * 60)
+            suffix = "PM" if total // 60 >= 12 else "AM"
+            hour12 = (total // 60) % 12 or 12
+            return "{}:{:02d} {}".format(hour12, total % 60, suffix)
+
+
+default clock = Clock()
 
 
 screen time_display():
 
-    text clock_string():
+    text clock.display:
         xpos 24
         ypos 14
         style "clock_text"

@@ -1,8 +1,8 @@
 label explore_room:
 
-    if is_night_dark():
+    if clock.is_night_dark:
         scene bg room night dark
-    elif is_night_light():
+    elif clock.is_night_light:
         scene bg room night light
     else:
         scene bg room evening

@@ -1,6 +1,6 @@
 label explore_pond:
 
-    if is_night_light():
+    if clock.is_night_light:
         scene bg pond night
     else:
         scene bg pond evening

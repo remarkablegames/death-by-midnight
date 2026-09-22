@@ -1,8 +1,8 @@
 label explore_backyard:
 
-    if is_night_dark():
+    if clock.is_night_dark:
         scene bg backyard night dark
-    elif is_night_light():
+    elif clock.is_night_light:
         scene bg backyard night light
     else:
         scene bg backyard evening

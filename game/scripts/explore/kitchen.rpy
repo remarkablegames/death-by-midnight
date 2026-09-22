@@ -1,6 +1,6 @@
 label explore_kitchen:
 
-    if is_night_light():
+    if clock.is_night_light:
         scene bg kitchen night
     else:
         scene bg kitchen evening
