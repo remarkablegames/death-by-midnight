@@ -4,7 +4,13 @@ screen arrow_button(arrow, label, xalign, yalign):
         text_style "arrow_button"
         xalign xalign 
         yalign yalign
-        action Jump(label)
+        action [
+            Hide("arrow_up_button"),
+            Hide("arrow_right_button"),
+            Hide("arrow_down_button"),
+            Hide("arrow_left_button"),
+            Jump(label),
+        ]
 
 
 screen arrow_up_button(label, xalign, yalign):
