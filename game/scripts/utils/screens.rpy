@@ -5,6 +5,7 @@ screen arrow_button(arrow, label, xalign, yalign):
         xalign xalign 
         yalign yalign
         action [
+            Hide("arrow_button"),
             Hide("arrow_up_button"),
             Hide("arrow_right_button"),
             Hide("arrow_down_button"),
