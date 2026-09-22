@@ -1,9 +1,9 @@
 style arrow_button:
     font "DejaVuSans.ttf"
     size 150
-    color "#F2C14E"
-    hover_color "#F4D9A6"
-    outlines [(4, "#160B08", 0, 0)]
+    color "#f2c14ecc"
+    hover_color "#f2c14e"
+    outlines [(2, "#160b08cc", 0, 0)]
 
 
 style character_button:

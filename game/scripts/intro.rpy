@@ -15,7 +15,7 @@ screen intro_butler_greet(enabled):
     imagebutton:
         style "character_button"
         idle "images/butler/butler neutral.webp"
-        at character_button(xalign=0.15)
+        at character_button(xalign=.15)
         sensitive enabled
         action [Hide("intro_butler_greet"), Jump("intro_butler_greet")]
 
@@ -34,7 +34,7 @@ label intro_butler_greet:
     hide butler
     with dissolve
 
-    call screen arrow_up_button(label="intro_butler_door", xalign=0.53, yalign=0.85)
+    call screen arrow_up_button(label="intro_butler_door", xalign=.53, yalign=.85)
 
 
 label intro_butler_door:
@@ -49,4 +49,4 @@ label intro_butler_door:
     hide butler
     with dissolve
 
-    call screen arrow_up_button(label="end", xalign=0.491, yalign=0.6)
+    call screen arrow_up_button(label="end", xalign=.491, yalign=.6)
