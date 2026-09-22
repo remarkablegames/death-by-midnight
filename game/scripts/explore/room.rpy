@@ -1,6 +1,11 @@
 label explore_room:
 
-    scene bg room evening
+    if is_night_dark():
+        scene bg room night dark
+    elif is_night_light():
+        scene bg room night light
+    else:
+        scene bg room evening
     with dissolve
 
     show screen time_display

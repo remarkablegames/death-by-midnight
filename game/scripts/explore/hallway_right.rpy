@@ -1,6 +1,11 @@
 label explore_hallway_right:
 
-    scene bg hallway right evening
+    if is_night_dark():
+        scene bg hallway right night dark
+    elif is_night_light():
+        scene bg hallway right night light
+    else:
+        scene bg hallway right evening
     with dissolve
 
     show screen time_display

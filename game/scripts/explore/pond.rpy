@@ -1,6 +1,9 @@
 label explore_pond:
 
-    scene bg pond evening
+    if is_night_light():
+        scene bg pond night
+    else:
+        scene bg pond evening
     with dissolve
 
     show screen time_display

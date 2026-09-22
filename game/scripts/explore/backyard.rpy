@@ -1,6 +1,11 @@
 label explore_backyard:
 
-    scene bg backyard evening
+    if is_night_dark():
+        scene bg backyard night dark
+    elif is_night_light():
+        scene bg backyard night light
+    else:
+        scene bg backyard evening
     with dissolve
 
     show screen time_display

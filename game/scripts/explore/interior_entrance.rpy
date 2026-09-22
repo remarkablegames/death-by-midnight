@@ -1,6 +1,11 @@
 label explore_interior_entrance:
 
-    scene bg interior entrance evening
+    if is_night_dark():
+        scene bg interior entrance night dark
+    elif is_night_light():
+        scene bg interior entrance night light
+    else:
+        scene bg interior entrance evening
     with dissolve
 
     show screen time_display

@@ -1,9 +1,17 @@
-default clock_minutes = 18 * 60
+default clock_minutes = 18 * 60 # 6pm
 
-define MIDNIGHT_MINUTES = 24 * 60
+define MIDNIGHT_MINUTES = 24 * 60 # 12pm
+define TIME_NIGHT_LIGHT_START = 20 * 60 # 8pm
+define TIME_NIGHT_DARK_START = 22 * 60 # 10pm
 
 
 init python:
+
+    def is_night_light():
+        return clock_minutes >= TIME_NIGHT_LIGHT_START
+
+    def is_night_dark():
+        return clock_minutes >= TIME_NIGHT_DARK_START
 
     def advance_clock(minutes=0):
         global clock_minutes

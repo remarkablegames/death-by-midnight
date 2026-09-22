@@ -1,6 +1,9 @@
 label explore_kitchen:
 
-    scene bg kitchen evening
+    if is_night_light():
+        scene bg kitchen night
+    else:
+        scene bg kitchen evening
     with dissolve
 
     show screen time_display

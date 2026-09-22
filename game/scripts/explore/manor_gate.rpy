@@ -1,6 +1,11 @@
 label explore_manor_gate:
 
-    scene bg manor gate evening
+    if is_night_dark():
+        scene bg manor gate night dark
+    elif is_night_light():
+        scene bg manor gate night light
+    else:
+        scene bg manor gate evening
     with dissolve
 
     show screen time_display
