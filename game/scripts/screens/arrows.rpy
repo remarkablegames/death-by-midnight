@@ -1,3 +1,11 @@
+style arrow_button:
+    font "DejaVuSans.ttf"
+    size 150
+    color COLOR_ACTION_DIM
+    hover_color COLOR_ACTION
+    outlines [(2, COLOR_OUTLINE, 0, 0)]
+
+
 screen arrow_button(arrow, label, xalign, yalign, minutes=0):
 
     textbutton arrow:
@@ -22,7 +30,7 @@ screen arrow_up_button(label, xalign, yalign, minutes=0):
 
 screen arrow_right_button(label, xalign, yalign, minutes=0):
 
-    use arrow_button("→", label, xalign, yalign, minutes=0)
+    use arrow_button("→", label, xalign, yalign, minutes)
 
 
 screen arrow_down_button(label, xalign, yalign, minutes=0):
