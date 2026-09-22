@@ -8,4 +8,4 @@ label explore_kitchen:
 
     show screen time_display
 
-    call screen arrow_right_button(label="explore_hallway_left", xalign=.95, yalign=.65, minutes=5)
+    call screen arrow_right_button(label="explore_hallway_left", xalign=.95, yalign=.7, minutes=5)
