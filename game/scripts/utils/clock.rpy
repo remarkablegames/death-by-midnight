@@ -31,5 +31,5 @@ screen time_display():
 style clock_text:
     font "DejaVuSans.ttf"
     size 36
-    color "#f2c14e"
-    outlines [(2, "#160b08cc", 0, 0)]
+    color COLOR_ACTION
+    outlines [(2, COLOR_OUTLINE, 0, 0)]
