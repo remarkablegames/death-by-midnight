@@ -19,7 +19,9 @@ label explore_interior_entrance:
     show screen inventory_hud
     with dissolve
 
-    $ scene_characters = [("butler", 0.3)]
+    $ scene_characters = [
+      SceneCharacter("butler", expression="smile", xalign=.3),
+    ]
 
     show screen arrow_button("↑", label="explore_bedroom", xalign=.728, yalign=.13, minutes=5)
     show screen arrow_up_button(label="explore_room", xalign=.345, yalign=.13, minutes=5)

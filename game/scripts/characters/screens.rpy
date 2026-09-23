@@ -1,5 +1,13 @@
 init python:
 
+    class SceneCharacter(object):
+
+        def __init__(self, character_id, expression="neutral", xalign=.5):
+            self.character_id = character_id
+            self.expression = expression
+            self.xalign = xalign
+
+
     class CharacterInfo(object):
 
         def __init__(self, character_id, name, image):
@@ -59,7 +67,7 @@ screen inventory_character_menu(character):
     zorder 300
 
     frame:
-        align (0.5, 0.5)
+        align (.5, .5)
         background Solid(COLOR_ACTION)
 
         frame:
@@ -71,7 +79,7 @@ screen inventory_character_menu(character):
 
                 text character.name:
                     style "inventory_read_title"
-                    align (0.5, 0.5)
+                    align (.5, .5)
 
                 textbutton _("Talk"):
                     text_style "text_sans_serif"
@@ -93,7 +101,7 @@ screen inventory_choose_item(character):
     zorder 300
 
     frame:
-        align (0.5, 0.5)
+        align (.5, .5)
         background Solid(COLOR_ACTION)
 
         frame:
@@ -105,7 +113,7 @@ screen inventory_choose_item(character):
 
                 text _("Give an item to [character.name]:"):
                     style "inventory_read_title"
-                    xalign 0.5
+                    xalign .5
 
                 for item in inventory.items:
                     textbutton item.name action Return(item.item_id)

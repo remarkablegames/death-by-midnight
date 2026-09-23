@@ -1,6 +1,6 @@
 label talk_butler:
 
-    show butler neutral at character_speak
+    show butler smile at character_speak
     with dissolve
 
     butler "The master’s will has gone quiet these past weeks. The family argues over it constantly."

@@ -14,7 +14,7 @@ screen intro_butler_greet(enabled):
 
     imagebutton:
         style "character_button"
-        idle character_sprite("butler")
+        idle character_sprite("butler", "smile")
         at character_button(xalign=.15)
         sensitive enabled
         action [Hide("intro_butler_greet"), Jump("intro_butler_greet")]
@@ -22,7 +22,7 @@ screen intro_butler_greet(enabled):
 
 label intro_butler_greet:
 
-    show butler neutral at character_speak
+    show butler smile at character_speak
     with dissolve
 
     butler "You must be the detective."
@@ -40,7 +40,7 @@ label intro_butler_greet:
 label intro_butler_door:
 
     scene bg manor door evening
-    show butler neutral at character_speak
+    show butler smile at character_speak
     with dissolve
 
     butler "Please come in."

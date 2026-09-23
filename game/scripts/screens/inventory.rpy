@@ -150,19 +150,19 @@ screen inventory_hud():
                         xysize (INVENTORY_SLOT_W - 16, INVENTORY_SLOT_H - 16)
                         align (0.5, 0.5)
 
-        for (character_id, character_xalign) in scene_characters:
+        for scene_character in scene_characters:
             drag:
-                drag_name character_id
+                drag_name scene_character.character_id
                 draggable False
                 droppable True
                 clicked inventory_character_click_cb
-                hovered (lambda c_id=character_id: character_hover_set(c_id))
-                unhovered (lambda c_id=character_id: character_hover_clear(c_id))
-                xalign character_xalign
+                hovered (lambda c_id=scene_character.character_id: character_hover_set(c_id))
+                unhovered (lambda c_id=scene_character.character_id: character_hover_clear(c_id))
+                xalign scene_character.xalign
                 yalign 1.0
 
-                add character_sprite(character_id):
-                    at (character_target_hover(character_xalign) if character_hover_id == character_id else character_target(character_xalign))
+                add character_sprite(scene_character.character_id, scene_character.expression):
+                    at (character_target_hover(scene_character.xalign) if character_hover_id == scene_character.character_id else character_target(scene_character.xalign))
 
 
 screen inventory_read(item):
