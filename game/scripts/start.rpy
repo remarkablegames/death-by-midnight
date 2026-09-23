@@ -1,4 +1,4 @@
-default player_name = "Danny"
+default player_name = ""
 
 
 label start:
