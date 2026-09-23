@@ -118,16 +118,16 @@ label inventory_talk_scene(character_id):
 
     hide screen inventory_hud
 
-    $ renpy.show(character.image, tag=character.character_id, at_list=[character_speak])
-    with dissolve
-
     if renpy.has_label("talk_" + character_id):
         call expression "talk_" + character_id
     else:
+        $ renpy.show(character.image, tag=character.character_id, at_list=[character_speak])
+        with dissolve
+
         python:
             character_object(character.character_id)(CHARACTER_GREETINGS.get(character.character_id, CHARACTER_GREETING_FALLBACK))
 
-    $ renpy.hide(character.character_id)
-    with dissolve
+        $ renpy.hide(character.character_id)
+        with dissolve
 
     return
