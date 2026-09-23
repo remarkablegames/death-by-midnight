@@ -103,7 +103,7 @@ define INVENTORY_PANEL_PAD = 12
 define INVENTORY_SLOT_W = 248
 define INVENTORY_SLOT_H = 60
 define INVENTORY_SLOT_X = INVENTORY_PANEL_X + INVENTORY_PANEL_PAD
-define INVENTORY_SLOT_Y = INVENTORY_PANEL_Y + 82
+define INVENTORY_SLOT_Y = INVENTORY_PANEL_Y + 104
 define INVENTORY_SLOT_YSTEP = 68
 
 
@@ -132,25 +132,14 @@ screen inventory_hud():
                 pos (INVENTORY_PANEL_X + INVENTORY_PANEL_PAD, INVENTORY_PANEL_Y + 50)
                 xmaximum INVENTORY_PANEL_WIDTH - INVENTORY_PANEL_PAD
 
-    draggroup:
-
-        for index, item in enumerate(inventory.items):
-            drag:
-                drag_name item.item_id
-                draggable True
-                droppable False
-                clicked inventory_read_cb
-                dragged inventory_drop_cb
-
-                pos (INVENTORY_SLOT_X, INVENTORY_SLOT_Y + index * INVENTORY_SLOT_YSTEP)
+            for index, item in enumerate(inventory.items):
 
                 frame:
                     style "inventory_slot"
+                    pos (INVENTORY_SLOT_X, INVENTORY_SLOT_Y + index * INVENTORY_SLOT_YSTEP)
                     xysize (INVENTORY_SLOT_W, INVENTORY_SLOT_H)
-                    add item.image:
-                        fit "contain"
-                        xysize (INVENTORY_SLOT_W - 16, INVENTORY_SLOT_H - 16)
-                        align (0.5, 0.5)
+
+    draggroup:
 
         for scene_character in scene_characters:
             drag:
@@ -178,6 +167,21 @@ screen inventory_hud():
                 ypos 146
                 xysize (312, 739)
                 add Solid("#ffffff00")
+
+        for index, item in enumerate(inventory.items):
+            drag:
+                drag_name item.item_id
+                draggable True
+                droppable False
+                clicked inventory_read_cb
+                dragged inventory_drop_cb
+
+                pos (INVENTORY_SLOT_X, INVENTORY_SLOT_Y + index * INVENTORY_SLOT_YSTEP)
+
+                add item.image:
+                    fit "contain"
+                    xysize (INVENTORY_SLOT_W, INVENTORY_SLOT_H)
+                    align (0.5, 0.5)
 
 
 screen inventory_read(item):
