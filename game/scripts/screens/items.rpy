@@ -7,7 +7,7 @@ screen item_scroll(tint="#ffffff00"):
         action [
             Hide("item_scroll"),
             Function(inventory.add, "scroll"),
-            Function(renpy.notify, "Picked up a scroll"),
+            Function(renpy.notify, "Picked up scroll"),
             Jump("explore_interior_entrance"),
         ]
 

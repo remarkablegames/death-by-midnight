@@ -227,34 +227,7 @@ screen inventory_read(item):
                     xalign 0.5
                     spacing 40
 
-                    textbutton _("Give to a Character") action Return("give")
                     textbutton _("Close") action Return("close")
-
-
-screen inventory_give_choose(item):
-
-    modal True
-    zorder 300
-
-    frame:
-        align (0.5, 0.5)
-        background Solid(COLOR_ACTION)
-
-        frame:
-            background Solid("#160b08")
-            padding (30, 30, 30, 30)
-
-            vbox:
-                spacing 12
-
-                text _("Give the [item.name] to:"):
-                    style "inventory_read_title"
-                    align (0.5, 0.5)
-
-                for character in CHARACTER_ROSTER:
-                    textbutton character.name action Return(character.character_id)
-
-                textbutton _("Nevermind") action Return(None)
 
 
 label inventory_handle:
@@ -266,12 +239,14 @@ label inventory_handle:
 
     if inventory_result_action == "read":
 
-        call screen inventory_read(inventory.get(inventory_result_item))
+        $ _read_item = inventory.get(inventory_result_item)
 
-        if _return == "give":
-            call screen inventory_give_choose(inventory.get(inventory_result_item))
-            if _return is not None:
-                call inventory_give_scene(inventory_result_item, _return)
+        if _read_item is None:
+
+            $ renpy.notify("That item is gone.")
+            jump expression _inventory_return_label
+
+        call screen inventory_read(_read_item)
 
     elif inventory_result_action == "give":
 
@@ -302,9 +277,7 @@ label inventory_give_scene(item_id, character_id):
     $ item = inventory.get(item_id)
     $ character = character_info(character_id)
 
-    if character is None:
-
-        $ renpy.notify("Could not hand over that character.")
+    if item is None or character is None:
         return
 
     $ response_line = GIVE_LINES.get((item_id, character.character_id), GIVE_LINE_FALLBACK)

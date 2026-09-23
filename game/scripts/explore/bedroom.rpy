@@ -35,6 +35,6 @@ screen item_key():
         action [
             Hide("item_key"),
             Function(inventory.add, "basement_key"),
-            Function(renpy.notify, "Picked up a key"),
+            Function(renpy.notify, "Picked up key"),
             Jump("explore_bedroom"),
         ]

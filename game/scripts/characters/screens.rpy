@@ -87,7 +87,7 @@ screen inventory_character_menu(character):
                     action Return("talk")
 
                 if inventory.items:
-                    textbutton _("Give an item"):
+                    textbutton _("Give"):
                         text_style "text_sans_serif"
                         action Return("give")
 
@@ -112,7 +112,7 @@ screen inventory_choose_item(character):
             vbox:
                 spacing 12
 
-                text _("Give an item to [character.name]:"):
+                text _("Give to [character.name]"):
                     style "inventory_read_title"
                     xalign .5
 
