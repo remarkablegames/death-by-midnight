@@ -1,5 +1,7 @@
 label explore_backyard:
 
+    $ scene_characters = []
+
     if clock.is_night_dark:
         scene bg backyard night dark
     elif clock.is_night_light:

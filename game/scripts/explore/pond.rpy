@@ -1,5 +1,7 @@
 label explore_pond:
 
+    $ scene_characters = []
+
     if clock.is_night_light:
         scene bg pond night
     else:

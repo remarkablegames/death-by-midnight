@@ -20,8 +20,11 @@ init python:
         def __init__(self):
             self.items = []
             self.given = []
+            self.picked_up = []
 
         def add(self, item_id):
+            if item_id not in self.picked_up:
+                self.picked_up.append(item_id)
             item = INVENTORY_ITEMS.get(item_id)
             if item is not None and item not in self.items:
                 self.items.append(item)
@@ -31,6 +34,12 @@ init python:
 
         def has(self, item_id):
             return any(item.item_id == item_id for item in self.items)
+
+        def has_picked_up(self, item_id):
+            return item_id in self.picked_up
+
+        def given_to(self, character_id):
+            return any(character == character_id for _, character in self.given)
 
         def get(self, item_id):
             return INVENTORY_ITEMS.get(item_id)
@@ -69,6 +78,10 @@ init python:
         return globals()[character_id]
 
 
+    def character_sprite(character_id):
+        return "images/%s/%s neutral.webp" % (character_id, character_id)
+
+
     def inventory_read_cb(drag):
         return ("read", drag.drag_name)
 
@@ -81,13 +94,16 @@ init python:
         return ("give", drags[0].drag_name, drop.drag_name)
 
 
-    def inventory_noop_cb(drag):
+    def inventory_character_click_cb(drag):
+        character = character_info(drag.drag_name)
+        if character is not None:
+            renpy.notify("Drag an item onto %s to hand it over." % character.name)
         return None
 
 
     def inventory_panel_height():
         item_rows = max(len(inventory.items), 1)
-        return INVENTORY_SLOT_Y + item_rows * INVENTORY_SLOT_YSTEP + 2 * INVENTORY_CHAR_YSTEP - INVENTORY_PANEL_Y + 6
+        return INVENTORY_SLOT_Y + item_rows * INVENTORY_SLOT_YSTEP - INVENTORY_PANEL_Y + 6
 
 
 define INVENTORY_ITEMS = {
@@ -129,15 +145,10 @@ define INVENTORY_SLOT_X = INVENTORY_PANEL_X + INVENTORY_PANEL_PAD
 define INVENTORY_SLOT_Y = INVENTORY_PANEL_Y + 82
 define INVENTORY_SLOT_YSTEP = 68
 
-define INVENTORY_CHAR_W = 124
-define INVENTORY_CHAR_H = 148
-define INVENTORY_CHAR_X1 = INVENTORY_PANEL_X + INVENTORY_PANEL_PAD
-define INVENTORY_CHAR_X2 = INVENTORY_CHAR_X1 + INVENTORY_CHAR_W + 8
-define INVENTORY_CHAR_Y0 = INVENTORY_SLOT_Y + 2 * INVENTORY_SLOT_YSTEP + 4
-define INVENTORY_CHAR_YSTEP = INVENTORY_CHAR_H + 10
-
 
 default inventory = Inventory()
+
+default scene_characters = []
 
 
 screen inventory_hud():
@@ -155,55 +166,42 @@ screen inventory_hud():
                 style "inventory_header"
                 pos (INVENTORY_PANEL_X + INVENTORY_PANEL_PAD, INVENTORY_PANEL_Y + 16)
 
-            text _("Click to read. Drag onto a portrait to hand it over."):
+            text _("Click to read. Drag onto a character on screen to hand it over."):
                 style "inventory_hint"
                 pos (INVENTORY_PANEL_X + INVENTORY_PANEL_PAD, INVENTORY_PANEL_Y + 50)
                 xmaximum INVENTORY_PANEL_WIDTH - INVENTORY_PANEL_PAD
 
-            draggroup:
+    draggroup:
 
-                for index, item in enumerate(inventory.items):
-                    drag:
-                        drag_name item.item_id
-                        draggable True
-                        droppable False
-                        clicked inventory_read_cb
-                        dragged inventory_drop_cb
+        for index, item in enumerate(inventory.items):
+            drag:
+                drag_name item.item_id
+                draggable True
+                droppable False
+                clicked inventory_read_cb
+                dragged inventory_drop_cb
 
-                        pos (INVENTORY_SLOT_X, INVENTORY_SLOT_Y + index * INVENTORY_SLOT_YSTEP)
+                pos (INVENTORY_SLOT_X, INVENTORY_SLOT_Y + index * INVENTORY_SLOT_YSTEP)
 
-                        frame:
-                            style "inventory_slot"
-                            xysize (INVENTORY_SLOT_W, INVENTORY_SLOT_H)
-                            add item.image:
-                                fit "contain"
-                                xysize (INVENTORY_SLOT_W - 16, INVENTORY_SLOT_H - 16)
-                                align (0.5, 0.5)
+                frame:
+                    style "inventory_slot"
+                    xysize (INVENTORY_SLOT_W, INVENTORY_SLOT_H)
+                    add item.image:
+                        fit "contain"
+                        xysize (INVENTORY_SLOT_W - 16, INVENTORY_SLOT_H - 16)
+                        align (0.5, 0.5)
 
-                for index, character in enumerate(CHARACTER_ROSTER):
-                    drag:
-                        drag_name character.character_id
-                        draggable False
-                        droppable True
-                        clicked inventory_noop_cb
+        for (target_id, target_xalign) in scene_characters:
+            drag:
+                drag_name target_id
+                draggable False
+                droppable True
+                clicked inventory_character_click_cb
+                xalign target_xalign
+                yalign 1.0
 
-                        pos ((INVENTORY_CHAR_X1 if index % 2 == 0 else INVENTORY_CHAR_X2), (INVENTORY_CHAR_Y0 + (index // 2) * INVENTORY_CHAR_YSTEP))
-
-                        frame:
-                            style "inventory_character_slot"
-                            xysize (INVENTORY_CHAR_W, INVENTORY_CHAR_H)
-
-                            vbox:
-                                spacing 4
-
-                                add character.image:
-                                    fit "contain"
-                                    xysize (INVENTORY_CHAR_W - 10, INVENTORY_CHAR_H - 30)
-                                    align (0.5, 0.5)
-
-                                text character.name:
-                                    style "inventory_character_name"
-                                    align (0.5, 1.0)
+                add character_sprite(target_id):
+                    at character_target_zoom
 
 
 screen inventory_read(item):
@@ -303,14 +301,12 @@ label inventory_give_scene(item_id, character_id):
 
     if character is None:
 
-        python:
-            with open("game/inventory_diag.log", "a") as diag_file:
-                diag_file.write("give_scene received character_id=%r item_id=%r\n" % (character_id, item_id))
-
         $ renpy.notify("Could not hand over that character.")
         return
 
     $ response_line = GIVE_LINES.get((item_id, character.character_id), GIVE_LINE_FALLBACK)
+
+    hide screen inventory_hud
 
     $ renpy.show(character.image, tag=character.character_id, at_list=[character_speak])
     with dissolve
@@ -346,17 +342,6 @@ style inventory_hint:
 style inventory_slot is inventory_hint:
     background Solid("#24160fcc")
     padding (6, 6, 6, 6)
-
-
-style inventory_character_slot is inventory_slot:
-    padding (4, 4, 4, 4)
-
-
-style inventory_character_name:
-    font "DejaVuSans.ttf"
-    size 13
-    color COLOR_ACTION
-    outlines [(1, COLOR_OUTLINE, 0, 0)]
 
 
 style inventory_read_title:

@@ -23,3 +23,7 @@ transform item_button(zoom, xalign, yalign, matrixcolor):
         linear 0.1 zoom zoom + .01
     on idle:
         linear 0.1 zoom zoom
+
+
+transform character_target_zoom:
+    zoom 0.5

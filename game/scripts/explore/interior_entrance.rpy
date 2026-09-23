@@ -7,7 +7,7 @@ label explore_interior_entrance:
     else:
         scene bg interior entrance evening
 
-    if not inventory.has("scroll"):
+    if not inventory.has_picked_up("scroll"):
         if clock.is_night_dark:
             show screen item_scroll(tint="#1f3a5f")
         elif clock.is_night_light:
@@ -18,6 +18,8 @@ label explore_interior_entrance:
     show screen time_display
     show screen inventory_hud
     with dissolve
+
+    $ scene_characters = [("butler", 0.5)]
 
     show screen arrow_button("↑", label="explore_bedroom", xalign=.728, yalign=.13, minutes=5)
     show screen arrow_up_button(label="explore_room", xalign=.345, yalign=.13, minutes=5)

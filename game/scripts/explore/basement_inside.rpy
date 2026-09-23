@@ -1,5 +1,7 @@
 label explore_basement_inside:
 
+    $ scene_characters = []
+
     scene bg basement inside
 
     show screen time_display

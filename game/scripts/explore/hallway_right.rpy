@@ -1,5 +1,7 @@
 label explore_hallway_right:
 
+    $ scene_characters = []
+
     if clock.is_night_dark:
         scene bg hallway right night dark
     elif clock.is_night_light:

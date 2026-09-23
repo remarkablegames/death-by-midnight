@@ -1,5 +1,7 @@
 label explore_basement_stairs:
 
+    $ scene_characters = []
+
     scene bg basement stairs
 
     show screen time_display

@@ -1,5 +1,7 @@
 label explore_basement_door:
 
+    $ scene_characters = []
+
     scene bg door open light
 
     show screen time_display

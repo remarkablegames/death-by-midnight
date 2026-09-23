@@ -1,5 +1,7 @@
 label explore_manor_gate:
 
+    $ scene_characters = []
+
     if clock.is_night_dark:
         scene bg manor gate night dark
     elif clock.is_night_light:
