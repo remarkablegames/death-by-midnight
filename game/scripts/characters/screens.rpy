@@ -39,16 +39,6 @@ define CHARACTER_ROSTER = [
 ]
 
 
-define CHARACTER_GREETINGS = {
-    "butler": _("Good evening. My master prefers a quiet manor, as you can see."),
-    "maid": _("You have my ear, though I’d keep your voice down around here."),
-    "miss": _("Oh, a guest. How... unusual for the hour."),
-    "nurse": _("If you’re here about his care, speak plainly."),
-}
-
-define CHARACTER_GREETING_FALLBACK = _("…Yes?")
-
-
 screen inventory_character_menu(character):
 
     modal True
@@ -118,16 +108,6 @@ label inventory_talk_scene(character_id):
 
     hide screen inventory_hud
 
-    if renpy.has_label("talk_" + character_id):
-        call expression "talk_" + character_id
-    else:
-        $ renpy.show(character.image, tag=character.character_id, at_list=[character_speak])
-        with dissolve
-
-        python:
-            character_object(character.character_id)(CHARACTER_GREETINGS.get(character.character_id, CHARACTER_GREETING_FALLBACK))
-
-        $ renpy.hide(character.character_id)
-        with dissolve
+    call expression "talk_" + character_id
 
     return
