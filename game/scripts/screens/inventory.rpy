@@ -80,12 +80,24 @@ define INVENTORY_ITEMS = {
         "images/items/scroll.webp",
         _("An aged parchment, creased from being tucked away in the rafters. In curling ink, it reads:\n\n“To whoever finds this: the will you seek is not the one they will read aloud. Follow the truth to whoever holds the real document.”"),
     ),
+    "basement_key": InventoryItem(
+        "basement_key",
+        _("Key"),
+        "images/items/key.webp",
+        _("A golden key."),
+    ),
+    "will": InventoryItem(
+        "will",
+        _("The True Will"),
+        "images/items/scroll.webp",
+        _("The Master’s real will, hidden where no one could read it until the truth came out. It names his true heir, and binds the night to repeat until the family’s history is confessed before the reading."),
+    ),
 }
 
 
 define GIVE_LINES = {
     ("scroll", "butler"): _("The will? I’ll take a look, though it smells of the attic."),
-    ("scroll", "maid"): _("This is the Owner’s handwriting... I’ve seen it on his private notes."),
+    ("scroll", "maid"): _("This is the Master’s handwriting... I’ve seen it on his private notes."),
     ("scroll", "miss"): _("His seal... He never let anyone touch his papers, not even Mother."),
     ("scroll", "nurse"): _("Where did you find this? Careful, detective. Not in front of the others."),
 }

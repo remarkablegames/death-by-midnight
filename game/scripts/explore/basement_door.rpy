@@ -6,14 +6,15 @@ label explore_basement_door:
 
     $ scene_characters = []
 
-    if clock.is_night_dark:
-        if is_basement_locked:
+    if is_basement_locked:
+        if clock.is_night_dark:
             scene bg door closed dark
         else:
-            scene bg door open dark
-    else:
-        if is_basement_locked:
             scene bg door closed light
+        show screen interactable_door
+    else:
+        if clock.is_night_dark:
+            scene bg door open dark
         else:
             scene bg door open light
 
@@ -21,10 +22,8 @@ label explore_basement_door:
     show screen inventory_hud
     with dissolve
 
-    if inventory.has("basement_key"):
+    if not is_basement_locked:
         show screen arrow_down_button(label="explore_basement_stairs", xalign=.475, yalign=.4, minutes=5)
-    else:
-        show screen arrow_down_button(label="locked_gate", xalign=.475, yalign=.4)
 
     call screen arrow_left_button(label="explore_hallway_right", xalign=.05, yalign=.7, minutes=5)
 
@@ -37,7 +36,18 @@ label explore_basement_door:
     jump explore_basement_door
 
 
-label locked_gate:
+screen interactable_door():
+
+    imagebutton:
+        idle Transform("images/interactables/door.webp", alpha=0)
+        hover Transform("images/interactables/door.webp", alpha=.1, matrixcolor=TintMatrix("#ffffff00" if clock.is_night_dark else "#000"))
+        style "interactable_button"
+        xpos 736
+        ypos 146
+        action [Hide("interactable_door"), Jump("explore_basement_door_locked")]
+
+
+label explore_basement_door_locked:
 
     $ seen_basement_door = True
 

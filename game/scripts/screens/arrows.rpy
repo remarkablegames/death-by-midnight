@@ -25,6 +25,9 @@ screen arrow_button(arrow, label, xalign, yalign, minutes=0):
             Hide("arrow_down_button"),
             Hide("arrow_left_button"),
             Hide("item_scroll"),
+            Hide("item_key"),
+            Hide("item_will"),
+            Hide("interactable_door"),
             Jump(label),
         ]
 
