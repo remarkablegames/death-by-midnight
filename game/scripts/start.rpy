@@ -4,7 +4,7 @@ default player_name = "Danny"
 label start:
 
     player "I’m on my way to the manor."
-    player "The deceased owner asked me to execute his will."
+    player "The late Master asked me to execute his will."
 
     $ player_name = renpy.input("What’s my name?", default="Danny").strip()
 
