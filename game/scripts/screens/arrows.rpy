@@ -20,14 +20,14 @@ screen arrow_button(arrow, label, xalign, yalign, minutes=0):
         action [
             Function(clock.advance, minutes),
             Hide("arrow_button"),
-            Hide("arrow_up_button"),
-            Hide("arrow_right_button"),
             Hide("arrow_down_button"),
             Hide("arrow_left_button"),
-            Hide("item_scroll"),
-            Hide("item_key"),
-            Hide("item_will"),
+            Hide("arrow_right_button"),
+            Hide("arrow_up_button"),
             Hide("interactable_door"),
+            Hide("item_key"),
+            Hide("item_scroll"),
+            Hide("item_will"),
             Jump(label),
         ]
 
