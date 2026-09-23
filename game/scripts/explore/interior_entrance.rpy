@@ -20,7 +20,7 @@ label explore_interior_entrance:
     with dissolve
 
     $ scene_characters = [
-      SceneCharacter("butler", expression="smile", xalign=.3),
+      SceneCharacter("butler", expression="smile", xalign=.3, tint=("#333" if clock.is_night_dark else "#ffffff00")),
     ]
 
     show screen arrow_button("↑", label="explore_bedroom", xalign=.728, yalign=.13, minutes=5)

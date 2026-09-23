@@ -162,6 +162,7 @@ screen inventory_hud():
                 yalign 1.0
 
                 add character_sprite(scene_character.character_id, scene_character.expression):
+                    matrixcolor TintMatrix(scene_character.tint)
                     at (character_target_hover(scene_character.xalign) if character_hover_id == scene_character.character_id else character_target(scene_character.xalign))
 
 
