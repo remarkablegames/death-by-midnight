@@ -31,6 +31,20 @@ init python:
         return "images/%s/%s neutral.webp" % (character_id, character_id)
 
 
+    def character_hover_set(character_id):
+        store.character_hover_id = character_id
+        renpy.sound.play("ui/mouserelease1.ogg")
+        renpy.restart_interaction()
+
+
+    def character_hover_clear(character_id):
+        store.character_hover_id = None
+        renpy.restart_interaction()
+
+
+default character_hover_id = None
+
+
 define CHARACTER_ROSTER = [
     CharacterInfo("butler", _("Butler Ben"), "butler neutral"),
     CharacterInfo("maid", _("Maid Madelyn"), "maid neutral"),

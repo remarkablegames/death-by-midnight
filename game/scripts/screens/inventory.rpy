@@ -64,6 +64,7 @@ init python:
 
 
     def inventory_character_click_cb(drag):
+        renpy.sound.play("ui/click_003.ogg")
         return ("character", drag.drag_name)
 
 
@@ -149,17 +150,19 @@ screen inventory_hud():
                         xysize (INVENTORY_SLOT_W - 16, INVENTORY_SLOT_H - 16)
                         align (0.5, 0.5)
 
-        for (target_id, target_xalign) in scene_characters:
+        for (character_id, character_xalign) in scene_characters:
             drag:
-                drag_name target_id
+                drag_name character_id
                 draggable False
                 droppable True
                 clicked inventory_character_click_cb
-                xalign target_xalign
+                hovered (lambda c_id=character_id: character_hover_set(c_id))
+                unhovered (lambda c_id=character_id: character_hover_clear(c_id))
+                xalign character_xalign
                 yalign 1.0
 
-                add character_sprite(target_id):
-                    at character_target_zoom
+                add character_sprite(character_id):
+                    at (character_target_hover(character_xalign) if character_hover_id == character_id else character_target(character_xalign))
 
 
 screen inventory_read(item):

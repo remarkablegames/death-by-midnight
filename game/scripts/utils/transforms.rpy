@@ -14,6 +14,18 @@ transform character_button(xalign=0.5):
         linear 0.1 zoom 0.5
 
 
+transform character_target(xalign):
+    zoom 0.5
+    xalign xalign
+    yalign 1.0
+
+
+transform character_target_hover(xalign):
+    zoom 0.51
+    xalign xalign
+    yalign 1.0
+
+
 transform item_button(zoom, xalign, yalign, matrixcolor):
     zoom zoom
     xalign xalign
@@ -23,7 +35,3 @@ transform item_button(zoom, xalign, yalign, matrixcolor):
         linear 0.1 zoom zoom + .01
     on idle:
         linear 0.1 zoom zoom
-
-
-transform character_target_zoom:
-    zoom 0.5
