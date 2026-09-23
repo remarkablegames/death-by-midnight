@@ -7,6 +7,9 @@ label explore_kitchen:
     else:
         scene bg kitchen evening
 
+    if not inventory.has_picked_up("kitchen_knife"):
+        show screen item_kitchen_knife
+
     show screen time_display
     show screen inventory_hud
     with dissolve
@@ -20,3 +23,22 @@ label explore_kitchen:
         jump inventory_handle
 
     jump explore_kitchen
+
+
+screen item_kitchen_knife():
+
+    if clock.is_night_light:
+        $ tint = "#1f3a5f"
+    else:
+        $ tint = "#ffcf9a"
+
+    imagebutton:
+        idle "images/items/kitchen_knife.webp"
+        style "item_button"
+        at item_button(zoom=.2, xalign=.53, yalign=.436, matrixcolor=TintMatrix(tint))
+        action [
+            Hide("item_kitchen_knife"),
+            Function(inventory.add, "kitchen_knife"),
+            Function(renpy.notify, "Picked up kitchen knife"),
+            Jump("explore_kitchen"),
+        ]

@@ -28,6 +28,7 @@ screen arrow_button(arrow, label, xalign, yalign, minutes=0):
             Hide("item_key"),
             Hide("item_scroll"),
             Hide("item_will"),
+            Hide("item_kitchen_knife"),
             Jump(label),
         ]
 

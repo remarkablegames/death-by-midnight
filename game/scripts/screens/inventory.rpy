@@ -86,6 +86,12 @@ define INVENTORY_ITEMS = {
         "images/items/key.webp",
         _("A silver key."),
     ),
+    "kitchen_knife": InventoryItem(
+        "kitchen_knife",
+        _("Kitchen Knife"),
+        "images/items/kitchen_knife.webp",
+        _("An old kitchen knife that’s starting to rust."),
+    ),
     "will": InventoryItem(
         "will",
         _("The True Will"),

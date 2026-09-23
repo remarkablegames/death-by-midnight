@@ -2,7 +2,7 @@
 
 Every item should have a **verb**: it either changes what the detective knows (which carries into the next loop as unlocked talk options) or changes what a character does when it is given to them. Items reset each loop and must be refound; knowledge carries over as persistent talk options.
 
-Handing an item to a character consumes and notifies the item and runs a label named `give_<item>_<character>` (e.g. `give_scroll_nurse`). Every item/character pair needs a label since it owns the dialogue scene and may set flags or unlock talk options.
+Handing an item to a character runs a label named `give_<item>_<character>` (e.g. `give_scroll_nurse`). Every item/character pair needs a label since it owns the dialogue scene. `inventory_give_scene` in `scripts/screens/inventory.rpy` consumes the item and notifies before the label runs; if the character declines, the label calls `inventory.add(item_id)` and its own notify to return the item. Labels may set flags or unlock talk options.
 
 ## Knowledge items
 

@@ -8,12 +8,7 @@ label explore_interior_entrance:
         scene bg interior entrance evening
 
     if not inventory.has_picked_up("scroll"):
-        if clock.is_night_dark:
-            show screen item_scroll(tint="#1f3a5f")
-        elif clock.is_night_light:
-            show screen item_scroll
-        else:
-            show screen item_scroll(tint="#555")
+        show screen item_scroll
 
     show screen time_display
     show screen inventory_hud
@@ -38,7 +33,14 @@ label explore_interior_entrance:
     jump explore_interior_entrance
 
 
-screen item_scroll(tint="#ffffff00"):
+screen item_scroll():
+
+    if clock.is_night_dark:
+        $ tint = "#1f3a5f"
+    elif clock.is_night_light:
+        $ tint = "#ffffff00"
+    else:
+        $ tint = "#555"
 
     imagebutton:
         idle "images/items/scroll.webp"
