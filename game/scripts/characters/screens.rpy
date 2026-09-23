@@ -32,10 +32,6 @@ init python:
         return None
 
 
-    def character_object(character_id):
-        return globals()[character_id]
-
-
     def character_sprite(character_id, expression="neutral"):
         return "images/%s/%s %s.webp" % (character_id, character_id, expression)
 

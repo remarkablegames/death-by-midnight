@@ -95,16 +95,6 @@ define INVENTORY_ITEMS = {
 }
 
 
-define GIVE_LINES = {
-    ("scroll", "butler"): _("The will? I’ll take a look, though it smells of the attic."),
-    ("scroll", "maid"): _("This is the Master’s handwriting... I’ve seen it on his private notes."),
-    ("scroll", "miss"): _("His seal... He never let anyone touch his papers, not even Mother."),
-    ("scroll", "nurse"): _("Where did you find this? Careful, detective. Not in front of the others."),
-}
-
-define GIVE_LINE_FALLBACK = _("I’ll keep that safe for now.")
-
-
 define INVENTORY_PANEL_X = 1632
 define INVENTORY_PANEL_Y = 12
 define INVENTORY_PANEL_WIDTH = 272
@@ -280,22 +270,12 @@ label inventory_give_scene(item_id, character_id):
     if item is None or character is None:
         return
 
-    $ response_line = GIVE_LINES.get((item_id, character.character_id), GIVE_LINE_FALLBACK)
-
     hide screen inventory_hud
 
-    $ renpy.show(character.image, tag=character.character_id, at_list=[character_speak])
-    with dissolve
+    $ inventory.give(item_id, character.character_id)
+    $ renpy.notify(f"You gave the {item.name.lower()} to {character.name}")
 
-    player "Here, take the [item.name]. I think you should see it."
-
-    python:
-        character_object(character.character_id)(response_line)
-        inventory.give(item_id, character.character_id)
-        renpy.notify(f"You gave the {item.name} to {character.name}.")
-
-    $ renpy.hide(character.character_id)
-    with dissolve
+    call expression "give_{0}_{1}".format(item_id, character.character_id)
 
     return
 

@@ -2,7 +2,7 @@
 
 Every item should have a **verb**: it either changes what the detective knows (which carries into the next loop as unlocked talk options) or changes what a character does when it is given to them. Items reset each loop and must be refound; knowledge carries over as persistent talk options.
 
-Giveable items each need a `GIVE_LINES` reaction for the four live characters (Butler, Maid, Miss, Nurse), with the fallback line covering the rest.
+Handing an item to a character consumes and notifies the item and runs a label named `give_<item>_<character>` (e.g. `give_scroll_nurse`). Every item/character pair needs a label since it owns the dialogue scene and may set flags or unlock talk options.
 
 ## Knowledge items
 
