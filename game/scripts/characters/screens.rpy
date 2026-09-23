@@ -121,8 +121,11 @@ label inventory_talk_scene(character_id):
     $ renpy.show(character.image, tag=character.character_id, at_list=[character_speak])
     with dissolve
 
-    python:
-        character_object(character.character_id)(CHARACTER_GREETINGS.get(character.character_id, CHARACTER_GREETING_FALLBACK))
+    if renpy.has_label("talk_" + character_id):
+        call expression "talk_" + character_id
+    else:
+        python:
+            character_object(character.character_id)(CHARACTER_GREETINGS.get(character.character_id, CHARACTER_GREETING_FALLBACK))
 
     $ renpy.hide(character.character_id)
     with dissolve
