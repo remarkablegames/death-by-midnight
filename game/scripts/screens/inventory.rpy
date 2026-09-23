@@ -95,10 +95,7 @@ init python:
 
 
     def inventory_character_click_cb(drag):
-        character = character_info(drag.drag_name)
-        if character is not None:
-            renpy.notify("Drag an item onto %s to hand it over." % character.name)
-        return None
+        return ("character", drag.drag_name)
 
 
     def inventory_panel_height():
@@ -132,6 +129,16 @@ define GIVE_LINES = {
 }
 
 define GIVE_LINE_FALLBACK = _("I’ll keep that safe for now.")
+
+
+define CHARACTER_GREETINGS = {
+    "butler": _("Good evening. My master prefers a quiet manor, as you can see."),
+    "maid": _("You have my ear, though I’d keep your voice down around here."),
+    "miss": _("Oh, a guest. How... unusual for the hour."),
+    "nurse": _("If you’re here about his care, speak plainly."),
+}
+
+define CHARACTER_GREETING_FALLBACK = _("…Yes?")
 
 
 define INVENTORY_PANEL_X = 1632
@@ -271,6 +278,66 @@ screen inventory_give_choose(item):
                 textbutton _("Nevermind") action Return(None)
 
 
+screen inventory_character_menu(character):
+
+    modal True
+    zorder 300
+
+    frame:
+        align (0.5, 0.5)
+        background Solid(COLOR_ACTION)
+
+        frame:
+            background Solid("#160b08")
+            padding (30, 30, 30, 30)
+
+            vbox:
+                spacing 12
+
+                text character.name:
+                    style "inventory_read_title"
+                    align (0.5, 0.5)
+
+                textbutton _("Talk"):
+                    text_style "text_sans_serif"
+                    action Return("talk")
+
+                if inventory.items:
+                    textbutton _("Give an item"):
+                        text_style "text_sans_serif"
+                        action Return("give")
+
+                textbutton _("Leave"):
+                    text_style "text_sans_serif"
+                    action Return(None)
+
+
+screen inventory_choose_item(character):
+
+    modal True
+    zorder 300
+
+    frame:
+        align (0.5, 0.5)
+        background Solid(COLOR_ACTION)
+
+        frame:
+            background Solid("#160b08")
+            padding (30, 30, 30, 30)
+
+            vbox:
+                spacing 12
+
+                text _("Give an item to [character.name]:"):
+                    style "inventory_read_title"
+                    xalign 0.5
+
+                for item in inventory.items:
+                    textbutton item.name action Return(item.item_id)
+
+                textbutton _("Nevermind") action Return(None)
+
+
 label inventory_handle:
 
     python:
@@ -291,7 +358,42 @@ label inventory_handle:
 
         call inventory_give_scene(inventory_result_item, _inventory_result[2])
 
+    elif inventory_result_action == "character":
+
+        $ character_result_info = character_info(inventory_result_item)
+
+        if character_result_info is not None:
+            call screen inventory_character_menu(character_result_info)
+
+            if _return == "talk":
+                call inventory_talk_scene(inventory_result_item)
+            elif _return == "give":
+                call screen inventory_choose_item(character_result_info)
+                if _return is not None:
+                    call inventory_give_scene(_return, inventory_result_item)
+
     jump expression _inventory_return_label
+
+
+label inventory_talk_scene(character_id):
+
+    $ character = character_info(character_id)
+
+    if character is None:
+        return
+
+    hide screen inventory_hud
+
+    $ renpy.show(character.image, tag=character.character_id, at_list=[character_speak])
+    with dissolve
+
+    python:
+        character_object(character.character_id)(CHARACTER_GREETINGS.get(character.character_id, CHARACTER_GREETING_FALLBACK))
+
+    $ renpy.hide(character.character_id)
+    with dissolve
+
+    return
 
 
 label inventory_give_scene(item_id, character_id):
@@ -324,16 +426,14 @@ label inventory_give_scene(item_id, character_id):
     return
 
 
-style inventory_header:
-    font "DejaVuSans.ttf"
+style inventory_header is text_sans_serif:
     size 28
     bold True
     color COLOR_ACTION
     outlines [(1, COLOR_OUTLINE, 0, 0)]
 
 
-style inventory_hint:
-    font "DejaVuSans.ttf"
+style inventory_hint is text_sans_serif:
     size 14
     color "#ddd5c9"
     outlines [(1, COLOR_OUTLINE, 0, 0)]
@@ -344,15 +444,13 @@ style inventory_slot is inventory_hint:
     padding (6, 6, 6, 6)
 
 
-style inventory_read_title:
-    font "DejaVuSans.ttf"
+style inventory_read_title is text_sans_serif:
     size 40
     color COLOR_ACTION
     outlines [(2, COLOR_OUTLINE, 0, 0)]
 
 
-style inventory_read_body:
-    font "DejaVuSans.ttf"
+style inventory_read_body is text_sans_serif:
     size 22
     color "#f2ede2"
     outlines [(1, COLOR_OUTLINE, 0, 0)]

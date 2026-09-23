@@ -4,3 +4,7 @@ style character_button:
 
 
 style item_button is character_button
+
+
+style text_sans_serif:
+    font "DejaVuSans.ttf"

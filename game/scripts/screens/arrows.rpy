@@ -1,5 +1,4 @@
-style arrow_button:
-    font "DejaVuSans.ttf"
+style arrow_button is text_sans_serif:
     size 150
     color COLOR_ACTION + "cc"
     hover_color COLOR_ACTION

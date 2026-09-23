@@ -43,8 +43,7 @@ screen time_display():
         style "clock_text"
 
 
-style clock_text:
-    font "DejaVuSans.ttf"
+style clock_text is text_sans_serif:
     size 36
     color COLOR_ACTION
     outlines [(2, COLOR_OUTLINE, 0, 0)]
