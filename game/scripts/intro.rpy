@@ -14,7 +14,7 @@ screen intro_butler_greet(enabled):
 
     imagebutton:
         style "character_button"
-        idle "images/butler/butler neutral.webp"
+        idle character_sprite("butler")
         at character_button(xalign=.15)
         sensitive enabled
         action [Hide("intro_butler_greet"), Jump("intro_butler_greet")]

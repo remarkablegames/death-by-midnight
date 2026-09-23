@@ -27,8 +27,8 @@ init python:
         return globals()[character_id]
 
 
-    def character_sprite(character_id):
-        return "images/%s/%s neutral.webp" % (character_id, character_id)
+    def character_sprite(character_id, expression="neutral"):
+        return "images/%s/%s %s.webp" % (character_id, character_id, expression)
 
 
     def character_hover_set(character_id):
