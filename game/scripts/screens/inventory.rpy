@@ -177,6 +177,18 @@ screen inventory_hud():
                     matrixcolor TintMatrix(scene_character.tint)
                     at (character_target_hover(scene_character.xalign) if character_hover_id == scene_character.character_id else character_target(scene_character.xalign))
 
+        if door_drop_active:
+
+            drag:
+                drag_name "basement_door"
+                draggable False
+                droppable True
+                focus_mask None
+                xpos 736
+                ypos 146
+                xysize (312, 739)
+                add Solid("#ffffff00")
+
 
 screen inventory_read(item):
 
@@ -263,7 +275,10 @@ label inventory_handle:
 
     elif inventory_result_action == "give":
 
-        call inventory_give_scene(inventory_result_item, _inventory_result[2])
+        if _inventory_result[2] == "basement_door":
+            call inventory_unlock_door(inventory_result_item)
+        else:
+            call inventory_give_scene(inventory_result_item, _inventory_result[2])
 
     elif inventory_result_action == "character":
 
@@ -310,6 +325,26 @@ label inventory_give_scene(item_id, character_id):
     with dissolve
 
     return
+
+
+label inventory_unlock_door(item_id):
+
+    if item_id != "basement_key":
+
+        $ renpy.notify("That won’t open the door.")
+        return
+
+    hide screen inventory_hud
+
+    $ is_basement_locked = False
+    $ door_drop_active = False
+    $ inventory.remove("basement_key")
+
+    player "I slide the key into the lock and turn it.{w=.3} The bolt yields with a dry click."
+
+    $ renpy.notify("You unlocked the basement door.")
+
+    jump expression _inventory_return_label
 
 
 style inventory_header is text_sans_serif:

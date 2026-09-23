@@ -1,10 +1,12 @@
 default seen_basement_door = False
 default is_basement_locked = True
+default door_drop_active = False
 
 
 label explore_basement_door:
 
     $ scene_characters = []
+    $ door_drop_active = is_basement_locked
 
     if is_basement_locked:
         if clock.is_night_dark:
@@ -56,7 +58,9 @@ label explore_basement_door_locked:
 
     player "The door is locked."
 
-    if not inventory.has_picked_up("basement_key"):
+    if inventory.has_picked_up("basement_key"):
+        player "Should I use the key?"
+    else:
         player "The key must be somewhere."
 
     jump explore_basement_door

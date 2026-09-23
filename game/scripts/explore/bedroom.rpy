@@ -11,7 +11,7 @@ label explore_bedroom:
     show screen inventory_hud
 
     if not inventory.has("basement_key"):
-        show screen item_basement_key
+        show screen item_key
 
     with dissolve
 
@@ -26,7 +26,7 @@ label explore_bedroom:
     jump explore_bedroom
 
 
-screen item_basement_key():
+screen item_key():
 
     imagebutton:
         idle "images/items/key.webp"
