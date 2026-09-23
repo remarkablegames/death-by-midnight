@@ -60,7 +60,7 @@ define gui.interface_text_color = '#ffffff'
 define gui.text_font = "LibreBaskerville.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "LibreBaskerville.ttf"
+define gui.name_text_font = "DejaVuSans.ttf"
 
 ## The font used for out-of-game text.
 define gui.interface_text_font = "LibreBaskerville.ttf"
@@ -69,7 +69,7 @@ define gui.interface_text_font = "LibreBaskerville.ttf"
 define gui.text_size = 33
 
 ## The size of character names.
-define gui.name_text_size = 45
+define gui.name_text_size = 40
 
 ## The size of text in the game's user interface.
 define gui.interface_text_size = 33
@@ -106,8 +106,8 @@ define gui.textbox_yalign = 0.97
 
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
-define gui.name_xpos = 370
-define gui.name_ypos = -16
+define gui.name_xpos = 360
+define gui.name_ypos = -10
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
