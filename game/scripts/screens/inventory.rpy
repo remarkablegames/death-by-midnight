@@ -285,7 +285,7 @@ label inventory_give_scene(item_id, character_id):
     $ inventory.give(item_id, character.character_id)
     $ renpy.notify(f"You gave the {item.name.lower()} to {character.name}")
 
-    call expression "give_{0}_{1}".format(item_id, character.character_id)
+    call expression "give_{0}_to_{1}".format(item_id, character.character_id)
 
     return
 

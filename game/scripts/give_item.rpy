@@ -1,4 +1,4 @@
-label give_scroll_butler:
+label give_scroll_to_butler:
 
     show butler neutral at character_speak
     with dissolve
@@ -13,7 +13,7 @@ label give_scroll_butler:
     return
 
 
-label give_scroll_maid:
+label give_scroll_to_maid:
 
     show maid neutral at character_speak
     with dissolve
@@ -28,7 +28,7 @@ label give_scroll_maid:
     return
 
 
-label give_scroll_miss:
+label give_scroll_to_miss:
 
     show miss neutral at character_speak
     with dissolve
@@ -43,7 +43,7 @@ label give_scroll_miss:
     return
 
 
-label give_scroll_nurse:
+label give_scroll_to_nurse:
 
     show nurse neutral at character_speak
     with dissolve
@@ -58,7 +58,7 @@ label give_scroll_nurse:
     return
 
 
-label give_basement_key_butler:
+label give_basement_key_to_butler:
 
     show butler neutral at character_speak
     with dissolve
@@ -73,7 +73,7 @@ label give_basement_key_butler:
     return
 
 
-label give_basement_key_maid:
+label give_basement_key_to_maid:
 
     show maid neutral at character_speak
     with dissolve
@@ -88,7 +88,7 @@ label give_basement_key_maid:
     return
 
 
-label give_basement_key_miss:
+label give_basement_key_to_miss:
 
     show miss neutral at character_speak
     with dissolve
@@ -103,7 +103,7 @@ label give_basement_key_miss:
     return
 
 
-label give_basement_key_nurse:
+label give_basement_key_to_nurse:
 
     show nurse neutral at character_speak
     with dissolve
@@ -118,7 +118,7 @@ label give_basement_key_nurse:
     return
 
 
-label give_will_butler:
+label give_will_to_butler:
 
     show butler neutral at character_speak
     with dissolve
@@ -133,7 +133,7 @@ label give_will_butler:
     return
 
 
-label give_will_maid:
+label give_will_to_maid:
 
     show maid neutral at character_speak
     with dissolve
@@ -148,7 +148,7 @@ label give_will_maid:
     return
 
 
-label give_will_miss:
+label give_will_to_miss:
 
     show miss neutral at character_speak
     with dissolve
@@ -163,7 +163,7 @@ label give_will_miss:
     return
 
 
-label give_will_nurse:
+label give_will_to_nurse:
 
     show nurse neutral at character_speak
     with dissolve
@@ -178,7 +178,7 @@ label give_will_nurse:
     return
 
 
-label give_kitchen_knife_butler:
+label give_kitchen_knife_to_butler:
 
     show butler neutral at character_speak
     with dissolve
@@ -196,7 +196,7 @@ label give_kitchen_knife_butler:
     return
 
 
-label give_kitchen_knife_maid:
+label give_kitchen_knife_to_maid:
 
     show maid neutral at character_speak
     with dissolve
@@ -211,7 +211,7 @@ label give_kitchen_knife_maid:
     return
 
 
-label give_kitchen_knife_miss:
+label give_kitchen_knife_to_miss:
 
     show miss neutral at character_speak
     with dissolve
@@ -229,7 +229,7 @@ label give_kitchen_knife_miss:
     return
 
 
-label give_kitchen_knife_nurse:
+label give_kitchen_knife_to_nurse:
 
     show nurse neutral at character_speak
     with dissolve
