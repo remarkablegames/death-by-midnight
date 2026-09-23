@@ -84,7 +84,7 @@ define INVENTORY_ITEMS = {
         "basement_key",
         _("Key"),
         "images/items/key.webp",
-        _("A golden key."),
+        _("A silver key."),
     ),
     "will": InventoryItem(
         "will",

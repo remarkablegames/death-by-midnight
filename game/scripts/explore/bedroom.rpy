@@ -31,7 +31,7 @@ screen item_key():
     imagebutton:
         idle "images/items/key.webp"
         style "item_button"
-        at item_button(zoom=.12, xalign=.787, yalign=.548, matrixcolor=TintMatrix("#51432fff"), rotate=50)
+        at item_button(zoom=.035, xalign=.789, yalign=.552, matrixcolor=TintMatrix("#51432fff"), rotate=170)
         action [
             Hide("item_key"),
             Function(inventory.add, "basement_key"),
