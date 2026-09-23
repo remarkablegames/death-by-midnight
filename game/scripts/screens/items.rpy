@@ -7,22 +7,8 @@ screen item_scroll(tint="#ffffff00"):
         action [
             Hide("item_scroll"),
             Function(inventory.add, "scroll"),
-            Function(renpy.notify, "Picked up a scroll."),
+            Function(renpy.notify, "Picked up a scroll"),
             Jump("explore_interior_entrance"),
-        ]
-
-
-screen item_key():
-
-    imagebutton:
-        idle "images/items/key.webp"
-        style "item_button"
-        at item_button(zoom=.06, xalign=.88, yalign=.93, matrixcolor=TintMatrix("#5f4f39d9"))
-        action [
-            Hide("item_key"),
-            Function(inventory.add, "basement_key"),
-            Function(renpy.notify, "Picked up a key."),
-            Jump("explore_bedroom"),
         ]
 
 
@@ -35,6 +21,6 @@ screen item_will():
         action [
             Hide("item_will"),
             Function(inventory.add, "will"),
-            Function(renpy.notify, "Found the Master’s true will."),
+            Function(renpy.notify, "Found the Master’s true will"),
             Jump("explore_basement_inside"),
         ]

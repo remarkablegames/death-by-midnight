@@ -26,11 +26,12 @@ transform character_target_hover(xalign):
     yalign 1.0
 
 
-transform item_button(zoom, xalign, yalign, matrixcolor):
+transform item_button(zoom, xalign, yalign, matrixcolor=TintMatrix("#ffffff00"), rotate=0):
     zoom zoom
     xalign xalign
     yalign yalign
     matrixcolor matrixcolor
+    rotate rotate
     on hover:
         linear .1 zoom zoom + .01
     on idle:
