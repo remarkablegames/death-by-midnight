@@ -27,7 +27,7 @@ label intro_butler_greet:
 
     butler "You must be the detective."
 
-    player "That’s correct."
+    player "That’s right."
 
     butler "Follow me inside."
 

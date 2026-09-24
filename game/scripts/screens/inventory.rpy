@@ -126,7 +126,7 @@ define INVENTORY_ITEMS = {
     "will": InventoryItem(
         "will",
         _("The True Will"),
-        "images/items/scroll.webp",
+        "images/items/will.webp",
         _("The Master’s real will, hidden where no one could read it until the truth came out. It names his true heir, and binds the night to repeat until the family’s history is confessed before the reading."),
     ),
 }
@@ -285,7 +285,7 @@ label inventory_handle:
     elif inventory_result_action == "give":
 
         if _inventory_result[2] == "basement_door":
-            call inventory_unlock_door(inventory_result_item)
+            call basement_unlock_door(inventory_result_item)
         else:
             call inventory_give_scene(inventory_result_item, _inventory_result[2])
 
@@ -322,26 +322,6 @@ label inventory_give_scene(item_id, character_id):
     call expression "give_{0}_to_{1}".format(item_id, character.character_id)
 
     return
-
-
-label inventory_unlock_door(item_id):
-
-    if item_id != "basement_key":
-
-        $ renpy.notify("That won’t open the door.")
-        return
-
-    hide screen inventory_hud
-
-    $ is_basement_locked = False
-    $ door_drop_active = False
-    $ inventory.remove("basement_key")
-
-    player "I slide the key into the lock and turn it.{w=.3} The bolt yields with a dry click."
-
-    $ renpy.notify("You unlocked the basement door.")
-
-    jump expression _inventory_return_label
 
 
 style inventory_header is text_sans_serif:

@@ -55,7 +55,35 @@ label explore_basement_door_locked:
 
     if inventory.has_picked_up("basement_key"):
         player "Should I use the key?"
+
+        menu:
+            "Yes":
+                call basement_unlock_door("basement_key")
+            "No":
+                pass
+
     else:
         player "The key must be somewhere."
+
+    jump explore_basement_door
+
+
+label basement_unlock_door(item_id):
+
+    if item_id != "basement_key":
+        $ renpy.notify("That won’t open the door")
+        return
+
+    hide screen inventory_hud
+    hide screen interactable_door
+
+    $ is_basement_locked = False
+    $ door_drop_active = False
+    $ inventory.remove("basement_key")
+
+    "You slide the key into the lock and turn it."
+    "The bolt yields with a dry click."
+
+    $ renpy.notify("You unlocked the basement door")
 
     jump explore_basement_door
