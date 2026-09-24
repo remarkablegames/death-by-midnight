@@ -148,12 +148,6 @@ default inventory = Inventory()
 
 default persistent.knew_red_hair = False
 
-default gave_mia_milk = False
-
-default diary_recent_entry = ""
-
-default scene_characters = []
-
 
 screen inventory_hud():
 

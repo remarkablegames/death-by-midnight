@@ -1,3 +1,13 @@
+default seen_basement_door = False
+default is_basement_locked = True
+default door_drop_active = False
+default milk_taken = False
+default milk_beat_shown = False
+default gave_mia_milk = False
+default diary_recent_entry = ""
+default scene_characters = []
+
+
 label loop_start:
 
     $ inventory.items = []

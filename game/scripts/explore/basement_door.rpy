@@ -1,8 +1,3 @@
-default seen_basement_door = False
-default is_basement_locked = True
-default door_drop_active = False
-
-
 label explore_basement_door:
 
     $ scene_characters = []
