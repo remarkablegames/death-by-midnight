@@ -16,7 +16,7 @@ Read them to unlock talk options.
 | Family register | Bedroom | Reveals Ben's full name: Bernard Morrow, the Master's brother |
 | Master's camera | Bedroom | Contains photos of the young Master with head full of red hair that links him to Mia's hair color |
 | Mia's journal | Pond | Her despair; unlocks the empathetic dialogue that prevents her self-inflicted death |
-| Mother's letter | Basement | "To my two daughters, Nora and Madelyn": the sister reveal |
+
 
 <!-- prettier-ignore-end -->
 
@@ -68,5 +68,5 @@ Used or withheld to stop the night's death.
 - **Pond**: Mia's journal
 - **Kitchen**: knife, milk
 - **Living room**: coffee
-- **Basement**: mother's letter, True Will, pocket watch
+- **Basement**: True Will, pocket watch
 - **Entrance hall**: scroll

@@ -108,6 +108,7 @@ Design rule: a character's _public goal_ should be what they claim to want, whil
   - Uncle of Miss and not father
 - Maid
   - Little sister of Nurse
+  - Aunt of Miss (sister to Miss's mother, Nurse)
   - Romantically involved with Butler
   - Envious of Miss and Nurse
 - Miss

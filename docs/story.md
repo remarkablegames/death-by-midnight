@@ -51,6 +51,7 @@ Knowledge milestones to unlock across loops:
 - Learn that Mia is the Master's daughter.
 - Learn why the Nurse protects the Master.
 - Discover who benefits from each death and why Madelyn's and Mia's benefit no one.
+- Learn through dialogue that the Nurse and the Maid are sisters (Madelyn is Nora's younger sister and Mia's aunt); surfaced along Nora's "why I protect the Master" talk track.
 - Discover why the detective is trapped in the loop.
 
 ## The Cursed Will
