@@ -10,15 +10,15 @@ label explore_basement_door:
 
     if is_basement_locked:
         if clock.is_night_dark:
-            scene bg door closed dark
+            scene bg basement door closed dark
         else:
-            scene bg door closed light
+            scene bg basement door closed light
         show screen interactable_door
     else:
         if clock.is_night_dark:
-            scene bg door open dark
+            scene bg basement door open dark
         else:
-            scene bg door open light
+            scene bg basement door open light
 
     show screen time_display
     show screen inventory_hud
