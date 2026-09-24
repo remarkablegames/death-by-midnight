@@ -58,7 +58,7 @@ label explore_basement_door_locked:
 
         menu:
             "Yes":
-                call basement_unlock_door("basement_key")
+                jump basement_door_unlock
             "No":
                 pass
 
@@ -68,11 +68,7 @@ label explore_basement_door_locked:
     jump explore_basement_door
 
 
-label basement_unlock_door(item_id):
-
-    if item_id != "basement_key":
-        $ renpy.notify("That won’t open the door")
-        return
+label basement_door_unlock:
 
     hide screen inventory_hud
     hide screen interactable_door

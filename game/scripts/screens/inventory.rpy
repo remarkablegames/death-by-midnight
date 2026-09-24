@@ -60,6 +60,11 @@ init python:
             drag = drags[0]
             drag.snap(drag.start_x, drag.start_y, delay=0.25)
             return None
+        if drop.drag_name == "basement_door" and drags[0].drag_name != "basement_key":
+            drag = drags[0]
+            drag.snap(drag.start_x, drag.start_y, delay=0.25)
+            renpy.notify("That won’t open the door")
+            return None
         return ("give", drags[0].drag_name, drop.drag_name)
 
 
@@ -285,7 +290,7 @@ label inventory_handle:
     elif inventory_result_action == "give":
 
         if _inventory_result[2] == "basement_door":
-            call basement_unlock_door(inventory_result_item)
+            jump basement_door_unlock
         else:
             call inventory_give_scene(inventory_result_item, _inventory_result[2])
 
