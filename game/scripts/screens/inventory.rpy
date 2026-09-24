@@ -92,6 +92,12 @@ define INVENTORY_ITEMS = {
         "images/items/kitchen_knife.webp",
         _("An old kitchen knife that’s starting to rust."),
     ),
+    "coffee": InventoryItem(
+        "coffee",
+        _("Coffee"),
+        "images/items/coffee.webp",
+        _("A half-finished cup of brew, left in the living room. It has a sweet and chemical fragrance."),
+    ),
     "camera": InventoryItem(
         "camera",
         _("Camera"),

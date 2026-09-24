@@ -15,7 +15,7 @@ Read them to unlock talk options.
 | Scroll | Entrance hall | Hints the will being read aloud is not the real one; names the hunt for the _True Will_ |
 | Family register | Bedroom | Reveals Ben's full name: Bernard Morrow, the Master's brother |
 | Master's camera | Bedroom | Contains photos of the young Master with head full of red hair that links him to Mia's hair color |
-| Mia's journal | Room | Her despair; unlocks the empathetic dialogue that prevents her self-inflicted death |
+| Mia's journal | Backyard | Her despair; unlocks the empathetic dialogue that prevents her self-inflicted death |
 | Mother's letter | Basement | "To my two daughters, Nora and Madelyn": the sister reveal |
 
 <!-- prettier-ignore-end -->
@@ -43,7 +43,7 @@ Used or withheld to stop the night's death.
 | Item | Where | Verb |
 | --- | --- | --- |
 | Cup with residue | Study | Proves Ben died by poison, not accident |
-| Medicine bottle (Nora's) | Kitchen | The poison vehicle: swapping or destroying it prevents Ben's death |
+| Coffee (Nora's) | Living room | The poison vehicle: swapping or destroying it prevents Ben's death |
 | Kitchen knife | Kitchen | Stays clean; not premeditated. Its condition exposes the frame on Ben |
 
 <!-- prettier-ignore-end -->
@@ -64,7 +64,8 @@ Used or withheld to stop the night's death.
 
 - **Study**: locket, Bernard letter, never-sent letter, camera, wine cup
 - **Bedroom**: family register, spare basement key, Master's camera
-- **Room**: Mia's journal
-- **Kitchen**: knife, medicine bottle
+- **Backyard**: Mia's journal
+- **Kitchen**: knife
+- **Living room**: coffee
 - **Basement**: mother's letter, True Will, pocket watch
 - **Entrance hall**: scroll

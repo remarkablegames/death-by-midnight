@@ -9,6 +9,9 @@ label explore_living_room:
     else:
         scene bg living room evening
 
+    if not inventory.has_picked_up("coffee"):
+        show screen item_coffee
+
     show screen time_display
     show screen inventory_hud
     with dissolve
@@ -22,3 +25,24 @@ label explore_living_room:
         jump inventory_handle
 
     jump explore_living_room
+
+
+screen item_coffee():
+
+    if clock.is_night_dark:
+        $ tint = "#050a18"
+    elif clock.is_night_light:
+        $ tint = "#333"
+    else:
+        $ tint = "#ffe59a"
+
+    imagebutton:
+        idle "images/items/coffee.webp"
+        style "item_button"
+        at item_button(zoom=.13, xalign=.155, yalign=.602, matrixcolor=TintMatrix(tint))
+        action [
+            Hide("item_coffee"),
+            Function(inventory.add, "coffee"),
+            Function(renpy.notify, "Picked up coffee"),
+            Jump("explore_living_room"),
+        ]

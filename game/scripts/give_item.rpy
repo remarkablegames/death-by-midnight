@@ -178,6 +178,75 @@ label give_will_to_nurse:
     return
 
 
+label give_coffee_to_butler:
+
+    show butler neutral at character_speak
+    with dissolve
+
+    player "I found a cup of coffee lying around."
+
+    butler "It has an unnatural smell.{w=.3} I don’t believe it’s a blend from our kitchen."
+
+    $ inventory.add("coffee")
+    $ renpy.notify("Butler Ben handed the coffee back to you")
+
+    hide butler
+    with dissolve
+
+    return
+
+
+label give_coffee_to_maid:
+
+    show maid neutral at character_speak
+    with dissolve
+
+    player "I found a cup of coffee lying around."
+
+    maid "Sweet beneath the bitter.{w=.3} Whoever made that cup measured it carefully."
+
+    $ inventory.add("coffee")
+    $ renpy.notify("Maid Madelyn handed the coffee back to you")
+
+    hide maid
+    with dissolve
+
+    return
+
+
+label give_coffee_to_miss:
+
+    show miss neutral at character_speak
+    with dissolve
+
+    player "I found a cup of coffee lying around."
+
+    miss "Don’t give me that.{w=.3} I only drink hot coffee."
+
+    $ inventory.add("coffee")
+    $ renpy.notify("Miss Mia handed the coffee back to you")
+
+    hide miss
+    with dissolve
+
+    return
+
+
+label give_coffee_to_nurse:
+
+    show nurse neutral at character_speak
+    with dissolve
+
+    player "I found a cup of coffee lying around."
+
+    nurse "Careless of someone to leave that lying about.{w=.3} Let me throw it out for you."
+
+    hide nurse
+    with dissolve
+
+    return
+
+
 label give_camera_to_butler:
 
     show butler neutral at character_speak
