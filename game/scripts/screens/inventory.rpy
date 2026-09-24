@@ -113,8 +113,9 @@ define INVENTORY_ITEMS = {
         "diary",
         _("Diary"),
         "images/items/diary.webp",
-        _("Someone’s journal left behind by the pond. The most recent entry says:\n\n“I wish my parents would pay more attention to me. I feel like father is hiding something.”"),
+        _("Someone’s journal, left behind by the pond."),
     ),
+
     "camera": InventoryItem(
         "camera",
         _("Camera"),
@@ -144,6 +145,12 @@ define INVENTORY_SLOT_YSTEP = 68
 
 
 default inventory = Inventory()
+
+default persistent.knew_red_hair = False
+
+default gave_mia_milk = False
+
+default diary_recent_entry = ""
 
 default scene_characters = []
 
@@ -248,7 +255,7 @@ screen inventory_read(item):
                     xysize (600, 160)
                     align (0.5, 0.5)
 
-                text item.description:
+                text (diary_description() if item.item_id == "diary" else item.description):
                     style "inventory_read_body"
                     xalign 0.5
                     xmaximum 620
@@ -277,6 +284,9 @@ label inventory_handle:
             jump expression _inventory_return_label
 
         call screen inventory_read(_read_item)
+
+        if _read_item.item_id == "camera":
+            $ persistent.knew_red_hair = True
 
     elif inventory_result_action == "give":
 

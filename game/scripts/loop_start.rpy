@@ -12,5 +12,7 @@ label loop_start:
 
     $ milk_taken = False
     $ milk_beat_shown = False
+    $ gave_mia_milk = False
+    $ diary_recent_entry = diary_recent_entry_text()
 
     jump explore_interior_entrance

@@ -15,7 +15,7 @@ Read them to unlock talk options.
 | Scroll | Entrance hall | Hints the will being read aloud is not the real one; names the hunt for the _True Will_ |
 | Family register | Bedroom | Reveals Ben's full name: Bernard Morrow, the Master's brother |
 | Master's camera | Bedroom | Contains photos of the young Master with head full of red hair that links him to Mia's hair color |
-| Mia's journal | Pond | Her despair; unlocks the empathetic dialogue that prevents her self-inflicted death |
+| Mia's journal | Pond | Multi-entry; entries surface as knowledge unlocks (favoritism, poison/bloodline, red-hair wonder once the camera is read, despair). Unlocks the empathetic dialogue that prevents her self-inflicted death |
 
 
 <!-- prettier-ignore-end -->

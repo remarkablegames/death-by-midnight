@@ -38,7 +38,46 @@ screen item_diary():
         at item_button(zoom=.035, xalign=.385, yalign=.535, matrixcolor=TintMatrix(tint))
         action [
             Hide("item_diary"),
-            Function(inventory.add, "diary"),
-            Function(renpy.notify, "Picked up diary"),
+            Function(diary_pickup),
             Jump("explore_pond"),
         ]
+
+
+init python:
+
+    def diary_recent_entry_text():
+
+        if gave_mia_milk:
+            return _("“I’m grateful to the person who brought me milk today.”")
+        elif milk_taken:
+            return _("“They took the milk. Not that it mattered. I didn’t want it anyway.”")
+        else:
+            return _("“I wish they paid more attention to me. Father is always with Madelyn. I feel like he’s hiding something.”")
+
+    def diary_pickup():
+
+        renpy.store.diary_recent_entry = diary_recent_entry_text()
+        renpy.store.inventory.add("diary")
+        renpy.notify(_("Picked up diary"))
+
+    def diary_description():
+
+        text = _("Someone’s journal, left behind by the pond.\n\nRecent entry:\n") + renpy.store.diary_recent_entry
+
+        text += _(
+            "\n\nAn older page:\n"
+            "“Mother says there are mixtures that heal and mixtures that harm. Knowing which is which is the difference between a cure or a toxin.”"
+        )
+
+        if persistent.knew_red_hair:
+            text += _(
+                "\n\nA middle page, the ink smudged:\n"
+                "“Mother says my red hair must come from some ancestor long ago. I wonder which one.”"
+            )
+
+        text += _(
+            "\n\nLast page:\n"
+            "“I smile at dinner and everyone believes it. I’m so tired of acting. Sometimes I come to the pond so no one can see me.”"
+        )
+
+        return text
