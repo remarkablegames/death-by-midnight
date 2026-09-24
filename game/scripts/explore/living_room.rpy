@@ -1,13 +1,13 @@
-label explore_room:
+label explore_living_room:
 
     $ scene_characters = []
 
     if clock.is_night_dark:
-        scene bg room night dark
+        scene bg living room night dark
     elif clock.is_night_light:
-        scene bg room night light
+        scene bg living room night light
     else:
-        scene bg room evening
+        scene bg living room evening
 
     show screen time_display
     show screen inventory_hud
@@ -17,8 +17,8 @@ label explore_room:
 
     if _return is not None:
         $ _inventory_result = _return
-        $ _inventory_return_label = "explore_room"
+        $ _inventory_return_label = "explore_living_room"
         $ _return = None
         jump inventory_handle
 
-    jump explore_room
+    jump explore_living_room
