@@ -178,6 +178,66 @@ label give_will_to_nurse:
     return
 
 
+label give_camera_to_butler:
+
+    show butler neutral at character_speak
+    with dissolve
+
+    player "The Master’s camera.{w=.3} There’s pictures of him when he was young."
+
+    butler "He was handsome once,{w=.1} before the manor took its dues."
+
+    hide butler
+    with dissolve
+
+    return
+
+
+label give_camera_to_maid:
+
+    show maid neutral at character_speak
+    with dissolve
+
+    player "The Master’s camera.{w=.3} There’s pictures of him when he was young."
+
+    maid "Heaven rest him,{w=.1} he lost that hair long before he lost himself."
+
+    hide maid
+    with dissolve
+
+    return
+
+
+label give_camera_to_miss:
+
+    show miss neutral at character_speak
+    with dissolve
+
+    player "The Master’s camera.{w=.3} There’s pictures of him when he was young."
+
+    miss "Although I didn’t interact with him often,{w=.1} he always treated me in a special way."
+
+    hide miss
+    with dissolve
+
+    return
+
+
+label give_camera_to_nurse:
+
+    show nurse neutral at character_speak
+    with dissolve
+
+    player "The Master’s camera.{w=.3} There’s pictures of him when he was young."
+
+    nurse "What a nostalic sight."
+
+    hide nurse
+    with dissolve
+
+    return
+
+
 label give_kitchen_knife_to_butler:
 
     show butler neutral at character_speak
@@ -185,7 +245,7 @@ label give_kitchen_knife_to_butler:
 
     player "I found a knife in the kitchen."
 
-    butler "I’m the butler,{w=.1} not the cook.{w=.3} Return it back to where you found it."
+    butler "I’m the butler,{w=.1} not the cook.{w=.3} Put it back where you found it."
 
     $ inventory.add("kitchen_knife")
     $ renpy.notify("Butler Ben handed the kitchen knife back to you")

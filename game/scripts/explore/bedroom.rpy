@@ -13,6 +13,9 @@ label explore_bedroom:
     if not inventory.has("basement_key"):
         show screen item_key
 
+    if not inventory.has_picked_up("camera"):
+        show screen item_camera
+
     with dissolve
 
     call screen arrow_left_button(label="explore_interior_entrance", xalign=.05, yalign=1.0, minutes=5)
@@ -24,6 +27,25 @@ label explore_bedroom:
         jump inventory_handle
 
     jump explore_bedroom
+
+
+screen item_camera():
+
+    if clock.is_night_light:
+        $ tint = "#ffffff00"
+    else:
+        $ tint = "#ffcf9a"
+
+    imagebutton:
+        idle "images/items/camera.webp"
+        style "item_button"
+        at item_button(zoom=.05, xalign=.39, yalign=.534, matrixcolor=TintMatrix(tint))
+        action [
+            Hide("item_camera"),
+            Function(inventory.add, "camera"),
+            Function(renpy.notify, "Picked up camera"),
+            Jump("explore_bedroom"),
+        ]
 
 
 screen item_key():

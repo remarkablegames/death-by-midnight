@@ -92,6 +92,12 @@ define INVENTORY_ITEMS = {
         "images/items/kitchen_knife.webp",
         _("An old kitchen knife that’s starting to rust."),
     ),
+    "camera": InventoryItem(
+        "camera",
+        _("Camera"),
+        "images/items/camera.webp",
+        _("Contains pictures of the young Master. Looks like before he went bald, he had a full head of red hair."),
+    ),
     "will": InventoryItem(
         "will",
         _("The True Will"),
@@ -133,7 +139,7 @@ screen inventory_hud():
                 style "inventory_header"
                 pos (INVENTORY_PANEL_X + INVENTORY_PANEL_PAD, INVENTORY_PANEL_Y + 16)
 
-            text _("Click to read. Drag onto a character on screen to hand it over."):
+            text _("Click to read. Drag onto a character to hand it over."):
                 style "inventory_hint"
                 pos (INVENTORY_PANEL_X + INVENTORY_PANEL_PAD, INVENTORY_PANEL_Y + 50)
                 xmaximum INVENTORY_PANEL_WIDTH - INVENTORY_PANEL_PAD
