@@ -32,6 +32,7 @@ screen arrow_button(arrow, label, xalign, yalign, minutes=0):
             Hide("item_camera"),
             Hide("item_coffee"),
             Hide("item_milk"),
+            Hide("item_diary"),
             Jump(label),
         ]
 

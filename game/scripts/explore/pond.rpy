@@ -7,6 +7,9 @@ label explore_pond:
     else:
         scene bg pond evening
 
+    if not inventory.has_picked_up("diary"):
+        show screen item_diary
+
     show screen time_display
     show screen inventory_hud
     with dissolve
@@ -20,3 +23,22 @@ label explore_pond:
         jump inventory_handle
 
     jump explore_pond
+
+
+screen item_diary():
+
+    if clock.is_night_light:
+        $ tint = "#2a4468"
+    else:
+        $ tint = "#ffcf9a"
+
+    imagebutton:
+        idle "images/items/diary.webp"
+        style "item_button"
+        at item_button(zoom=.035, xalign=.385, yalign=.535, matrixcolor=TintMatrix(tint))
+        action [
+            Hide("item_diary"),
+            Function(inventory.add, "diary"),
+            Function(renpy.notify, "Picked up diary"),
+            Jump("explore_pond"),
+        ]

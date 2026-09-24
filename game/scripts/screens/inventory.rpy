@@ -109,6 +109,12 @@ define INVENTORY_ITEMS = {
         _("A carton of milk from the kitchen. It smells faintly sour."),
     ),
 
+    "diary": InventoryItem(
+        "diary",
+        _("Diary"),
+        "images/items/diary.webp",
+        _("Someone’s journal left behind by the pond. The most recent entry says:\n\n“I wish my parents would pay more attention to me. I feel like father is hiding something.”"),
+    ),
     "camera": InventoryItem(
         "camera",
         _("Camera"),
@@ -307,7 +313,7 @@ label inventory_give_scene(item_id, character_id):
     hide screen inventory_hud
 
     $ inventory.give(item_id, character.character_id)
-    $ renpy.notify(f"You gave the {item.name.lower()} to {character.name}")
+    $ renpy.notify(f"You gave {item.name} to {character.name}")
 
     call expression "give_{0}_to_{1}".format(item_id, character.character_id)
 

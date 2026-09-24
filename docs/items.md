@@ -15,7 +15,7 @@ Read them to unlock talk options.
 | Scroll | Entrance hall | Hints the will being read aloud is not the real one; names the hunt for the _True Will_ |
 | Family register | Bedroom | Reveals Ben's full name: Bernard Morrow, the Master's brother |
 | Master's camera | Bedroom | Contains photos of the young Master with head full of red hair that links him to Mia's hair color |
-| Mia's journal | Backyard | Her despair; unlocks the empathetic dialogue that prevents her self-inflicted death |
+| Mia's journal | Pond | Her despair; unlocks the empathetic dialogue that prevents her self-inflicted death |
 | Mother's letter | Basement | "To my two daughters, Nora and Madelyn": the sister reveal |
 
 <!-- prettier-ignore-end -->
@@ -65,7 +65,7 @@ Used or withheld to stop the night's death.
 
 - **Study**: locket, Bernard letter, never-sent letter, camera, wine cup
 - **Bedroom**: family register, spare basement key, Master's camera
-- **Backyard**: Mia's journal
+- **Pond**: Mia's journal
 - **Kitchen**: knife, milk
 - **Living room**: coffee
 - **Basement**: mother's letter, True Will, pocket watch

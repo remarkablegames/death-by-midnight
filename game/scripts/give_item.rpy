@@ -316,6 +316,91 @@ label give_coffee_to_nurse:
     return
 
 
+label give_diary_to_butler:
+
+    show butler neutral at character_speak
+    with dissolve
+
+    player "I found a diary by the pond."
+
+    butler "That’s the young lady’s journal."
+    butler "Make sure to hand it to her when you see her."
+
+    $ inventory.add("diary")
+    $ renpy.notify("Butler Ben handed the diary back to you")
+
+    hide butler
+    with dissolve
+
+    return
+
+
+label give_diary_to_maid:
+
+    show maid neutral at character_speak
+    with dissolve
+
+    player "I found a diary by the pond."
+
+    maid "That’s Mia’s journal.{w=.3} She’s currently looking for it."
+
+    $ inventory.add("diary")
+    $ renpy.notify("Maid Madelyn handed the diary back to you")
+
+    hide maid
+    with dissolve
+
+    return
+
+
+label give_diary_to_miss:
+
+    show miss neutral at character_speak
+    with dissolve
+
+    player "I found this by the water."
+
+    miss "Did you read it?"
+
+    menu:
+        "Yes":
+            miss "I can tell."
+
+            player "I..."
+
+            miss "Don’t look at me like that.{w=.3} This stays between us."
+
+            player "Understood."
+
+        "No":
+            miss "I’ll take your word for it."
+
+    hide miss
+    with dissolve
+
+    return
+
+
+label give_diary_to_nurse:
+
+    show nurse neutral at character_speak
+    with dissolve
+
+    player "I found a diary by the pond."
+
+    nurse "The girl’s diary."
+    nurse "She’s been writing out at the pond during the evening."
+    nurse "Please give it back to her when you can."
+
+    $ inventory.add("diary")
+    $ renpy.notify("Nurse Nora handed the diary back to you")
+
+    hide nurse
+    with dissolve
+
+    return
+
+
 label give_camera_to_butler:
 
     show butler neutral at character_speak
