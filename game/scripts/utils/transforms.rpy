@@ -26,6 +26,11 @@ transform character_target_hover(xalign):
     yalign 1.0
 
 
+transform flip(xzoom=1, yzoom=1):
+    xzoom xzoom
+    yzoom yzoom
+
+
 transform item_button(zoom, xalign, yalign, matrixcolor=TintMatrix("#ffffff00"), rotate=0):
     zoom zoom
     xalign xalign

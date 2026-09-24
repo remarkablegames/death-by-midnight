@@ -80,30 +80,42 @@ define INVENTORY_ITEMS = {
         "images/items/scroll.webp",
         _("An aged parchment, creased from being tucked away in the rafters. In curling ink, it reads:\n\n“To whoever finds this: the will you seek is not the one they will read aloud. Follow the truth to whoever holds the real document.”"),
     ),
+
     "basement_key": InventoryItem(
         "basement_key",
         _("Key"),
         "images/items/key.webp",
         _("A silver key."),
     ),
+
     "kitchen_knife": InventoryItem(
         "kitchen_knife",
         _("Kitchen Knife"),
         "images/items/kitchen_knife.webp",
         _("An old kitchen knife that’s starting to rust."),
     ),
+
     "coffee": InventoryItem(
         "coffee",
         _("Coffee"),
         "images/items/coffee.webp",
-        _("A half-finished cup of brew, left in the living room. It has a sweet and chemical fragrance."),
+        _("A half-finished cup of brew from the living room. It has a sweet and chemical taste."),
     ),
+
+    "milk": InventoryItem(
+        "milk",
+        _("Milk"),
+        "images/items/milk.webp",
+        _("A carton of milk from the kitchen. It smells faintly sour."),
+    ),
+
     "camera": InventoryItem(
         "camera",
         _("Camera"),
         "images/items/camera.webp",
         _("Contains pictures of the young Master. Looks like before he went bald, he had a full head of red hair."),
     ),
+
     "will": InventoryItem(
         "will",
         _("The True Will"),

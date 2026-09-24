@@ -10,6 +10,9 @@ label explore_kitchen:
     if not inventory.has_picked_up("kitchen_knife"):
         show screen item_kitchen_knife
 
+    if not milk_taken:
+        show screen item_milk
+
     show screen time_display
     show screen inventory_hud
     with dissolve
@@ -40,5 +43,25 @@ screen item_kitchen_knife():
             Hide("item_kitchen_knife"),
             Function(inventory.add, "kitchen_knife"),
             Function(renpy.notify, "Picked up kitchen knife"),
+            Jump("explore_kitchen"),
+        ]
+
+
+screen item_milk():
+
+    if clock.is_night_light:
+        $ tint = "#1f3a5f"
+    else:
+        $ tint = "#ffd9ae"
+
+    imagebutton:
+        idle "images/items/milk.webp"
+        style "item_button"
+        at item_button(zoom=.1, xalign=.7, yalign=.329, matrixcolor=TintMatrix(tint)), flip(xzoom=-1)
+        action [
+            Hide("item_milk"),
+            SetVariable("milk_taken", True),
+            Function(inventory.add, "milk"),
+            Function(renpy.notify, "Picked up milk"),
             Jump("explore_kitchen"),
         ]

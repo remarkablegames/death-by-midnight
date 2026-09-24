@@ -31,6 +31,7 @@ Each carries a piece of the Master's history and a reaction when handed over.
 | Locket (engraved "E.M.", lock of red hair) | Study | Mia: the object-gesture of her empathy path; also connects her hair to the Master |
 | Letter to "Brother Bernard" | Study | Anyone: reveals the Master's name and the brotherhood |
 | Never-sent letter to "my girl" | Study | Mia or Nora: his affection, signed as her father |
+| Milk | Kitchen | Red herring: companion to the poisoned coffee, but provably harmless. Left in place, Miss Mia drinks it and unlocks a persistent talk option; picked up, that beat is blocked |
 
 <!-- prettier-ignore-end -->
 
@@ -65,7 +66,7 @@ Used or withheld to stop the night's death.
 - **Study**: locket, Bernard letter, never-sent letter, camera, wine cup
 - **Bedroom**: family register, spare basement key, Master's camera
 - **Backyard**: Mia's journal
-- **Kitchen**: knife
+- **Kitchen**: knife, milk
 - **Living room**: coffee
 - **Basement**: mother's letter, True Will, pocket watch
 - **Entrance hall**: scroll

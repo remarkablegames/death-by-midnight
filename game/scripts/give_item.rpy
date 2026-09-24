@@ -178,6 +178,75 @@ label give_will_to_nurse:
     return
 
 
+label give_milk_to_butler:
+
+    show butler neutral at character_speak
+    with dissolve
+
+    player "Is the milk expired?"
+
+    butler "Looks like it.{w=.3} But keep it in the fridge,{w=.1} someone might still be drinking it."
+
+    $ inventory.add("milk")
+    $ renpy.notify("Butler Ben handed the milk back to you")
+
+    hide butler
+    with dissolve
+
+    return
+
+
+label give_milk_to_maid:
+
+    show maid neutral at character_speak
+    with dissolve
+
+    player "Is the milk expired?"
+
+    maid "Past its date,{w=.1} like everything in this house lately."
+
+    $ inventory.add("milk")
+    $ renpy.notify("Maid Madelyn handed the milk back to you")
+
+    hide maid
+    with dissolve
+
+    return
+
+
+label give_milk_to_miss:
+
+    show miss neutral at character_speak
+    with dissolve
+
+    player "I brought you some milk."
+
+    miss "You thought of me?{w=.3} Thank you for your kindnesses."
+
+    hide miss
+    with dissolve
+
+    return
+
+
+label give_milk_to_nurse:
+
+    show nurse neutral at character_speak
+    with dissolve
+
+    player "Is the milk expired?"
+
+    nurse "The milk is fine."
+
+    $ inventory.add("milk")
+    $ renpy.notify("Nurse Nora handed the milk back to you")
+
+    hide nurse
+    with dissolve
+
+    return
+
+
 label give_coffee_to_butler:
 
     show butler neutral at character_speak
@@ -221,7 +290,7 @@ label give_coffee_to_miss:
 
     player "I found a cup of coffee lying around."
 
-    miss "Don’t give me that.{w=.3} I only drink hot coffee."
+    miss "Don’t give me that.{w=.3} I only drink milk."
 
     $ inventory.add("coffee")
     $ renpy.notify("Miss Mia handed the coffee back to you")
