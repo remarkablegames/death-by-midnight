@@ -11,21 +11,22 @@
 
 ### Detective
 
-- **Public role:** Detective hired to execute the Master's will and see the estate settled
+- **Public role:** The executor named in the Master's will, hired to read it at midnight and see the estate settled
 - **Public goal:** Read the will, settle the family, leave the manor
 - **Private goal (hidden from himself):** He is the Master's chosen instrument, a detective who follows the truth is exactly the mechanism that keeps the family's secrets tearing it apart, night after night
-- **Secret he does not know:** He cannot leave until the truth is named, because he is the one the will bound to see it done
-- **Fear:** Failing the job; unable to save others
-- **Misbelief:** He believes he is an impartial outsider with no stake in the family
+- **Secret he keeps from himself:** He investigated the Master's death once before and signed it off as natural causes. The will binds its executor, and the Master named him for exactly that reason
+- **Secret he does not know:** The clause carries a remedy, and it falls on the executor at 11:30
+- **Fear:** Failing the job; unable to save others; being the reason someone dies; unable to escape the time loop
+- **Misbelief:** He believes he is an impartial outsider with no stake in the family, when he is the compromised witness the Master deliberately chose
 - **Personality:** Inquisitive, methodical, dry
-- **Arc:** From impartial executor to recognizing that he's the Master's instrument and choosing what to do with that knowledge: expose the truth, protect the family, or inherit the manor himself
+- **Arc:** From impartial executor to recognizing that he is both the instrument and the bill, and choosing what to do with that knowledge: name the affair and let the rest stand, name everything, or take the watch and hold the binding
 
 ### Butler Ben
 
 - **Public role:** Butler, head of household, and Nora's husband
 - **Public goal:** Maintain order in the manor and ensure that the family's inheritance remains secure
 - **Private goal:** Inherit the manor for himself and gain control over the family's future
-- **Secret:** He is having an affair with Madelyn
+- **Secret:** He is having an affair with Madelyn, and at 7:30 he stabs her at the manor door with the kitchen knife rather than let her expose the affair
 - **Secret he does not know:** Mia is the Master's biological daughter, making Ben her uncle rather than her father
 - **Fear:** Losing his position, authority, and the family's respect
 - **Misbelief:** He believes controlling the family is the same as protecting it
@@ -41,8 +42,9 @@
 - **Public role:** Maid at the manor and Nora's younger sister
 - **Public goal:** Perform her duties and remain useful to the household
 - **Private goal:** Win Ben's love and replace Nora as his wife
-- **Secret:** She is having an affair with Ben
+- **Secret:** She is having an affair with Ben, and he kills her for it at the manor door at 7:30 if the detective does not stop him
 - **Possible secret:** She suspects that Ben is not Mia's biological father
+- **If she survives:** Accuse the wrong person and she kills Nora in the kitchen at 8:30 by her own jealousy
 - **Fear:** Being abandoned, ignored, or trapped in her low social position
 - **Misbelief:** She believes taking Ben away from Nora will prove that she is more deserving of love
 - **Personality:** Distant, observant, resentful, and emotionally guarded
@@ -66,6 +68,7 @@
 - **Relationship with Nora:** Loves her mother but resents being protected and treated like a child
 - **Relationship with the Master:** Feels strangely connected to him without understanding why
 - **Arc:** From seeking love through jealousy and emotional manipulation to defining herself independently of her family's secrets
+- **Death:** Suicide at the pond at 10:30, arranged to read as the first death, and prevented only by the empathetic dialogue her journal unlocks
 - **Image:** Young woman in her teens with pale skin, large dark eyes, and deep reddish-brown hair in an elaborate updo with curled side tendrils and braided sections at the crown. She has an elegant, doll-like appearance. She wears an ornate Victorian-inspired dress in burgundy and mauve: puffed sleeves, cream ruffled cuffs, a high neckline, and a fitted bodice trimmed with gold bows. A cream underskirt falls beneath a voluminous overskirt gathered at the hips and finished with a scalloped hem.
 
 ### Nurse Nora
@@ -74,6 +77,7 @@
 - **Public goal:** Keep the family safe and prevent the household from falling apart
 - **Private goal:** Protect Mia from the truth while secretly hoping someone will acknowledge the harm done to her
 - **Secret:** The Master took advantage of her, and she has concealed the circumstances surrounding Mia's birth
+- **Poison:** She puts it in Ben's coffee at 9:30 the moment she overhears the affair and misunderstanding it
 - **Possible secret:** She suspects that Mia is the Master's daughter but has chosen not to reveal it
 - **Fear:** Losing Mia, being abandoned by Ben, or exposing the family to scandal
 - **Misbelief:** She believes silently enduring pain is the same as protecting the people she loves
@@ -92,14 +96,14 @@
 - **Public goal:** Ensure that his estate and will are handled according to his wishes
 - **Private goal:** Maintain control over his family even after death and force his secrets into the open
 - **Secret:** He is Mia's biological father
-- **Secret:** He deliberately designed the will to manipulate the household after his death, binding the night to repeat until the truth is named
+- **Secret:** He built a clause that binds whoever reads the will and requires a name to be spoken before midnight, and he named the compromised witness on purpose
 - **Fear:** Losing control over his family, reputation, and legacy
 - **Misbelief:** He believes wealth and intelligence give him the right to control other people's lives
 - **Personality:** Charismatic, calculating, possessive, and emotionally cruel
 - **Relationship with Ben:** Treats his younger brother as both a rival and an inferior
 - **Relationship with Nora:** Exploited her and uses Mia's parentage to maintain power over her
 - **Relationship with Mia:** Claims to care about her but primarily views her as part of his legacy
-- **Arc:** His influence is gradually exposed, revealing that the mystery is his final attempt to control the family
+- **Arc:** His influence is gradually exposed, revealing that the mystery is not revenge but a contract, and that its only available executor was a man who had already buried him once
 
 Design rule: a character's _public goal_ should be what they claim to want, while their _private goal_ is what actually drives their choices. The detective can uncover the private goals gradually through conversations, evidence, and different time loops.
 
@@ -133,8 +137,8 @@ Design rule: a character's _public goal_ should be what they claim to want, whil
 Who benefits from each death:
 
 - **Madelyn's death** benefits no one in the will; it invites suspicion, most of all on Ben
-- **Ben's death** benefits Nora (freedom from his control) and, through Mia, the Master's line
-- **Nora's death** benefits Madelyn; with the rival wife gone, she steps into the place beside Ben; it is the death that most clearly rewards her, yet she commits it in the fail-state not by calculation but in blind rage: the benefit is real, the plotting is not
-- **Mia's death** benefits Ben; the true heir dead, the estate falls to the Master's brother whichever will is read; it makes him the standing suspect yet again in the very loop that should have cleared him, and the truth (despair, not plot) vindicates the detective's doubt
+- **Ben's death** the detective reads as benefiting Nora, freed from a husband who controls her; it is in fact the one death she causes, and she causes it at 9:30 believing she is the one protecting the family
+- **Nora's death** benefits Madelyn; with the rival wife gone, she steps into the place beside Ben; it is the death that most clearly rewards her, yet she commits it at 8:30 not by calculation but in blind rage, and only because a wrong accusation put her there: the benefit is real, the plotting is not
+- **Mia's death** the detective reads as benefiting Ben: the true heir dead, the estate falls to the Master's brother whichever will is read; it makes him the standing suspect yet again in the very loop that should have cleared him. The truth is that it benefits no one, and the reading he does of it is the same mistake he makes about himself.
 
 Mystery's core tension: deaths have clear beneficiaries, but the beneficiaries aren't necessary the killers.

@@ -4,6 +4,8 @@ Every item should have a **verb**: it either changes what the detective knows (w
 
 Handing an item to a character runs a label named `give_<item>_to_<character>` (e.g. `give_scroll_to_nurse`). Every item/character pair needs a label since it owns the dialogue scene. `inventory_give_scene` in `scripts/screens/inventory.rpy` consumes the item and notifies before the label runs; if the character declines, the label calls `inventory.add(item_id)` and its own notify to return the item. Labels may set flags or unlock talk options. Labels live in `game/scripts/give_item.rpy`.
 
+A give scene can close a cause on the death ladder or it can load one. Handing someone the thing that provokes them is disclosure, and disclosure kills. The giveable list below and the prevention list are therefore not the same list, and most items belong to both. See `docs/story.md`.
+
 ## Knowledge items
 
 Read them to unlock talk options.
@@ -34,19 +36,28 @@ Each carries a piece of the Master's history and a reaction when handed over.
 
 <!-- prettier-ignore-end -->
 
+## The missing knife
+
+The kitchen knife is not in the kitchen. It is the weapon in Madelyn's death, and its absence is the first evidence that points at Ben.
+
+- It is taken from the kitchen early, by Ben, and left at the scene.
+- The empty block in the kitchen is a clue the player can look at in every loop.
+- It surfaces at the manor door in a later loop, once the detective knows to look for it, and its condition is what convicts Ben.
+
 ## Prevention items
 
-Used or withheld to stop the night's death.
+Each closes one cause on the death ladder in `docs/story.md`. A cause closed in one night stays closed in every later night.
 
 <!-- prettier-ignore-start -->
 
 | Item | Where | Verb |
 | --- | --- | --- |
-| Cup with residue | Study | Proves Ben died by poison, not accident |
-| Coffee (Nora's) | Living room | The poison vehicle: swapping or destroying it prevents Ben's death |
-| Kitchen knife | Kitchen | Stays clean; not premeditated. Its condition exposes the frame on Ben |
+| Cup with residue | Study | Proves Ben died by poison, not by a knife, and by a hand other than Madelyn's |
+| Coffee (Nora's) | Living room | The poison vehicle. Swapping or destroying it empties the 9:30 hour |
 
 <!-- prettier-ignore-end -->
+
+Prevention is not knowledge. Knowing the affair does not close the 9:30 hour. Only never having said it aloud, or removing the coffee, does.
 
 ## Endgame items
 
@@ -64,8 +75,9 @@ Used or withheld to stop the night's death.
 
 - **Study**: locket, Bernard letter, never-sent letter, camera, wine cup
 - **Bedroom**: family register, spare basement key, Master's camera
+- **Manor door**: the missing kitchen knife, once the detective knows to look
 - **Pond**: Mia's journal
-- **Kitchen**: knife, milk
+- **Kitchen**: milk, and the empty block where the knife was
 - **Living room**: coffee
 - **Basement**: True Will, pocket watch
 - **Entrance hall**: scroll
