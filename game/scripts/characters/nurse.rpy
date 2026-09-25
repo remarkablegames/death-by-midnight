@@ -3,6 +3,11 @@ label talk_nurse:
     show nurse neutral at character_speak
     with dissolve
 
+    $ context = room_intro("nurse")
+
+    if context:
+        "[context]"
+
     nurse "If you’re here about his care,{w=.1} speak plainly."
 
     if seen_basement_door and not inventory.has("basement_key"):

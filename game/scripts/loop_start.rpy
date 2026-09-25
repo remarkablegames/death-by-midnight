@@ -6,6 +6,8 @@ default milk_beat_shown = False
 default gave_mia_milk = False
 default diary_recent_entry = ""
 default scene_characters = []
+default current_room = ""
+default room_intros_seen = set()
 
 
 label loop_start:
@@ -15,6 +17,9 @@ label loop_start:
     $ inventory.picked_up = []
 
     $ scene_characters = []
+
+    $ current_room = ""
+    $ room_intros_seen = set()
 
     $ seen_basement_door = False
     $ is_basement_locked = True

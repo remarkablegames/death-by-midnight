@@ -14,9 +14,7 @@ label explore_interior_entrance:
     show screen inventory_hud
     with dissolve
 
-    $ scene_characters = [
-      SceneCharacter("butler", expression="smile", xalign=.3, tint=("#333" if clock.is_night_dark else "#ffffff00")),
-    ]
+    $ set_scene_characters("interior_entrance")
 
     show screen arrow_button("↑", label="explore_bedroom", xalign=.728, yalign=.13, minutes=5)
     show screen arrow_up_button(label="explore_living_room", xalign=.345, yalign=.13, minutes=5)

@@ -1,6 +1,6 @@
 label explore_living_room:
 
-    $ scene_characters = []
+    $ set_scene_characters("living_room")
 
     if clock.is_night_dark:
         scene bg living room night dark

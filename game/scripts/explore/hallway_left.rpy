@@ -1,6 +1,6 @@
 label explore_hallway_left:
 
-    $ scene_characters = []
+    $ set_scene_characters("hallway_left")
 
     if clock.is_night_dark:
         scene bg hallway left night dark

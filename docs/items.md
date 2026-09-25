@@ -17,7 +17,6 @@ Read them to unlock talk options.
 | Master's camera | Bedroom | Contains photos of the young Master with head full of red hair that links him to Mia's hair color |
 | Mia's journal | Pond | Multi-entry; entries surface as knowledge unlocks (favoritism, poison/bloodline, red-hair wonder once the camera is read, despair). Unlocks the empathetic dialogue that prevents her self-inflicted death |
 
-
 <!-- prettier-ignore-end -->
 
 ## Giveable backstory objects

@@ -6,6 +6,11 @@ label talk_miss:
     show miss neutral at character_speak
     with dissolve
 
+    $ context = room_intro("miss")
+
+    if context:
+        "[context]"
+
     miss "Oh,{w=.1} a guest.{w=.3} How...{w=.2} unusual for the hour."
 
     if not milk_taken and not milk_beat_shown:

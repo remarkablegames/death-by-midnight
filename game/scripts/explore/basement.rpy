@@ -1,6 +1,6 @@
 label explore_basement:
 
-    $ scene_characters = []
+    $ set_scene_characters("basement")
 
     scene bg basement light
 

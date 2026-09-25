@@ -1,6 +1,6 @@
 label explore_basement_door:
 
-    $ scene_characters = []
+    $ set_scene_characters("basement_door")
     $ door_drop_active = is_basement_locked
 
     if is_basement_locked:

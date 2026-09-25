@@ -1,6 +1,6 @@
 label explore_kitchen:
 
-    $ scene_characters = []
+    $ set_scene_characters("kitchen")
 
     if clock.is_night_light:
         scene bg kitchen night
