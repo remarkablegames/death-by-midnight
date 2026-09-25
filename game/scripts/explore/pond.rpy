@@ -48,7 +48,7 @@ init python:
 
     def diary_recent_entry_text():
 
-        if gave_mia_milk:
+        if gave_miss_milk:
             return _("“I’m grateful to the person who brought me milk today.”")
         elif milk_taken:
             return _("“They took the milk. Not that it mattered. I didn’t want it anyway.”")
@@ -70,7 +70,7 @@ init python:
             "“Mother says there are mixtures that heal and mixtures that harm. Knowing which is which is the difference between a cure or a toxin.”"
         )
 
-        if persistent.knew_red_hair:
+        if persistent.knows_red_hair:
             text += _(
                 "\n\nA middle page, the ink smudged:\n"
                 "“Mother says my red hair must come from some ancestor long ago. I wonder which one.”"

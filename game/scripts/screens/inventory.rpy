@@ -151,8 +151,6 @@ define INVENTORY_SLOT_YSTEP = 68
 
 default inventory = Inventory()
 
-default persistent.knew_red_hair = False
-
 
 screen inventory_hud():
 
@@ -285,7 +283,7 @@ label inventory_handle:
         call screen inventory_read(_read_item)
 
         if _read_item.item_id == "camera":
-            $ persistent.knew_red_hair = True
+            $ persistent.knows_red_hair = True
 
     elif inventory_result_action == "give":
 

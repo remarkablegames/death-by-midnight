@@ -1,17 +1,6 @@
-default seen_basement_door = False
-default is_basement_locked = True
-default door_drop_active = False
-default milk_taken = False
-default milk_beat_shown = False
-default gave_mia_milk = False
-default diary_recent_entry = ""
-default is_item_interactable = True
-default scene_characters = []
-default current_room = ""
-default room_intros_seen = set()
-
-
 label loop_start:
+
+    $ clock = Clock()
 
     $ inventory.items = []
     $ inventory.given = []
@@ -29,7 +18,10 @@ label loop_start:
 
     $ milk_taken = False
     $ milk_beat_shown = False
-    $ gave_mia_milk = False
+    $ gave_miss_milk = False
     $ diary_recent_entry = diary_recent_entry_text()
+
+    $ disclosed_affair = False
+    $ accused_nurse = False
 
     jump explore_interior_entrance

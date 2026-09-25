@@ -1,6 +1,3 @@
-default persistent.knew_mia_milk = False
-
-
 label talk_miss:
 
     show miss neutral at character_speak
@@ -19,9 +16,9 @@ label talk_miss:
 
         miss "Have you seen the milk?{w=.3} I can’t seem to find it."
 
-        $ persistent.knew_mia_milk = True
+        $ persistent.knows_miss_milk = True
 
-    elif persistent.knew_mia_milk:
+    elif persistent.knows_miss_milk:
 
         menu:
             "Ask about the milk habit":

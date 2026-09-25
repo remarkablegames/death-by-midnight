@@ -223,7 +223,7 @@ label give_milk_to_miss:
 
     miss "You thought of me?{w=.3} Thank you for your kindnesses."
 
-    $ gave_mia_milk = True
+    $ gave_miss_milk = True
 
     hide miss
     with dissolve
