@@ -34,6 +34,7 @@
 - **Relationship with Madelyn:** Romantically involved with her, though he may see the relationship as temporary
 - **Relationship with Mia:** Believes she is his daughter and wants her loyalty
 - **Arc:** From trying to control the family and secure the inheritance to confronting the consequences of his lies
+- **Image:** Man in his 30s with light skin, short wavy brown hair, and thick eyebrows. He has a neat, reserved expression. He wears a formal butler's uniform: a black tailcoat over a dark waistcoat with matching trousers, a cream high-collared shirt, and a black bow tie. A small gold brooch fastens the front of his coat.
 
 ### Maid Madelyn
 
@@ -49,6 +50,7 @@
 - **Relationship with Nora:** Loves her as a sister but resents her marriage, security, and closeness to Ben
 - **Relationship with Mia:** Envious of the attention Mia receives from Ben and Nora
 - **Arc:** From blaming Nora and Mia for her unhappiness to recognizing Ben's manipulation and taking responsibility for her own choices
+- **Image:** Woman in her early 20s with light skin, large brown eyes, and short, soft grayish-brown hair framing her face. Her expression is gentle and composed. She wears a Victorian maid's uniform: a dark long-sleeved dress with a high white collar, puffed shoulders, and white ruffled cuffs. A cream apron tied at her waist falls over a long, full skirt with a ruffled hem, and a white ruffled maid headpiece sits on her head.
 
 ### Miss Mia
 
@@ -64,6 +66,7 @@
 - **Relationship with Nora:** Loves her mother but resents being protected and treated like a child
 - **Relationship with the Master:** Feels strangely connected to him without understanding why
 - **Arc:** From seeking love through jealousy and emotional manipulation to defining herself independently of her family's secrets
+- **Image:** Young woman in her teens with pale skin, large dark eyes, and deep reddish-brown hair in an elaborate updo with curled side tendrils and braided sections at the crown. She has an elegant, doll-like appearance. She wears an ornate Victorian-inspired dress in burgundy and mauve: puffed sleeves, cream ruffled cuffs, a high neckline, and a fitted bodice trimmed with gold bows. A cream underskirt falls beneath a voluminous overskirt gathered at the hips and finished with a scalloped hem.
 
 ### Nurse Nora
 
@@ -80,6 +83,7 @@
 - **Relationship with Mia:** Deeply protective, sometimes to the point of being overbearing
 - **Relationship with the Master:** Hates and fears him, but feels trapped by his power and the secret he left behind
 - **Arc:** From suppressing the truth to protect her family to confronting the people who harmed her and choosing honesty
+- **Image:** Woman in her 30s with light skin, large dark eyes, and long dark-brown hair partly covered by a traditional white head covering. Her expression is calm and gentle. She wears a Victorian servant's uniform: a long dark gray dress with a high buttoned collar, loose sleeves, and white cuffs. A large cream apron covers the front nearly to the floor, tied with a wide waistband, and a ruffled white cap with long pale hanging panels frames her face.
 
 ### The Master
 
