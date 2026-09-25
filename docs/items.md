@@ -42,7 +42,7 @@ The kitchen knife is the one death weapon the player can reach, and it is the wh
 
 - It is pickable in the kitchen before 7 p.m. **Pocketing it closes the 7:30 hour permanently.**
 - **Handing it to Madelyn closes the 7:30 hour permanently.** She takes it off your hands and puts it away. Every other character hands it straight back.
-- Either path sets `persistent.closed_maid`, so the knife does not return to the kitchen on any later night.
+- Either path sets `persistent.resolved_maid`, so the knife does not return to the kitchen on any later night.
 - Nothing announces that the knife has gone. It is simply not on the board after 7 p.m., and a player who was in the kitchen before then already knows it was there.
 - The board without the knife only registers as evidence if the player has asked Madelyn about the knife, so the game pays for knowledge rather than for walking around. A player who never asked sees a board with no knife on it and learns nothing from it.
 - The 7:30 discovery names the knife only when the player has earned it: her testimony plus the board, her testimony alone, or neither.

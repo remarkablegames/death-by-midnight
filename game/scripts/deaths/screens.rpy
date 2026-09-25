@@ -1,5 +1,6 @@
 define DEATH_HOURS = [
-    {"minutes": 19 * 60 + 30, "closed": "closed_maid", "label": "death_maid_approach"},
+    {"minutes": 19 * 60 + 30, "resolved": "resolved_maid", "label": "death_maid"},
+    {"minutes": 20 * 60 + 30, "resolved": "resolved_nurse", "label": "death_nurse", "depends": "accused_nurse"},
 ]
 
 define KNIFE_TAKEN_MINUTES = 19 * 60
@@ -8,14 +9,22 @@ define KNIFE_TAKEN_MINUTES = 19 * 60
 init python:
 
     def secure_kitchen_knife():
-        persistent.closed_maid = True
+        persistent.resolved_maid = True
+
+    def death_is_pending(death):
+        if getattr(persistent, death["resolved"]):
+            return False
+        depends = death.get("depends")
+        if depends and not getattr(store, depends):
+            return False
+        return True
 
 
-screen death_body(character_id, expression, discovery_label, xalign=.5, enabled=True):
+screen death_body(character, expression, label, xalign=.5, enabled=True):
 
     imagebutton:
         style "character_button"
-        idle character_sprite(character_id, expression)
+        idle character_sprite(character, expression)
         at character_body(xalign=xalign)
         sensitive enabled
-        action [Hide("death_body"), Jump(discovery_label)]
+        action [Hide("death_body"), Jump(label)]

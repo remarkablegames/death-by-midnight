@@ -5,10 +5,10 @@ default persistent.knows_miss_milk = False
 default persistent.knows_miss_parentage = False
 default persistent.knows_buried_death = False
 
-default persistent.closed_butler = False
-default persistent.closed_maid = False
-default persistent.closed_miss = False
-default persistent.closed_nurse = False
+default persistent.resolved_butler = False
+default persistent.resolved_maid = False
+default persistent.resolved_miss = False
+default persistent.resolved_nurse = False
 
 default disclosed_affair = False
 default accused_nurse = False

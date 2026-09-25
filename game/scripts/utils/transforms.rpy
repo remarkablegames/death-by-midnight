@@ -1,6 +1,6 @@
-transform character_speak:
+transform character_speak(xalign=.5):
     zoom .6
-    xalign .5
+    xalign xalign
     yalign 1.0
 
 

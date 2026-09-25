@@ -27,7 +27,7 @@ The Master named the one witness he was certain would be impartial. That is the 
 - A death at any hour, to anyone, ends the night and resets it to 6 p.m. There is no penalty attached to it. It costs you the night and nothing else.
 - Only the detective remembers. The household, their moods, and the placement of evidence all reset.
 - **Knowledge persists**, in the form of unlocked talk options.
-- **Prevention persists.** A cause you closed stays closed on every later night.
+- **Prevention persists.** A cause you resolved stays resolved on every later night.
 - **Disclosure does not persist.** Speaking a secret aloud can kill, and the next night the secret is still yours to speak or to keep.
 - Physical items reset each loop and must be refound. A few, the basement key among them, are handed over again through persistent conversations.
 
@@ -39,10 +39,10 @@ So **preventing a death does not stop the night, it moves it.** Closing the 7:30
 
 <!-- prettier-ignore-start -->
 
-| Hour | Who | Cause | Closed by |
+| Hour | Who | Cause | Resolved by |
 | --- | --- | --- | --- |
 | 7:30 p.m. | Madelyn | Ben stabs her at the manor door with the kitchen knife | Taking the knife out of the kitchen, or handing it to Madelyn, before 7 p.m. |
-| 8:30 p.m. | Nora | Redirection only. Madelyn, alive and furious, strangles her in the kitchen with her own head covering | Not accusing her, or meeting her in the hall |
+| 8:30 p.m. | Nora | Redirection only. Madelyn, alive and furious, strangles her in the kitchen with her own head covering, and denies it in front of you | Never accusing her |
 | 9:30 p.m. | Ben | Nora poisons the coffee as he crosses the living room | The coffee, or never speaking the affair aloud |
 | 10:30 p.m. | Mia | Suicide at the pond, arranged to read as the first death | Her journal, then the conversation it unlocks |
 | 11:30 p.m. | The detective | Never shown. The clause's remedy. | Breaking the loop before 11:30 |
@@ -53,15 +53,15 @@ Three further rules about the slot:
 
 - **A death is not required to be witnessed.** It fires whether or not you are in the room. Madelyn is *found* dead, not watched. Being elsewhere at 8:30 is how Nora dies.
 - **The schedule does not contain murders.** `docs/schedule.md` tells you where someone can be found, which is not where they get killed. Every death is a movement the placement table does not show.
-- **No death weapon survives the night.** The knife leaves the kitchen at 7 p.m. and is never found, because finding it would have closed the hour. The strangulation leaves nothing to hold. The poison is in a cup the victim chooses to drink from. The detective spends the night hunting a murder weapon and the truth is never one.
+- **No death weapon survives the night.** The knife leaves the kitchen at 7 p.m. and is never found, because finding it would have resolved the hour. The strangulation leaves nothing to hold. The poison is in a cup the victim chooses to drink from. The detective spends the night hunting a murder weapon and the truth is never one.
 
-### What closes a cause, and what gets you killed for closing it
+### What resolves a cause, and what gets you killed for resolving it
 
 <!-- prettier-ignore-start -->
 
 | Cause | Prevention | The trap |
 | --- | --- | --- |
-| Madelyn, 7:30 | Take the knife from the kitchen, or give it to Madelyn, before 7 p.m. | Holding the manor door is not prevention. The hour closes on the knife, not on you standing there. |
+| Madelyn, 7:30 | Take the knife from the kitchen, or give it to Madelyn, before 7 p.m. | Holding the manor door is not prevention. The hour resolves on the knife, not on you standing there. |
 | Nora, 8:30 | Never accuse Nora while Madelyn is alive | Any accusation can turn Madelyn, and Madelyn is the most dangerous thing in the house |
 | Ben, 9:30 | Swap or destroy the coffee, or keep the affair unspoken | Learning the affair is required for the true ending. Saying it aloud is what kills him. |
 | Mia, 10:30 | Her journal, then the conversation it unlocks | Knowledge that never becomes conversation is not prevention |
@@ -88,8 +88,8 @@ The rule for a time-loop story is that each loop adds knowledge rather than repe
 | --- | --- | --- |
 | Madelyn | Stabbed at the manor door at 7:30. The kitchen knife is gone. No foreknowledge, and no reason to have gone back for it. | An hour and a place. The shape of the night. |
 | Ben | Madelyn saved, and the 8:30 hour opens. Nora poisons his coffee at 9:30 because she overheard the affair resolved. | Disclosure kills. Learning a secret is not the same as being able to keep it. |
-| Mia | The earlier hours closed, and Mia at the pond at 10:30 has worked out enough to stop wanting to be alive. | The pattern breaks. He stops asking who kills and starts asking what he caused. |
-| Midnight | Everything closed except you. The reading begins in the entrance hall. | Why he is bound, what the clause collects, and that he signed the Master's death once already. |
+| Mia | The earlier hours resolved, and Mia at the pond at 10:30 has worked out enough to stop wanting to be alive. | The pattern breaks. He stops asking who kills and starts asking what he caused. |
+| Midnight | Everything resolved except you. The reading begins in the entrance hall. | Why he is bound, what the clause collects, and that he signed the Master's death once already. |
 
 <!-- prettier-ignore-end -->
 
@@ -101,13 +101,13 @@ Ben is findable in the entrance hall through the whole evening and he goes down 
 
 ### The Ben night
 
-You can save Madelyn. When you do, the 8:30 hour opens, the slot has nowhere to go until 9:30, and Nora poisons Ben's coffee. She does it because she overheard the affair resolved. You closed the secret, and speaking it killed him.
+You can save Madelyn. When you do, the 8:30 hour opens, the slot has nowhere to go until 9:30, and Nora poisons Ben's coffee. She does it because she overheard the affair resolved. You resolved the secret, and speaking it killed him.
 
 The coffee is in the living room and Ben is findable at the manor door, and he comes up through the entrance hall to reach it. The man and the poison cross the same room, and you are faster than one of them.
 
 ### The Mia night
 
-Madelyn alive, Ben alive, the 8:30 hour closed, and Mia at the pond at 10:30. She has worked out enough of the truth to stop wanting to be alive. The pond is where you learned how to read a scene, and the scene has been arranged to be read the same way. For a long time you will not be able to tell that there is no murderer here.
+Madelyn alive, Ben alive, the 8:30 hour resolved, and Mia at the pond at 10:30. She has worked out enough of the truth to stop wanting to be alive. The pond is where you learned how to read a scene, and the scene has been arranged to be read the same way. For a long time you will not be able to tell that there is no murderer here.
 
 ### The fail state, which is not a fail state
 
@@ -115,7 +115,7 @@ Accuse the wrong person and the slot redirects. Madelyn, alive and furious, is t
 
 ### The midnight night
 
-Everything is closed, or everything is closed but you. The reading begins in the entrance hall, you have one decision, and you have about six minutes to make it.
+Everything is resolved, or everything is resolved but you. The reading begins in the entrance hall, you have one decision, and you have about six minutes to make it.
 
 ## Mechanics
 
@@ -123,13 +123,13 @@ Everything is closed, or everything is closed but you. The reading begins in the
 - **Exploration.** Roam the manor and grounds for documents, objects, and secret rooms. Placement is listed in `docs/items.md`.
 - **Conversation.** Talk to characters to uncover secrets. Knowledge carries into the next loop as new talk options, and some of those options are weapons.
 - **Inventory.** Pick up, read, and give. Giving is how you speak a secret, and speaking is how you cause a death.
-- **Give scenes.** Handing an item to a character runs a label that owns the dialogue. A give scene can close a cause or load a slot, which is the main tension of the late game.
-- **No save/load mid-night.** The loop is the reset. Persistent variables track what the detective knows and which causes are closed.
+- **Give scenes.** Handing an item to a character runs a label that owns the dialogue. A give scene can resolve a cause or load a slot, which is the main tension of the late game.
+- **No save/load mid-night.** The loop is the reset. Persistent variables track what the detective knows and which causes are resolved.
 - **Midnight.** Reaching midnight ends the night. `clock.advance` currently jumps to a stub `end` label, which is where the reading and the endings go.
 
 ## Endings
 
-There is no bad ending. Every death is a reset, so the only thing that ends the game is a night in which nothing dies, and the only way to get that night is to have closed every cause before the last hour.
+There is no bad ending. Every death is a reset, so the only thing that ends the game is a night in which nothing dies, and the only way to get that night is to have resolved every cause before the last hour.
 
 At the reading you have one decision, and the clause only ever asked for a name. How much you name is the whole distance between the three endings.
 
@@ -155,4 +155,4 @@ At the reading you have one decision, and the clause only ever asked for a name.
 - Secrets
 - Time
 - Inheritance (what a legacy does to the people who inherit it)
-- Guilt (the part of a case you closed early)
+- Guilt (the part of a case you resolved early)

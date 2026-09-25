@@ -22,7 +22,7 @@ init python:
                 return
             self.minutes = max(0, self.minutes + minutes)
             for death in DEATH_HOURS:
-                if self.minutes >= death["minutes"] and not getattr(persistent, death["closed"]):
+                if self.minutes >= death["minutes"] and death_is_pending(death):
                     renpy.jump(death["label"])
             if self.minutes >= self.MIDNIGHT_MINUTES:
                 renpy.jump("loop_restart")
