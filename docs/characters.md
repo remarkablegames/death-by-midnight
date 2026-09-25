@@ -20,6 +20,7 @@
 - **Misbelief:** He believes he is an impartial outsider with no stake in the family, when he is the compromised witness the Master deliberately chose
 - **Personality:** Inquisitive, methodical, dry
 - **Arc:** From impartial executor to recognizing that he is both the instrument and the bill, and choosing what to do with that knowledge: name the affair and let the rest stand, name everything, or take the watch and hold the binding
+- **Image:** None. The player takes on the role of the detective from a first-person perspective.
 
 ### Butler Ben
 
@@ -104,6 +105,7 @@
 - **Relationship with Nora:** Exploited her and uses Mia's parentage to maintain power over her
 - **Relationship with Mia:** Claims to care about her but primarily views her as part of his legacy
 - **Arc:** His influence is gradually exposed, revealing that the mystery is not revenge but a contract, and that its only available executor was a man who had already buried him once
+- **Image:** None. The character never appears in the game except through dialogue and other references.
 
 Design rule: a character's _public goal_ should be what they claim to want, while their _private goal_ is what actually drives their choices. The detective can uncover the private goals gradually through conversations, evidence, and different time loops.
 
