@@ -8,7 +8,7 @@ label explore_pond:
         scene bg pond evening
 
     if not inventory.has_picked_up("diary"):
-        show screen item_diary
+        show screen item_diary onlayer master zorder 0
 
     show screen time_display
     show screen inventory_hud
@@ -36,6 +36,7 @@ screen item_diary():
         idle "images/items/diary.webp"
         style "item_button"
         at item_button(zoom=.035, xalign=.385, yalign=.535, matrixcolor=TintMatrix(tint))
+        sensitive is_item_interactable
         action [
             Hide("item_diary"),
             Function(diary_pickup),

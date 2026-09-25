@@ -5,6 +5,7 @@ default milk_taken = False
 default milk_beat_shown = False
 default gave_mia_milk = False
 default diary_recent_entry = ""
+default is_item_interactable = True
 default scene_characters = []
 default current_room = ""
 default room_intros_seen = set()
@@ -16,6 +17,7 @@ label loop_start:
     $ inventory.given = []
     $ inventory.picked_up = []
 
+    $ is_item_interactable = True
     $ scene_characters = []
 
     $ current_room = ""

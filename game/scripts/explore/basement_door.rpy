@@ -8,7 +8,7 @@ label explore_basement_door:
             scene bg basement door closed dark
         else:
             scene bg basement door closed light
-        show screen interactable_door
+        show screen interactable_door onlayer master zorder 0
     else:
         if clock.is_night_dark:
             scene bg basement door open dark

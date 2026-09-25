@@ -8,10 +8,10 @@ label explore_kitchen:
         scene bg kitchen evening
 
     if not inventory.has_picked_up("kitchen_knife"):
-        show screen item_kitchen_knife
+        show screen item_kitchen_knife onlayer master zorder 0
 
     if not milk_taken:
-        show screen item_milk
+        show screen item_milk onlayer master zorder 0
 
     show screen time_display
     show screen inventory_hud
@@ -39,13 +39,13 @@ screen item_kitchen_knife():
         idle "images/items/kitchen_knife.webp"
         style "item_button"
         at item_button(zoom=.2, xalign=.53, yalign=.436, matrixcolor=TintMatrix(tint))
+        sensitive is_item_interactable
         action [
             Hide("item_kitchen_knife"),
             Function(inventory.add, "kitchen_knife"),
             Function(renpy.notify, "Picked up kitchen knife"),
             Jump("explore_kitchen"),
         ]
-
 
 screen item_milk():
 
@@ -58,6 +58,7 @@ screen item_milk():
         idle "images/items/milk.webp"
         style "item_button"
         at item_button(zoom=.1, xalign=.7, yalign=.329, matrixcolor=TintMatrix(tint)), flip(xzoom=-1)
+        sensitive is_item_interactable
         action [
             Hide("item_milk"),
             SetVariable("milk_taken", True),

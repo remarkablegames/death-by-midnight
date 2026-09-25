@@ -11,10 +11,10 @@ label explore_bedroom:
     show screen inventory_hud
 
     if not inventory.has("basement_key"):
-        show screen item_key
+        show screen item_key onlayer master zorder 0
 
     if not inventory.has_picked_up("camera"):
-        show screen item_camera
+        show screen item_camera onlayer master zorder 0
 
     with dissolve
 
@@ -40,6 +40,7 @@ screen item_camera():
         idle "images/items/camera.webp"
         style "item_button"
         at item_button(zoom=.05, xalign=.39, yalign=.534, matrixcolor=TintMatrix(tint))
+        sensitive is_item_interactable
         action [
             Hide("item_camera"),
             Function(inventory.add, "camera"),
@@ -47,13 +48,13 @@ screen item_camera():
             Jump("explore_bedroom"),
         ]
 
-
 screen item_key():
 
     imagebutton:
         idle "images/items/key.webp"
         style "item_button"
         at item_button(zoom=.035, xalign=.789, yalign=.552, matrixcolor=TintMatrix("#51432fff"), rotate=170)
+        sensitive is_item_interactable
         action [
             Hide("item_key"),
             Function(inventory.add, "basement_key"),

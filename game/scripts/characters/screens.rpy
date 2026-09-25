@@ -127,6 +127,10 @@ label inventory_talk_scene(character_id):
 
     hide screen inventory_hud
 
+    $ is_item_interactable = False
+
     call expression "talk_" + character_id
+
+    $ is_item_interactable = True
 
     return

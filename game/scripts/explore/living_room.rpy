@@ -10,7 +10,7 @@ label explore_living_room:
         scene bg living room evening
 
     if not inventory.has_picked_up("coffee"):
-        show screen item_coffee
+        show screen item_coffee onlayer master zorder 0
 
     show screen time_display
     show screen inventory_hud
@@ -40,6 +40,7 @@ screen item_coffee():
         idle "images/items/coffee.webp"
         style "item_button"
         at item_button(zoom=.13, xalign=.155, yalign=.602, matrixcolor=TintMatrix(tint))
+        sensitive is_item_interactable
         action [
             Hide("item_coffee"),
             Function(inventory.add, "coffee"),

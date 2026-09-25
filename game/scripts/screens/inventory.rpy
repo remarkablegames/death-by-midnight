@@ -319,12 +319,16 @@ label inventory_give_scene(item_id, character_id):
     if item is None or character is None:
         return
 
+    $ is_item_interactable = False
+
     hide screen inventory_hud
 
     $ inventory.give(item_id, character.character_id)
     $ renpy.notify(f"You gave {item.name} to {character.name}")
 
-    call expression "give_{0}_to_{1}".format(item_id, character.character_id)
+    call expression f"give_{item_id}_to_{character.character_id}"
+
+    $ is_item_interactable = True
 
     return
 

@@ -8,7 +8,7 @@ label explore_interior_entrance:
         scene bg interior entrance evening
 
     if not inventory.has_picked_up("scroll"):
-        show screen item_scroll
+        show screen item_scroll onlayer master zorder 0
 
     show screen time_display
     show screen inventory_hud
@@ -44,6 +44,7 @@ screen item_scroll():
         idle "images/items/scroll.webp"
         style "item_button"
         at item_button(zoom=.14, xalign=.02, yalign=.54, matrixcolor=TintMatrix(tint))
+        sensitive is_item_interactable
         action [
             Hide("item_scroll"),
             Function(inventory.add, "scroll"),
