@@ -48,3 +48,9 @@ label meetup:
 label something:
     e "What's up?"
 ```
+
+**Punctuation:**
+
+- Write ellipses as `...`, never the `…` character
+- Use em dashes (`—`) and hyphens (`-`) sparingly; prefer a full stop, comma, or parentheses
+- Use smart quotes (`’` `“` `”`) in dialogue and prose, not straight ones
