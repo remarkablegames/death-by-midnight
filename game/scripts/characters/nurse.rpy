@@ -13,8 +13,9 @@ label talk_nurse:
     $ can_ask_key = seen_basement_door and not inventory.has("basement_key")
     $ can_ask_bedroom = persistent.knows_affair
     $ can_accuse = persistent.knows_affair and inventory.has("coffee") and not accused_nurse
+    $ can_disclose = persistent.knows_affair and not disclosed_affair
 
-    if can_ask_key or can_ask_bedroom or can_accuse:
+    if can_ask_key or can_ask_bedroom or can_accuse or can_disclose:
 
         menu:
 
@@ -52,6 +53,20 @@ label talk_nurse:
                 nurse "He does.{w=.3} So does everyone in this house,{w=.1} detective,{w=.1} including you."
 
                 nurse "Be careful what you accuse people of.{w=.3} Doors lock from the outside here."
+
+            "Tell her about Ben and Madelyn" if can_disclose:
+
+                $ disclosed_affair = True
+
+                player "It’s Ben and Madelyn.{w=.3} I know what has been going on between them."
+
+                nurse "I did not ask you to say that in this house."
+
+                player "I know.{w=.3} I’m just saying."
+
+                nurse "Then you’ve said it."
+
+                "She doesn’t raise her voice.{w=.3} Silence settles between you."
 
             "Say nothing":
 

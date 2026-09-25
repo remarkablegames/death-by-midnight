@@ -312,6 +312,9 @@ label give_coffee_to_nurse:
 
     nurse "Careless of someone to leave that lying about.{w=.3} Let me throw it out for you."
 
+    $ persistent.resolved_butler = True
+    $ renpy.notify("Nora took the coffee away")
+
     hide nurse
     with dissolve
 
