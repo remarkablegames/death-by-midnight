@@ -1,9 +1,9 @@
 init python:
 
     def character_schedule_band():
-        if store.clock.is_night_dark:
+        if clock.is_night_dark:
             return "night_dark"
-        if store.clock.is_night_light:
+        if clock.is_night_light:
             return "night_light"
         return "evening"
 
@@ -14,7 +14,7 @@ init python:
         band = character_schedule_band()
         entry = CHARACTER_SCHEDULE.get(room_id, {}).get(band, [])
 
-        tint = "#333" if store.clock.is_night_dark else "#ffffff00"
+        tint = "#333" if clock.is_night_dark else "#ffffff00"
 
         store.scene_characters = [
             SceneCharacter(character_id, expression=expression, xalign=xalign, tint=tint)
@@ -23,17 +23,17 @@ init python:
 
     def room_intro(character_id):
 
-        line = ROOM_INTRO.get(character_id, {}).get(store.current_room)
+        line = ROOM_INTRO.get(character_id, {}).get(current_room)
 
         if line is None:
             return None
 
-        key = (character_id, store.current_room)
+        key = (character_id, current_room)
 
-        if key in store.room_intros_seen:
+        if key in room_intros_seen:
             return None
 
-        store.room_intros_seen.add(key)
+        room_intros_seen.add(key)
 
         return line
 

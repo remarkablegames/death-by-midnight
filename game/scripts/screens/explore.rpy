@@ -21,5 +21,5 @@ define EXPLORE_SCREENS = (
 init python:
 
     def hide_explore_screens():
-        for screen_name in store.EXPLORE_SCREENS:
+        for screen_name in EXPLORE_SCREENS:
             renpy.hide_screen(screen_name)

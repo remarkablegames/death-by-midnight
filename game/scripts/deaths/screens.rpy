@@ -8,7 +8,7 @@ define KNIFE_TAKEN_MINUTES = 19 * 60
 init python:
 
     def secure_kitchen_knife():
-        store.persistent.closed_maid = True
+        persistent.closed_maid = True
 
 
 screen death_body(character_id, expression, discovery_label, xalign=.5, enabled=True):

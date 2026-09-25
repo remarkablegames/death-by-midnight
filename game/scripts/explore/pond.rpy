@@ -57,13 +57,13 @@ init python:
 
     def diary_pickup():
 
-        renpy.store.diary_recent_entry = diary_recent_entry_text()
-        renpy.store.inventory.add("diary")
+        store.diary_recent_entry = diary_recent_entry_text()
+        inventory.add("diary")
         renpy.notify(_("Picked up diary"))
 
     def diary_description():
 
-        text = _("Someone’s journal, left behind by the pond.\n\nRecent entry:\n") + renpy.store.diary_recent_entry
+        text = _("Someone’s journal, left behind by the pond.\n\nRecent entry:\n") + diary_recent_entry
 
         text += _(
             "\n\nAn older page:\n"
