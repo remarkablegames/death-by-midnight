@@ -26,6 +26,16 @@ transform character_target_hover(xalign):
     yalign 1.0
 
 
+transform character_body(xalign=.5):
+    zoom .5
+    xalign xalign
+    yalign 1.02
+    on hover:
+        linear .1 zoom .51
+    on idle:
+        linear .1 zoom .5
+
+
 transform flip(xzoom=1, yzoom=1):
     xzoom xzoom
     yzoom yzoom

@@ -41,7 +41,7 @@ So **preventing a death does not stop the night, it moves it.** Closing the 7:30
 
 | Hour | Who | Cause | Closed by |
 | --- | --- | --- | --- |
-| 7:30 p.m. | Madelyn | Ben stabs her at the manor door with the kitchen knife | Holding the entrance, or watching the door, or finding the knife first |
+| 7:30 p.m. | Madelyn | Ben stabs her at the manor door with the kitchen knife | Taking the knife out of the kitchen, or handing it to Madelyn, before 7 p.m. |
 | 8:30 p.m. | Nora | Redirection only. Madelyn, alive and furious, strangles her in the kitchen with her own head covering | Not accusing her, or meeting her in the hall |
 | 9:30 p.m. | Ben | Nora poisons the coffee as he crosses the living room | The coffee, or never speaking the affair aloud |
 | 10:30 p.m. | Mia | Suicide at the pond, arranged to read as the first death | Her journal, then the conversation it unlocks |
@@ -53,7 +53,7 @@ Three further rules about the slot:
 
 - **A death is not required to be witnessed.** It fires whether or not you are in the room. Madelyn is *found* dead, not watched. Being elsewhere at 8:30 is how Nora dies.
 - **The schedule does not contain murders.** `docs/schedule.md` tells you where someone can be found, which is not where they get killed. Every death is a movement the placement table does not show.
-- **There is no weapon in this house.** The knife is not there. The strangulation leaves nothing to hold. The poison is in a cup the victim chooses to drink from. The detective spends the night hunting a murder weapon and the truth is never one.
+- **No death weapon survives the night.** The knife leaves the kitchen at 7 p.m. and is never found, because finding it would have closed the hour. The strangulation leaves nothing to hold. The poison is in a cup the victim chooses to drink from. The detective spends the night hunting a murder weapon and the truth is never one.
 
 ### What closes a cause, and what gets you killed for closing it
 
@@ -61,7 +61,7 @@ Three further rules about the slot:
 
 | Cause | Prevention | The trap |
 | --- | --- | --- |
-| Madelyn, 7:30 | Hold the manor door, or take the knife from the scene | Holding the door is not enough if you never look for what he used |
+| Madelyn, 7:30 | Take the knife from the kitchen, or give it to Madelyn, before 7 p.m. | Holding the manor door is not prevention. The hour closes on the knife, not on you standing there. |
 | Nora, 8:30 | Never accuse Nora while Madelyn is alive | Any accusation can turn Madelyn, and Madelyn is the most dangerous thing in the house |
 | Ben, 9:30 | Swap or destroy the coffee, or keep the affair unspoken | Learning the affair is required for the true ending. Saying it aloud is what kills him. |
 | Mia, 10:30 | Her journal, then the conversation it unlocks | Knowledge that never becomes conversation is not prevention |
@@ -86,7 +86,7 @@ The rule for a time-loop story is that each loop adds knowledge rather than repe
 
 | Night | What happens | What the detective learns |
 | --- | --- | --- |
-| Madelyn | Stabbed at the manor door at 7:30. The kitchen knife is gone. No foreknowledge, no way to stop it. | An hour and a place. The shape of the night. |
+| Madelyn | Stabbed at the manor door at 7:30. The kitchen knife is gone. No foreknowledge, and no reason to have gone back for it. | An hour and a place. The shape of the night. |
 | Ben | Madelyn saved, and the 8:30 hour opens. Nora poisons his coffee at 9:30 because she overheard the affair resolved. | Disclosure kills. Learning a secret is not the same as being able to keep it. |
 | Mia | The earlier hours closed, and Mia at the pond at 10:30 has worked out enough to stop wanting to be alive. | The pattern breaks. He stops asking who kills and starts asking what he caused. |
 | Midnight | Everything closed except you. The reading begins in the entrance hall. | Why he is bound, what the clause collects, and that he signed the Master's death once already. |
@@ -95,7 +95,7 @@ The rule for a time-loop story is that each loop adds knowledge rather than repe
 
 ### The Madelyn night
 
-Madelyn is found dead at the manor door at 7:30, stab wounds, and the kitchen knife is not in the kitchen. You have no foreknowledge and no way to stop it. The first thing the night teaches you is an hour and a place.
+Madelyn is found dead at the manor door at 7:30, stab wounds, and the kitchen knife is not in the kitchen. You have no foreknowledge, so you never went back for it. It was lying on the board when the night began, and it was the only thing that would have mattered. The first thing the night teaches you is an hour, a place, and the one item you should have carried out of the kitchen before seven.
 
 Ben is findable in the entrance hall through the whole evening and he goes down one door to the manor door to do it. The manor door is where every loop begins: you walk through it on your way in each time. You are standing in the room where somebody dies.
 

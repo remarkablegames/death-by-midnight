@@ -36,13 +36,16 @@ Each carries a piece of the Master's history and a reaction when handed over.
 
 <!-- prettier-ignore-end -->
 
-## The missing knife
+## The kitchen knife
 
-The kitchen knife is not in the kitchen. It is the weapon in Madelyn's death, and its absence is the first evidence that points at Ben.
+The kitchen knife is the one death weapon the player can reach, and it is the whole of the 7:30 prevention. It sits on the cutting board from 6 p.m. until 7 p.m., and at 7 p.m. it is gone, because Ben took it.
 
-- It is taken from the kitchen early, by Ben, and left at the scene.
-- The empty block in the kitchen is a clue the player can look at in every loop.
-- It surfaces at the manor door in a later loop, once the detective knows to look for it, and its condition is what convicts Ben.
+- It is pickable in the kitchen before 7 p.m. **Pocketing it closes the 7:30 hour permanently.**
+- **Handing it to Madelyn closes the 7:30 hour permanently.** She takes it off your hands and puts it away. Every other character hands it straight back.
+- Either path sets `persistent.closed_maid`, so the knife does not return to the kitchen on any later night.
+- Nothing announces that the knife has gone. It is simply not on the board after 7 p.m., and a player who was in the kitchen before then already knows it was there.
+- The board without the knife only registers as evidence if the player has asked Madelyn about the knife, so the game pays for knowledge rather than for walking around. A player who never asked sees a board with no knife on it and learns nothing from it.
+- The 7:30 discovery names the knife only when the player has earned it: her testimony plus the board, her testimony alone, or neither.
 
 ## Prevention items
 
@@ -75,9 +78,9 @@ Prevention is not knowledge. Knowing the affair does not close the 9:30 hour. On
 
 - **Study**: locket, Bernard letter, never-sent letter, camera, wine cup
 - **Bedroom**: family register, spare basement key, Master's camera
-- **Manor door**: the missing kitchen knife, once the detective knows to look
+- **Manor door**: the body, from 7:30, on a later night
 - **Pond**: Mia's journal
-- **Kitchen**: milk, and the empty block where the knife was
+- **Kitchen**: milk, and the knife until 7 p.m., then the board with no knife on it
 - **Living room**: coffee
 - **Basement**: True Will, pocket watch
 - **Entrance hall**: scroll

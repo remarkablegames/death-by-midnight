@@ -488,7 +488,9 @@ label give_kitchen_knife_to_maid:
 
     player "I found a knife in the kitchen."
 
-    maid "That belongs on the rack,{w=.1} not in a guest’s pocket.{w=.3} I’ll take it and see it put away before the cook misses it."
+    maid "That belongs on the board,{w=.1} not in a guest’s pocket.{w=.3} I’ll take it and see it put away before the cook misses it."
+
+    $ secure_kitchen_knife()
 
     hide maid
     with dissolve

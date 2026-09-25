@@ -18,6 +18,7 @@ label loop_start:
 
     $ milk_taken = False
     $ milk_beat_shown = False
+    $ confirmed_knife_gone = False
     $ gave_miss_milk = False
     $ diary_recent_entry = diary_recent_entry_text()
 

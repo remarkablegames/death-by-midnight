@@ -7,7 +7,7 @@ label explore_kitchen:
     else:
         scene bg kitchen evening
 
-    if not inventory.has_picked_up("kitchen_knife"):
+    if not persistent.closed_maid and clock.minutes < KNIFE_TAKEN_MINUTES:
         show screen item_kitchen_knife onlayer master zorder 0
 
     if not milk_taken:
@@ -16,6 +16,10 @@ label explore_kitchen:
     show screen time_display
     show screen inventory_hud
     with dissolve
+
+    if persistent.knows_knife_exists and not persistent.closed_maid and clock.minutes >= KNIFE_TAKEN_MINUTES and not confirmed_knife_gone:
+        $ confirmed_knife_gone = True
+        "The board is still out with bread on it, and the knife is gone. She was right."
 
     call screen arrow_right_button(label="explore_hallway_left", xalign=.95, yalign=.7, minutes=5)
 
@@ -43,6 +47,7 @@ screen item_kitchen_knife():
         action [
             Hide("item_kitchen_knife"),
             Function(inventory.add, "kitchen_knife"),
+            Function(secure_kitchen_knife),
             Function(renpy.notify, "Picked up kitchen knife"),
             Jump("explore_kitchen"),
         ]

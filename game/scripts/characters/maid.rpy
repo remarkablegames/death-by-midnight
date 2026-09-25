@@ -10,11 +10,11 @@ label talk_maid:
 
     maid "You have my ear, though I’d keep your voice down around here."
 
-    if not persistent.knows_knife_taken and not persistent.knows_affair:
+    if not persistent.knows_knife_exists and not persistent.knows_affair:
 
         menu:
 
-            "Ask about the empty knife block":
+            "Ask about the missing kitchen knife":
 
                 maid "There was a knife in that kitchen this evening."
 
@@ -22,13 +22,13 @@ label talk_maid:
 
                 maid "Then your eyes are better than mine."
 
-                $ persistent.knows_knife_taken = True
+                $ persistent.knows_knife_exists = True
 
             "Leave it":
 
                 pass
 
-    elif persistent.knows_knife_taken and not persistent.knows_affair:
+    elif persistent.knows_knife_exists and not persistent.knows_affair:
 
         menu:
 

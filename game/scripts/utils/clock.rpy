@@ -21,8 +21,11 @@ init python:
             if minutes <= 0:
                 return
             self.minutes = max(0, self.minutes + minutes)
+            for death in DEATH_HOURS:
+                if self.minutes >= death["minutes"] and not getattr(persistent, death["closed"]):
+                    renpy.jump(death["label"])
             if self.minutes >= self.MIDNIGHT_MINUTES:
-                renpy.jump("end")
+                renpy.jump("loop_restart")
 
         @property
         def display(self):
