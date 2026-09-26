@@ -2,6 +2,7 @@ define DEATH_HOURS = [
     {"minutes": 19 * 60 + 30, "resolved": "resolved_maid", "label": "death_maid"},
     {"minutes": 20 * 60 + 30, "resolved": "resolved_nurse", "label": "death_nurse", "depends": "accused_nurse"},
     {"minutes": 21 * 60 + 30, "resolved": "resolved_butler", "label": "death_butler", "depends": "disclosed_affair"},
+    {"minutes": 22 * 60 + 30, "resolved": "resolved_miss", "label": "death_miss"},
 ]
 
 define KNIFE_TAKEN_MINUTES = 19 * 60

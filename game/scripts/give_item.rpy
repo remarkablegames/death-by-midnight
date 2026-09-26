@@ -380,6 +380,9 @@ label give_diary_to_miss:
         "No":
             miss "I’ll take your word for it."
 
+    $ persistent.resolved_miss = True
+    $ renpy.notify(_("Mia will not go to the pond tonight"))
+
     hide miss
     with dissolve
 

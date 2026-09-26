@@ -29,6 +29,25 @@ label talk_miss:
 
                 pass
 
+    if inventory.has("diary") and not persistent.resolved_miss:
+
+        player "I read your diary."
+
+        miss "That’s an invasion of privacy."
+
+        player "But I’m concerned about you."
+
+        miss "You never once asked me what I wanted."
+
+        player "I’m asking now."
+
+        miss "..."
+
+        miss "I don’t want to die.{w=.3} Not tonight."
+
+        $ persistent.resolved_miss = True
+        $ renpy.notify(_("Mia will not go to the pond tonight"))
+
     hide miss
     with dissolve
 

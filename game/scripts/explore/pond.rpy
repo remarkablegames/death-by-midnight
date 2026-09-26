@@ -7,7 +7,7 @@ label explore_pond:
     else:
         scene bg pond evening
 
-    if not inventory.has_picked_up("diary"):
+    if not inventory.has_picked_up("diary") and clock.is_night_light:
         show screen item_diary onlayer master zorder 0
 
     show screen time_display
