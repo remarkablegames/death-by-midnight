@@ -8,7 +8,12 @@ label talk_nurse:
     if context:
         "[context]"
 
-    nurse "What can I help you with?"
+    jump talk_nurse_menu
+
+
+label talk_nurse_menu:
+
+    show nurse neutral at character_speak
 
     $ can_ask_key = seen_basement_door and not inventory.has("basement_key")
     $ can_ask_bedroom = persistent.knows_affair
@@ -91,9 +96,9 @@ label talk_nurse:
 
         "Nevermind":
 
-            pass
+            hide nurse
+            with dissolve
 
-    hide nurse
-    with dissolve
+            return
 
-    return
+    jump talk_nurse_menu

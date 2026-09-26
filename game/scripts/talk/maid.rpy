@@ -8,49 +8,45 @@ label talk_maid:
     if context:
         "[context]"
 
-    maid "You have my ear, though I’d keep your voice down around here."
+    jump talk_maid_menu
 
-    if not persistent.knows_knife_exists and not persistent.knows_affair:
 
-        menu:
+label talk_maid_menu:
 
-            "Ask about the missing kitchen knife":
+    $ can_ask_knife = not persistent.knows_knife_exists and not persistent.knows_affair
+    $ can_ask_thief = persistent.knows_knife_exists and not persistent.knows_affair
 
-                maid "There was a knife in that kitchen this evening."
+    menu:
 
-                player "There isn’t one now."
+        "Ask about the missing kitchen knife" if can_ask_knife:
 
-                maid "Then your eyes are better than mine."
+            maid "There was a knife in the kitchen this evening."
 
-                $ persistent.knows_knife_exists = True
+            player "There isn’t one now."
 
-            "Leave it":
+            maid "Then your eyes are better than mine."
 
-                pass
+            $ persistent.knows_knife_exists = True
 
-    elif persistent.knows_knife_exists and not persistent.knows_affair:
+        "Ask who took the knife" if can_ask_thief:
 
-        menu:
+            maid "I clean the kitchen.{w=.3} I didn’t take it."
 
-            "Ask who took the knife":
+            player "You know whose hands it was in."
 
-                maid "I clean the kitchen.{w=.3} I didn’t take it."
+            maid "You know a great deal for a man who arrived this evening."
 
-                player "You know whose hands it was in."
+            player "Someone in this house saw him with it."
 
-                maid "You know a great deal for a man who arrived this evening."
+            maid "You should be more careful...{w=.3} nobody in this house forgives being named."
 
-                player "Someone in this house saw him with it."
+            $ persistent.knows_affair = True
 
-                maid "You should be more careful...{w=.3} nobody in this house forgives being named."
+        "Nevermind":
 
-                $ persistent.knows_affair = True
+            hide maid
+            with dissolve
 
-            "Leave it":
+            return
 
-                pass
-
-    hide maid
-    with dissolve
-
-    return
+    jump talk_maid_menu
