@@ -27,15 +27,16 @@
 - **Public role:** Butler, head of household, and Nora's husband
 - **Public goal:** Maintain order in the manor and ensure that the family's inheritance remains secure
 - **Private goal:** Inherit the manor for himself and gain control over the family's future
-- **Secret:** He is having an affair with Madelyn, and at 7:30 he stabs her at the manor door with the kitchen knife rather than let her expose the affair
+- **Mask:** An amiable host. He's gracious, jolly, and openly fond of his family in front of a guest.
+- **Secret:** He's having an affair with Madelyn, and at 7:30 he stabs her at the manor door with the kitchen knife rather than let her expose the affair
 - **Secret he does not know:** Mia is the Master's biological daughter, making Ben her uncle rather than her father
 - **Fear:** Losing his position, authority, and the family's respect
 - **Misbelief:** He believes controlling the family is the same as protecting it
-- **Personality:** Ambitious, controlling, confident, pragmatic, and curt
+- **Personality:** Ambitious, controlling, confident, and pragmatic. Curt by nature and warm by practice, which is the mask at work rather than a change of temperament
 - **Relationship with Nora:** Married to her, but increasingly distant and resentful
 - **Relationship with Madelyn:** Romantically involved with her, though he may see the relationship as temporary
-- **Relationship with Mia:** Believes she is his daughter and wants her loyalty
-- **Arc:** From trying to control the family and secure the inheritance to confronting the consequences of his lies
+- **Relationship with Mia:** Believes she's his daughter and wants her loyalty
+- **Arc:** From trying to control the family and secure the inheritance to confronting the consequences of his lies, and no longer performing for anyone
 - **Image:** Man in his 30s with light skin, short wavy brown hair, and thick eyebrows. He has a neat, reserved expression. He wears a formal butler's uniform: a black tailcoat over a dark waistcoat with matching trousers, a cream high-collared shirt, and a black bow tie. A small gold brooch fastens the front of his coat.
 
 ### Maid Madelyn
@@ -107,7 +108,7 @@
 - **Arc:** His influence is gradually exposed, revealing that the mystery is not revenge but a contract, and that its only available executor was a man who had already buried him once
 - **Image:** None. The character never appears in the game except through dialogue and other references.
 
-Design rule: a character's _public goal_ should be what they claim to want, while their _private goal_ is what actually drives their choices. The detective can uncover the private goals gradually through conversations, evidence, and different time loops.
+Design rule: a character's _public goal_ should be what they claim to want, while their _private goal_ is what actually drives their choices. The _mask_ is a third axis between the two: the performance an audience sees in the meantime, and the thing that makes the private goal survivable. A mask is never contradicted outright, only outgrown, so it should slip under pressure rather than shatter. The detective can uncover the private goals gradually through conversations, evidence, and different time loops.
 
 ## Relationships
 
