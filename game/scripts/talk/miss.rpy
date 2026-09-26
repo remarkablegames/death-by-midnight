@@ -10,7 +10,41 @@ label talk_miss:
 
     miss "Oh,{w=.1} a guest.{w=.3} How...{w=.2} unusual for the hour."
 
-    if not milk_taken and not milk_beat_shown:
+    if inventory.has("diary") and not persistent.resolved_miss:
+
+        miss "You’ve read it."
+
+        player "The last page."
+
+        miss "I know what it says."
+
+        menu:
+            "“Everyone believes it.” Who is it for?":
+
+                player "“I smile at dinner and everyone believes it.”{w=.3} Who is that for?"
+
+                miss "I don’t know.{w=.3} That’s the trouble.{w=.2} I’ve been at it so long I’ve forgotten where it stops."
+
+            "Tell her what you asked all night":
+
+                player "I spent tonight asking who did this.{w=.3} I never once asked you a thing."
+
+                miss "No.{w=.2} You didn’t."
+
+                player "I’m asking now."
+
+            "Say nothing":
+
+                "You don’t answer.{w=.3} She does."
+
+                miss "You never once asked me what I wanted."
+
+        miss "I don’t want to die.{w=.3} Not tonight."
+
+        $ persistent.resolved_miss = True
+        $ renpy.notify(_("Mia will not go to the pond tonight"))
+
+    elif not milk_taken and not milk_beat_shown:
 
         $ milk_beat_shown = True
 
@@ -28,25 +62,6 @@ label talk_miss:
             "Say nothing about the milk":
 
                 pass
-
-    if inventory.has("diary") and not persistent.resolved_miss:
-
-        player "I read your diary."
-
-        miss "That’s an invasion of privacy."
-
-        player "But I’m concerned about you."
-
-        miss "You never once asked me what I wanted."
-
-        player "I’m asking now."
-
-        miss "..."
-
-        miss "I don’t want to die.{w=.3} Not tonight."
-
-        $ persistent.resolved_miss = True
-        $ renpy.notify(_("Mia will not go to the pond tonight"))
 
     hide miss
     with dissolve
