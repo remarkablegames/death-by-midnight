@@ -77,9 +77,9 @@ define CHARACTER_SCHEDULE = {
 
 define ROOM_INTRO = {
     "butler": {
-        "interior_entrance": _("The butler stands just inside the hall,{w=.1} watching the door as if waiting for something."),
+        "interior_entrance": _("The butler stands beside the staircase,{w=.1} watching the door as though he were waiting for something."),
         "manor_door": _("You find the butler at the manor door,{w=.1} peering out at the grounds."),
-        "living_room": _("The butler is in the living room,{w=.1} tidying up around the pool table."),
+        "living_room": _("The butler is in the living room,{w=.1} tidying up the furniture."),
     },
 
     "nurse": {

@@ -8,32 +8,29 @@ label talk_butler:
     if context:
         "[context]"
 
-    butler "The master’s will has gone quiet these past weeks. The family argues over it constantly."
-    butler "If you intend to see it set right, you’ll want to mind who holds it now."
+    jump talk_butler_menu
+
+
+label talk_butler_menu:
 
     menu:
 
-        "Ask who holds the will now":
+        "Ask about the will":
 
             if inventory.has("scroll"):
 
-                butler "You have taken it up.{w=.3} I hope you know what reading it makes you."
+                butler @ neutral "You have it in your possession."
+                butler "I’m looking forward to the reading tonight."
 
             else:
 
-                butler "The entrance hall.{w=.3} Exactly where he left it,{w=.1} and where I have left it."
+                butler @ neutral look away "If you’re looking for it,{w=.2} it should still be here."
 
-            butler "I have not signed for it.{w=.1} I will not.{w=.3} Whoever reads that paper gets a house with a family still arguing in it."
+        "Nevermind":
 
-            player "That is not an answer."
+            hide butler
+            with dissolve
 
-            butler "It is the answer you will use.{w=.3} The reading is at midnight."
+            return
 
-        "Leave it":
-
-            pass
-
-    hide butler
-    with dissolve
-
-    return
+    jump talk_butler_menu
