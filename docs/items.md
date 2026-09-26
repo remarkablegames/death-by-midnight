@@ -69,8 +69,7 @@ Prevention is not knowledge. Knowing the affair does not close the 9:30 hour. On
 | Item | Where | Verb |
 | --- | --- | --- |
 | Basement key | Handed over by Nora once her talk track is earned; a spare is hidden in the bedroom | Unlocks the basement gate |
-| True Will | Basement | Presented at the midnight reading → True ending |
-| Master's pocket watch | The drawer beside the _True Will_ | Claiming it → Hidden ending |
+| True Will | Basement | The reading instrument. Lays the Master's intention behind whatever heir you name; without it a naming is refused. Presented with the proof behind Mia → True ending |
 
 <!-- prettier-ignore-end -->
 
@@ -82,5 +81,5 @@ Prevention is not knowledge. Knowing the affair does not close the 9:30 hour. On
 - **Pond**: Mia's journal
 - **Kitchen**: milk, and the knife until 7 p.m., then the board with no knife on it
 - **Living room**: coffee
-- **Basement**: True Will, pocket watch
+- **Basement**: True Will
 - **Entrance hall**: scroll

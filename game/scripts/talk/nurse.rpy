@@ -14,8 +14,9 @@ label talk_nurse:
     $ can_ask_bedroom = persistent.knows_affair
     $ can_accuse = persistent.knows_affair and inventory.has("coffee") and not accused_nurse
     $ can_disclose = persistent.knows_affair and not disclosed_affair
+    $ can_ask_parentage = persistent.knows_red_hair and not persistent.knows_miss_parentage
 
-    if can_ask_key or can_ask_bedroom or can_accuse or can_disclose:
+    if can_ask_key or can_ask_bedroom or can_accuse or can_disclose or can_ask_parentage:
 
         menu:
 
@@ -67,6 +68,28 @@ label talk_nurse:
                 nurse "Then you’ve said it."
 
                 "She doesn’t raise her voice.{w=.3} Silence settles between you."
+
+            "Show her the photograph in the camera" if can_ask_parentage:
+
+                $ persistent.knows_miss_parentage = True
+
+                player "There are photographs in the Master’s camera.{w=.3} A young man with red hair, standing beside your wife."
+
+                nurse "..."
+
+                player "Mia has his hair.{w=.3} Red like that doesn’t come from anywhere else in this house."
+
+                "Nora looks at the door, then at the floor, then at you."
+
+                nurse "He came to me when Elias was already ill.{w=.3} He did not ask.{w=.3} He never once asked."
+
+                nurse "I buried it, because a nurse does that.{w=.3} I buried it so Mia would have a father standing in the doorway."
+
+                nurse "Ben is her uncle.{w=.3} He has never been her father, and if you tell him you know, he will take the house apart before he takes his own share of it."
+
+                "She folds her hands very tightly, as if holding something shut."
+
+                nurse "The Master is her father.{w=.3} Write that down somewhere no one can lose it, and let me carry the rest."
 
             "Say nothing":
 

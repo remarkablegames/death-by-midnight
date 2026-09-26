@@ -25,7 +25,7 @@ init python:
                 if self.minutes >= death["minutes"] and death_is_pending(death):
                     renpy.jump(death["label"])
             if self.minutes >= self.MIDNIGHT_MINUTES:
-                renpy.jump("loop_restart")
+                renpy.jump("end")
 
         @property
         def display(self):

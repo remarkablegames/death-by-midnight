@@ -6,7 +6,7 @@
 
 The Master is dead and his will cannot be read until midnight. That is the term you were hired on, and it is the term that will not release you. When someone dies before the reading, the night snaps back to 6 p.m. and runs again, and you are the only one who remembers.
 
-Three people die tonight, one at a time, each for a reason that has nothing to do with the last. The Master is not watching and the will is not a curse. The will binds its executor, and its executor is you. Everything that happens to the people in this house happens because of what you do with what you know.
+Four people die tonight, one at a time, each for a reason that has nothing to do with the last. The Master is not watching and the will is not a curse. The will binds its executor, and its executor is you. Everything that happens to the people in this house happens because of what you do with what you know.
 
 ## The Clause
 
@@ -25,6 +25,7 @@ The Master named the one witness he was certain would be impartial. That is the 
 - The night runs from 6 p.m. to midnight, and the clock only moves when you move.
 - **One death per night, at most.** The first death ends the night.
 - A death at any hour, to anyone, ends the night and resets it to 6 p.m. There is no penalty attached to it. It costs you the night and nothing else.
+- Reaching midnight does not reset. It begins the reading, and the reading can fail in a way no death can: a naming the clause will not hold ends the game outright.
 - Only the detective remembers. The household, their moods, and the placement of evidence all reset.
 - **Knowledge persists**, in the form of unlocked talk options.
 - **Prevention persists.** A cause you resolved stays resolved on every later night.
@@ -45,7 +46,6 @@ So **preventing a death does not stop the night, it moves it.** Closing the 7:30
 | 8:30 p.m. | Nora | Redirection only. Madelyn, alive and furious, strangles her in the kitchen with her own head covering, and denies it in front of you | Never accusing her |
 | 9:30 p.m. | Ben | Nora poisons the coffee as he crosses the living room | The coffee, or never speaking the affair aloud |
 | 10:30 p.m. | Mia | Suicide at the pond, arranged to read as the first death | Her journal, then the conversation it unlocks |
-| 11:30 p.m. | The detective | Never shown. The clause's remedy. | Breaking the loop before 11:30 |
 
 <!-- prettier-ignore-end -->
 
@@ -65,7 +65,6 @@ Three further rules about the slot:
 | Nora, 8:30 | Never accuse Nora while Madelyn is alive | Any accusation can turn Madelyn, and Madelyn is the most dangerous thing in the house |
 | Ben, 9:30 | Swap or destroy the coffee, or keep the affair unspoken | Learning the affair is required for the true ending. Saying it aloud is what kills him. |
 | Mia, 10:30 | Her journal, then the conversation it unlocks | Knowledge that never becomes conversation is not prevention |
-| Detective, 11:30 | Break the loop before 11:30 | Only the _True Will_ discharges it, and the basement is not on the way |
 
 <!-- prettier-ignore-end -->
 
@@ -75,7 +74,7 @@ Three further rules about the slot:
 - You have been in this house before. You investigated the Master's death and signed it off as natural causes. He knew what that cost you.
 - The clause is the bill for a favour you took, and you are the last person in the manor who knows it. The story you tell yourself, that you are an impartial outsider with no stake in this family, is the reason you did not see it coming.
 - You cannot leave. Not because the door is locked, but because the reading is unfinished and you are the one who has to finish it.
-- You can die. So far the night has only taken people around you and you have read that as a pattern aimed elsewhere. It is not. The remedy falls on the executor, and the remedy is at 11:30.
+- You can die. So far the night has only taken people around you and you have read that as a pattern aimed elsewhere. It is not. The remedy is the Master’s own instrument, and it is in the basement.
 - Everything that has happened tonight has been a document, and you have spent the night looking for a person.
 
 ## Plot
@@ -129,13 +128,13 @@ Everything is resolved, or everything is resolved but you. The reading begins in
 
 ## Endings
 
-There is no bad ending. Every death is a reset, so the only thing that ends the game is a night in which nothing dies, and the only way to get that night is to have resolved every cause before the last hour.
+There is one way to end the game and it is not a reset. Every death is a reset, so the only night that reaches midnight is one in which nothing died, and the only way to get that night is to have resolved every cause before the last hour. Reach midnight and the reading begins, and the reading is the last thing that happens.
 
-At the reading you have one decision, and the clause only ever asked for a name. How much you name is the whole distance between the three endings.
+At the reading you have one decision, and the clause only ever asked for a name. Who you name, and whether you can prove it, is the whole distance between the endings.
 
-- **Good ending.** You name the affair and stop there. The clause asked for a name and you gave it one; it does not check the rest. The reading completes, the night ends, and the family keeps Mia's parentage. You leave, and you leave having let it stand.
-- **True ending.** You name everything, you name Mia, and you present the _True Will_ before the decoy is read. The binding has nothing left to collect.
-- **Hidden ending.** You take the Master's pocket watch from the drawer beside the _True Will_ and present nothing. You were executor all along, so the binding cannot be escaped, only held. You run the night now, everyone in it is yours, and you know that because you are the one who died at 11:30 every time you did not.
+- **Good ending.** You name the heir and stop there. The clause asked for a name and you gave it one; it does not check the rest. The reading completes, the night ends, and the family keeps Mia's parentage. You leave, and you leave having let it stand.
+- **True ending.** You name Mia with the proof behind her: the red hair, Nora's confession, and the _True Will_. The binding has nothing left to collect.
+- **Bad ending.** You name an heir the reading will not hold, either because you never found the _True Will_ or because you named a claim you had no proof for. The reading closes unfinished and does not snap back. There is no 6 p.m. to return to.
 
 ## Knowledge milestones
 

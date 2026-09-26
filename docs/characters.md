@@ -15,11 +15,11 @@
 - **Public goal:** Read the will, settle the family, leave the manor
 - **Private goal (hidden from himself):** He is the Master's chosen instrument, a detective who follows the truth is exactly the mechanism that keeps the family's secrets tearing it apart, night after night
 - **Secret he keeps from himself:** He investigated the Master's death once before and signed it off as natural causes. The will binds its executor, and the Master named him for exactly that reason
-- **Secret he does not know:** The clause carries a remedy, and it falls on the executor at 11:30
+- **Secret he does not know:** The clause has a remedy, and it is not mercy. It is the Master's own instrument, waiting in the basement, and the will does not care why you name an heir, only whether you can prove it.
 - **Fear:** Failing the job; unable to save others; being the reason someone dies; unable to escape the time loop
 - **Misbelief:** He believes he is an impartial outsider with no stake in the family, when he is the compromised witness the Master deliberately chose
 - **Personality:** Inquisitive, methodical, dry
-- **Arc:** From impartial executor to recognizing that he is both the instrument and the bill, and choosing what to do with that knowledge: name the affair and let the rest stand, name everything, or take the watch and hold the binding
+- **Arc:** From impartial executor to recognizing that he is both the instrument and the bill, and choosing what to do with that knowledge: name the family and let it stand, name Mia with the proof she deserves, or name a claim he cannot support and have the reading refuse him
 - **Image:** None. The player takes on the role of the detective from a first-person perspective.
 
 ### Butler Ben
