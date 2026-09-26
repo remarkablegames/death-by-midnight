@@ -1,5 +1,14 @@
 init python:
 
+    class SceneCharacter(object):
+
+        def __init__(self, character_id, expression="neutral", xalign=.5, tint="#ffffff00"):
+            self.character_id = character_id
+            self.expression = expression
+            self.xalign = xalign
+            self.tint = tint
+
+
     def character_schedule_band():
         if clock.is_night_dark:
             return "night_dark"

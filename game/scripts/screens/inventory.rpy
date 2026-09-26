@@ -264,6 +264,66 @@ screen inventory_read(item):
                     textbutton _("Close") action Return("close")
 
 
+screen inventory_character_menu(character):
+
+    modal True
+    zorder 300
+
+    frame:
+        align (.5, .5)
+        background Solid(COLOR_ACTION)
+
+        frame:
+            background Solid("#160b08")
+            padding (30, 30, 30, 30)
+
+            vbox:
+                spacing 12
+
+                text character.name:
+                    style "inventory_read_title"
+                    align (.5, .5)
+
+                textbutton _("Talk"):
+                    text_style "text_sans_serif"
+                    action Return("talk")
+
+                if inventory.items:
+                    textbutton _("Give"):
+                        text_style "text_sans_serif"
+                        action Return("give")
+
+                textbutton _("Leave"):
+                    text_style "text_sans_serif"
+                    action Return(None)
+
+
+screen inventory_choose_item(character):
+
+    modal True
+    zorder 300
+
+    frame:
+        align (.5, .5)
+        background Solid(COLOR_ACTION)
+
+        frame:
+            background Solid("#160b08")
+            padding (30, 30, 30, 30)
+
+            vbox:
+                spacing 12
+
+                text _("Give to [character.name]"):
+                    style "inventory_read_title"
+                    xalign .5
+
+                for item in inventory.items:
+                    textbutton item.name action Return(item.item_id)
+
+                textbutton _("Nevermind") action Return(None)
+
+
 label inventory_handle:
 
     python:
@@ -325,6 +385,24 @@ label inventory_give_scene(item_id, character_id):
     $ renpy.notify(f"You gave {item.name} to {character.name}")
 
     call expression f"give_{item_id}_to_{character.character_id}"
+
+    $ is_item_interactable = True
+
+    return
+
+
+label inventory_talk_scene(character_id):
+
+    $ character = character_info(character_id)
+
+    if character is None:
+        return
+
+    hide screen inventory_hud
+
+    $ is_item_interactable = False
+
+    call expression "talk_" + character_id
 
     $ is_item_interactable = True
 
