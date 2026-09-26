@@ -51,11 +51,11 @@ init python:
             self.remove(item_id)
 
 
-    def inventory_read_cb(drag):
+    def inventory_read(drag):
         return ("read", drag.drag_name)
 
 
-    def inventory_drop_cb(drags, drop):
+    def inventory_drop(drags, drop):
         if drop is None:
             drag = drags[0]
             drag.snap(drag.start_x, drag.start_y, delay=0.25)
@@ -68,7 +68,7 @@ init python:
         return ("give", drags[0].drag_name, drop.drag_name)
 
 
-    def inventory_character_click_cb(drag):
+    def inventory_character_click(drag):
         renpy.sound.play("ui/click_003.ogg")
         return ("character", drag.drag_name)
 
@@ -186,7 +186,7 @@ screen inventory_hud():
                 drag_name scene_character.character_id
                 draggable False
                 droppable True
-                clicked inventory_character_click_cb
+                clicked inventory_character_click
                 hovered (lambda c_id=scene_character.character_id: character_hover_set(c_id))
                 unhovered (lambda c_id=scene_character.character_id: character_hover_clear(c_id))
                 xalign scene_character.xalign
@@ -213,8 +213,8 @@ screen inventory_hud():
                 drag_name item.item_id
                 draggable True
                 droppable False
-                clicked inventory_read_cb
-                dragged inventory_drop_cb
+                clicked inventory_read
+                dragged inventory_drop
 
                 pos (INVENTORY_SLOT_X, INVENTORY_SLOT_Y + index * INVENTORY_SLOT_YSTEP)
 
