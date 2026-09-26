@@ -3,10 +3,10 @@ default player_name = ""
 
 label start:
 
-    player "I’m on my way to the manor."
-    player "The late Master asked me to execute his will."
+    "You’re on your way to the manor."
+    "The late Master tasked you with executing his will."
 
-    $ player_name = renpy.input("What’s my name?", default="Danny").strip()
+    $ player_name = renpy.input("What’s your name?", default="Danny").strip()
 
     if not player_name:
         $ player_name = "Danny"
