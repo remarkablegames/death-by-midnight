@@ -24,7 +24,7 @@ label death_maid_found:
 
         player "The kitchen knife.{w=.3} She told me it was there,{w=.1} but now it’s gone."
 
-    elif persistent.knows_knife_exists:
+    elif knows_knife_exists:
 
         player "She told me there was a knife in the kitchen this evening."
 

@@ -13,8 +13,8 @@ label talk_maid:
 
 label talk_maid_menu:
 
-    $ can_ask_knife = not persistent.knows_knife_exists and not persistent.knows_affair
-    $ can_ask_thief = persistent.knows_knife_exists and not persistent.knows_affair
+    $ can_ask_knife = not knows_knife_exists and not knows_affair
+    $ can_ask_thief = knows_knife_exists and not knows_affair
 
     menu:
 
@@ -26,7 +26,7 @@ label talk_maid_menu:
 
             maid "Then your eyes are better than mine."
 
-            $ persistent.knows_knife_exists = True
+            $ knows_knife_exists = True
 
         "Ask who took the knife" if can_ask_thief:
 
@@ -40,7 +40,7 @@ label talk_maid_menu:
 
             maid "You should be more careful...{w=.3} nobody in this house forgives being named."
 
-            $ persistent.knows_affair = True
+            $ knows_affair = True
 
         "Nevermind":
 

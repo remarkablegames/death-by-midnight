@@ -25,4 +25,9 @@ label loop_start:
     $ disclosed_affair = False
     $ accused_nurse = False
 
+    $ resolved_butler = False
+    $ resolved_maid = False
+    $ resolved_miss = False
+    $ resolved_nurse = False
+
     jump explore_interior_entrance

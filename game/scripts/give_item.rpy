@@ -312,7 +312,7 @@ label give_coffee_to_nurse:
 
     nurse "Careless of someone to leave that lying about.{w=.3} Let me throw it out for you."
 
-    $ persistent.resolved_butler = True
+    $ resolved_butler = True
     $ renpy.notify("Nora took the coffee away")
 
     hide nurse
@@ -380,7 +380,7 @@ label give_diary_to_miss:
         "No":
             miss "I’ll take your word for it."
 
-    $ persistent.resolved_miss = True
+    $ resolved_miss = True
     $ renpy.notify(_("Mia will not go to the pond tonight"))
 
     hide miss
@@ -496,7 +496,7 @@ label give_kitchen_knife_to_maid:
 
     maid "That belongs on the board,{w=.1} not in a guest’s pocket.{w=.3} I’ll take it and see it put away before the cook misses it."
 
-    $ secure_kitchen_knife()
+    $ resolved_maid = True
 
     hide maid
     with dissolve

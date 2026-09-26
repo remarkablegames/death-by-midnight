@@ -27,10 +27,10 @@ The Master named the one witness he was certain would be impartial. That is the 
 - A death at any hour, to anyone, ends the night and resets it to 6 p.m. There is no penalty attached to it. It costs you the night and nothing else.
 - Reaching midnight does not reset. It begins the reading, and the reading can fail in a way no death can: a naming the clause will not hold ends the game outright.
 - Only the detective remembers. The household, their moods, and the placement of evidence all reset.
-- **Knowledge persists**, in the form of unlocked talk options.
-- **Prevention persists.** A cause you resolved stays resolved on every later night.
+- **Knowledge persists**, in the form of unlocked talk options. What the detective learns carries for the rest of the playthrough.
+- **Prevention does not persist.** A cause you resolved has to be resolved again on every later night, because the act is physical and the household forgets it happened.
 - **Disclosure does not persist.** Speaking a secret aloud can kill, and the next night the secret is still yours to speak or to keep.
-- Physical items reset each loop and must be refound. A few, the basement key among them, are handed over again through persistent conversations.
+- Physical items reset each loop and must be refound. A few, the basement key among them, are handed over again through repeated conversations.
 
 ## The Death Slot
 
@@ -123,7 +123,7 @@ Everything is resolved, or everything is resolved but you. The reading begins in
 - **Conversation.** Talk to characters to uncover secrets. Knowledge carries into the next loop as new talk options, and some of those options are weapons.
 - **Inventory.** Pick up, read, and give. Giving is how you speak a secret, and speaking is how you cause a death.
 - **Give scenes.** Handing an item to a character runs a label that owns the dialogue. A give scene can resolve a cause or load a slot, which is the main tension of the late game.
-- **No save/load mid-night.** The loop is the reset. Persistent variables track what the detective knows and which causes are resolved.
+- **No save/load mid-night.** The loop is the reset. The `knows_*` variables track what the detective learned and carry across nights; the `resolved_*` variables track what was prevented and reset every night.
 - **Midnight.** Reaching midnight ends the night. `clock.advance` currently jumps to a stub `end` label, which is where the reading and the endings go.
 
 ## Endings

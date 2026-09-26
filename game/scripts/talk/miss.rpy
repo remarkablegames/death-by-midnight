@@ -14,15 +14,15 @@ label talk_miss:
 
         miss "Have you seen the milk?{w=.3} I can’t seem to find it."
 
-        $ persistent.knows_miss_milk = True
+        $ knows_miss_milk = True
 
     jump talk_miss_menu
 
 
 label talk_miss_menu:
 
-    $ can_confess = inventory.has("diary") and not persistent.resolved_miss
-    $ can_ask_habit = persistent.knows_miss_milk
+    $ can_confess = inventory.has("diary") and not resolved_miss
+    $ can_ask_habit = knows_miss_milk
 
     menu:
 
@@ -58,7 +58,7 @@ label talk_miss_menu:
 
             miss "I don’t want to die.{w=.3} Not tonight."
 
-            $ persistent.resolved_miss = True
+            $ resolved_miss = True
             $ renpy.notify(_("Mia will not go to the pond tonight"))
 
         "Ask about the milk habit" if can_ask_habit:

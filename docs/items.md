@@ -1,6 +1,6 @@
 # Items
 
-Every item should have a **verb**: it either changes what the detective knows (which carries into the next loop as unlocked talk options) or changes what a character does when it is given to them. Items reset each loop and must be refound; knowledge carries over as persistent talk options.
+Every item should have a **verb**: it either changes what the detective knows (which carries into the next loop as unlocked talk options) or changes what a character does when it is given to them. Items reset each loop and must be refound; knowledge carries over as unlocked talk options.
 
 Handing an item to a character runs a label named `give_<item>_to_<character>` (e.g. `give_scroll_to_nurse`). Every item/character pair needs a label since it owns the dialogue scene. `inventory_give_scene` in `scripts/screens/inventory.rpy` consumes the item and notifies before the label runs; if the character declines, the label calls `inventory.add(item_id)` and its own notify to return the item. Labels may set flags or unlock talk options. Labels live in `game/scripts/give_item.rpy`.
 
@@ -32,7 +32,7 @@ Each carries a piece of the Master's history and a reaction when handed over.
 | Locket (engraved "E.M.", lock of red hair) | Study | Mia: the object-gesture of her empathy path; also connects her hair to the Master |
 | Letter to "Brother Bernard" | Study | Anyone: reveals the Master's name and the brotherhood |
 | Never-sent letter to "my girl" | Study | Mia or Nora: his affection, signed as her father |
-| Milk | Kitchen | Red herring: companion to the poisoned coffee, but provably harmless. Left in place, Miss Mia drinks it and unlocks a persistent talk option; picked up, that beat is blocked |
+| Milk | Kitchen | Red herring: companion to the poisoned coffee, but provably harmless. Left in place, Miss Mia drinks it and unlocks a talk option that carries over; picked up, that beat is blocked |
 
 <!-- prettier-ignore-end -->
 
@@ -40,9 +40,9 @@ Each carries a piece of the Master's history and a reaction when handed over.
 
 The kitchen knife is the one death weapon the player can reach, and it is the whole of the 7:30 prevention. It sits on the cutting board from 6 p.m. until 7 p.m., and at 7 p.m. it is gone, because Ben took it.
 
-- It is pickable in the kitchen before 7 p.m. **Pocketing it closes the 7:30 hour permanently.**
-- **Handing it to Madelyn closes the 7:30 hour permanently.** She takes it off your hands and puts it away. Every other character hands it straight back.
-- Either path sets `persistent.resolved_maid`, so the knife does not return to the kitchen on any later night.
+- It is pickable in the kitchen before 7 p.m. **Pocketing it closes the 7:30 hour for that night.**
+- **Handing it to Madelyn closes the 7:30 hour for that night.** She takes it off your hands and puts it away. Every other character hands it straight back.
+- Either path sets `resolved_maid`, which resets at 6 p.m. with everything else, so the knife has to be taken out of the kitchen again on every night you want 7:30 to stay empty.
 - Nothing announces that the knife has gone. It is simply not on the board after 7 p.m., and a player who was in the kitchen before then already knows it was there.
 - The board without the knife only registers as evidence if the player has asked Madelyn about the knife, so the game pays for knowledge rather than for walking around. A player who never asked sees a board with no knife on it and learns nothing from it.
 - The 7:30 discovery names the knife only when the player has earned it: her testimony plus the board, her testimony alone, or neither.

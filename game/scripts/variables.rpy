@@ -1,14 +1,14 @@
-default persistent.knows_affair = False
-default persistent.knows_knife_exists = False
-default persistent.knows_red_hair = False
-default persistent.knows_miss_milk = False
-default persistent.knows_miss_parentage = False
-default persistent.knows_buried_death = False
+default knows_affair = False
+default knows_knife_exists = False
+default knows_red_hair = False
+default knows_miss_milk = False
+default knows_miss_parentage = False
+default knows_buried_death = False
 
-default persistent.resolved_butler = False
-default persistent.resolved_maid = False
-default persistent.resolved_miss = False
-default persistent.resolved_nurse = False
+default resolved_butler = False
+default resolved_maid = False
+default resolved_miss = False
+default resolved_nurse = False
 
 default disclosed_affair = False
 default accused_nurse = False

@@ -343,7 +343,7 @@ label inventory_handle:
         call screen inventory_read(_read_item)
 
         if _read_item.item_id == "camera":
-            $ persistent.knows_red_hair = True
+            $ knows_red_hair = True
 
     elif inventory_result_action == "give":
 

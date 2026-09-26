@@ -70,7 +70,7 @@ init python:
             "“Mother says there are mixtures that heal and mixtures that harm. Knowing which is which is the difference between a cure or a toxin.”"
         )
 
-        if persistent.knows_red_hair:
+        if knows_red_hair:
             text += _(
                 "\n\nA middle page, the ink smudged:\n"
                 "“Mother says my red hair must come from some ancestor long ago. I wonder which one.”"

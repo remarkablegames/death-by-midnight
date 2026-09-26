@@ -43,7 +43,7 @@ label ending_miss:
 
     player "Mia shall inherit the manor."
 
-    if persistent.knows_miss_parentage and inventory.has("will"):
+    if knows_miss_parentage and inventory.has("will"):
 
         "The photograph in the camera,{w=.1} the red hair,{w=.1} the truth Nora carried alone,{w=.1} and the Master’s own will to back it."
         "Every thread comes taut at once."
@@ -64,7 +64,7 @@ label ending_miss:
 
         jump ending_true
 
-    elif persistent.knows_miss_parentage and not inventory.has("will"):
+    elif knows_miss_parentage and not inventory.has("will"):
 
         miss "Me?{w=.3} On what grounds?"
 
@@ -105,7 +105,7 @@ label ending_butler:
 
     player "Ben shall inherit the manor."
 
-    if inventory.has("will") and persistent.knows_affair:
+    if inventory.has("will") and knows_affair:
 
         "The reading holds."
         "Ben takes the manor and all family secrets are buried under it."
@@ -139,7 +139,7 @@ label ending_nurse:
 
     player "Nora shall inherit the manor."
 
-    if inventory.has("will") and persistent.knows_miss_parentage:
+    if inventory.has("will") and knows_miss_parentage:
 
         "The True Will is in your hands and you have pieced together the evidence."
 
@@ -183,7 +183,7 @@ label ending_maid:
 
     player "Madelyn shall inherit the manor."
 
-    if inventory.has("will") and persistent.knows_affair:
+    if inventory.has("will") and knows_affair:
 
         "The True Will is in your hands and you name the affair with it."
         "You give the manor to the woman who was under it the whole time."

@@ -10,11 +10,8 @@ define KNIFE_TAKEN_MINUTES = 19 * 60
 
 init python:
 
-    def secure_kitchen_knife():
-        persistent.resolved_maid = True
-
     def death_is_pending(death):
-        if getattr(persistent, death["resolved"]):
+        if getattr(store, death["resolved"]):
             return False
         depends = death.get("depends")
         if depends and not getattr(store, depends):

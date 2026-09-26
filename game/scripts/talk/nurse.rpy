@@ -16,10 +16,10 @@ label talk_nurse_menu:
     show nurse neutral at character_speak
 
     $ can_ask_key = seen_basement_door and not inventory.has("basement_key")
-    $ can_ask_bedroom = persistent.knows_affair
-    $ can_accuse = persistent.knows_affair and inventory.has("coffee") and not accused_nurse
-    $ can_disclose = persistent.knows_affair and not disclosed_affair
-    $ can_ask_parentage = persistent.knows_red_hair and not persistent.knows_miss_parentage
+    $ can_ask_bedroom = knows_affair
+    $ can_accuse = knows_affair and inventory.has("coffee") and not accused_nurse
+    $ can_disclose = knows_affair and not disclosed_affair
+    $ can_ask_parentage = knows_red_hair and not knows_miss_parentage
 
     menu:
 
@@ -74,7 +74,7 @@ label talk_nurse_menu:
 
         "Show her the photograph in the camera" if can_ask_parentage:
 
-            $ persistent.knows_miss_parentage = True
+            $ knows_miss_parentage = True
 
             player "There are photographs in the Master’s camera.{w=.3} A young man with red hair, standing beside your wife."
 
