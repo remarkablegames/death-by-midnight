@@ -97,9 +97,6 @@ label ending_miss:
 
         jump ending_bad
 
-    hide miss
-    with dissolve
-
 
 label ending_butler:
 
@@ -133,9 +130,6 @@ label ending_butler:
         "You leave having let it stand."
 
         jump ending_good
-
-    hide butler
-    with dissolve
 
 
 label ending_nurse:
@@ -180,9 +174,6 @@ label ending_nurse:
         "The clause is not satisfied."
 
         jump ending_bad
-
-    hide nurse
-    with dissolve
 
 
 label ending_maid:
@@ -233,9 +224,6 @@ label ending_maid:
         "The clause is not satisfied."
 
         jump ending_bad
-
-    hide maid
-    with dissolve
 
 
 label ending_true:
