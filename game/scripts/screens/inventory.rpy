@@ -391,6 +391,9 @@ label inventory_give_scene(item_id, character_id):
     return
 
 
+define TALK_MINUTES = 5
+
+
 label inventory_talk_scene(character_id):
 
     $ character = character_info(character_id)
@@ -405,6 +408,8 @@ label inventory_talk_scene(character_id):
     call expression "talk_" + character_id
 
     $ is_item_interactable = True
+
+    $ clock.advance(TALK_MINUTES)
 
     return
 
