@@ -4,8 +4,8 @@ label intro:
     show screen intro_butler_greet(enabled=False)
     with fade
 
-    player "Looks like the butler’s waiting for me."
-    player "I should go speak with him."
+    player "Looks like the butler’s waiting outside the manor gate."
+    player "I should go talk to him."
 
     call screen intro_butler_greet(enabled=True)
 
@@ -25,7 +25,7 @@ label intro_butler_greet:
     show butler smile at character_speak
     with dissolve
 
-    butler "You must be the detective."
+    butler @ happy "You must be the detective."
 
     player "That’s right."
 
@@ -43,7 +43,7 @@ label intro_butler_door:
     show butler smile at character_speak
     with dissolve
 
-    butler "Please come in."
+    butler "The other residents are waiting.{w=.3} Please come in."
     player "Thanks."
 
     hide butler
