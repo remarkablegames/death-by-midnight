@@ -4,13 +4,13 @@ label explore_hallway_right:
 
     if clock.is_night_dark:
         scene bg hallway right night dark
-        $ character_tint = "#1f3a5f"
+        $ character_tint = COLOR_TINT_BLUE
     elif clock.is_night_light:
         scene bg hallway right night light
-        $ character_tint = "#ffffff00"
+        $ character_tint = COLOR_TRANSPARENT
     else:
         scene bg hallway right evening
-        $ character_tint = "#ffffff00"
+        $ character_tint = COLOR_TRANSPARENT
 
     call death_hint
 

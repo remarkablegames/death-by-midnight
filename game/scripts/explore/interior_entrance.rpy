@@ -4,13 +4,13 @@ label explore_interior_entrance:
 
     if clock.is_night_dark:
         scene bg interior entrance night dark
-        $ character_tint = "#1f3a5f"
+        $ character_tint = COLOR_TINT_BLUE
     elif clock.is_night_light:
         scene bg interior entrance night light
-        $ character_tint = "#ffffff00"
+        $ character_tint = COLOR_TRANSPARENT
     else:
         scene bg interior entrance evening
-        $ character_tint = "#ffffff00"
+        $ character_tint = COLOR_TRANSPARENT
 
     if not inventory.has_picked_up("scroll"):
         show screen item_scroll onlayer master zorder 0
@@ -39,9 +39,9 @@ label explore_interior_entrance:
 screen item_scroll():
 
     if clock.is_night_dark:
-        $ item_tint = "#1f3a5f"
+        $ item_tint = COLOR_TINT_BLUE
     elif clock.is_night_light:
-        $ item_tint = "#ffffff00"
+        $ item_tint = COLOR_TRANSPARENT
     else:
         $ item_tint = "#555"
 

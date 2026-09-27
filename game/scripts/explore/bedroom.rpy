@@ -4,10 +4,10 @@ label explore_bedroom:
 
     if clock.is_night_light:
         scene bg bedroom night
-        $ character_tint = "#ffffff00"
+        $ character_tint = COLOR_TRANSPARENT
     else:
         scene bg bedroom evening
-        $ character_tint = "#ffffff00"
+        $ character_tint = COLOR_TRANSPARENT
 
     call death_hint
 
@@ -36,7 +36,7 @@ label explore_bedroom:
 screen item_camera():
 
     if clock.is_night_light:
-        $ tint = "#ffffff00"
+        $ tint = COLOR_TRANSPARENT
     else:
         $ tint = "#ffcf9a"
 

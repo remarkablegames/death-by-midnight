@@ -7,18 +7,18 @@ label explore_basement_door:
     if is_basement_locked:
         if clock.is_night_dark:
             scene bg basement door closed dark
-            $ character_tint = "#1f3a5f"
+            $ character_tint = COLOR_TINT_BLUE
         else:
             scene bg basement door closed light
-            $ character_tint = "#ffffff00"
+            $ character_tint = COLOR_TRANSPARENT
         show screen interactable_door onlayer master zorder 0
     else:
         if clock.is_night_dark:
             scene bg basement door open dark
-            $ character_tint = "#1f3a5f"
+            $ character_tint = COLOR_TINT_BLUE
         else:
             scene bg basement door open light
-            $ character_tint = "#ffffff00"
+            $ character_tint = COLOR_TRANSPARENT
 
     call death_hint
 
@@ -44,7 +44,7 @@ screen interactable_door():
 
     imagebutton:
         idle Transform("images/interactables/door.webp", alpha=0)
-        hover Transform("images/interactables/door.webp", alpha=.1, matrixcolor=TintMatrix("#ffffff00" if clock.is_night_dark else "#000"))
+        hover Transform("images/interactables/door.webp", alpha=.1, matrixcolor=TintMatrix(COLOR_TRANSPARENT if clock.is_night_dark else COLOR_BLACK))
         style "interactable_button"
         xpos 736
         ypos 146

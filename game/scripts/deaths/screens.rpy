@@ -64,7 +64,7 @@ label death_hint:
     return
 
 
-screen death_body(character, expression, label, xalign=.5, tintcolor="#ffffff00", enabled=True):
+screen death_body(character, expression, label, xalign=.5, tintcolor=COLOR_TRANSPARENT, enabled=True):
 
     imagebutton:
         style "character_button"

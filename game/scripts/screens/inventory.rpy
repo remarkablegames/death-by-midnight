@@ -155,7 +155,7 @@ screen inventory_hud():
 
         fixed:
 
-            add Solid("#160b08b8") xpos INVENTORY_PANEL_X ypos INVENTORY_PANEL_Y xysize (INVENTORY_PANEL_WIDTH, inventory_panel_height())
+            add Solid(COLOR_OUTLINE + "b8") xpos INVENTORY_PANEL_X ypos INVENTORY_PANEL_Y xysize (INVENTORY_PANEL_WIDTH, inventory_panel_height())
             add Solid(COLOR_ACTION) xpos INVENTORY_PANEL_X ypos INVENTORY_PANEL_Y xysize (INVENTORY_PANEL_WIDTH, 4)
 
             text _("Inventory"):
@@ -201,7 +201,7 @@ screen inventory_hud():
                 xpos 736
                 ypos 146
                 xysize (312, 739)
-                add Solid("#ffffff00")
+                add Solid(COLOR_TRANSPARENT)
 
         for index, item in enumerate(inventory.items):
             drag:
@@ -231,7 +231,7 @@ screen inventory_read(item):
         frame:
             padding (34, 30, 34, 30)
             xmaximum 780
-            background Solid("#160b08")
+            background Solid(COLOR_OUTLINE)
 
             vbox:
                 xalign 0.5
@@ -267,7 +267,7 @@ screen inventory_character_menu(character):
         background Solid(COLOR_ACTION)
 
         frame:
-            background Solid("#160b08")
+            background Solid(COLOR_OUTLINE)
             padding (30, 30, 30, 30)
 
             vbox:
@@ -300,7 +300,7 @@ screen inventory_choose_item(character):
         background Solid(COLOR_ACTION)
 
         frame:
-            background Solid("#160b08")
+            background Solid(COLOR_OUTLINE)
             padding (30, 30, 30, 30)
 
             vbox:

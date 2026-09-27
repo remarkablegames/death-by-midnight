@@ -76,7 +76,6 @@ label loop_start:
 
         player "Then I have another chance."
 
-    $ hide_explore_screens()
     $ is_interactable = True
 
     jump explore_interior_entrance

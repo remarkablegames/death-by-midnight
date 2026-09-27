@@ -1,7 +1,7 @@
 label explore_basement_stairs:
 
     $ set_scene_characters("basement_stairs")
-    $ character_tint = "#ffffff00"
+    $ character_tint = COLOR_TRANSPARENT
 
     scene bg basement stairs
 

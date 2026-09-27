@@ -4,10 +4,10 @@ label explore_kitchen:
 
     if clock.is_night_light:
         scene bg kitchen night
-        $ character_tint = "#1f3a5f"
+        $ character_tint = COLOR_TINT_BLUE
     else:
         scene bg kitchen evening
-        $ character_tint = "#ffffff00"
+        $ character_tint = COLOR_TRANSPARENT
 
     if not resolved_maid and clock.minutes < KNIFE_TAKEN_MINUTES:
         show screen item_kitchen_knife onlayer master zorder 0
@@ -43,7 +43,7 @@ label explore_kitchen:
 screen item_kitchen_knife():
 
     if clock.is_night_light:
-        $ item_tint = "#1f3a5f"
+        $ item_tint = COLOR_TINT_BLUE
     else:
         $ item_tint = "#ffcf9a"
 
@@ -64,7 +64,7 @@ screen item_kitchen_knife():
 screen item_milk():
 
     if clock.is_night_light:
-        $ item_tint = "#1f3a5f"
+        $ item_tint = COLOR_TINT_BLUE
     else:
         $ item_tint = "#ffd9ae"
 

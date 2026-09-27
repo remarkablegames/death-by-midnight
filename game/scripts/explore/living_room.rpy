@@ -4,13 +4,13 @@ label explore_living_room:
 
     if clock.is_night_dark:
         scene bg living room night dark
-        $ character_tint = "#1f3a5f"
+        $ character_tint = COLOR_TINT_BLUE
     elif clock.is_night_light:
         scene bg living room night light
-        $ character_tint = "#ffffff00"
+        $ character_tint = COLOR_TRANSPARENT
     else:
         scene bg living room evening
-        $ character_tint = "#ffffff00"
+        $ character_tint = COLOR_TRANSPARENT
 
     if not inventory.has_picked_up("coffee"):
         show screen item_coffee onlayer master zorder 0
@@ -41,7 +41,7 @@ screen item_coffee():
     if clock.is_night_dark:
         $ item_tint = "#050a18"
     elif clock.is_night_light:
-        $ item_tint = "#333"
+        $ item_tint = COLOR_TINT_GREY
     else:
         $ item_tint = "#ffe59a"
 

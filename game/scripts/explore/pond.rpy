@@ -4,10 +4,10 @@ label explore_pond:
 
     if clock.is_night_light:
         scene bg pond night
-        $ character_tint = "#1f3a5f"
+        $ character_tint = COLOR_TINT_BLUE
     else:
         scene bg pond evening
-        $ character_tint = "#ffffff00"
+        $ character_tint = COLOR_TRANSPARENT
 
     if not inventory.has_picked_up("diary") and clock.is_night_light:
         show screen item_diary onlayer master zorder 0

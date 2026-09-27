@@ -41,7 +41,7 @@ transform flip(xzoom=1, yzoom=1):
     yzoom yzoom
 
 
-transform item_button(zoom, xalign, yalign, matrixcolor=TintMatrix("#ffffff00"), rotate=0):
+transform item_button(zoom, xalign, yalign, matrixcolor=TintMatrix(COLOR_TRANSPARENT), rotate=0):
     zoom zoom
     xalign xalign
     yalign yalign
