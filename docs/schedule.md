@@ -1,10 +1,10 @@
 # Character Schedule
 
-Where each resident can be found during the evening/night, by time band, and the one-line observation the detective gets when first meeting them there each loop.
+Where each resident can be found during the evening/night, and the one-line observation the detective gets when first meeting them there each loop.
 
-## Time bands
+## Time windows
 
-The clock runs from **6 p.m. to midnight** and only advances forward.
+The clock runs from **6 p.m. to midnight** and only advances forward. Placement is by explicit window rather than by band, because a character's whereabouts have to line up with a death hour, and a two-hour band cannot express "gone from the hall at half past seven."
 
 <!-- prettier-ignore-start -->
 
@@ -16,17 +16,29 @@ The clock runs from **6 p.m. to midnight** and only advances forward.
 
 <!-- prettier-ignore-end -->
 
+The bands still drive backgrounds and item tinting, but placement is per-window.
+
 ## The schedule
 
-A character is **present** in a room when that room is entered during their band. Presence is what makes them findable for Talk/Give, and every character has at least one presence in every band, so nothing is ever soft-locked. Movements between rooms are unobserved (room-based navigation), so placement is per-band, not a path.
+A character is **present** in a room when that room is entered during one of their windows. Presence is what makes them findable for Talk/Give. Movements between rooms are unobserved (room-based navigation), so a window records only where someone is, not how they got there.
 
 <!-- prettier-ignore-start -->
 
-| Character | Evening | Night-light | Night-dark |
-| --- | --- | --- | --- |
-| **Butler Ben** | interior entrance | manor door | living room |
-| **Nurse Nora** | kitchen | kitchen | bedroom |
-| **Miss Mia** | living room | pond | kitchen |
-| **Maid Madelyn** | living room | hallway right | bedroom |
+| Character | 6:00-7:00 | 7:00-7:30 | 7:30-8:30 | 8:30-9:30 | 9:30-10:30 | 10:30-12:00 |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Butler Ben** | interior entrance | interior entrance | interior entrance | manor door | living room | living room |
+| **Nurse Nora** | kitchen | kitchen | kitchen | kitchen | kitchen | bedroom |
+| **Miss Mia** | living room | kitchen | kitchen | kitchen | pond | pond |
+| **Maid Madelyn** | living room | living room | hallway right | kitchen | kitchen | bedroom |
 
 <!-- prettier-ignore-end -->
+
+## Why the windows sit where they do
+
+Each window is pinned to a death hour, because the hour has to be survivable and the aftermath has to be readable.
+
+- **Madelyn is in the living room until 7:30.** Handing her the knife is one of two ways to close the 7:30 hour, and the living room is the only place she can be handed it. She is in the kitchen from 8:30, which is where she kills Nora, so the 8:30 night has all three women in one room.
+- **Ben is not at the manor door when Madelyn dies.** He works there at 7:30, and putting him in the entrance hall until 8:30 keeps him out of frame for his own murder. He takes up position at the manor door at 8:30, crosses the living room at 9:30 for the coffee, and is found there.
+- **Mia is in the kitchen until 9:30, then the pond.** The kitchen is where the milk is and where the pantry observation happens; the pond is where she dies at 10:30. Her diary is only recoverable from the pond before midnight, so the window leaves room to read it and then find her.
+- **Nora holds the kitchen until 10 p.m.** She is there when the 8:30 hour fires, and she moves to the bedroom afterwards, which is where the current placement already had her.
+- **Madelyn and Nora share the bedroom from 10 p.m.** The house is winding down, and it keeps the two of them findable together for the late game.

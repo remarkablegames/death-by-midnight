@@ -9,25 +9,18 @@ init python:
             self.tint = tint
 
 
-    def character_schedule_band():
-        if clock.is_night_dark:
-            return "night_dark"
-        if clock.is_night_light:
-            return "night_light"
-        return "evening"
-
     def set_scene_characters(room_id):
 
         store.current_room = room_id
 
-        band = character_schedule_band()
-        entry = CHARACTER_SCHEDULE.get(room_id, {}).get(band, [])
+        now = clock.minutes
 
         tint = "#333" if clock.is_night_dark else "#ffffff00"
 
         store.scene_characters = [
-            SceneCharacter(character_id, expression=expression, xalign=xalign, tint=tint)
-            for character_id, expression, xalign in entry
+            SceneCharacter(character_id, expression, xalign, tint)
+            for character_id, expression, xalign, start, end, room in CHARACTER_SCHEDULE
+            if room == room_id and start <= now < end
         ]
 
     def room_intro(character_id):
@@ -47,32 +40,23 @@ init python:
         return line
 
 
-define CHARACTER_SCHEDULE = {
-    "interior_entrance": {
-        "evening": [("butler", "smile", .2)],
-    },
-    "manor_door": {
-        "night_light": [("butler", "smile", .2)],
-    },
-    "living_room": {
-        "evening": [("miss", "smile", .3), ("maid", "smile", .7)],
-        "night_dark": [("butler", "smile", .3)],
-    },
-    "kitchen": {
-        "evening": [("nurse", "smile", .2)],
-        "night_light": [("nurse", "smile", .2)],
-        "night_dark": [("miss", "smile", .2)],
-    },
-    "bedroom": {
-        "night_dark": [("nurse", "smile", .3), ("maid", "smile", .7)],
-    },
-    "pond": {
-        "night_light": [("miss", "smile", .7)],
-    },
-    "hallway_right": {
-        "night_light": [("maid", "smile", .5)],
-    },
-}
+define CHARACTER_SCHEDULE = [
+    ("butler", "smile", .2, 18 * 60, 20 * 60 + 30, "interior_entrance"),
+    ("butler", "smile", .2, 20 * 60 + 30, 21 * 60 + 30, "manor_door"),
+    ("butler", "smile", .3, 21 * 60 + 30, 24 * 60, "living_room"),
+
+    ("nurse", "smile", .2, 18 * 60, 22 * 60, "kitchen"),
+    ("nurse", "smile", .3, 22 * 60, 24 * 60, "bedroom"),
+
+    ("miss", "smile", .3, 18 * 60, 19 * 60, "living_room"),
+    ("miss", "smile", .2, 19 * 60, 21 * 60 + 30, "kitchen"),
+    ("miss", "smile", .7, 21 * 60 + 30, 24 * 60, "pond"),
+
+    ("maid", "smile", .7, 18 * 60, 19 * 60 + 30, "living_room"),
+    ("maid", "smile", .5, 19 * 60 + 30, 20 * 60 + 30, "hallway_right"),
+    ("maid", "smile", .2, 20 * 60 + 30, 22 * 60, "kitchen"),
+    ("maid", "smile", .7, 22 * 60, 24 * 60, "bedroom"),
+]
 
 
 define ROOM_INTRO = {
