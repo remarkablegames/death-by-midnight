@@ -43,7 +43,7 @@ screen item_diary():
         idle "images/items/diary.webp"
         style "item_button"
         at item_button(zoom=.035, xalign=.385, yalign=.535, matrixcolor=TintMatrix(tint))
-        sensitive is_item_interactable
+        sensitive is_interactable
         action [
             Hide("item_diary"),
             Function(diary_pickup),

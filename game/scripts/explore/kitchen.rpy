@@ -50,7 +50,7 @@ screen item_kitchen_knife():
         idle "images/items/kitchen_knife.webp"
         style "item_button"
         at item_button(zoom=.2, xalign=.53, yalign=.436, matrixcolor=TintMatrix(tint))
-        sensitive is_item_interactable
+        sensitive is_interactable
         action [
             Hide("item_kitchen_knife"),
             Function(inventory.add, "kitchen_knife"),
@@ -70,7 +70,7 @@ screen item_milk():
         idle "images/items/milk.webp"
         style "item_button"
         at item_button(zoom=.1, xalign=.7, yalign=.329, matrixcolor=TintMatrix(tint)), flip(xzoom=-1)
-        sensitive is_item_interactable
+        sensitive is_interactable
         action [
             Hide("item_milk"),
             SetVariable("milk_taken", True),

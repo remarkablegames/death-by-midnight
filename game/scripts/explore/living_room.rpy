@@ -47,7 +47,7 @@ screen item_coffee():
         idle "images/items/coffee.webp"
         style "item_button"
         at item_button(zoom=.13, xalign=.155, yalign=.602, matrixcolor=TintMatrix(tint))
-        sensitive is_item_interactable
+        sensitive is_interactable
         action [
             Hide("item_coffee"),
             Function(inventory.add, "coffee"),

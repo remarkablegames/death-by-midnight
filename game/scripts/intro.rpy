@@ -56,7 +56,7 @@ label intro_household:
 
     scene bg interior entrance evening
 
-    $ is_item_interactable = False
+    $ is_interactable = False
     show screen item_scroll
 
     show butler smile at character_speak(xalign=.125)

@@ -31,7 +31,7 @@ screen item_will():
         idle "images/items/will.webp"
         style "item_button"
         at item_button(zoom=.05, xalign=.52, yalign=.399, matrixcolor=TintMatrix("#444"), rotate=-13)
-        sensitive is_item_interactable
+        sensitive is_interactable
         action [
             Hide("item_will"),
             Function(inventory.add, "will"),

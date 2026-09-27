@@ -377,7 +377,7 @@ label inventory_give_scene(item_id, character_id):
     if item is None or character is None:
         return
 
-    $ is_item_interactable = False
+    $ is_interactable = False
 
     hide screen inventory_hud
 
@@ -386,7 +386,7 @@ label inventory_give_scene(item_id, character_id):
 
     call expression f"give_{item_id}_to_{character.character_id}"
 
-    $ is_item_interactable = True
+    $ is_interactable = True
 
     return
 
@@ -403,11 +403,11 @@ label inventory_talk_scene(character_id):
 
     hide screen inventory_hud
 
-    $ is_item_interactable = False
+    $ is_interactable = False
 
     call expression "talk_" + character_id
 
-    $ is_item_interactable = True
+    $ is_interactable = True
 
     $ clock.advance(TALK_MINUTES)
 

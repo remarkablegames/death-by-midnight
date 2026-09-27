@@ -6,7 +6,7 @@ label loop_start:
     $ inventory.given = []
     $ inventory.picked_up = []
 
-    $ is_item_interactable = True
+    $ is_interactable = True
     $ scene_characters = []
 
     $ current_room = ""

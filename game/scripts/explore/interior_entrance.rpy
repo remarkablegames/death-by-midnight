@@ -46,7 +46,7 @@ screen item_scroll():
         idle "images/items/scroll.webp"
         style "item_button"
         at item_button(zoom=.14, xalign=.02, yalign=.54, matrixcolor=TintMatrix(tint))
-        sensitive is_item_interactable
+        sensitive is_interactable
         action [
             Hide("item_scroll"),
             Function(inventory.add, "scroll"),

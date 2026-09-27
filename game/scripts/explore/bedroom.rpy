@@ -42,7 +42,7 @@ screen item_camera():
         idle "images/items/camera.webp"
         style "item_button"
         at item_button(zoom=.05, xalign=.39, yalign=.534, matrixcolor=TintMatrix(tint))
-        sensitive is_item_interactable
+        sensitive is_interactable
         action [
             Hide("item_camera"),
             Function(inventory.add, "camera"),
@@ -56,7 +56,7 @@ screen item_key():
         idle "images/items/key.webp"
         style "item_button"
         at item_button(zoom=.035, xalign=.789, yalign=.552, matrixcolor=TintMatrix("#51432fff"), rotate=170)
-        sensitive is_item_interactable
+        sensitive is_interactable
         action [
             Hide("item_key"),
             Function(inventory.add, "basement_key"),
