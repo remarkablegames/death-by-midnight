@@ -125,7 +125,7 @@ Everything is resolved, or everything is resolved but you. The reading begins in
 - **Inventory.** Pick up, read, and give. Giving is how you speak a secret, and speaking is how you cause a death.
 - **Give scenes.** Handing an item to a character runs a label that owns the dialogue. A give scene can resolve a cause or load a slot, which is the main tension of the late game.
 - **Deaths are found, not announced.** `DEATH_HOURS` in `scripts/deaths/screens.rpy` carries the room and the call label for each hour alongside its hour and its resolved flag. The four rooms that can hold a body check `death_waiting_in` on entry, so arriving is what triggers the scene.
-- **No save/load mid-night.** The loop is the reset. The `knows_*` variables track what the detective learned and carry across nights; the `resolved_*` variables track what was prevented and reset every night.
+- **No save/load mid-night.** The loop is the reset. The `knows_*` variables track what the detective learned and carry across nights, as does `loop_count`, which tallies how many nights have run; the `resolved_*` variables track what was prevented and reset every night.
 - **Midnight.** Reaching midnight ends the night. `clock.advance` currently jumps to a stub `end` label, which is where the reading and the endings go.
 
 ## Endings

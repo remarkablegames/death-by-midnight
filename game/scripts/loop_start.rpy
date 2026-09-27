@@ -1,5 +1,7 @@
 label loop_start:
 
+    $ loop_count += 1
+
     $ clock = Clock(Clock.START_MINUTES)
 
     $ inventory.items = []

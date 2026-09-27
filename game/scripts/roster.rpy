@@ -2,10 +2,9 @@ init python:
 
     class CharacterInfo(object):
 
-        def __init__(self, character_id, name, image):
+        def __init__(self, character_id, name):
             self.character_id = character_id
             self.name = name
-            self.image = image
 
 
     def character_info(character_id):
@@ -42,8 +41,8 @@ default character_hover_id = None
 
 
 define CHARACTER_ROSTER = [
-    CharacterInfo("butler", _("Butler Ben"), "butler neutral"),
-    CharacterInfo("maid", _("Maid Madelyn"), "maid neutral"),
-    CharacterInfo("miss", _("Miss Mia"), "miss neutral"),
-    CharacterInfo("nurse", _("Nurse Nora"), "nurse neutral"),
+    CharacterInfo("butler", _("Butler Ben")),
+    CharacterInfo("maid", _("Maid Madelyn")),
+    CharacterInfo("miss", _("Miss Mia")),
+    CharacterInfo("nurse", _("Nurse Nora")),
 ]

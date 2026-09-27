@@ -38,9 +38,6 @@ init python:
         def has_picked_up(self, item_id):
             return item_id in self.picked_up
 
-        def given_to(self, character_id):
-            return any(character == character_id for _, character in self.given)
-
         def get(self, item_id):
             return INVENTORY_ITEMS.get(item_id)
 

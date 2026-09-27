@@ -3,7 +3,8 @@ default knows_knife_exists = False
 default knows_red_hair = False
 default knows_miss_milk = False
 default knows_miss_parentage = False
-default knows_buried_death = False
+
+default loop_count = 0
 
 default resolved_butler = False
 default resolved_maid = False
