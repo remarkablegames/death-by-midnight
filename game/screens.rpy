@@ -397,9 +397,11 @@ style main_menu_text:
 
 style main_menu_title:
     properties gui.text_properties("title")
+    outlines [(2, COLOR_OUTLINE + "cc", 0, 0)]
 
 style main_menu_version:
     properties gui.text_properties("version")
+    outlines [(2, COLOR_OUTLINE + "40", 0, 0)]
 
 
 ## Game Menu screen ############################################################

@@ -65,7 +65,6 @@ cd death-by-midnight
 
 Replace the assets:
 
-- [ ] `game/gui/main_menu.png`
 - [ ] `game/gui/window_icon.png`
 - [ ] [`icon.icns`](https://anyconv.com/png-to-icns-converter/)
 - [ ] [`icon.ico`](https://anyconv.com/png-to-ico-converter/)
