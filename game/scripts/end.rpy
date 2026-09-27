@@ -1,3 +1,53 @@
+label end_incomplete:
+
+    $ victim = dead_character()
+
+    if not victim:
+        jump end
+
+    $ hide_explore_screens()
+
+    scene black
+    with fade
+
+    "The clock strikes twelve."
+
+    scene bg interior entrance night dark
+
+    if victim != "butler":
+        show butler smile at character_speak(xalign=.125)
+
+    if victim != "nurse":
+        show nurse neutral at character_speak(xalign=.375)
+
+    if victim != "miss":
+        show miss neutral at character_speak(xalign=.625)
+
+    if victim != "maid":
+        show maid smile at character_speak(xalign=.875)
+
+    with dissolve
+
+    player "Where’s [character_info(victim).name.split()[-1]]?"
+
+    if victim != "nurse":
+        nurse sad "I’ve searched this entire house..."
+        nurse "...but I could not find ['him' if victim == 'butler' else 'her']..."
+    else:
+        butler neutral "I have not laid eyes on her tonight."
+
+    "The will’s history must be spoken aloud before the reading can be completed."
+    "There’s a death in this house that was never named."
+    "The reading cannot be completed."
+
+    scene black
+    with fade
+
+    "The night starts over."
+
+    jump loop_start
+
+
 label end:
 
     $ hide_explore_screens()

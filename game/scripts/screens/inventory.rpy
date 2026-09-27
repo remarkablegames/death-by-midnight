@@ -26,7 +26,7 @@ init python:
             if item_id not in self.picked_up:
                 self.picked_up.append(item_id)
             item = INVENTORY_ITEMS.get(item_id)
-            if item is not None and item not in self.items:
+            if item and item not in self.items:
                 self.items.append(item)
 
         def remove(self, item_id):
@@ -346,19 +346,19 @@ label inventory_handle:
 
     elif inventory_result_action == "character":
 
-        $ character_result_info = character_info(inventory_result_item)
+        $ character = character_info(inventory_result_item)
 
-        if character_result_info is not None:
+        if character:
 
             $ hide_explore_screens(CHARACTER_MENU_VISIBLE_SCREENS)
 
-            call screen inventory_character_menu(character_result_info)
+            call screen inventory_character_menu(character)
 
             if _return == "talk":
                 call inventory_talk_scene(inventory_result_item)
             elif _return == "give":
-                call screen inventory_choose_item(character_result_info)
-                if _return is not None:
+                call screen inventory_choose_item(character)
+                if _return:
                     call inventory_give_scene(_return, inventory_result_item)
 
     jump expression _inventory_return_label

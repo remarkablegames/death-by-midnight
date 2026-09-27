@@ -28,13 +28,19 @@ init python:
         def advance(self, minutes=0):
             if minutes <= 0:
                 return
+
             self.minutes = max(0, self.minutes + minutes)
+
             for death in DEATH_HOURS:
                 if self.minutes >= death["minutes"] and death_is_pending(death):
                     if not store.pending_death:
                         store.pending_death = death["label"]
                         store.pending_hint = death["hint"]
                     break
+
+            if store.pending_death:
+                renpy.jump("end_incomplete")
+
             if self.minutes >= self.MIDNIGHT_MINUTES:
                 renpy.jump("end")
 
