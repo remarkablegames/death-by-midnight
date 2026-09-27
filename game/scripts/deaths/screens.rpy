@@ -43,6 +43,9 @@ label death_hint:
     if current_room in HINT_DEFERRED_ROOMS:
         return
 
+    if death_waiting_in(current_room) is not None:
+        return
+
     $ hint = pending_hint
 
     $ pending_hint = ""

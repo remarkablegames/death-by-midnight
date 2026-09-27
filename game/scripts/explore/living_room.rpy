@@ -15,8 +15,7 @@ label explore_living_room:
     call death_hint
 
     $ death_here = death_waiting_in("living_room")
-
-    if death_here is not None:
+    if death_here:
         jump expression death_here["label"]
 
     show screen time_display

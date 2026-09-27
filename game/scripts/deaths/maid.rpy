@@ -1,8 +1,5 @@
 label death_maid_hint:
 
-    if current_room == "manor_door":
-        return
-
     "{i}(Crash){/i}"
 
     player "What was that?"
@@ -15,6 +12,7 @@ label death_maid:
 
     $ hide_explore_screens()
 
+    # we're intentionally use this background image for horror purposes
     scene bg manor door night dark
 
     show screen death_body("maid", expression="shocked head tilt bloody", label="death_maid_found", xalign=.8, tintcolor="#111", enabled=False)
