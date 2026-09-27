@@ -377,16 +377,18 @@ label inventory_give_scene(item_id, character_id):
     $ hide_explore_screens(keep=TALK_VISIBLE_SCREENS)
 
     $ inventory.give(item_id, character.character_id)
-    $ renpy.notify(f"You gave {item.name} to {character.name}")
+    $ renpy.notify(f"You gave the {item.name} to {character.name}")
 
     call expression f"give_{item_id}_to_{character.character_id}"
 
     $ is_interactable = True
 
+    $ clock.advance(CHARACTER_MINUTES)
+
     return
 
 
-define TALK_MINUTES = 5
+define CHARACTER_MINUTES = 5
 
 
 label inventory_talk_scene(character_id):
@@ -404,7 +406,7 @@ label inventory_talk_scene(character_id):
 
     $ is_interactable = True
 
-    $ clock.advance(TALK_MINUTES)
+    $ clock.advance(CHARACTER_MINUTES)
 
     return
 

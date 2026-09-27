@@ -119,7 +119,7 @@ Everything is resolved, or everything is resolved but you. The reading begins in
 
 ## Mechanics
 
-- **Time progression.** The clock runs 6 p.m. to midnight and advances on movement, five minutes a step. Each rung of the ladder is a fixed distance in steps, so a death hour is a deadline measured in walking. A conversation costs one step (`TALK_MINUTES`), which makes the detective's attention a spendable resource rather than a free one.
+- **Time progression.** The clock runs 6 p.m. to midnight and advances on movement, five minutes a step. Each rung of the ladder is a fixed distance in steps, so a death hour is a deadline measured in walking. A conversation with a character costs one step (`CHARACTER_MINUTES`), which makes the detective's attention a spendable resource rather than a free one.
 - **Exploration.** Roam the manor and grounds for documents, objects, and secret rooms. Placement is listed in `docs/items.md`.
 - **Conversation.** Talk to characters to uncover secrets. Knowledge carries into the next loop as new talk options, and some of those options are weapons.
 - **Inventory.** Pick up, read, and give. Giving is how you speak a secret, and speaking is how you cause a death.

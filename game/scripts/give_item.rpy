@@ -5,7 +5,7 @@ label give_scroll_to_butler:
 
     player "Here,{w=.1} take the scroll.{w=.3} I think you should see it."
 
-    butler "The will?{w=.3} I’ll take a look,{w=.1} but it looks old and dusty."
+    butler "The will?{w=.3} I’ll take a look,{w=.1} but it looks outdated."
 
     hide butler
     with dissolve
@@ -123,9 +123,10 @@ label give_will_to_butler:
     show butler neutral at character_speak
     with dissolve
 
-    player "Hey,{w=.1} does this look like the true will?"
+    player "Hey,{w=.1} does this look like the True Will?"
 
-    butler "This is no will I have read.{w=.3} And I have read every paper in this house."
+    butler neutral "This will is unfamiliar to me."
+    butler "And I have read every paper in this house."
 
     hide butler
     with dissolve
@@ -138,9 +139,10 @@ label give_will_to_maid:
     show maid neutral at character_speak
     with dissolve
 
-    player "Hey,{w=.1} does this look like the true will?"
+    player "Hey,{w=.1} does this look like the True Will?"
 
-    maid "So you found it after all.{w=.3} I suspected this existed,{w=.1} but I never found the courage to search for it."
+    maid shocked "So you found it after all."
+    maid "I knew it existed,{w=.2} but I never dared search for it."
 
     hide maid
     with dissolve
@@ -153,9 +155,9 @@ label give_will_to_miss:
     show miss neutral at character_speak
     with dissolve
 
-    player "Hey,{w=.1} does this look like the true will?"
+    player "Hey,{w=.1} does this look like the True Will?"
 
-    miss "His seal...{w=.3} He never trusted anyone with this but himself.{w=.3} And now he’s trusting me?"
+    miss shocked "His seal...{w=.3} He never trusted anyone with this but himself."
 
     hide miss
     with dissolve
@@ -168,9 +170,10 @@ label give_will_to_nurse:
     show nurse neutral at character_speak
     with dissolve
 
-    player "Hey,{w=.1} does this look like the true will?"
+    player "Hey,{w=.1} does this look like the True Will?"
 
-    nurse "This changes everything.{w=.3} But at midnight,{w=.1} no one will want to hear it."
+    nurse sad "This changes everything."
+    nurse "But by midnight,{w=.1} no one will want to hear it."
 
     hide nurse
     with dissolve
@@ -461,7 +464,7 @@ label give_camera_to_nurse:
 
     player "The Master’s camera.{w=.3} There’s pictures of him when he was young."
 
-    nurse "What a nostalic sight."
+    nurse "What a nostalgic sight."
 
     hide nurse
     with dissolve
@@ -476,10 +479,10 @@ label give_kitchen_knife_to_butler:
 
     player "I found a knife in the kitchen."
 
-    butler "I’m the butler,{w=.1} not the cook.{w=.3} Put it back where you found it."
+    butler "You have no business carrying that around the house."
+    butler "I’ll keep it safe."
 
-    $ inventory.add("kitchen_knife")
-    $ renpy.notify("Butler Ben handed the kitchen knife back to you")
+    player "Thanks."
 
     hide butler
     with dissolve

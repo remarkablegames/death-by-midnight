@@ -41,7 +41,7 @@ Each carries a piece of the Master's history and a reaction when handed over.
 The kitchen knife is the one death weapon the player can reach, and it is the whole of the 7:30 prevention. It sits on the cutting board from 6 p.m. until 7 p.m., and at 7 p.m. it is gone, because Ben took it.
 
 - It is pickable in the kitchen before 7 p.m. **Pocketing it closes the 7:30 hour for that night.**
-- **Handing it to Madelyn closes the 7:30 hour for that night.** She takes it off your hands and puts it away. Every other character hands it straight back.
+- **Handing it to Madelyn closes the 7:30 hour for that night.** Nora and Mia hand it straight back. **Ben confiscates it** and does not give it back; the hour stays open because the knife is now on him.
 - Either path sets `resolved_maid`, which resets at 6 p.m. with everything else, so the knife has to be taken out of the kitchen again on every night you want 7:30 to stay empty.
 - Nothing announces that the knife has gone. It is simply not on the board after 7 p.m., and a player who was in the kitchen before then already knows it was there.
 - The board without the knife only registers as evidence if the player has asked Madelyn about the knife, so the game pays for knowledge rather than for walking around. A player who never asked sees a board with no knife on it and learns nothing from it.
