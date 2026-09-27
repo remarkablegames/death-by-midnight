@@ -26,6 +26,16 @@ label talk_butler_menu:
 
                 butler @ neutral look away "If you’re looking for it,{w=.2} it should still be here."
 
+        "Do you remember me?" if loop_count > 1:
+
+            player "Do you remember having a conversation like this before?"
+
+            butler neutral "What do you mean?{w=.3} We only met a while ago...{w=.2} didn’t we?"
+
+            player "Yes,{w=.1} forget I asked."
+
+            show butler smile
+
         "Nevermind":
 
             hide butler
