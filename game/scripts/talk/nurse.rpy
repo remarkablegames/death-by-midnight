@@ -23,7 +23,7 @@ label talk_nurse_menu:
 
     menu:
 
-        "Ask for something to drink":
+        "Ask for something to drink" if current_room == "kitchen":
 
             nurse @ smile look away "I’m making coffee,{w=.1} but there’s also milk beside the fridge."
 

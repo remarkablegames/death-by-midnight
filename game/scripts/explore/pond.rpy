@@ -4,8 +4,10 @@ label explore_pond:
 
     if clock.is_night_light:
         scene bg pond night
+        $ character_tint = "#1f3a5f"
     else:
         scene bg pond evening
+        $ character_tint = "#ffffff00"
 
     if not inventory.has_picked_up("diary") and clock.is_night_light:
         show screen item_diary onlayer master zorder 0
@@ -34,14 +36,14 @@ label explore_pond:
 screen item_diary():
 
     if clock.is_night_light:
-        $ tint = "#2a4468"
+        $ item_tint = "#2a4468"
     else:
-        $ tint = "#ffcf9a"
+        $ item_tint = "#ffcf9a"
 
     imagebutton:
         idle "images/items/diary.webp"
         style "item_button"
-        at item_button(zoom=.035, xalign=.385, yalign=.535, matrixcolor=TintMatrix(tint))
+        at item_button(zoom=.035, xalign=.385, yalign=.535, matrixcolor=TintMatrix(item_tint))
         sensitive is_interactable
         action [
             Hide("item_diary"),

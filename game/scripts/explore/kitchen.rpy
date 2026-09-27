@@ -4,8 +4,10 @@ label explore_kitchen:
 
     if clock.is_night_light:
         scene bg kitchen night
+        $ character_tint = "#1f3a5f"
     else:
         scene bg kitchen evening
+        $ character_tint = "#ffffff00"
 
     if not resolved_maid and clock.minutes < KNIFE_TAKEN_MINUTES:
         show screen item_kitchen_knife onlayer master zorder 0
@@ -41,14 +43,14 @@ label explore_kitchen:
 screen item_kitchen_knife():
 
     if clock.is_night_light:
-        $ tint = "#1f3a5f"
+        $ item_tint = "#1f3a5f"
     else:
-        $ tint = "#ffcf9a"
+        $ item_tint = "#ffcf9a"
 
     imagebutton:
         idle "images/items/kitchen_knife.webp"
         style "item_button"
-        at item_button(zoom=.2, xalign=.53, yalign=.436, matrixcolor=TintMatrix(tint))
+        at item_button(zoom=.2, xalign=.53, yalign=.436, matrixcolor=TintMatrix(item_tint))
         sensitive is_interactable
         action [
             Hide("item_kitchen_knife"),
@@ -58,17 +60,18 @@ screen item_kitchen_knife():
             Jump("explore_kitchen"),
         ]
 
+
 screen item_milk():
 
     if clock.is_night_light:
-        $ tint = "#1f3a5f"
+        $ item_tint = "#1f3a5f"
     else:
-        $ tint = "#ffd9ae"
+        $ item_tint = "#ffd9ae"
 
     imagebutton:
         idle "images/items/milk.webp"
         style "item_button"
-        at item_button(zoom=.1, xalign=.7, yalign=.329, matrixcolor=TintMatrix(tint)), flip(xzoom=-1)
+        at item_button(zoom=.1, xalign=.7, yalign=.329, matrixcolor=TintMatrix(item_tint)), flip(xzoom=-1)
         sensitive is_interactable
         action [
             Hide("item_milk"),

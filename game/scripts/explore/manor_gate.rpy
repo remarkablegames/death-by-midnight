@@ -4,10 +4,13 @@ label explore_manor_gate:
 
     if clock.is_night_dark:
         scene bg manor gate night dark
+        $ character_tint = "#1f3a5f"
     elif clock.is_night_light:
         scene bg manor gate night light
+        $ character_tint = "#ffffff00"
     else:
         scene bg manor gate evening
+        $ character_tint = "#ffffff00"
 
     call death_hint
 

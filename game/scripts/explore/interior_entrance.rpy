@@ -4,10 +4,13 @@ label explore_interior_entrance:
 
     if clock.is_night_dark:
         scene bg interior entrance night dark
+        $ character_tint = "#1f3a5f"
     elif clock.is_night_light:
         scene bg interior entrance night light
+        $ character_tint = "#ffffff00"
     else:
         scene bg interior entrance evening
+        $ character_tint = "#ffffff00"
 
     if not inventory.has_picked_up("scroll"):
         show screen item_scroll onlayer master zorder 0
@@ -36,16 +39,16 @@ label explore_interior_entrance:
 screen item_scroll():
 
     if clock.is_night_dark:
-        $ tint = "#1f3a5f"
+        $ item_tint = "#1f3a5f"
     elif clock.is_night_light:
-        $ tint = "#ffffff00"
+        $ item_tint = "#ffffff00"
     else:
-        $ tint = "#555"
+        $ item_tint = "#555"
 
     imagebutton:
         idle "images/items/scroll.webp"
         style "item_button"
-        at item_button(zoom=.14, xalign=.02, yalign=.54, matrixcolor=TintMatrix(tint))
+        at item_button(zoom=.14, xalign=.02, yalign=.54, matrixcolor=TintMatrix(item_tint))
         sensitive is_interactable
         action [
             Hide("item_scroll"),

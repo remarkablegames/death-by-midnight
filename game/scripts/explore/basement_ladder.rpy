@@ -1,6 +1,7 @@
 label explore_basement_ladder:
 
     $ set_scene_characters("basement_ladder")
+    $ character_tint = "#ffffff00"
 
     scene bg basement ladder
 

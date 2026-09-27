@@ -4,10 +4,13 @@ label explore_backyard:
 
     if clock.is_night_dark:
         scene bg backyard night dark
+        $ character_tint = "#1f3a5f"
     elif clock.is_night_light:
         scene bg backyard night light
+        $ character_tint = "#ffffff00"
     else:
         scene bg backyard evening
+        $ character_tint = "#ffffff00"
 
     call death_hint
 

@@ -2,11 +2,10 @@ init python:
 
     class SceneCharacter(object):
 
-        def __init__(self, character_id, expression="smile", xalign=.5, tint="#ffffff00"):
+        def __init__(self, character_id, expression="smile", xalign=.5):
             self.character_id = character_id
             self.expression = expression
             self.xalign = xalign
-            self.tint = tint
 
 
     def set_scene_characters(room_id):
@@ -15,12 +14,10 @@ init python:
 
         now = clock.minutes
 
-        tint = "#333" if clock.is_night_dark else "#ffffff00"
-
         dead = dead_character()
 
         store.scene_characters = [
-            SceneCharacter(character_id, expression, xalign, tint)
+            SceneCharacter(character_id, expression, xalign)
             for character_id, expression, xalign, start, end, room in CHARACTER_SCHEDULE
             if room == room_id and start <= now < end and character_id != dead
         ]

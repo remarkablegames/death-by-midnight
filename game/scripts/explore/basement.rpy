@@ -1,6 +1,7 @@
 label explore_basement:
 
     $ set_scene_characters("basement")
+    $ character_tint = "#ffffff00"
 
     scene bg basement light
 

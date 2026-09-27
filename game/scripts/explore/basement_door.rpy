@@ -7,14 +7,18 @@ label explore_basement_door:
     if is_basement_locked:
         if clock.is_night_dark:
             scene bg basement door closed dark
+            $ character_tint = "#1f3a5f"
         else:
             scene bg basement door closed light
+            $ character_tint = "#ffffff00"
         show screen interactable_door onlayer master zorder 0
     else:
         if clock.is_night_dark:
             scene bg basement door open dark
+            $ character_tint = "#1f3a5f"
         else:
             scene bg basement door open light
+            $ character_tint = "#ffffff00"
 
     call death_hint
 

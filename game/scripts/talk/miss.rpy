@@ -8,7 +8,7 @@ label talk_miss:
     if context:
         "[context]"
 
-    if not milk_taken and not milk_beat_shown:
+    if milk_taken and not milk_beat_shown:
 
         $ milk_beat_shown = True
 

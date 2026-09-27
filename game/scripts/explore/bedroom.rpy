@@ -4,8 +4,10 @@ label explore_bedroom:
 
     if clock.is_night_light:
         scene bg bedroom night
+        $ character_tint = "#ffffff00"
     else:
         scene bg bedroom evening
+        $ character_tint = "#ffffff00"
 
     call death_hint
 

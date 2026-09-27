@@ -4,10 +4,13 @@ label explore_living_room:
 
     if clock.is_night_dark:
         scene bg living room night dark
+        $ character_tint = "#1f3a5f"
     elif clock.is_night_light:
         scene bg living room night light
+        $ character_tint = "#ffffff00"
     else:
         scene bg living room evening
+        $ character_tint = "#ffffff00"
 
     if not inventory.has_picked_up("coffee"):
         show screen item_coffee onlayer master zorder 0
@@ -36,16 +39,16 @@ label explore_living_room:
 screen item_coffee():
 
     if clock.is_night_dark:
-        $ tint = "#050a18"
+        $ item_tint = "#050a18"
     elif clock.is_night_light:
-        $ tint = "#333"
+        $ item_tint = "#333"
     else:
-        $ tint = "#ffe59a"
+        $ item_tint = "#ffe59a"
 
     imagebutton:
         idle "images/items/coffee.webp"
         style "item_button"
-        at item_button(zoom=.13, xalign=.155, yalign=.602, matrixcolor=TintMatrix(tint))
+        at item_button(zoom=.13, xalign=.155, yalign=.602, matrixcolor=TintMatrix(item_tint))
         sensitive is_interactable
         action [
             Hide("item_coffee"),
