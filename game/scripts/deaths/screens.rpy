@@ -7,6 +7,14 @@ define DEATH_HOURS = [
 
 define KNIFE_TAKEN_MINUTES = 19 * 60
 
+define HINT_DEFERRED_ROOMS = (
+    "basement",
+    "basement_stairs",
+    "basement_ladder",
+    "basement_inside",
+    "basement_door",
+)
+
 
 init python:
 
@@ -30,6 +38,9 @@ init python:
 label death_hint:
 
     if not pending_hint:
+        return
+
+    if current_room in HINT_DEFERRED_ROOMS:
         return
 
     $ hint = pending_hint
