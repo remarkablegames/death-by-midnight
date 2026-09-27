@@ -51,3 +51,7 @@ transform item_button(zoom, xalign, yalign, matrixcolor=TintMatrix("#ffffff00"),
         linear .1 zoom zoom + .01
     on idle:
         linear .1 zoom zoom
+
+
+transform tint(color):
+    matrixcolor TintMatrix(color)

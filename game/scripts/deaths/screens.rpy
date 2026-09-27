@@ -53,11 +53,11 @@ label death_hint:
     return
 
 
-screen death_body(character, expression, label, xalign=.5, enabled=True):
+screen death_body(character, expression, label, xalign=.5, tintcolor="#ffffff00", enabled=True):
 
     imagebutton:
         style "character_button"
         idle character_sprite(character, expression)
-        at character_body(xalign=xalign)
+        at character_body(xalign=xalign), tint(tintcolor)
         sensitive enabled
         action [Hide("death_body"), Jump(label)]

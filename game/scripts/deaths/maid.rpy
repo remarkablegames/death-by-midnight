@@ -1,5 +1,8 @@
 label death_maid_hint:
 
+    if current_room == "manor_door":
+        return
+
     "{i}(Crash){/i}"
 
     player "What was that?"
@@ -12,23 +15,28 @@ label death_maid:
 
     $ hide_explore_screens()
 
-    scene bg manor door evening
-    show screen death_body("maid", expression="shocked head tilt bloody", label="death_maid_found", xalign=.5, enabled=False)
+    scene bg manor door night dark
+
+    show screen death_body("maid", expression="shocked head tilt bloody", label="death_maid_found", xalign=.8, tintcolor="#111", enabled=False)
     with dissolve
 
-    player "Someone is on the step."
+    player "What happened to the lights?"
+    player "I can barely make out someone’s silhouette in the shadows."
 
-    call screen death_body("maid", expression="shocked head tilt bloody", label="death_maid_found", xalign=.5, enabled=True)
+    call screen death_body("maid", expression="shocked head tilt bloody", label="death_maid_found", xalign=.8, tintcolor="#111", enabled=True)
 
 
 label death_maid_found:
 
     show maid shocked head tilt bloody at character_body
-    with dissolve
+    with hpunch
 
-    "Madelyn is lying by the door and she’s no longer responsive."
+    player "Madelyn! What happened to you?"
 
-    player "Looks like multiple stab wounds."
+    maid @ shocked bloody "{i}(Gurgle){/i}"
+
+    "She tries to speak,{w=.1} but only blood spills from her mouth."
+    "You see stab wounds on her body."
 
     if confirmed_knife_gone:
 
@@ -38,10 +46,13 @@ label death_maid_found:
 
         player "She told me there was a knife in the kitchen this evening."
 
+    player "Stay where you are,{w=.1} I’ll get help!"
+
     "The clock strikes half past seven."
-    "Your vision starts to fade..."
+    "Something feels wrong.{w=.3} Your heart pounds wildly in your chest."
+    "Your vision begins to fade..."
 
     scene black
-    with fade
+    with Fade(1, 0, 1)
 
     jump loop_start
