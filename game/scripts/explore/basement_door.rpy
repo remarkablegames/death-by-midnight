@@ -15,6 +15,8 @@ label explore_basement_door:
         else:
             scene bg basement door open light
 
+    call death_hint
+
     show screen time_display
     show screen inventory_hud
     with dissolve

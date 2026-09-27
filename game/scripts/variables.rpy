@@ -25,3 +25,5 @@ default is_item_interactable = True
 default scene_characters = []
 default current_room = ""
 default room_intros_seen = set()
+default pending_death = ""
+default pending_hint = ""

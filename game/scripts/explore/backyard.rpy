@@ -9,6 +9,8 @@ label explore_backyard:
     else:
         scene bg backyard evening
 
+    call death_hint
+
     show screen time_display
     show screen inventory_hud
     with dissolve

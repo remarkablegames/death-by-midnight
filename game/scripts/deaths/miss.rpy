@@ -1,3 +1,20 @@
+label death_miss_hint:
+
+    show nurse sad at character_speak
+    with dissolve
+
+    nurse "It’s getting late,{w=.1} and Mia is nowhere to be found."
+    nurse "I’ve been searching for her inside the manor."
+    nurse sad look away "Could you help me look for her outside?"
+
+    player "Of course."
+
+    hide nurse
+    with dissolve
+
+    return
+
+
 label death_miss:
 
     $ hide_explore_screens()
@@ -23,7 +40,7 @@ label death_miss_found:
 
     player "Did she fall in?{w=.3} Or did someone arrange this."
 
-    "The clock strikes half past ten.{w=.3} Your vision fades..."
+    "The clock strikes half past ten.{w=.3} Time starts to reverse..."
 
     scene black
     with fade

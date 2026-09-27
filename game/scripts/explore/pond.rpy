@@ -10,6 +10,13 @@ label explore_pond:
     if not inventory.has_picked_up("diary") and clock.is_night_light:
         show screen item_diary onlayer master zorder 0
 
+    call death_hint
+
+    $ death_here = death_waiting_in("pond")
+
+    if death_here is not None:
+        jump expression death_here["label"]
+
     show screen time_display
     show screen inventory_hud
     with dissolve

@@ -1,3 +1,13 @@
+label death_maid_hint:
+
+    "{i}(Crash){/i}"
+
+    player "What was that?"
+    player "It sounds like it came from the manor door."
+
+    return
+
+
 label death_maid:
 
     $ hide_explore_screens()
@@ -28,7 +38,8 @@ label death_maid_found:
 
         player "She told me there was a knife in the kitchen this evening."
 
-    "The clock strikes half past seven.{w=.3} Your vision starts to fade..."
+    "The clock strikes half past seven."
+    "Your vision starts to fade..."
 
     scene black
     with fade

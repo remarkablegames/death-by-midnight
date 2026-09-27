@@ -9,6 +9,13 @@ label explore_manor_door:
     else:
         scene bg manor door evening
 
+    call death_hint
+
+    $ death_here = death_waiting_in("manor_door")
+
+    if death_here is not None:
+        jump expression death_here["label"]
+
     show screen time_display
     show screen inventory_hud
     with dissolve

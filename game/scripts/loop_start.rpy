@@ -30,4 +30,7 @@ label loop_start:
     $ resolved_miss = False
     $ resolved_nurse = False
 
+    $ pending_death = ""
+    $ pending_hint = ""
+
     jump explore_interior_entrance

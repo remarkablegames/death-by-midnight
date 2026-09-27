@@ -9,6 +9,8 @@ label explore_hallway_right:
     else:
         scene bg hallway right evening
 
+    call death_hint
+
     show screen time_display
     show screen inventory_hud
     with dissolve

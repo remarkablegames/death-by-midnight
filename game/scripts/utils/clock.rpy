@@ -23,7 +23,10 @@ init python:
             self.minutes = max(0, self.minutes + minutes)
             for death in DEATH_HOURS:
                 if self.minutes >= death["minutes"] and death_is_pending(death):
-                    renpy.jump(death["label"])
+                    if not store.pending_death:
+                        store.pending_death = death["label"]
+                        store.pending_hint = death["hint"]
+                    break
             if self.minutes >= self.MIDNIGHT_MINUTES:
                 renpy.jump("end")
 

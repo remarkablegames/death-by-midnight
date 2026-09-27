@@ -4,6 +4,8 @@ label explore_basement:
 
     scene bg basement light
 
+    call death_hint
+
     show screen time_display
     show screen inventory_hud
     with dissolve

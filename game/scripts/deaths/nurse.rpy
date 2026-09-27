@@ -1,8 +1,25 @@
+label death_nurse_hint:
+
+    show maid sad at character_speak
+    with dissolve
+
+    maid "Detective.{w=.3} You need to come to the kitchen."
+
+    player "What happened?"
+
+    maid sad look away "I don’t know...{w=.3} Please just come and look."
+
+    hide maid
+    with dissolve
+
+    return
+
+
 label death_nurse:
 
     $ hide_explore_screens()
 
-    scene bg kitchen evening
+    scene bg kitchen night
 
     show maid shocked at character_speak(xalign=.68)
     show screen death_body("nurse", expression="creepier bloody", label="death_nurse_found", xalign=.35, enabled=False)
@@ -31,7 +48,8 @@ label death_nurse_found:
 
     maid "No..."
 
-    "The clock strikes half past eight.{w=.3} Time begins to unwind..."
+    "The clock strikes half past eight."
+    "Time begins to unwind..."
 
     scene black
     with fade

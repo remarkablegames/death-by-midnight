@@ -12,6 +12,8 @@ label explore_interior_entrance:
     if not inventory.has_picked_up("scroll"):
         show screen item_scroll onlayer master zorder 0
 
+    call death_hint
+
     show screen time_display
     show screen inventory_hud
     with dissolve

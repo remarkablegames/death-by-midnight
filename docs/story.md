@@ -52,6 +52,7 @@ So **preventing a death does not stop the night, it moves it.** Closing the 7:30
 Three further rules about the slot:
 
 - **A death is not required to be witnessed.** It fires whether or not you are in the room. Madelyn is *found* dead, not watched. Being elsewhere at 8:30 is how Nora dies.
+- **The death summons you, it does not cut to the body.** When an hour fires, `clock.advance` records it in `pending_death` and calls a `death_<id>_hint` label instead of the death scene. That beat is a sound, a line of narration, or someone fetching you, and it names the room. Nothing is found until you walk there, and the walk costs the clock, so the hour you failed to prevent becomes time you spend learning about it. The night still ends on the body, never before.
 - **The schedule does not contain murders.** `docs/schedule.md` tells you where someone can be found, which is not where they get killed. Every death is a movement the placement table does not show.
 - **No death weapon survives the night.** The knife leaves the kitchen at 7 p.m. and is never found, because finding it would have resolved the hour. The strangulation leaves nothing to hold. The poison is in a cup the victim chooses to drink from. The detective spends the night hunting a murder weapon and the truth is never one.
 
@@ -118,11 +119,12 @@ Everything is resolved, or everything is resolved but you. The reading begins in
 
 ## Mechanics
 
-- **Time progression.** The clock runs 6 p.m. to midnight and advances on movement, five minutes a step. Each rung of the ladder is a fixed distance in steps, so a death hour is a deadline measured in walking.
+- **Time progression.** The clock runs 6 p.m. to midnight and advances on movement, five minutes a step. Each rung of the ladder is a fixed distance in steps, so a death hour is a deadline measured in walking. A conversation costs one step (`TALK_MINUTES`), which makes the detective's attention a spendable resource rather than a free one.
 - **Exploration.** Roam the manor and grounds for documents, objects, and secret rooms. Placement is listed in `docs/items.md`.
 - **Conversation.** Talk to characters to uncover secrets. Knowledge carries into the next loop as new talk options, and some of those options are weapons.
 - **Inventory.** Pick up, read, and give. Giving is how you speak a secret, and speaking is how you cause a death.
 - **Give scenes.** Handing an item to a character runs a label that owns the dialogue. A give scene can resolve a cause or load a slot, which is the main tension of the late game.
+- **Deaths are found, not announced.** `DEATH_HOURS` in `scripts/deaths/screens.rpy` carries the room and the call label for each hour alongside its hour and its resolved flag. The four rooms that can hold a body check `death_waiting_in` on entry, so arriving is what triggers the scene.
 - **No save/load mid-night.** The loop is the reset. The `knows_*` variables track what the detective learned and carry across nights; the `resolved_*` variables track what was prevented and reset every night.
 - **Midnight.** Reaching midnight ends the night. `clock.advance` currently jumps to a stub `end` label, which is where the reading and the endings go.
 

@@ -7,6 +7,8 @@ label explore_bedroom:
     else:
         scene bg bedroom evening
 
+    call death_hint
+
     show screen time_display
     show screen inventory_hud
 

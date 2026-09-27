@@ -9,6 +9,8 @@ label explore_manor_gate:
     else:
         scene bg manor gate evening
 
+    call death_hint
+
     show screen time_display
     show screen inventory_hud
     with dissolve

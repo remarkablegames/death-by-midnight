@@ -12,6 +12,13 @@ label explore_living_room:
     if not inventory.has_picked_up("coffee"):
         show screen item_coffee onlayer master zorder 0
 
+    call death_hint
+
+    $ death_here = death_waiting_in("living_room")
+
+    if death_here is not None:
+        jump expression death_here["label"]
+
     show screen time_display
     show screen inventory_hud
     with dissolve
