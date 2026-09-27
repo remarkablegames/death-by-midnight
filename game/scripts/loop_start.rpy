@@ -1,6 +1,6 @@
 label loop_start:
 
-    $ clock = Clock()
+    $ clock = Clock(Clock.START_MINUTES)
 
     $ inventory.items = []
     $ inventory.given = []

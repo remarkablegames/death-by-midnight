@@ -1,11 +1,11 @@
 define DEATH_HOURS = [
-    {"minutes": 19 * 60 + 30, "room": "manor_door", "hint": "death_maid_hint", "resolved": "resolved_maid", "label": "death_maid"},
-    {"minutes": 20 * 60 + 30, "room": "kitchen", "hint": "death_nurse_hint", "resolved": "resolved_nurse", "label": "death_nurse", "depends": "accused_nurse"},
-    {"minutes": 21 * 60 + 30, "room": "living_room", "hint": "death_butler_hint", "resolved": "resolved_butler", "label": "death_butler", "depends": "disclosed_affair"},
-    {"minutes": 22 * 60 + 30, "room": "pond", "hint": "death_miss_hint", "resolved": "resolved_miss", "label": "death_miss"},
+    {"minutes": clock_time("19:30"), "room": "manor_door", "hint": "death_maid_hint", "resolved": "resolved_maid", "label": "death_maid"},
+    {"minutes": clock_time("20:30"), "room": "kitchen", "hint": "death_nurse_hint", "resolved": "resolved_nurse", "label": "death_nurse", "depends": "accused_nurse"},
+    {"minutes": clock_time("21:30"), "room": "living_room", "hint": "death_butler_hint", "resolved": "resolved_butler", "label": "death_butler", "depends": "disclosed_affair"},
+    {"minutes": clock_time("22:30"), "room": "pond", "hint": "death_miss_hint", "resolved": "resolved_miss", "label": "death_miss"},
 ]
 
-define KNIFE_TAKEN_MINUTES = 19 * 60
+define KNIFE_TAKEN_MINUTES = clock_time("19:00")
 
 define HINT_DEFERRED_ROOMS = (
     "basement",

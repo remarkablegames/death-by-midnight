@@ -6,13 +6,15 @@ Where each resident can be found during the evening/night, and the one-line obse
 
 The clock runs from **6 p.m. to midnight** and only advances forward. Placement is by explicit window rather than by band, because a character's whereabouts have to line up with a death hour, and a two-hour band cannot express "gone from the hall at half past seven."
 
+Windows are written as 24-hour strings (`"20:30"`) and converted at load by `clock_time()` in `scripts/utils/clock.rpy`. Midnight is `"24:00"`, not `"0:00"`, so the values sort and compare the same way `clock.minutes` does.
+
 <!-- prettier-ignore-start -->
 
 | Band | Clock range | Flavor |
 | --- | --- | --- |
-| Evening | 6 p.m. - 8 p.m. | House with sun setting down |
-| Night-light | 8 p.m. - 10 p.m. | House with lights on |
-| Night-dark | 10 p.m. - midnight | House with lights off |
+| Evening | 18:00 - 20:00 | House with sun setting down |
+| Night-light | 20:00 - 22:00 | House with lights on |
+| Night-dark | 22:00 - 24:00 | House with lights off |
 
 <!-- prettier-ignore-end -->
 
@@ -24,7 +26,7 @@ A character is **present** in a room when that room is entered during one of the
 
 <!-- prettier-ignore-start -->
 
-| Character | 6:00-7:00 | 7:00-7:30 | 7:30-8:30 | 8:30-9:30 | 9:30-10:30 | 10:30-12:00 |
+| Character | 18:00-19:00 | 19:00-19:30 | 19:30-20:30 | 20:30-21:30 | 21:30-22:30 | 22:30-24:00 |
 | --- | --- | --- | --- | --- | --- | --- |
 | **Butler Ben** | interior entrance | interior entrance | interior entrance | manor door | living room | living room |
 | **Nurse Nora** | kitchen | kitchen | kitchen | kitchen | kitchen | bedroom |

@@ -41,21 +41,21 @@ init python:
 
 
 define CHARACTER_SCHEDULE = [
-    ("butler", "smile", .2, 18 * 60, 20 * 60 + 30, "interior_entrance"),
-    ("butler", "smile", .2, 20 * 60 + 30, 21 * 60 + 30, "manor_door"),
-    ("butler", "smile", .3, 21 * 60 + 30, 24 * 60, "living_room"),
+    ("butler", "smile", .2, clock_time("18:00"), clock_time("20:30"), "interior_entrance"),
+    ("butler", "smile", .2, clock_time("20:30"), clock_time("21:30"), "manor_door"),
+    ("butler", "smile", .3, clock_time("21:30"), clock_time("24:00"), "living_room"),
 
-    ("nurse", "smile", .2, 18 * 60, 22 * 60, "kitchen"),
-    ("nurse", "smile", .3, 22 * 60, 24 * 60, "bedroom"),
+    ("nurse", "smile", .2, clock_time("18:00"), clock_time("22:00"), "kitchen"),
+    ("nurse", "smile", .3, clock_time("22:00"), clock_time("24:00"), "bedroom"),
 
-    ("miss", "smile", .3, 18 * 60, 19 * 60, "living_room"),
-    ("miss", "smile", .2, 19 * 60, 21 * 60 + 30, "kitchen"),
-    ("miss", "smile", .7, 21 * 60 + 30, 24 * 60, "pond"),
+    ("miss", "smile", .3, clock_time("18:00"), clock_time("19:00"), "living_room"),
+    ("miss", "smile", .2, clock_time("19:00"), clock_time("21:30"), "kitchen"),
+    ("miss", "smile", .7, clock_time("21:30"), clock_time("24:00"), "pond"),
 
-    ("maid", "smile", .7, 18 * 60, 19 * 60 + 30, "living_room"),
-    ("maid", "smile", .5, 19 * 60 + 30, 20 * 60 + 30, "hallway_right"),
-    ("maid", "smile", .2, 20 * 60 + 30, 22 * 60, "kitchen"),
-    ("maid", "smile", .7, 22 * 60, 24 * 60, "bedroom"),
+    ("maid", "smile", .7, clock_time("18:00"), clock_time("19:30"), "living_room"),
+    ("maid", "smile", .5, clock_time("19:30"), clock_time("20:30"), "hallway_right"),
+    ("maid", "smile", .2, clock_time("20:30"), clock_time("22:00"), "kitchen"),
+    ("maid", "smile", .7, clock_time("22:00"), clock_time("24:00"), "bedroom"),
 ]
 
 
