@@ -17,10 +17,12 @@ init python:
 
         tint = "#333" if clock.is_night_dark else "#ffffff00"
 
+        dead = dead_character()
+
         store.scene_characters = [
             SceneCharacter(character_id, expression, xalign, tint)
             for character_id, expression, xalign, start, end, room in CHARACTER_SCHEDULE
-            if room == room_id and start <= now < end
+            if room == room_id and start <= now < end and character_id != dead
         ]
 
     def room_intro(character_id):
@@ -49,12 +51,12 @@ define CHARACTER_SCHEDULE = [
     ("nurse", "smile", .3, clock_time("22:00"), clock_time("24:00"), "bedroom"),
 
     ("miss", "smile", .3, clock_time("18:00"), clock_time("19:00"), "living_room"),
-    ("miss", "smile", .2, clock_time("19:00"), clock_time("21:30"), "kitchen"),
-    ("miss", "smile", .7, clock_time("21:30"), clock_time("24:00"), "pond"),
+    ("miss", "smile", .85, clock_time("19:00"), clock_time("20:30"), "kitchen"),
+    ("miss", "smile", .7, clock_time("20:30"), clock_time("24:00"), "pond"),
 
     ("maid", "smile", .7, clock_time("18:00"), clock_time("19:30"), "living_room"),
     ("maid", "smile", .5, clock_time("19:30"), clock_time("20:30"), "hallway_right"),
-    ("maid", "smile", .2, clock_time("20:30"), clock_time("22:00"), "kitchen"),
+    ("maid", "smile", .85, clock_time("20:30"), clock_time("22:00"), "kitchen"),
     ("maid", "smile", .7, clock_time("22:00"), clock_time("24:00"), "bedroom"),
 ]
 
