@@ -20,6 +20,7 @@ label death_maid:
 
     player "What happened to the lights?"
     player "I can barely make out someone’s silhouette in the shadows."
+    player "Hello?{w=.3} Is someone there?"
 
     call screen death_body("maid", expression="shocked head tilt bloody", label="death_maid_found", xalign=.8, tintcolor="#111", enabled=True)
 
@@ -34,7 +35,7 @@ label death_maid_found:
     maid @ shocked bloody "{i}(Gurgle){/i}"
 
     "She tries to speak,{w=.1} but only blood spills from her mouth."
-    "You see stab wounds on her body."
+    "You notice multiple stab wounds on her body."
 
     if confirmed_knife_gone:
 
@@ -47,8 +48,7 @@ label death_maid_found:
     player "Stay where you are,{w=.1} I’ll get help!"
 
     "The clock strikes half past seven."
-    "Something feels wrong.{w=.3} Your heart pounds wildly in your chest."
-    "Your vision begins to fade..."
+    "Your vision begins to blur..."
 
     scene black
     with Fade(1, 0, 1)

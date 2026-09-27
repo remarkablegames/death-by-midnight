@@ -8,7 +8,6 @@ label loop_start:
     $ inventory.given = []
     $ inventory.picked_up = []
 
-    $ is_interactable = True
     $ scene_characters = []
 
     $ current_room = ""
@@ -34,5 +33,50 @@ label loop_start:
 
     $ pending_death = ""
     $ pending_hint = ""
+
+    if loop_count == 2:
+
+        scene black
+
+        player "Something’s wrong."
+
+        "You can feel your surroundings tilt."
+        "Your heart pounds against your ribs,{w=.2} each beat louder than the last."
+
+        player "What’s happening to me?"
+
+        $ is_interactable = False
+        $ set_scene_characters("interior_entrance")
+
+        scene bg interior entrance evening
+        show screen item_scroll
+        show screen time_display
+        show butler smile at character_target(xalign=.2)
+        with dissolve
+
+        "Your vision returns and it snaps back into focus."
+
+        "The manor surrounds you again."
+
+        player "...What?"
+
+        "You check the time."
+        "Six o’clock."
+
+        player "No.{w=.3} That’s impossible."
+
+        "The same silence."
+        "The same cold air."
+        "The same sight of the butler standing right in front of you."
+
+        player "I was just here."
+        player "Did I...{w=.3} loop?"
+
+        "Your pulse quickens."
+
+        player "Then I have another chance."
+
+    $ hide_explore_screens()
+    $ is_interactable = True
 
     jump explore_interior_entrance

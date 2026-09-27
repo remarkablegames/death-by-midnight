@@ -151,8 +151,6 @@ default inventory = Inventory()
 
 screen inventory_hud():
 
-    zorder 110
-
     if inventory.items:
 
         fixed:
@@ -224,7 +222,6 @@ screen inventory_hud():
 screen inventory_read(item):
 
     modal True
-    zorder 300
 
     frame:
         align (0.5, 0.5)
@@ -264,7 +261,6 @@ screen inventory_read(item):
 screen inventory_character_menu(character):
 
     modal True
-    zorder 300
 
     frame:
         align (.5, .5)
@@ -298,7 +294,6 @@ screen inventory_character_menu(character):
 screen inventory_choose_item(character):
 
     modal True
-    zorder 300
 
     frame:
         align (.5, .5)
