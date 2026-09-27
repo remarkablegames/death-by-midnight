@@ -125,8 +125,8 @@ label give_will_to_butler:
 
     player "Hey,{w=.1} does this look like the True Will?"
 
-    butler neutral "This will is unfamiliar to me."
-    butler "And I have read every paper in this house."
+    butler neutral "This will is unfamiliar to me,{w=.3} and I have read every paper in this house."
+    butler neutral look away "Leave it with me until the reading."
 
     hide butler
     with dissolve
@@ -143,6 +143,7 @@ label give_will_to_maid:
 
     maid shocked "So you found it after all."
     maid "I knew it existed,{w=.2} but I never dared search for it."
+    maid shocked look away "Give it here before someone walks in."
 
     hide maid
     with dissolve
@@ -158,6 +159,7 @@ label give_will_to_miss:
     player "Hey,{w=.1} does this look like the True Will?"
 
     miss shocked "His seal...{w=.3} He never trusted anyone with this but himself."
+    miss shocked look away "I’d like to hold on to it."
 
     hide miss
     with dissolve
@@ -174,6 +176,7 @@ label give_will_to_nurse:
 
     nurse sad "This changes everything."
     nurse "But by midnight,{w=.1} no one will want to hear it."
+    nurse sad look away "You can leave it with me."
 
     hide nurse
     with dissolve
