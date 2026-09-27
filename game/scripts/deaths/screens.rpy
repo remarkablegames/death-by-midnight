@@ -27,18 +27,18 @@ init python:
         return True
 
     def death_waiting_in(room_id):
-        if not store.pending_death:
+        if not pending_death:
             return None
         for death in DEATH_HOURS:
-            if death["label"] == store.pending_death and death["room"] == room_id:
+            if death["label"] == pending_death and death["room"] == room_id:
                 return death
         return None
 
     def dead_character():
-        if not store.pending_death:
+        if not pending_death:
             return None
         for death in DEATH_HOURS:
-            if death["label"] == store.pending_death:
+            if death["label"] == pending_death:
                 return death["character"]
         return None
 
