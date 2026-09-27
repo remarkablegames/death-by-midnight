@@ -2,6 +2,7 @@ label explore_basement_door:
 
     $ set_scene_characters("basement_door")
     $ door_drop_active = is_basement_locked
+    $ is_interactable = True
 
     if is_basement_locked:
         if clock.is_night_dark:
@@ -43,7 +44,12 @@ screen interactable_door():
         style "interactable_button"
         xpos 736
         ypos 146
-        action [Hide("interactable_door"), Jump("explore_basement_door_locked")]
+        sensitive is_interactable
+        action [
+            Hide("interactable_door"),
+            SetVariable("is_interactable", False),
+            Jump("explore_basement_door_locked"),
+        ]
 
 
 label explore_basement_door_locked:
