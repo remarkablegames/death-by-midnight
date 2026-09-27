@@ -17,9 +17,19 @@ define EXPLORE_SCREENS = (
     "item_diary",
 )
 
+define TALK_VISIBLE_SCREENS = (
+    "time_display",
+)
+
+define CHARACTER_MENU_VISIBLE_SCREENS = (
+    "time_display",
+    "inventory_hud",
+)
+
 
 init python:
 
-    def hide_explore_screens():
+    def hide_explore_screens(keep=()):
         for screen_name in EXPLORE_SCREENS:
-            renpy.hide_screen(screen_name)
+            if screen_name not in keep:
+                renpy.hide_screen(screen_name)

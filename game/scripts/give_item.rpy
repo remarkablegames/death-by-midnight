@@ -185,7 +185,7 @@ label give_milk_to_butler:
 
     player "Is the milk expired?"
 
-    butler "Looks like it.{w=.3} But keep it in the fridge,{w=.1} someone might still be drinking it."
+    butler "Looks like it.{w=.3} But keep it in the fridge,{w=.1} someone might still drink it."
 
     $ inventory.add("milk")
     $ renpy.notify("Butler Ben handed the milk back to you")

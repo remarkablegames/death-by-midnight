@@ -97,7 +97,7 @@ The rule for a time-loop story is that each loop adds knowledge rather than repe
 
 Madelyn is found dead at the manor door at 7:30, stab wounds, and the kitchen knife is not in the kitchen. You have no foreknowledge, so you never went back for it. It was lying on the board when the night began, and it was the only thing that would have mattered. The first thing the night teaches you is an hour, a place, and the one item you should have carried out of the kitchen before seven.
 
-Ben is findable in the entrance hall through the whole evening and he goes down one door to the manor door to do it. The manor door is where every loop begins: you walk through it on your way in each time. You are standing in the room where somebody dies.
+Ben is findable in the entrance hall until seven, and he goes down one door to the manor door to do it. He is not in the house for the half hour before, and he is not in the hall afterwards. The manor door is where every loop begins: you walk through it on your way in each time. You are standing in the room where somebody dies.
 
 ### The Ben night
 

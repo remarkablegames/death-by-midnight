@@ -53,7 +53,7 @@ init python:
 
 
     def inventory_drop(drags, drop):
-        if drop is None:
+        if not drop:
             drag = drags[0]
             drag.snap(drag.start_x, drag.start_y, delay=0.25)
             return None
@@ -327,7 +327,7 @@ label inventory_handle:
 
         $ _read_item = inventory.get(inventory_result_item)
 
-        if _read_item is None:
+        if not _read_item:
 
             $ renpy.notify("That item is gone.")
             jump expression _inventory_return_label
@@ -349,6 +349,9 @@ label inventory_handle:
         $ character_result_info = character_info(inventory_result_item)
 
         if character_result_info is not None:
+
+            $ hide_explore_screens(CHARACTER_MENU_VISIBLE_SCREENS)
+
             call screen inventory_character_menu(character_result_info)
 
             if _return == "talk":
@@ -366,12 +369,12 @@ label inventory_give_scene(item_id, character_id):
     $ item = inventory.get(item_id)
     $ character = character_info(character_id)
 
-    if item is None or character is None:
+    if not item or not character:
         return
 
     $ is_interactable = False
 
-    hide screen inventory_hud
+    $ hide_explore_screens(keep=TALK_VISIBLE_SCREENS)
 
     $ inventory.give(item_id, character.character_id)
     $ renpy.notify(f"You gave {item.name} to {character.name}")
@@ -390,10 +393,10 @@ label inventory_talk_scene(character_id):
 
     $ character = character_info(character_id)
 
-    if character is None:
+    if not character:
         return
 
-    hide screen inventory_hud
+    $ hide_explore_screens(keep=TALK_VISIBLE_SCREENS)
 
     $ is_interactable = False
 
