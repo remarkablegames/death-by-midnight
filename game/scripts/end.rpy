@@ -6,25 +6,27 @@ label end:
     with fade
 
     "The clock strikes twelve."
-    "The reading begins,{w=.1} and the clause waits for a name."
+    "The time has come to read the will..."
+    "...and reveal whose name completes the missing clause."
+
+    scene bg interior entrance night dark
+    show butler smile at character_speak(xalign=.125)
+    show nurse neutral at character_speak(xalign=.375)
+    show miss neutral at character_speak(xalign=.625)
+    show maid smile at character_speak(xalign=.875)
+    with dissolve
 
     if not inventory.has("will"):
-
-        "You have no instrument."
-        "The Master’s hand is not on anything you can lay before them,{w=.1} and the clause will not take a name on your word alone."
-
+        player "I don’t have the will on me."
+        player "Should I just wing it?"
     else:
+        player "I have the True Will in my hands."
+        player "For once,{w=.1} I get to choose what happens."
 
-        "The True Will is in your hands."
-        "It’s the one thing here that carries the Master’s intention."
-
-    player "The clause requires a name spoken before the reading can be completed."
+    "The clause requires a name spoken before the reading can be completed."
 
     menu:
         "Who should inherit the manor?"
-
-        "Miss Mia":
-            jump ending_miss
 
         "Butler Ben":
             jump ending_butler
@@ -32,12 +34,16 @@ label end:
         "Nurse Nora":
             jump ending_nurse
 
+        "Miss Mia":
+            jump ending_miss
+
         "Maid Madelyn":
             jump ending_maid
 
 
 label ending_miss:
 
+    scene bg interior entrance night dark
     show miss shocked at character_speak
     with dissolve
 
@@ -100,6 +106,7 @@ label ending_miss:
 
 label ending_butler:
 
+    scene bg interior entrance night dark
     show butler neutral at character_speak
     with dissolve
 
@@ -134,6 +141,7 @@ label ending_butler:
 
 label ending_nurse:
 
+    scene bg interior entrance night dark
     show nurse neutral at character_speak
     with dissolve
 
@@ -178,6 +186,7 @@ label ending_nurse:
 
 label ending_maid:
 
+    scene bg interior entrance night dark
     show maid neutral at character_speak
     with dissolve
 
@@ -231,12 +240,13 @@ label ending_true:
     scene black
     with fade
 
-    "The reading completes."
-    "Mia is the Master’s heir,{w=.1} named and proven,{w=.1} and the night releases the man who read it."
+    "The reading is complete."
+    "Mia is the Master’s heir,{w=.2} named and proven."
+    "The night releases the man who read it."
     "You leave the manor at dawn."
-    "Behind you the house is already arguing about what you did, and none of it is about the will."
+    "Behind you,{w=.2} the house is already arguing about what you did,{w=.2} and none of it is about the will."
 
-    player "Good night."
+    player "Good day."
 
     return
 
@@ -246,12 +256,12 @@ label ending_good:
     scene black
     with fade
 
-    "The reading completes."
-    "The family keeps what it kept,{w=.1} and the clause is satisfied with a name,{w=.1} and you’re released."
+    "The reading is finished."
+    "The family keeps its inheritance."
+    "The clause is satisfied with a name,{w=.2} and you’re released."
     "You leave the manor at dawn."
-    "You leave having let it stand."
 
-    player "Good night."
+    player "Good day."
 
     return
 
@@ -261,12 +271,13 @@ label ending_bad:
     scene black
     with fade
 
-    "The name does not take."
-    "The reading closes unfinished,{w=.1} the clause is not satisfied,{w=.1} and the man who named nothing true is the only one still in the hall when the lights go out."
+    "The name is not accepted."
+    "The reading ends incomplete,{w=.2} and the clause remains unsatisfied."
+    "Tired and frustrated,{w=.1} everyone leaves.{w=.3} You’re the only one left."
     "The night does not snap back."
     "Time does not rewind."
-    "There’s only the reading that never finished and you."
+    "You stare at your own shadow."
 
-    player "It was not a good outcome."
+    player "Good night, then."
 
     return

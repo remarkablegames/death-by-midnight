@@ -14,7 +14,6 @@ label death_maid:
 
     # use dark background for suspense
     scene bg manor door night dark
-
     show screen death_body("maid", expression="shocked head tilt bloody", label="death_maid_found", xalign=.8, tintcolor="#111", enabled=False)
     with dissolve
 
