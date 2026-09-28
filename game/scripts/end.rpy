@@ -299,7 +299,8 @@ label ending_maid:
 
 label ending_true:
 
-    play music misery1 fadeout 2
+    stop music fadeout 2
+    play music misery1
     queue music misery2
     queue music misery3
 
@@ -319,6 +320,8 @@ label ending_true:
 
 label ending_good:
 
+    queue music stone_walls_bridge2 volume .7
+
     scene black
     with fade
 
@@ -333,6 +336,8 @@ label ending_good:
 
 
 label ending_bad:
+
+    queue music stone_walls_bridge2 volume .7
 
     scene black
     with fade
