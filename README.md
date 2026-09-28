@@ -32,6 +32,7 @@ Or download for desktop:
 
 ### Audio
 
+- [Free music pack](https://sinetient.itch.io/free-music-pack) by [Sinetient](https://sinetient.itch.io/)
 - [Kenney](https://kenney.nl/assets/interface-sounds)
 
 ## Prerequisites
