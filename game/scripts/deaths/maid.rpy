@@ -1,8 +1,6 @@
 label death_maid_hint:
 
-    play music night_outdoors fadeout 1
-
-    play sound crash
+    play sound crash volume .7
 
     "{i}(Crash){/i}"
 
@@ -13,6 +11,8 @@ label death_maid_hint:
 
 
 label death_maid:
+
+    play music night_outdoors fadeout 1
 
     $ hide_explore_screens()
 
@@ -30,8 +30,12 @@ label death_maid:
 
 label death_maid_found:
 
+    play sound string_hit1
+
     show maid shocked head tilt bloody at character_body
     with hpunch
+
+    play music fractal_fragments1
 
     player "Madelyn! What happened to you?"
 
@@ -50,7 +54,12 @@ label death_maid_found:
 
     player "Stay where you are,{w=.1} I’ll get help!"
 
+    play sound tick_tock
+
     "The clock strikes half past seven."
+
+    play music fractal_fragments2
+
     "Your vision begins to blur..."
 
     scene black

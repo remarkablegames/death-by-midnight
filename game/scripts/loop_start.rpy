@@ -41,6 +41,7 @@ label loop_start:
         player "Something’s wrong."
 
         "You can feel your surroundings tilt."
+
         "Your heart pounds against your ribs,{w=.2} each beat louder than the last."
 
         player "What’s happening to me?"
@@ -54,27 +55,25 @@ label loop_start:
         show butler smile at character_target(xalign=.2)
         with dissolve
 
+        stop music fadeout 3
+
         "Your vision returns and it snaps back into focus."
 
         "The manor surrounds you again."
 
-        player "...What?"
+        player "...What?{w=.5} What just happened?"
 
-        "You check the time."
-        "Six o’clock."
+        "You check the time.{w=.5} Six o’clock."
 
         player "No.{w=.3} That’s impossible."
 
-        "The same silence."
-        "The same cold air."
-        "The same sight of the butler standing right in front of you."
+        "The same silence.{w=.3} The same cold air.{w=.3} The same sight of the butler standing right in front of you."
 
-        player "I was just here."
-        player "Did I...{w=.3} loop?"
+        player "I was just here.{w=.5} Did I...{w=.3} loop?"
 
         "Your pulse quickens."
 
-        player "Then I have another chance."
+        player "This means I have another chance."
 
     $ is_interactable = True
 
