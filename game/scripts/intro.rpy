@@ -1,5 +1,7 @@
 label intro:
 
+    play music birds_chirping fadeout 3
+
     scene bg manor gate evening
     show screen intro_butler_greet(enabled=False)
     with fade
@@ -53,6 +55,8 @@ label intro_butler_door:
 
 
 label intro_household:
+
+    stop music fadeout 1
 
     scene bg interior entrance evening
 

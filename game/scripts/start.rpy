@@ -3,7 +3,7 @@ default player_name = ""
 
 label start:
 
-    stop music fadeout 1
+    play music stone_walls_verse2
 
     "You’re on your way to the manor."
     "The late Master tasked you with executing his will."
