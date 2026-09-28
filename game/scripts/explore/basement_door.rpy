@@ -58,6 +58,8 @@ screen interactable_door():
 
 label explore_basement_door_locked:
 
+    play sound door_locked
+
     $ seen_basement_door = True
 
     show screen time_display
@@ -89,8 +91,11 @@ label basement_door_unlock:
     $ door_drop_active = False
     $ inventory.remove("basement_key")
 
-    "You slide the key into the lock and turn it."
-    "The bolt yields with a dry click."
+    play sound door_unlocked
+
+    "You slide the key into the lock and turn it.{w=.3} The bolt yields with a dry click."
+
+    play sound door_creak
 
     $ renpy.notify("You unlocked the basement door")
 

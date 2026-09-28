@@ -5,14 +5,14 @@ label explore_basement:
 
     scene bg basement light
 
+    if not inventory.has_picked_up("will"):
+        show screen item_will onlayer master zorder 0
+
     call death_hint
 
     show screen time_display
     show screen inventory_hud
     with dissolve
-
-    if not inventory.has_picked_up("will"):
-        show screen item_will onlayer master zorder 0
 
     show screen arrow_up_button(label="explore_basement_inside", xalign=.515, yalign=.6, minutes=5)
     call screen arrow_down_button(label="explore_basement_stairs", xalign=.515, yalign=.95, minutes=5)

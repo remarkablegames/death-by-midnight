@@ -9,16 +9,16 @@ label explore_bedroom:
         scene bg bedroom evening
         $ character_tint = COLOR_TRANSPARENT
 
-    call death_hint
-
-    show screen time_display
-    show screen inventory_hud
-
     if not inventory.has("basement_key"):
         show screen item_key onlayer master zorder 0
 
     if not inventory.has_picked_up("camera"):
         show screen item_camera onlayer master zorder 0
+
+    call death_hint
+
+    show screen time_display
+    show screen inventory_hud
 
     with dissolve
 
