@@ -22,12 +22,12 @@ label death_miss:
     $ hide_explore_screens()
 
     scene bg pond night
-    show screen death_body("miss", expression="creepy bloody", label="death_miss_found", xalign=.5, tintcolor="#111", enabled=False)
+    show screen death_body("miss", expression="creepy bloody", label="death_miss_found", xalign=.5, tintcolor=COLOR_TINT_UNLIT, enabled=False)
     with dissolve
 
     player "There you are.{w=.5} Your mother’s been worried sick."
 
-    call screen death_body("miss", expression="creepy bloody", label="death_miss_found", xalign=.5, tintcolor="#111", enabled=True)
+    call screen death_body("miss", expression="creepy bloody", label="death_miss_found", xalign=.5, tintcolor=COLOR_TINT_UNLIT, enabled=True)
 
 
 label death_miss_found:

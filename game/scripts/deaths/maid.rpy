@@ -18,14 +18,14 @@ label death_maid:
 
     # use dark background for suspense
     scene bg manor door night dark
-    show screen death_body("maid", expression="shocked head tilt bloody", label="death_maid_found", xalign=.8, tintcolor="#111", enabled=False)
+    show screen death_body("maid", expression="shocked head tilt bloody", label="death_maid_found", xalign=.8, tintcolor=COLOR_TINT_UNLIT, enabled=False)
     with dissolve
 
     player "What happened to the lights?"
     player "I can barely make out someone’s silhouette in the shadows."
     player "Hello?{w=.3} Is someone there?"
 
-    call screen death_body("maid", expression="shocked head tilt bloody", label="death_maid_found", xalign=.8, tintcolor="#111", enabled=True)
+    call screen death_body("maid", expression="shocked head tilt bloody", label="death_maid_found", xalign=.8, tintcolor=COLOR_TINT_UNLIT, enabled=True)
 
 
 label death_maid_found:

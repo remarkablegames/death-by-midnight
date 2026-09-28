@@ -19,14 +19,14 @@ label death_butler:
     $ hide_explore_screens()
 
     scene bg living room night dark
-    show screen death_body("butler", expression="creepy bloody", label="death_butler_found", xalign=.8, tintcolor="#111", enabled=False)
+    show screen death_body("butler", expression="creepy bloody", label="death_butler_found", xalign=.8, tintcolor=COLOR_TINT_UNLIT, enabled=False)
     with dissolve
 
     "It looks like someone is resting on the sofa."
 
     player "Hey,{w=.1} Madelyn was looking for you."
 
-    call screen death_body("butler", expression="creepy bloody", label="death_butler_found", xalign=.8, tintcolor="#111", enabled=True)
+    call screen death_body("butler", expression="creepy bloody", label="death_butler_found", xalign=.8, tintcolor=COLOR_TINT_UNLIT, enabled=True)
 
 
 label death_butler_found:

@@ -22,8 +22,8 @@ label death_nurse:
     $ hide_explore_screens()
 
     scene bg kitchen night
-    show maid shocked at character_target(xalign=.7), tint("#111")
-    call screen death_body("nurse", expression="creepier", label="death_nurse_found", xalign=.3, tintcolor="#111", enabled=True)
+    show maid shocked at character_target(xalign=.7), tint(COLOR_TINT_UNLIT)
+    call screen death_body("nurse", expression="creepier", label="death_nurse_found", xalign=.3, tintcolor=COLOR_TINT_UNLIT, enabled=True)
     with dissolve
 
 
