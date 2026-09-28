@@ -5,10 +5,14 @@ label end_incomplete:
     if not victim:
         jump end
 
+    play music fractal_fragments1 fadeout 1
+
     $ hide_explore_screens()
 
     scene black
     with fade
+
+    play sound tick_tock
 
     "The clock strikes twelve."
 
@@ -40,6 +44,8 @@ label end_incomplete:
     "There’s a death in this house that was never named."
     "The reading cannot be completed."
 
+    play music fractal_fragments2
+
     scene black
     with fade
 
@@ -50,14 +56,19 @@ label end_incomplete:
 
 label end:
 
+    stop music fadeout 1
+
     $ hide_explore_screens()
 
     scene black
     with fade
 
+    play sound tick_tock
+
     "The clock strikes twelve."
-    "The time has come to read the will..."
-    "...and reveal whose name completes the missing clause."
+    "The time has come to read the will...{w=0.5} and reveal whose name completes the missing clause."
+
+    play music stone_walls_bridge1 volume .7
 
     scene bg interior entrance night dark
     show butler smile at character_speak(xalign=.125)
@@ -69,6 +80,10 @@ label end:
     if not inventory.has("will"):
         player "I don’t have the will on me."
         player "Should I just wing it?"
+
+        menu:
+            "Yes":
+                pass
     else:
         player "I have the True Will in my hands."
         player "For once,{w=.1} I get to choose what happens."
@@ -143,13 +158,12 @@ label ending_miss:
 
     else:
 
-        "The hall laughs."
-        "Then silence fills the room."
+        "The hall laughs.{w=.5} Then silence fills the room."
 
-        miss "Don’t."
+        miss neutral "Don’t."
 
         "That’s all the answer she gets."
-        "The clause is not satisfied,{w=.1} and the reading closes on nothing."
+        "The clause is unsatisfied,{w=.1} and the reading closes on nothing."
 
         jump ending_bad
 
@@ -157,7 +171,7 @@ label ending_miss:
 label ending_butler:
 
     scene bg interior entrance night dark
-    show butler neutral at character_speak
+    show butler smile at character_speak
     with dissolve
 
     player "Ben shall inherit the manor."
@@ -181,9 +195,9 @@ label ending_butler:
 
     else:
 
-        butler "It’s about time."
+        butler creepy "It’s about time."
 
-        "You feel that something is amiss,{w=.1} but you can’t quite put your finger on what it is."
+        "You feel that something’s amiss,{w=.1} but you can’t quite put your finger on what it is."
         "You leave having let it stand."
 
         jump ending_good
@@ -212,8 +226,8 @@ label ending_nurse:
 
     elif inventory.has("will"):
 
-        nurse "It’s a mistake."
-        nurse "The Master left this to his family."
+        nurse sad "It’s a mistake."
+        nurse @ sad look away "The Master left this to his family."
 
         "The reading does not hold."
         "You named the nurse,{w=.1} and the clause finds no heir in it,{w=.1} and the night closes on your error."
@@ -222,14 +236,13 @@ label ending_nurse:
 
     else:
 
-        nurse "It’s a mistake."
-        nurse "Ask the will,{w=.1} not me."
+        nurse sad "It’s a mistake."
+        nurse sad look away "Ask the will,{w=.2} not me."
 
         "You have not seen the will."
-        "You have asked a woman who has spent her life holding a house together to hand it to herself,{w=.1} and she tells you plainly that it is a mistake."
-
-        "The reading does not hold."
-        "The clause is not satisfied."
+        "You have asked a woman who has spent her life holding a house together to hand it to herself."
+        "And she has told you plainly...{w=.3} it’s a mistake."
+        "The reading does not hold and the clause is unsatisfied."
 
         jump ending_bad
 
@@ -248,7 +261,7 @@ label ending_maid:
         "You give the manor to the woman who was under it the whole time."
         "The maid.{w=.3} Ben’s lover.{w=.3} Mia’s aunt."
 
-        maid "You’re not serious."
+        maid shocked "You’re not serious."
 
         player "I am."
 
@@ -262,7 +275,7 @@ label ending_maid:
 
         "The True Will is in your hands,{w=.1} and it does not name a maid,{w=.1} and you name her anyway."
 
-        maid "On what grounds?"
+        maid shocked "On what grounds?"
 
         player "There are no grounds."
 
@@ -273,14 +286,13 @@ label ending_maid:
 
     else:
 
-        maid "It’s a mistake."
-        maid "Check the will."
+        maid shocked "It’s a mistake."
+        maid @ shocked look away "Check the will."
 
         "You have not seen the will."
         "You have named a maid in a room full of people who have never once thought about whether she deserved anything."
         "Now they’re laughing."
-        "The reading does not hold."
-        "The clause is not satisfied."
+        "The reading does not hold and the clause is unsatisfied."
 
         jump ending_bad
 
@@ -296,9 +308,9 @@ label ending_true:
     "You leave the manor at dawn."
     "Behind you,{w=.2} the house is already arguing about what you did,{w=.2} and none of it is about the will."
 
-    player "Good day."
+    player "{cps=10}Good morning..."
 
-    return
+    jump end_game
 
 
 label ending_good:
@@ -306,14 +318,14 @@ label ending_good:
     scene black
     with fade
 
-    "The reading is finished."
+    "The reading is complete."
     "The family keeps its inheritance."
-    "The clause is satisfied with a name,{w=.2} and you’re released."
+    "The clause is satisfied with a name,{w=.3} and you’re released."
     "You leave the manor at dawn."
 
-    player "Good day."
+    player "{cps=10}Good day..."
 
-    return
+    jump end_game
 
 
 label ending_bad:
@@ -321,13 +333,20 @@ label ending_bad:
     scene black
     with fade
 
-    "The name is not accepted."
-    "The reading ends incomplete,{w=.2} and the clause remains unsatisfied."
-    "Tired and frustrated,{w=.1} everyone leaves.{w=.3} You’re the only one left."
-    "The night does not snap back."
-    "Time does not rewind."
-    "You stare at your own shadow."
+    "The name is not accepted and the reading ends incomplete."
+    "Tired and frustrated,{w=.2} they all leave.{w=.5} You’re the only one left standing."
+    "The night does not snap back.{w=.3} Time does not rewind.{w=.3} You stare at your own shadow."
 
-    player "Good night, then."
+    player "{cps=10}Good night..."
+
+    jump end_game
+
+
+label end_game:
+
+    stop music fadeout 4
+
+    scene black
+    with Fade(1, 0, 1)
 
     return
