@@ -17,30 +17,42 @@ label death_miss_hint:
 
 label death_miss:
 
+    play music running_water fadeout 1
+
     $ hide_explore_screens()
 
     scene bg pond night
-
-    show screen death_body("miss", expression="sad bloody", label="death_miss_found", xalign=.5, enabled=False)
+    show screen death_body("miss", expression="creepy bloody", label="death_miss_found", xalign=.5, tintcolor="#111", enabled=False)
     with dissolve
 
-    "She is face down at the water,{w=.1} and she has been still a long time."
+    player "There you are.{w=.5} Your mother’s been worried sick."
 
-    player "Mia...{w=.3} No.{w=.2} Not you too."
-
-    call screen death_body("miss", expression="sad bloody", label="death_miss_found", xalign=.5, enabled=True)
+    call screen death_body("miss", expression="creepy bloody", label="death_miss_found", xalign=.5, tintcolor="#111", enabled=True)
 
 
 label death_miss_found:
 
-    show miss sad bloody at character_speak
-    with dissolve
+    play sound string_hit2
 
-    "Her clothes are folded on the bank.{w=0.3} Her shoes are set side by side,{w=.1} toes pointing out,{w=.1} the way a child lines them up."
+    show miss creepy bloody at character_speak
 
-    player "Did she fall in?{w=.3} Or did someone arrange this."
+    play music fractal_fragments1
 
-    "The clock strikes half past ten.{w=.3} Time starts to reverse..."
+    "She’s motionless,{w=.2} and she has been for a while."
+
+    player "Mia...{w=.3} No...{w=.3} Not you too..."
+
+    "There’s no sign of a struggle.{w=.3} Whoever did this left no trace."
+
+    player "I need more clues.{w=.5} I’m running out of time."
+
+    play sound tick_tock
+
+    "The clock strikes half past ten."
+
+    play music fractal_fragments2
+
+    "Time starts to reverse..."
 
     scene black
     with fade
