@@ -1,6 +1,9 @@
 label explore_manor_gate:
 
-    play music birds_chirping fadeout 1
+    if clock.is_night_light:
+        play music night_outdoors fadeout 1
+    else:
+        play music birds_chirping fadeout 1
 
     $ set_scene_characters("manor_gate")
 

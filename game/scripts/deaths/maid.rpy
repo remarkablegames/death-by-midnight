@@ -1,5 +1,9 @@
 label death_maid_hint:
 
+    play music night_outdoors fadeout 1
+
+    play sound crash
+
     "{i}(Crash){/i}"
 
     player "What was that?"
