@@ -299,6 +299,10 @@ label ending_maid:
 
 label ending_true:
 
+    play music misery1 fadeout 2
+    queue music misery2
+    queue music misery3
+
     scene black
     with fade
 
