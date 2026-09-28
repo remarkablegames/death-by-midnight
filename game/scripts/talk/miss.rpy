@@ -1,6 +1,6 @@
 label talk_miss:
 
-    show miss neutral at character_speak
+    show miss smile at character_speak
     with dissolve
 
     $ context = room_intro("miss")
@@ -21,12 +21,9 @@ label talk_miss:
 
 label talk_miss_menu:
 
-    $ can_confess = inventory.has("diary") and not resolved_miss
-    $ can_ask_habit = knows_miss_milk
-
     menu:
 
-        "Tell her about the last page" if can_confess:
+        "Tell her about the last page" if inventory.has("diary") and not resolved_miss:
 
             miss "You’ve read it."
 
@@ -61,7 +58,7 @@ label talk_miss_menu:
             $ resolved_miss = True
             $ renpy.notify(_("Mia will not go to the pond tonight"))
 
-        "Ask about the milk habit" if can_ask_habit:
+        "Ask about the milk habit" if knows_miss_milk:
 
             miss "Drinking it during the night helps me fall asleep."
 

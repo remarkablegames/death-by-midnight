@@ -1,6 +1,6 @@
 label talk_maid:
 
-    show maid neutral at character_speak
+    show maid smile at character_speak
     with dissolve
 
     $ context = room_intro("maid")
@@ -13,12 +13,9 @@ label talk_maid:
 
 label talk_maid_menu:
 
-    $ can_ask_knife = not knows_knife_exists and not knows_affair
-    $ can_ask_thief = knows_knife_exists and not knows_affair
-
     menu:
 
-        "Ask about the missing kitchen knife" if can_ask_knife:
+        "Ask about the missing kitchen knife" if not knows_knife_exists and not knows_affair:
 
             maid "There was a knife in the kitchen this evening."
 
@@ -28,7 +25,7 @@ label talk_maid_menu:
 
             $ knows_knife_exists = True
 
-        "Ask who took the knife" if can_ask_thief:
+        "Ask who took the knife" if knows_knife_exists and not knows_affair:
 
             maid "I clean the kitchen.{w=.3} I didn’t take it."
 

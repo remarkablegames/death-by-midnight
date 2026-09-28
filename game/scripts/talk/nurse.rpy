@@ -1,6 +1,6 @@
 label talk_nurse:
 
-    show nurse neutral at character_speak
+    show nurse smile at character_speak
     with dissolve
 
     $ context = room_intro("nurse")
@@ -13,13 +13,7 @@ label talk_nurse:
 
 label talk_nurse_menu:
 
-    show nurse neutral at character_speak
-
-    $ can_ask_key = seen_basement_door and not inventory.has("basement_key")
-    $ can_ask_bedroom = knows_affair
-    $ can_accuse = knows_affair and inventory.has("coffee") and not accused_nurse
-    $ can_disclose = knows_affair and not disclosed_affair
-    $ can_ask_parentage = knows_red_hair and not knows_miss_parentage
+    show nurse smile at character_speak
 
     menu:
 
@@ -27,7 +21,9 @@ label talk_nurse_menu:
 
             nurse @ smile look away "I’m making coffee,{w=.1} but there’s also milk beside the fridge."
 
-        "Ask about the key" if can_ask_key:
+        "Ask about the locked door" if seen_basement_door:
+
+        "Ask about the key" if seen_basement_door and not inventory.has("basement_key"):
 
             nurse "So you’ve seen the locked door.{w=.3} The Master kept the only key on his person to the very end."
 
@@ -36,7 +32,7 @@ label talk_nurse_menu:
             $ inventory.add("basement_key")
             $ renpy.notify("Nora gave you the basement key")
 
-        "Ask where Ben spends the night" if can_ask_bedroom:
+        "Ask where Ben spends the night" if knows_affair:
 
             nurse "Not in the bedroom.{w=.3} I stopped waiting in the bedroom."
 
@@ -44,7 +40,7 @@ label talk_nurse_menu:
 
             nurse "My sister keeps her own counsel,{w=.3} as she keeps her own position."
 
-        "Accuse her of poisoning him" if can_accuse:
+        "Accuse her of poisoning him" if knows_affair and inventory.has("coffee") and not accused_nurse:
 
             $ accused_nurse = True
 
@@ -58,7 +54,7 @@ label talk_nurse_menu:
 
             nurse "Be careful what you accuse people of.{w=.3} Doors lock from the outside here."
 
-        "Tell her about Ben and Madelyn" if can_disclose:
+        "Tell her about Ben and Madelyn" if knows_affair and not disclosed_affair:
 
             $ disclosed_affair = True
 
@@ -72,7 +68,7 @@ label talk_nurse_menu:
 
             "She doesn’t raise her voice.{w=.3} Silence settles between you."
 
-        "Show her the photograph in the camera" if can_ask_parentage:
+        "Show her the photograph in the camera" if knows_red_hair and not knows_miss_parentage:
 
             $ knows_miss_parentage = True
 
