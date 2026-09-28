@@ -25,7 +25,7 @@ The Master named the one witness he was certain would be impartial. That is the 
 - The night runs from 6 p.m. to midnight, and the clock only moves when you move and talk to the characters.
 - **One death per night, at most.** The first death ends the night.
 - A death at any hour, to anyone, ends the night and resets it to 6 p.m. There is no penalty attached to it. It costs you the night and nothing else.
-- Reaching midnight does not reset. It begins the reading, and the reading can fail in a way no death can: a naming the clause will not hold ends the game outright.
+- Reaching midnight begins the reading. If a body is unaccounted for, the reading is refused and the night resets. Otherwise you name an heir.
 - Only the detective remembers. The household, their moods, and the placement of evidence all reset.
 - **Knowledge persists**, in the form of unlocked talk options. What the detective learns carries for the rest of the playthrough.
 - **Prevention does not persist.** A cause you resolved has to be resolved again on every later night, because the act is physical and the household forgets it happened.
