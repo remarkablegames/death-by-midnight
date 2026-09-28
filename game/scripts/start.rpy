@@ -3,6 +3,8 @@ default player_name = ""
 
 label start:
 
+    stop music fadeout 1
+
     "You’re on your way to the manor."
     "The late Master tasked you with executing his will."
 

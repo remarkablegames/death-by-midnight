@@ -18,6 +18,7 @@ screen arrow_button(arrow, label, xalign, yalign, minutes=0):
         xalign xalign 
         yalign yalign
         action [
+            Play("sound", "audio/sfx/footsteps.ogg"),
             Function(clock.advance, minutes),
             Hide("arrow_button"),
             Hide("arrow_down_button"),
