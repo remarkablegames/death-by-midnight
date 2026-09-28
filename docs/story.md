@@ -126,11 +126,11 @@ Everything is resolved, or everything is resolved but you. The reading begins in
 - **Give scenes.** Handing an item to a character runs a label that owns the dialogue. A give scene can resolve a cause or load a slot, which is the main tension of the late game.
 - **Deaths are found, not announced.** `DEATH_HOURS` in `scripts/deaths/screens.rpy` carries the room and the call label for each hour alongside its hour and its resolved flag. The four rooms that can hold a body check `death_waiting_in` on entry, so arriving is what triggers the scene.
 - **No save/load mid-night.** The loop is the reset. The `knows_*` variables track what the detective learned and carry across nights, as does `loop_count`, which tallies how many nights have run; the `resolved_*` variables track what was prevented and reset every night.
-- **Midnight.** Reaching midnight ends the night. `clock.advance` currently jumps to a stub `end` label, which is where the reading and the endings go.
+- **Midnight.** `clock.advance` branches on `pending_death` at the midnight mark: an unaccounted body goes to `end_incomplete`, where the reading refuses and the loop restarts; otherwise to the `end` label
 
 ## Endings
 
-There is one way to end the game and it is not a reset. Every death is a reset, so the only night that reaches midnight is one in which nothing died, and the only way to get that night is to have resolved every cause before the last hour. Reach midnight and the reading begins, and the reading is the last thing that happens.
+Reaching midnight only ends the game if everything is resolved. An unfound death is refused at `end_incomplete` and the night restarts.
 
 At the reading you have one decision, and the clause only ever asked for a name. Who you name, and whether you can prove it, is the whole distance between the endings.
 
