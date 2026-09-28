@@ -1,5 +1,7 @@
 label explore_basement_stairs:
 
+    stop music fadeout 1
+
     $ set_scene_characters("basement_stairs")
     $ character_tint = COLOR_TRANSPARENT
 

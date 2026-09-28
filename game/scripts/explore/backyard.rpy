@@ -1,5 +1,7 @@
 label explore_backyard:
 
+    play music birds_chirping fadeout 1
+
     $ set_scene_characters("backyard")
 
     if clock.is_night_dark:

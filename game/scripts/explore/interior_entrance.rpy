@@ -1,5 +1,7 @@
 label explore_interior_entrance:
 
+    stop music fadeout 1
+
     $ set_scene_characters("interior_entrance")
 
     if clock.is_night_dark:

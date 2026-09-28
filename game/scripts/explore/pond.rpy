@@ -1,5 +1,7 @@
 label explore_pond:
 
+    play music running_water fadeout 1
+
     $ set_scene_characters("pond")
 
     if clock.is_night_light:
