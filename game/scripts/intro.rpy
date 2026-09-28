@@ -73,7 +73,7 @@ label intro_household:
     butler @ happy "This is my wife Nora."
 
     nurse smile "Pleasure meeting you,{w=.1} detective."
-    nurse smile look away "I have something to take care of in the kitchen,{w=.2} so I’ll excuse myself for now."
+    nurse smile look away "I have something to take care of in the kitchen,{w=.2} so please excuse me."
 
     hide nurse
     with dissolve
