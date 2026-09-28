@@ -38,10 +38,9 @@ init python:
                         store.pending_hint = death["hint"]
                     break
 
-            if store.pending_death:
-                renpy.jump("end_incomplete")
-
             if self.minutes >= self.MIDNIGHT_MINUTES:
+                if store.pending_death:
+                    renpy.jump("end_incomplete")
                 renpy.jump("end")
 
         @property
