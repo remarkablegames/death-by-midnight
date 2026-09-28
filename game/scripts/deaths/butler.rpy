@@ -19,30 +19,40 @@ label death_butler:
     $ hide_explore_screens()
 
     scene bg living room night dark
-
-    show screen death_body("butler", expression="shocked bloody", label="death_butler_found", xalign=.5, enabled=False)
+    show screen death_body("butler", expression="creepy bloody", label="death_butler_found", xalign=.8, tintcolor="#111", enabled=False)
     with dissolve
 
-    player "Someone is slumped on the sofa."
+    "It looks like someone is resting on the sofa."
 
-    call screen death_body("butler", expression="shocked bloody", label="death_butler_found", xalign=.5, enabled=True)
+    player "Hey,{w=.1} Madelyn was looking for you."
+
+    call screen death_body("butler", expression="creepy bloody", label="death_butler_found", xalign=.8, tintcolor="#111", enabled=True)
 
 
 label death_butler_found:
 
-    show butler shocked bloody at character_body
-    with dissolve
+    play sound piano_horror
 
-    "Ben lies quietly on the side,{w=.2} his face ashen."
+    show butler creepy bloody at character_speak
+    with vpunch
+
+    play music fractal_fragments1
+
+    "Ben is slumped on the side,{w=.2} his face ashen."
+    "He’s no longer breathing."
 
     player "What happened?"
     player "He was fine just a moment ago."
 
     if ("coffee", "butler") in inventory.given:
-
         "You smell coffee on him."
 
+    play sound tick_tock
+
     "The clock strikes half past nine."
+
+    play music fractal_fragments2
+
     "Time starts to unravel..."
 
     scene black

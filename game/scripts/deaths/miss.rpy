@@ -33,7 +33,7 @@ label death_miss:
 
 label death_miss_found:
 
-    show miss sad bloody at character_body(xalign=.5)
+    show miss sad bloody at character_speak
     with dissolve
 
     "Her clothes are folded on the bank.{w=0.3} Her shoes are set side by side,{w=.1} toes pointing out,{w=.1} the way a child lines them up."

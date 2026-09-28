@@ -69,6 +69,6 @@ screen death_body(character, expression, label, xalign=.5, tintcolor=COLOR_TRANS
     imagebutton:
         style "character_button"
         idle character_sprite(character, expression)
-        at character_body(xalign=xalign), tint(tintcolor)
+        at character_button(xalign=xalign), tint(tintcolor)
         sensitive enabled
         action [Hide("death_body"), Jump(label)]

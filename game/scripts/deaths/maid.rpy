@@ -32,7 +32,7 @@ label death_maid_found:
 
     play sound string_hit1
 
-    show maid shocked head tilt bloody at character_body
+    show maid shocked head tilt bloody at character_speak
     with hpunch
 
     play music fractal_fragments1

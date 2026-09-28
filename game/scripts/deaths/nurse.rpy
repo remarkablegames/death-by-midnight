@@ -21,7 +21,7 @@ label death_nurse:
 
     scene bg kitchen night
 
-    show maid shocked at character_speak(xalign=.68)
+    show maid shocked at character_speak(xalign=.7)
     show screen death_body("nurse", expression="creepier bloody", label="death_nurse_found", xalign=.35, enabled=False)
     with dissolve
 
@@ -34,8 +34,8 @@ label death_nurse:
 
 label death_nurse_found:
 
-    show nurse creepier bloody at character_body(xalign=.35)
-    show maid neutral at character_speak(xalign=.68)
+    show nurse creepier bloody at character_speak(xalign=.3)
+    show maid neutral at character_speak(xalign=.7)
     with dissolve
 
     "Nora lies motionless, her eyes rolled back, showing only the whites."
