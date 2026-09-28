@@ -1,11 +1,11 @@
 label give_scroll_to_butler:
 
-    show butler neutral at character_speak
+    show butler smile at character_speak
     with dissolve
 
     player "Here,{w=.1} take the scroll.{w=.3} I think you should see it."
 
-    butler "The will?{w=.3} I’ll take a look,{w=.1} but it looks outdated."
+    butler smile look away "The will?{w=.3} It looks good to me."
 
     hide butler
     with dissolve
@@ -15,12 +15,12 @@ label give_scroll_to_butler:
 
 label give_scroll_to_maid:
 
-    show maid neutral at character_speak
+    show maid smile at character_speak
     with dissolve
 
     player "Here,{w=.1} take the scroll.{w=.3} I think you should see it."
 
-    maid "This is the Master’s handwriting...{w=.3} I’ve seen it on his private notes."
+    maid shocked "This is the Master’s handwriting...{w=.3} I’ve seen it on his private notes."
 
     hide maid
     with dissolve
@@ -30,12 +30,12 @@ label give_scroll_to_maid:
 
 label give_scroll_to_miss:
 
-    show miss neutral at character_speak
+    show miss smile at character_speak
     with dissolve
 
     player "Here,{w=.1} take the scroll.{w=.3} I think you should see it."
 
-    miss "His seal...{w=.3} He never let anyone touch his papers,{w=.1} not even Mother."
+    miss shocked "His seal...{w=.3} He never let anyone touch his papers,{w=.1} not even Mother."
 
     hide miss
     with dissolve
@@ -45,12 +45,34 @@ label give_scroll_to_miss:
 
 label give_scroll_to_nurse:
 
-    show nurse neutral at character_speak
+    show nurse smile at character_speak
     with dissolve
 
     player "Here,{w=.1} take the scroll.{w=.3} I think you should see it."
 
-    nurse "Where did you find this?{w=.3} Careful,{w=.1} detective.{w=.3} Not in front of the others."
+    nurse @ smile look away "Where did you find this?{w=.3} Careful,{w=.1} detective.{w=.3} Not in front of the others."
+
+    nurse neutral "..."
+
+    if not accused_nurse and clock.minutes >= clock_time("20:30"):
+
+        "She reads it without hurrying.{w=.3} The only part that stops her is the date at the top."
+
+        nurse "This is older than the will you were hired to read.{w=.3} He kept the other one locked away."
+
+        nurse "I’ve had a key to that door for years.{w=.3} I just never used it."
+
+        $ inventory.add("basement_key")
+        $ renpy.notify("Nora gave you a key")
+
+    else:
+
+        "She skims it quickly."
+
+        nurse "It looks good to me."
+
+        $ inventory.add("scroll")
+        $ renpy.notify("Nora handed the scroll back to you")
 
     hide nurse
     with dissolve
@@ -60,12 +82,12 @@ label give_scroll_to_nurse:
 
 label give_basement_key_to_butler:
 
-    show butler neutral at character_speak
+    show butler smile at character_speak
     with dissolve
 
     player "Do you know what this key unlocks?"
 
-    butler "It’s the Master’s key.{w=.3} Why would you hand me that."
+    butler neutral "It’s the Master’s key.{w=.3} I’ll hold on to it."
 
     hide butler
     with dissolve
@@ -75,12 +97,13 @@ label give_basement_key_to_butler:
 
 label give_basement_key_to_maid:
 
-    show maid neutral at character_speak
+    show maid smile at character_speak
     with dissolve
 
     player "Do you know what this key unlocks?"
 
-    maid "Careful with that one.{w=.3} The Master never let it out of his sight."
+    maid smile look away "Careful with that one.{w=.3} The Master never let it out of his sight."
+    maid happy "I’ll keep it safe."
 
     hide maid
     with dissolve
@@ -90,12 +113,15 @@ label give_basement_key_to_maid:
 
 label give_basement_key_to_miss:
 
-    show miss neutral at character_speak
+    show miss smile at character_speak
     with dissolve
 
     player "Do you know what this key unlocks?"
 
-    miss "It opens the underground chamber.{w=.3} I’m told not to go there..."
+    miss sad look away "It opens the underground chamber.{w=.3} I’m told not to go there..."
+
+    $ inventory.add("basement_key")
+    $ renpy.notify("Miss Mia handed the key back to you")
 
     hide miss
     with dissolve
@@ -105,12 +131,15 @@ label give_basement_key_to_miss:
 
 label give_basement_key_to_nurse:
 
-    show nurse neutral at character_speak
+    show nurse smile at character_speak
     with dissolve
 
     player "Do you know what this key unlocks?"
 
     nurse "Where did you find this?{w=.3} Put it away before anyone sees you with it."
+
+    $ inventory.add("basement_key")
+    $ renpy.notify("Nurse Nora handed the key back to you")
 
     hide nurse
     with dissolve
@@ -120,7 +149,7 @@ label give_basement_key_to_nurse:
 
 label give_will_to_butler:
 
-    show butler neutral at character_speak
+    show butler smile at character_speak
     with dissolve
 
     player "Hey,{w=.1} does this look like the True Will?"
@@ -136,7 +165,7 @@ label give_will_to_butler:
 
 label give_will_to_maid:
 
-    show maid neutral at character_speak
+    show maid smile at character_speak
     with dissolve
 
     player "Hey,{w=.1} does this look like the True Will?"
@@ -153,7 +182,7 @@ label give_will_to_maid:
 
 label give_will_to_miss:
 
-    show miss neutral at character_speak
+    show miss smile at character_speak
     with dissolve
 
     player "Hey,{w=.1} does this look like the True Will?"
@@ -169,7 +198,7 @@ label give_will_to_miss:
 
 label give_will_to_nurse:
 
-    show nurse neutral at character_speak
+    show nurse smile at character_speak
     with dissolve
 
     player "Hey,{w=.1} does this look like the True Will?"
@@ -186,7 +215,7 @@ label give_will_to_nurse:
 
 label give_milk_to_butler:
 
-    show butler neutral at character_speak
+    show butler smile at character_speak
     with dissolve
 
     player "Is the milk expired?"
@@ -204,15 +233,13 @@ label give_milk_to_butler:
 
 label give_milk_to_maid:
 
-    show maid neutral at character_speak
+    show maid smile at character_speak
     with dissolve
 
     player "Is the milk expired?"
 
-    maid "Past its date,{w=.1} like everything in this house lately."
-
-    $ inventory.add("milk")
-    $ renpy.notify("Maid Madelyn handed the milk back to you")
+    maid happy "Past its date,{w=.1} like everything in this house lately."
+    maid happy head tilt "I’ll dispose of it for you."
 
     hide maid
     with dissolve
@@ -222,12 +249,12 @@ label give_milk_to_maid:
 
 label give_milk_to_miss:
 
-    show miss neutral at character_speak
+    show miss smile at character_speak
     with dissolve
 
     player "I brought you some milk."
 
-    miss "You thought of me?{w=.3} Thank you for your kindnesses."
+    miss smile look away "You thought of me?{w=.3} Thank you for your kindnesses."
 
     $ gave_miss_milk = True
 
@@ -239,12 +266,12 @@ label give_milk_to_miss:
 
 label give_milk_to_nurse:
 
-    show nurse neutral at character_speak
+    show nurse smile at character_speak
     with dissolve
 
     player "Is the milk expired?"
 
-    nurse "The milk is fine."
+    nurse smile look away "The milk is fine."
 
     $ inventory.add("milk")
     $ renpy.notify("Nurse Nora handed the milk back to you")
@@ -257,15 +284,12 @@ label give_milk_to_nurse:
 
 label give_coffee_to_butler:
 
-    show butler neutral at character_speak
+    show butler smile at character_speak
     with dissolve
 
     player "I found a cup of coffee lying around."
 
-    butler "It has an unnatural smell.{w=.3} I don’t believe it’s a blend from our kitchen."
-
-    $ inventory.add("coffee")
-    $ renpy.notify("Butler Ben handed the coffee back to you")
+    butler happy "Oh,{w=.1} that’s mine.{w=.3} Thanks for finding it."
 
     hide butler
     with dissolve
@@ -275,12 +299,12 @@ label give_coffee_to_butler:
 
 label give_coffee_to_maid:
 
-    show maid neutral at character_speak
+    show maid smile at character_speak
     with dissolve
 
     player "I found a cup of coffee lying around."
 
-    maid "Sweet beneath the bitter.{w=.3} Whoever made that cup measured it carefully."
+    maid smile look away "Sweet beneath the bitter.{w=.3} Whoever made that cup measured it carefully."
 
     $ inventory.add("coffee")
     $ renpy.notify("Maid Madelyn handed the coffee back to you")
@@ -293,12 +317,12 @@ label give_coffee_to_maid:
 
 label give_coffee_to_miss:
 
-    show miss neutral at character_speak
+    show miss smile at character_speak
     with dissolve
 
     player "I found a cup of coffee lying around."
 
-    miss "Don’t give me that.{w=.3} I only drink milk."
+    miss neutral "Don’t give me that.{w=.3} I only drink milk."
 
     $ inventory.add("coffee")
     $ renpy.notify("Miss Mia handed the coffee back to you")
@@ -311,12 +335,12 @@ label give_coffee_to_miss:
 
 label give_coffee_to_nurse:
 
-    show nurse neutral at character_speak
+    show nurse smile at character_speak
     with dissolve
 
     player "I found a cup of coffee lying around."
 
-    nurse "Careless of someone to leave that lying about.{w=.3} Let me throw it out for you."
+    nurse neutral "Careless of someone to leave that lying about.{w=.3} Let me throw it out for you."
 
     $ resolved_butler = True
     $ renpy.notify("Nora took the coffee away")
@@ -329,12 +353,12 @@ label give_coffee_to_nurse:
 
 label give_diary_to_butler:
 
-    show butler neutral at character_speak
+    show butler smile at character_speak
     with dissolve
 
     player "I found a diary by the pond."
 
-    butler "That’s the young lady’s journal."
+    butler @ smile look away "That’s the young lady’s journal."
     butler "Make sure to hand it to her when you see her."
 
     $ inventory.add("diary")
@@ -348,12 +372,12 @@ label give_diary_to_butler:
 
 label give_diary_to_maid:
 
-    show maid neutral at character_speak
+    show maid smile at character_speak
     with dissolve
 
     player "I found a diary by the pond."
 
-    maid "That’s Mia’s journal.{w=.3} She’s currently looking for it."
+    maid smile look away "That’s Mia’s journal.{w=.3} She’s currently looking for it."
 
     $ inventory.add("diary")
     $ renpy.notify("Maid Madelyn handed the diary back to you")
@@ -366,12 +390,12 @@ label give_diary_to_maid:
 
 label give_diary_to_miss:
 
-    show miss neutral at character_speak
+    show miss smile at character_speak
     with dissolve
 
     player "I found this by the water."
 
-    miss "Did you read it?"
+    miss neutral "Did you read it?"
 
     menu:
         "Yes":
@@ -387,7 +411,6 @@ label give_diary_to_miss:
             miss "I’ll take your word for it."
 
     $ resolved_miss = True
-    $ renpy.notify(_("Mia will not go to the pond tonight"))
 
     hide miss
     with dissolve
@@ -397,13 +420,13 @@ label give_diary_to_miss:
 
 label give_diary_to_nurse:
 
-    show nurse neutral at character_speak
+    show nurse smile at character_speak
     with dissolve
 
     player "I found a diary by the pond."
 
-    nurse "The girl’s diary."
-    nurse "She’s been writing out at the pond during the evening."
+    nurse sad "The girl’s diary."
+    nurse @ sad look away "She’s been writing out at the pond during the evening."
     nurse "Please give it back to her when you can."
 
     $ inventory.add("diary")
@@ -417,12 +440,12 @@ label give_diary_to_nurse:
 
 label give_camera_to_butler:
 
-    show butler neutral at character_speak
+    show butler smile at character_speak
     with dissolve
 
-    player "The Master’s camera.{w=.3} There’s pictures of him when he was young."
+    player "The Master’s camera.{w=.3} There are pictures of him when he was young."
 
-    butler "He was handsome once,{w=.1} before the manor took its dues."
+    butler neutral "He was handsome once,{w=.1} before the manor took its dues."
 
     hide butler
     with dissolve
@@ -432,12 +455,12 @@ label give_camera_to_butler:
 
 label give_camera_to_maid:
 
-    show maid neutral at character_speak
+    show maid smile at character_speak
     with dissolve
 
-    player "The Master’s camera.{w=.3} There’s pictures of him when he was young."
+    player "The Master’s camera.{w=.3} There are pictures of him when he was young."
 
-    maid "Heaven rest him,{w=.1} he lost that hair long before he lost himself."
+    maid sad "Heaven rest him,{w=.1} he lost that hair long before he lost himself."
 
     hide maid
     with dissolve
@@ -447,12 +470,12 @@ label give_camera_to_maid:
 
 label give_camera_to_miss:
 
-    show miss neutral at character_speak
+    show miss smile at character_speak
     with dissolve
 
-    player "The Master’s camera.{w=.3} There’s pictures of him when he was young."
+    player "The Master’s camera.{w=.3} There are pictures of him when he was young."
 
-    miss "Although I didn’t interact with him often,{w=.1} he always treated me in a special way."
+    miss sad "Although I didn’t interact with him often,{w=.1} he always treated me in a special way."
 
     hide miss
     with dissolve
@@ -462,12 +485,12 @@ label give_camera_to_miss:
 
 label give_camera_to_nurse:
 
-    show nurse neutral at character_speak
+    show nurse smile at character_speak
     with dissolve
 
-    player "The Master’s camera.{w=.3} There’s pictures of him when he was young."
+    player "The Master’s camera.{w=.3} There are pictures of him when he was young."
 
-    nurse "What a nostalgic sight."
+    nurse sad "What a nostalgic sight."
 
     hide nurse
     with dissolve
@@ -477,13 +500,13 @@ label give_camera_to_nurse:
 
 label give_kitchen_knife_to_butler:
 
-    show butler neutral at character_speak
+    show butler smile at character_speak
     with dissolve
 
     player "I found a knife in the kitchen."
 
-    butler "You have no business carrying that around the house."
-    butler "I’ll keep it safe."
+    butler neutral "You have no business carrying that around the house."
+    butler @ neutral look away "I’ll keep it safe."
 
     player "Thanks."
 
@@ -495,12 +518,12 @@ label give_kitchen_knife_to_butler:
 
 label give_kitchen_knife_to_maid:
 
-    show maid neutral at character_speak
+    show maid smile at character_speak
     with dissolve
 
     player "I found a knife in the kitchen."
 
-    maid "That belongs on the board,{w=.1} not in a guest’s pocket.{w=.3} I’ll take it and see it put away before the cook misses it."
+    maid neutral "That belongs on the board,{w=.1} not in a guest’s pocket.{w=.3} I’ll put it away."
 
     $ resolved_maid = True
 
@@ -512,12 +535,12 @@ label give_kitchen_knife_to_maid:
 
 label give_kitchen_knife_to_miss:
 
-    show miss neutral at character_speak
+    show miss smile at character_speak
     with dissolve
 
     player "I found a knife in the kitchen."
 
-    miss "You’re not planning to carve anything with that,{w=.1} are you?{w=.3} I’d put it back before the cook notices."
+    miss neutral "You’re not planning to carve anything with that,{w=.1} are you?{w=.3} I’d put it back before anyone notices."
 
     $ inventory.add("kitchen_knife")
     $ renpy.notify("Miss Mia handed the kitchen knife back to you")
@@ -530,12 +553,12 @@ label give_kitchen_knife_to_miss:
 
 label give_kitchen_knife_to_nurse:
 
-    show nurse neutral at character_speak
+    show nurse smile at character_speak
     with dissolve
 
     player "I found a knife in the kitchen."
 
-    nurse "Sharp things are best left where they live.{w=.3} I won’t take it,{w=.1} and neither should you."
+    nurse neutral "Sharp things are best left where they live.{w=.3} I won’t take it,{w=.1} and neither should you."
 
     $ inventory.add("kitchen_knife")
     $ renpy.notify("Nurse Nora handed the kitchen knife back to you")

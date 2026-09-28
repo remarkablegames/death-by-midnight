@@ -21,16 +21,14 @@ label talk_nurse_menu:
 
             nurse @ smile look away "I’m making coffee,{w=.1} but there’s also milk beside the fridge."
 
-        "Ask about the locked door" if seen_basement_door:
+        "Ask about the locked door" if seen_basement_door and is_basement_locked:
 
-        "Ask about the key" if seen_basement_door and not inventory.has("basement_key"):
+            nurse @ smile look away "So,{w=.1} you’ve seen the locked door."
+            nurse "The Master keeps something important behind it."
 
-            nurse "So you’ve seen the locked door.{w=.3} The Master kept the only key on his person to the very end."
+            player "What is it?"
 
-            nurse "I keep a spare.{w=.3} Take it...{w=.3} and be careful what you find down there."
-
-            $ inventory.add("basement_key")
-            $ renpy.notify("Nora gave you the basement key")
+            nurse @ neutral "I wouldn’t know."
 
         "Ask where Ben spends the night" if knows_affair:
 
