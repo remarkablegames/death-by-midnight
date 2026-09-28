@@ -34,8 +34,9 @@ Or download for desktop:
 
 - [Free music pack](https://sinetient.itch.io/free-music-pack) by [Sinetient](https://sinetient.itch.io/)
 - [Kenney](https://kenney.nl/assets/interface-sounds)
-- [Love & Terror [BGM Pack - Vol 01]](https://melancholy-marionette.itch.io/love-terror-vol-01-bgm-pack)
-by [Melancholy Marionette](https://melancholy-marionette.itch.io/)
+- [Love & Terror [BGM Pack - Vol 01]](https://melancholy-marionette.itch.io/love-terror-vol-01-bgm-pack) by [Melancholy Marionette](https://melancholy-marionette.itch.io/)
+- [Sound effects from Pixabay](https://pixabay.com/sound-effects/)
+- [Text/Dialogue Bleeps Pack](https://dmochas-assets.itch.io/dmochas-bleeps-pack)
 
 ## Prerequisites
 
