@@ -561,7 +561,7 @@ label give_kitchen_knife_to_miss:
 
     player "I found a knife in the kitchen."
 
-    miss neutral "You’re not planning to carve anything with that,{w=.1} are you?{w=.3} I’d put it back before anyone notices."
+    miss neutral "You’re not planning to carve anything with that,{w=.2} are you?{w=.5} I’d put it back before anyone notices."
 
     $ inventory.add("kitchen_knife")
     $ renpy.notify("Mia handed the kitchen knife back to you")
