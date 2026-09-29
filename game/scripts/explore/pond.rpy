@@ -11,7 +11,7 @@ label explore_pond:
         scene bg pond evening
         $ character_tint = COLOR_TRANSPARENT
 
-    if not inventory.has_picked_up("diary") and clock.is_night_light:
+    if not inventory.has_picked_up("diary") and clock.minutes >= clock_time("19:00"):
         show screen item_diary onlayer master zorder 0
 
     call death_hint
@@ -63,7 +63,10 @@ init python:
         elif inventory.has_picked_up("milk"):
             return _("“They took the milk. Not that it mattered. I didn’t want it anyway.”")
         else:
-            return _("“I wish they paid more attention to me. Father is always with Madelyn. I feel like he’s hiding something.”")
+            return _("“I wish they paid more attention to me. Father is always with Madelyn. I wish he spent more time with me.”")
+
+    def diary_entry_hints_affair():
+        return not gave_miss_milk and not inventory.has_picked_up("milk")
 
     def diary_pickup():
 
@@ -72,6 +75,9 @@ init python:
         renpy.notify(_("Picked up diary"))
 
     def diary_description():
+
+        if diary_entry_hints_affair():
+            store.knows_affair = True
 
         text = _("Someone’s journal, left behind by the pond.\n\nRecent entry:\n") + diary_recent_entry
 

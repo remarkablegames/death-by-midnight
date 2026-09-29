@@ -34,27 +34,35 @@ label talk_butler_menu:
 
             player "Do you have the key?"
 
-            butler smile look away "No, I don’t."
+            butler smile look away "No,{w=.1} I don’t."
 
-        "Ask why he calls Nora his wife" if knows_affair:
+        "Ask why he spends so much time with Madelyn" if knows_affair:
 
-            butler neutral look away "Because she is."
+            butler happy "I’m just helping her with work."
 
-            player "Madelyn doesn’t think so."
+            player "Is it just work?"
 
-            butler neutral "Then Madelyn should say it to me,{w=.3} and not to a detective she met this evening."
+            butler neutral "Yes,{w=.3} and you shouldn’t pry into other people’s affairs."
 
-            player "She’s your wife’s sister."
+            if knows_nurse_maid_sisters:
 
-            butler "{cps=10}..."
+                player "I’m aware she’s your wife’s sister."
 
-            show butler neutral look away
+                butler "{cps=10}..."
 
-            "He looks at the door before he answers."
+                show butler neutral look away
 
-            butler neutral "Yes,{w=.2} they were raised under the same roof.{w=.3} Madelyn has always coveted what her sister had."
+                "He stares off into the distance before answering."
 
-            $ knows_nurse_maid_sisters = True
+                butler neutral "Yes,{w=.2} they were raised under the same roof.{w=.3} Madelyn has always coveted what her sister had."
+
+                player "With the will reading coming up,{w=.2} do you think she’ll try to make your relationship public?"
+
+                butler neutral look away "She mentioned it,{w=.2} but I told her that as long as I have Nora,{w=.2} I won’t marry anyone else."
+
+                player "I see."
+
+                $ knows_maid_plans = True
 
         "Ask about the Master":
 

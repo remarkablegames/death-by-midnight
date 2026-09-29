@@ -22,9 +22,9 @@ label death_butler:
     show screen death_body("butler", expression="creepy bloody", label="death_butler_found", xalign=.8, tintcolor=COLOR_TINT_UNLIT, enabled=False)
     with dissolve
 
-    "It looks like someone is resting on the sofa."
+    "Looks like Ben’s resting on the sofa."
 
-    player "Hey,{w=.1} Madelyn was looking for you."
+    player "Hey,{w=.1} Madelyn was asking about you."
 
     call screen death_body("butler", expression="creepy bloody", label="death_butler_found", xalign=.8, tintcolor=COLOR_TINT_UNLIT, enabled=True)
 

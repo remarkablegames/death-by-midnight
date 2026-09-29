@@ -256,7 +256,9 @@ screen inventory_read(item):
                     xalign 0.5
                     spacing 40
 
-                    textbutton _("Close") action Return("close")
+                    textbutton _("Close"):
+                        text_font "DejaVuSans.ttf"
+                        action Return("close")
 
 
 screen inventory_character_menu(character):
@@ -312,9 +314,13 @@ screen inventory_choose_item(character):
                     xalign .5
 
                 for item in inventory.items:
-                    textbutton item.name action Return(item.item_id)
+                    textbutton item.name:
+                        text_font "DejaVuSans.ttf"
+                        action Return(item.item_id)
 
-                textbutton _("Nevermind") action Return(None)
+                textbutton _("Nevermind"):
+                    text_font "DejaVuSans.ttf"
+                    action Return(None)
 
 
 label inventory_handle:
@@ -420,7 +426,7 @@ style inventory_header is text_sans_serif:
 
 
 style inventory_hint is text_sans_serif:
-    size 14
+    size 16
     color "#ddd5c9"
     outlines [(1, COLOR_OUTLINE, 0, 0)]
 

@@ -41,13 +41,13 @@ init python:
 
 define CHARACTER_SCHEDULE = [
     ("butler", "smile", .2, clock_time("18:00"), clock_time("19:00"), "interior_entrance"),
-    ("butler", "smile", .7, clock_time("19:30"), clock_time("20:30"), "manor_door"),
+    ("butler", "smile", .7, clock_time("19:30"), clock_time("20:00"), "manor_door"),
     ("butler", "smile", .3, clock_time("20:30"), clock_time("24:00"), "living_room"),
 
     ("nurse", "smile", .2, clock_time("18:00"), clock_time("22:00"), "kitchen"),
     ("nurse", "smile", .3, clock_time("22:00"), clock_time("24:00"), "bedroom"),
 
-    ("miss", "smile", .3, clock_time("18:00"), clock_time("19:00"), "living_room"),
+    ("miss", "smile", .2, clock_time("18:00"), clock_time("19:00"), "pond"),
     ("miss", "smile", .7, clock_time("19:00"), clock_time("20:30"), "kitchen"),
     ("miss", "smile", .7, clock_time("20:30"), clock_time("24:00"), "pond"),
 
@@ -73,8 +73,7 @@ define ROOM_INTRO = {
     },
 
     "miss": {
-        "living_room": _("A young girl sits at the edge of the living room,{w=.2} waiting for time to pass."),
-        "pond": _("The young miss stands by the pond,{w=.2} gazing at her own reflection."),
+        "pond": _("The young miss sits on the bank with her shoes off,{w=.2} gazing at her own reflection."),
         "kitchen": _("You find the miss in the pantry,{w=.2} reaching for the milk."),
     },
 

@@ -1,9 +1,10 @@
 default knows_affair = False
 default knows_knife_exists = False
-default knows_red_hair = False
+default knows_maid_plans = False
 default knows_miss_milk = False
 default knows_miss_parentage = False
 default knows_nurse_maid_sisters = False
+default knows_red_hair = False
 
 default loop_count = 0
 

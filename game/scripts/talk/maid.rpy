@@ -103,7 +103,7 @@ label talk_maid_menu:
 
                 maid happy "Don’t make it sound like there’s more to it than that."
 
-        "Tell her to leave Nora alone" if not resolved_nurse and knows_affair:
+        "Tell her to leave Nora alone" if not resolved_nurse and knows_maid_plans:
 
             player "Whatever you’re thinking,{w=.3} it’s not worth it."
 
