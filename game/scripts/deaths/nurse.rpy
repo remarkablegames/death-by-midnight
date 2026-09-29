@@ -57,6 +57,6 @@ label death_nurse_found:
     "Time begins to unwind..."
 
     scene black
-    with fade
+    with Fade(1, 0, 1)
 
     jump loop_start

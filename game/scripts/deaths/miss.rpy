@@ -25,7 +25,7 @@ label death_miss:
     show screen death_body("miss", expression="creepy bloody", label="death_miss_found", xalign=.5, tintcolor=COLOR_TINT_UNLIT, enabled=False)
     with dissolve
 
-    player "There you are.{w=.5} Your mother’s been worried sick."
+    player "Mia,{w=.2} is that you?{w=.5} Your mother’s been looking for you."
 
     call screen death_body("miss", expression="creepy bloody", label="death_miss_found", xalign=.5, tintcolor=COLOR_TINT_UNLIT, enabled=True)
 
@@ -55,6 +55,6 @@ label death_miss_found:
     "Time starts to reverse..."
 
     scene black
-    with fade
+    with Fade(1, 0, 1)
 
     jump loop_start

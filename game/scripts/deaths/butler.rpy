@@ -56,6 +56,6 @@ label death_butler_found:
     "Time starts to unravel..."
 
     scene black
-    with fade
+    with Fade(1, 0, 1)
 
     jump loop_start
