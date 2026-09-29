@@ -41,6 +41,44 @@ label talk_maid_menu:
 
             $ knows_knife_taken = True
 
+        "Ask her about Nora" if not knows_nurse_maid_sisters:
+
+            maid @ smile look away "She’s my sister."
+
+            player "I didn’t know that."
+
+            maid @ neutral "There’s a great deal about this house you don’t know."
+
+            player "Are you close?"
+
+            maid sad "Not really...{w=.3} She took everything I wanted,{w=.3} and she did it by marrying him."
+
+            player "And you’ve made your peace with it?"
+
+            maid happy "I’m the maid of this house.{w=.3} There’s not much peace to make."
+
+            $ knows_nurse_maid_sisters = True
+
+        "Ask her about Ben":
+
+            player "What’s your relationship with Ben?"
+
+            maid @ happy head tilt "We work together.{w=.3} Nothing more and nothing less."
+
+            if knows_affair:
+
+                player "Then why have people seen you together so often?"
+
+                maid shocked "Who told you that?"
+
+                player "I have my sources."
+
+                maid @ shocked look away "It isn’t what you think.{w=.3} We only meet for walks...{w=.3} usually around seven-thirty."
+
+                player "Only walks?"
+
+                maid happy "Don’t make it sound like there’s more to it than that."
+
         "Nevermind":
 
             hide maid
