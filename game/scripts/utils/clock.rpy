@@ -32,11 +32,14 @@ init python:
             self.minutes = max(0, self.minutes + minutes)
 
             for death in DEATH_HOURS:
-                if self.minutes >= death["minutes"] and death_is_pending(death):
-                    if not store.pending_death:
-                        store.pending_death = death["label"]
-                        store.pending_hint = death["hint"]
-                    break
+                if self.minutes < death["minutes"]:
+                    continue
+                if not death_is_pending(death):
+                    continue
+                if not store.pending_death:
+                    store.pending_death = death["label"]
+                    store.pending_hint = death["hint"]
+                break
 
             if self.minutes >= self.MIDNIGHT_MINUTES:
                 if store.pending_death:

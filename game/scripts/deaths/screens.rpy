@@ -1,7 +1,7 @@
 define DEATH_HOURS = [
     {"minutes": clock_time("19:30"), "character": "maid", "room": "manor_door", "hint": "death_maid_hint", "resolved": "resolved_maid", "label": "death_maid"},
-    {"minutes": clock_time("20:30"), "character": "nurse", "room": "kitchen", "hint": "death_nurse_hint", "resolved": "resolved_nurse", "label": "death_nurse", "depends": "accused_nurse"},
-    {"minutes": clock_time("21:30"), "character": "butler", "room": "living_room", "hint": "death_butler_hint", "resolved": "resolved_butler", "label": "death_butler", "depends": "disclosed_affair"},
+    {"minutes": clock_time("20:30"), "character": "nurse", "room": "kitchen", "hint": "death_nurse_hint", "resolved": "resolved_nurse", "label": "death_nurse"},
+    {"minutes": clock_time("21:30"), "character": "butler", "room": "living_room", "hint": "death_butler_hint", "resolved": "resolved_butler", "label": "death_butler"},
     {"minutes": clock_time("22:30"), "character": "miss", "room": "pond", "hint": "death_miss_hint", "resolved": "resolved_miss", "label": "death_miss"},
 ]
 
@@ -20,9 +20,6 @@ init python:
 
     def death_is_pending(death):
         if getattr(store, death["resolved"]):
-            return False
-        depends = death.get("depends")
-        if depends and not getattr(store, depends):
             return False
         return True
 
