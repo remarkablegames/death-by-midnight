@@ -28,7 +28,7 @@ label talk_butler_menu:
 
                 butler neutral look away "If you’re looking for it,{w=.2} it should still be here."
 
-        "Ask about the missing kitchen knife" if not knows_knife_exists and not knows_affair:
+        "Ask about the missing kitchen knife" if not knows_knife_exists and not knows_knife_taken:
 
             butler smile look away "I don’t know what you mean."
 
