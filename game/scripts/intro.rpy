@@ -4,7 +4,9 @@ label intro:
 
     scene bg manor gate evening
     show screen intro_butler_greet(enabled=False)
-    with fade
+    with Fade(1, 0, 1)
+
+    pause .3
 
     player "Looks like the butler’s waiting outside."
     player "I should talk to him."

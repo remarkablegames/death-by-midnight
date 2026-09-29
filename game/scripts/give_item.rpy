@@ -7,6 +7,9 @@ label give_scroll_to_butler:
 
     butler smile look away "The will?{w=.3} It looks good to me."
 
+    $ inventory.add("scroll")
+    $ renpy.notify("Ben handed the scroll back to you")
+
     hide butler
     with dissolve
 
@@ -21,6 +24,9 @@ label give_scroll_to_maid:
     player "Here,{w=.1} take the scroll.{w=.3} I think you should see it."
 
     maid shocked "This is the Master’s handwriting...{w=.3} I’ve seen it on his private notes."
+
+    $ inventory.add("scroll")
+    $ renpy.notify("Madelyn handed the scroll back to you")
 
     hide maid
     with dissolve
@@ -37,6 +43,9 @@ label give_scroll_to_miss:
 
     miss shocked "His seal...{w=.3} He never let anyone touch his papers,{w=.1} not even Mother."
 
+    $ inventory.add("scroll")
+    $ renpy.notify("Mia handed the scroll back to you")
+
     hide miss
     with dissolve
 
@@ -50,7 +59,7 @@ label give_scroll_to_nurse:
 
     player "Here,{w=.1} take the scroll.{w=.3} I think you should see it."
 
-    nurse @ smile look away "Where did you find this?{w=.3} Careful,{w=.1} detective.{w=.3} Not in front of the others."
+    nurse @ smile look away "Let me see..."
 
     nurse neutral "..."
 
@@ -69,7 +78,7 @@ label give_scroll_to_nurse:
 
         "She skims it quickly."
 
-        nurse "It looks good to me."
+        nurse "It looks fine to me."
 
         $ inventory.add("scroll")
         $ renpy.notify("Nora handed the scroll back to you")
@@ -121,7 +130,7 @@ label give_basement_key_to_miss:
     miss sad look away "It opens the underground chamber.{w=.3} I’m told not to go there..."
 
     $ inventory.add("basement_key")
-    $ renpy.notify("Miss Mia handed the key back to you")
+    $ renpy.notify("Mia handed the key back to you")
 
     hide miss
     with dissolve
@@ -139,7 +148,7 @@ label give_basement_key_to_nurse:
     nurse "Where did you find this?{w=.3} Put it away before anyone sees you with it."
 
     $ inventory.add("basement_key")
-    $ renpy.notify("Nurse Nora handed the key back to you")
+    $ renpy.notify("Nora handed the key back to you")
 
     hide nurse
     with dissolve
@@ -223,7 +232,7 @@ label give_milk_to_butler:
     butler "Looks like it.{w=.3} But keep it in the fridge,{w=.1} someone might still drink it."
 
     $ inventory.add("milk")
-    $ renpy.notify("Butler Ben handed the milk back to you")
+    $ renpy.notify("Ben handed the milk back to you")
 
     hide butler
     with dissolve
@@ -274,7 +283,7 @@ label give_milk_to_nurse:
     nurse smile look away "The milk is fine."
 
     $ inventory.add("milk")
-    $ renpy.notify("Nurse Nora handed the milk back to you")
+    $ renpy.notify("Nora handed the milk back to you")
 
     hide nurse
     with dissolve
@@ -307,7 +316,7 @@ label give_coffee_to_maid:
     maid smile look away "Sweet beneath the bitter.{w=.3} Whoever made that cup measured it carefully."
 
     $ inventory.add("coffee")
-    $ renpy.notify("Maid Madelyn handed the coffee back to you")
+    $ renpy.notify("Madelyn handed the coffee back to you")
 
     hide maid
     with dissolve
@@ -325,7 +334,7 @@ label give_coffee_to_miss:
     miss neutral "Don’t give me that.{w=.3} I only drink milk."
 
     $ inventory.add("coffee")
-    $ renpy.notify("Miss Mia handed the coffee back to you")
+    $ renpy.notify("Mia handed the coffee back to you")
 
     hide miss
     with dissolve
@@ -362,7 +371,7 @@ label give_diary_to_butler:
     butler "Make sure to hand it to her when you see her."
 
     $ inventory.add("diary")
-    $ renpy.notify("Butler Ben handed the diary back to you")
+    $ renpy.notify("Ben handed the diary back to you")
 
     hide butler
     with dissolve
@@ -380,7 +389,7 @@ label give_diary_to_maid:
     maid smile look away "That’s Mia’s journal.{w=.3} She’s currently looking for it."
 
     $ inventory.add("diary")
-    $ renpy.notify("Maid Madelyn handed the diary back to you")
+    $ renpy.notify("Madelyn handed the diary back to you")
 
     hide maid
     with dissolve
@@ -430,7 +439,7 @@ label give_diary_to_nurse:
     nurse "Please give it back to her when you can."
 
     $ inventory.add("diary")
-    $ renpy.notify("Nurse Nora handed the diary back to you")
+    $ renpy.notify("Nora handed the diary back to you")
 
     hide nurse
     with dissolve
@@ -447,6 +456,9 @@ label give_camera_to_butler:
 
     butler neutral "He was handsome once,{w=.1} before the manor took its dues."
 
+    $ inventory.add("camera")
+    $ renpy.notify("Ben handed the camera back to you")
+
     hide butler
     with dissolve
 
@@ -461,6 +473,9 @@ label give_camera_to_maid:
     player "The Master’s camera.{w=.3} There are pictures of him when he was young."
 
     maid sad "Heaven rest him,{w=.1} he lost that hair long before he lost himself."
+
+    $ inventory.add("camera")
+    $ renpy.notify("Madelyn handed the camera back to you")
 
     hide maid
     with dissolve
@@ -477,6 +492,9 @@ label give_camera_to_miss:
 
     miss sad "Although I didn’t interact with him often,{w=.1} he always treated me in a special way."
 
+    $ inventory.add("camera")
+    $ renpy.notify("Mia handed the camera back to you")
+
     hide miss
     with dissolve
 
@@ -491,6 +509,9 @@ label give_camera_to_nurse:
     player "The Master’s camera.{w=.3} There are pictures of him when he was young."
 
     nurse sad "What a nostalgic sight."
+
+    $ inventory.add("camera")
+    $ renpy.notify("Nora handed the camera back to you")
 
     hide nurse
     with dissolve
@@ -543,7 +564,7 @@ label give_kitchen_knife_to_miss:
     miss neutral "You’re not planning to carve anything with that,{w=.1} are you?{w=.3} I’d put it back before anyone notices."
 
     $ inventory.add("kitchen_knife")
-    $ renpy.notify("Miss Mia handed the kitchen knife back to you")
+    $ renpy.notify("Mia handed the kitchen knife back to you")
 
     hide miss
     with dissolve
@@ -561,7 +582,7 @@ label give_kitchen_knife_to_nurse:
     nurse neutral "Sharp things are best left where they live.{w=.3} I won’t take it,{w=.1} and neither should you."
 
     $ inventory.add("kitchen_knife")
-    $ renpy.notify("Nurse Nora handed the kitchen knife back to you")
+    $ renpy.notify("Nora handed the kitchen knife back to you")
 
     hide nurse
     with dissolve
