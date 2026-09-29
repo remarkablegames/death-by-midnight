@@ -48,12 +48,13 @@ define CHARACTER_SCHEDULE = [
     ("nurse", "smile", .3, clock_time("22:00"), clock_time("24:00"), "bedroom"),
 
     ("miss", "smile", .3, clock_time("18:00"), clock_time("19:00"), "living_room"),
-    ("miss", "smile", .85, clock_time("19:00"), clock_time("20:30"), "kitchen"),
+    ("miss", "smile", .7, clock_time("19:00"), clock_time("20:30"), "kitchen"),
     ("miss", "smile", .7, clock_time("20:30"), clock_time("24:00"), "pond"),
 
-    ("maid", "smile", .7, clock_time("18:00"), clock_time("19:30"), "living_room"),
-    ("maid", "smile", .5, clock_time("19:30"), clock_time("20:30"), "hallway_right"),
-    ("maid", "smile", .85, clock_time("20:30"), clock_time("22:00"), "kitchen"),
+    ("maid", "smile", .7, clock_time("18:00"), clock_time("19:30"), "hallway_left"),
+    ("maid", "smile", .5, clock_time("19:30"), clock_time("20:30"), "backyard"),
+    ("maid", "smile", .7, clock_time("20:30"), clock_time("21:30"), "kitchen"),
+    ("maid", "smile", .5, clock_time("21:30"), clock_time("22:00"), "hallway_right"),
     ("maid", "smile", .7, clock_time("22:00"), clock_time("24:00"), "bedroom"),
 ]
 
@@ -77,8 +78,10 @@ define ROOM_INTRO = {
     },
 
     "maid": {
-        "living_room": _("The maid moves through the room,{w=.1} collecting everyone’s cups."),
-        "hallway_right": _("You encounter the maid in the hallway."),
+        "hallway_left": _("The maid is in the west hallway,{w=.1} carrying a stack of cups."),
+        "backyard": _("You find the maid outside,{w=.1} sweeping the courtyard."),
+        "kitchen": _("The maid is at the kitchen sink,{w=.1} washing a coffee cup."),
+        "hallway_right": _("You pass the maid in the hall,{w=.1} on her way upstairs."),
         "bedroom": _("You find the maid in the bedroom,{w=.1} sorting the Master’s belongings into neat piles."),
     },
 }
