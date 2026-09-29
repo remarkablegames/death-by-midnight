@@ -26,10 +26,6 @@ label explore_kitchen:
     show screen inventory_hud
     with dissolve
 
-    if knows_knife_exists and not resolved_maid and clock.minutes >= KNIFE_TAKEN_TIME and not confirmed_knife_gone:
-        $ confirmed_knife_gone = True
-        "The bread’s still on the board.{w=.3} But the knife’s gone."
-
     call screen arrow_right_button(label="explore_hallway_left", xalign=.95, yalign=.7, minutes=5)
 
     if _return is not None:

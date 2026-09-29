@@ -19,7 +19,6 @@ default seen_basement_door = False
 default is_basement_locked = True
 default door_drop_active = False
 default milk_beat_shown = False
-default confirmed_knife_gone = False
 default gave_miss_milk = False
 default diary_recent_entry = ""
 default is_interactable = True
