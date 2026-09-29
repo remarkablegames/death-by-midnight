@@ -12,7 +12,8 @@ label explore_kitchen:
     if not resolved_maid and clock.minutes < KNIFE_TAKEN_MINUTES:
         show screen item_kitchen_knife onlayer master zorder 0
 
-    if clock.is_night_light and not inventory.has_picked_up("milk"):
+    # show milk when Miss is not around, hide milk when Miss is around
+    if not inventory.has_picked_up("milk") and clock.minutes < clock_time("19:00"):
         show screen item_milk onlayer master zorder 0
 
     call death_hint
