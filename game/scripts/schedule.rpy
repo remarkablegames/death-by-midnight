@@ -61,27 +61,27 @@ define CHARACTER_SCHEDULE = [
 
 define ROOM_INTRO = {
     "butler": {
-        "interior_entrance": _("The butler stands beside the staircase,{w=.1} watching the door as if he were waiting for something."),
-        "manor_door": _("You find the butler at the manor door,{w=.1} peering out at the grounds."),
-        "living_room": _("The butler is in the living room,{w=.1} tidying up the furniture."),
+        "interior_entrance": _("The butler stands beside the staircase,{w=.2} watching the door as if he’s waiting for something."),
+        "manor_door": _("You find the butler at the manor door,{w=.2} peering out at the grounds."),
+        "living_room": _("The butler is in the living room,{w=.2} tidying up the furniture."),
     },
 
     "nurse": {
-        "kitchen": _("You find someone at the kitchen counter,{w=.1} brewing a pot of coffee."),
-        "bedroom": _("The nurse is in the bedroom,{w=.1} wiping away the dust."),
+        "kitchen": _("You find someone at the kitchen counter,{w=.2} brewing a pot of coffee."),
+        "bedroom": _("The nurse is in the bedroom,{w=.2} wiping away the dust."),
     },
 
     "miss": {
-        "living_room": _("A young girl sits at the edge of the living room,{w=.1} waiting for time to pass."),
-        "pond": _("The young miss stands by the pond,{w=.1} gazing at her own reflection."),
-        "kitchen": _("You find the miss in the pantry,{w=.1} reaching for the milk."),
+        "living_room": _("A young girl sits at the edge of the living room,{w=.2} waiting for time to pass."),
+        "pond": _("The young miss stands by the pond,{w=.2} gazing at her own reflection."),
+        "kitchen": _("You find the miss in the pantry,{w=.2} reaching for the milk."),
     },
 
     "maid": {
-        "hallway_left": _("The maid is in the west hallway,{w=.1} carrying a stack of cups."),
-        "backyard": _("You find the maid outside,{w=.1} sweeping the courtyard."),
-        "kitchen": _("The maid is at the kitchen sink,{w=.1} washing a coffee cup."),
-        "hallway_right": _("You pass the maid in the hall,{w=.1} on her way upstairs."),
-        "bedroom": _("You find the maid in the bedroom,{w=.1} sorting the Master’s belongings into neat piles."),
+        "hallway_left": _("The maid is in the west hallway,{w=.2} carrying a stack of cups."),
+        "backyard": _("You find the maid outside,{w=.2} sweeping the courtyard."),
+        "kitchen": _("The maid is at the kitchen sink,{w=.2} washing a coffee cup."),
+        "hallway_right": _("You pass the maid in the hall,{w=.2} on her way upstairs."),
+        "bedroom": _("You find the maid in the bedroom,{w=.2} sorting the Master’s belongings into neat piles."),
     },
 }
