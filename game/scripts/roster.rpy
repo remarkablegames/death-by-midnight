@@ -28,7 +28,7 @@ init python:
 
     def character_hover_set(character_id):
         store.character_hover_id = character_id
-        renpy.sound.play("ui/mouserelease1.ogg")
+        renpy.sound.play("ui/switch13.ogg")
         renpy.restart_interaction()
 
 

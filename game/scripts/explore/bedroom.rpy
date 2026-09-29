@@ -9,7 +9,7 @@ label explore_bedroom:
         scene bg bedroom evening
         $ character_tint = COLOR_TRANSPARENT
 
-    if not inventory.has("basement_key"):
+    if not inventory.has_picked_up("basement_key"):
         show screen item_key onlayer master zorder 0
 
     if not inventory.has_picked_up("camera"):

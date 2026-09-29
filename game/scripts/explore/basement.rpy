@@ -34,6 +34,7 @@ screen item_will():
         at item_button(zoom=.05, xalign=.52, yalign=.399, matrixcolor=TintMatrix("#444"), rotate=-13)
         sensitive is_interactable
         action [
+            Play("sound", "audio/sfx/paper.ogg"),
             Hide("item_will"),
             Function(inventory.add, "will"),
             Function(renpy.notify, "Found the Master’s true will"),

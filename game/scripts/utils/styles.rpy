@@ -1,5 +1,5 @@
 style character_button:
-    hover_sound "ui/mouserelease1.ogg"
+    hover_sound "ui/switch13.ogg"
     activate_sound "ui/click_003.ogg"
 
 

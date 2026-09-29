@@ -53,6 +53,7 @@ screen item_scroll():
         at item_button(zoom=.14, xalign=.02, yalign=.54, matrixcolor=TintMatrix(item_tint))
         sensitive is_interactable
         action [
+            Play("sound", "audio/sfx/paper.ogg"),
             Hide("item_scroll"),
             Function(inventory.add, "scroll"),
             Function(renpy.notify, "Picked up scroll"),

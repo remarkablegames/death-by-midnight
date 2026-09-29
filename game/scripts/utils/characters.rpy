@@ -6,7 +6,7 @@ init python:
     def make_voice(filename):
         def callback(event, **kwargs):
             if event == "show_done":
-                renpy.music.play(f"audio/voice/{filename}.ogg", channel=BLEEP_CHANNEL)
+                renpy.music.play(f"voice/{filename}.ogg", channel=BLEEP_CHANNEL, relative_volume=2)
 
             elif event in ("slow_done", "end"):
                 renpy.music.stop(channel=BLEEP_CHANNEL, fadeout=.2)
