@@ -8,7 +8,7 @@ label talk_miss:
     if context:
         "[context]"
 
-    if milk_taken and not milk_beat_shown:
+    if milk_taken and not milk_beat_shown and current_room == "kitchen":
 
         $ milk_beat_shown = True
 
@@ -21,46 +21,76 @@ label talk_miss:
 
 label talk_miss_menu:
 
+    show miss smile at character_speak
+
     menu:
 
-        "Tell her about the last page" if inventory.has("diary") and not resolved_miss:
+        "Ask her about the diary" if inventory.has("diary") and not resolved_miss:
 
-            miss "You’ve read it."
+            miss neutral "You’ve read my diary."
 
-            player "The last page."
+            player "Yes,{w=.1} the very last page."
 
-            miss "I know what it says."
+            miss neutral look away "That was supposed to be private."
+
+            player "I want to talk to you about it."
 
             menu:
 
-                "“Everyone believes it.” Who is it for?":
+                "Do you ever feel happy?":
 
-                    player "“I smile at dinner and everyone believes it.”{w=.3} Who is that for?"
+                    miss sad look away "Sometimes."
 
-                    miss "I don’t know.{w=.3} That’s the trouble.{w=.2} I’ve been at it so long I’ve forgotten where it stops."
+                    player "Sometimes?"
 
-                "Tell her what you asked all night":
+                    miss "I think so..."
 
-                    player "I spent tonight asking who did this.{w=.3} I never once asked you a thing."
+                "Tell her about your investigation":
 
-                    miss "No.{w=.2} You didn’t."
+                    player "I kept asking who would want to hurt you,{w=.2} and I realized I’ve been asking the wrong question."
 
-                    player "I’m asking now."
+                    miss sad look away "..."
 
                 "Say nothing":
 
-                    "You don’t answer.{w=.3} She does."
+                    player "..."
 
-                    miss "You never once asked me what I wanted."
+                    miss sad look away "..."
 
-            miss "I don’t want to die.{w=.3} Not tonight."
+            player "Is there anything I can do?"
+
+            miss sad "Give me a reason to see tomorrow."
+
+            player "If you can have a little faith in me,{w=.2} then I’ll do my best."
 
             $ resolved_miss = True
             $ renpy.notify(_("Mia will not go to the pond tonight"))
 
+        "Ask about her father" if gave_miss_milk and not knows_affair:
+
+            player "Where does your father usually go?"
+
+            miss neutral "The manor door,{w=.3} then Madelyn’s."
+
+            player "..."
+
+            miss sad look away "He spends more time with Madelyn than with me."
+
+            player "Mia—"
+
+            miss sad "I kept count."
+
+            player "You should have told someone."
+
+            miss "Who was I supposed to tell?{w=.3} That my father prefers the maid to his own daughter?"
+
+            $ knows_affair = True
+
         "Ask about the milk habit" if knows_miss_milk:
 
-            miss "Drinking it during the night helps me fall asleep."
+            miss smile look away "Drinking it before bed helps me fall asleep."
+
+            player "I see."
 
         "Nevermind":
 
