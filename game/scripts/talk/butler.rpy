@@ -28,7 +28,7 @@ label talk_butler_menu:
 
                 butler neutral look away "If you’re looking for it,{w=.2} it should still be here."
 
-        "Ask about the locked basement door" if seen_basement_door and is_basement_locked:
+        "Ask about the locked basement door" if knows_basement_locked and is_basement_locked:
 
             butler "That door has been locked since the Master died."
 

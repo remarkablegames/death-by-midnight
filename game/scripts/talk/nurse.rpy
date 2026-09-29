@@ -21,7 +21,7 @@ label talk_nurse_menu:
 
             nurse @ smile look away "I’m making coffee,{w=.1} but there’s also milk beside the fridge."
 
-        "Ask about the locked door" if seen_basement_door and is_basement_locked:
+        "Ask about the locked door" if knows_basement_locked and is_basement_locked:
 
             nurse @ smile look away "So,{w=.1} you’ve seen the locked door."
             nurse "The Master keeps something important behind it."

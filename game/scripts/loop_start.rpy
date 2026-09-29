@@ -11,7 +11,6 @@ label loop_start:
     $ current_room = ""
     $ room_intros_seen = set()
 
-    $ seen_basement_door = False
     $ is_basement_locked = True
     $ door_drop_active = False
 

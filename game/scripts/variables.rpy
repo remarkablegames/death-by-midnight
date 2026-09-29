@@ -1,4 +1,5 @@
 default knows_affair = False
+default knows_basement_locked = False
 default knows_knife_exists = False
 default knows_maid_plans = False
 default knows_miss_milk = False
@@ -16,7 +17,6 @@ default resolved_nurse = False
 default disclosed_affair = False
 default accused_nurse = False
 
-default seen_basement_door = False
 default is_basement_locked = True
 default door_drop_active = False
 default milk_beat_shown = False

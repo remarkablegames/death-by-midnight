@@ -60,10 +60,10 @@ label explore_basement_door_locked:
 
     play sound door_locked
 
-    $ seen_basement_door = True
-
     show screen time_display
     show screen inventory_hud
+
+    $ knows_basement_locked = True
 
     player "The door is locked."
 
