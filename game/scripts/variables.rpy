@@ -1,3 +1,6 @@
+default asked_maid_about_death = False
+default asked_butler_about_loop = False
+
 default knows_affair = False
 default knows_basement_locked = False
 default knows_knife_exists = False

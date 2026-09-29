@@ -36,7 +36,7 @@ label talk_butler_menu:
 
             butler smile look away "No,{w=.1} I don’t."
 
-        "Ask why he spends so much time with Madelyn" if knows_affair:
+        "Ask why he spends so much time with Madelyn" if knows_affair and not knows_maid_plans:
 
             butler happy "I’m just helping her with work."
 
@@ -82,13 +82,15 @@ label talk_butler_menu:
 
             butler "At this point,{w=.3} all I’m looking forward to is the reading of the will."
 
-        "Do you remember me?" if loop_count == 2:
+        "Do you remember me?" if loop_count > 1 and not asked_butler_about_loop:
 
             player "Do you remember having a conversation like this before?"
 
             butler neutral "What do you mean?{w=.3} We only met a while ago...{w=.2} didn’t we?"
 
             player "Yes,{w=.1} forget I asked."
+
+            $ asked_butler_about_loop = True
 
         "Nevermind":
 

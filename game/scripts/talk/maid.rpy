@@ -17,7 +17,7 @@ label talk_maid_menu:
 
     menu:
 
-        "Ask who would want to kill you" if loop_count == 2:
+        "Ask who would want to kill you" if loop_count > 1 and not asked_maid_about_death:
 
             player "Who in this house would want you dead?"
 
@@ -42,6 +42,8 @@ label talk_maid_menu:
             player "You should be careful."
 
             maid "I will."
+
+            $ asked_maid_about_death = True
 
         "Ask about the kitchen" if current_room == "kitchen":
 
