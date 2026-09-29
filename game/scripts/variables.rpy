@@ -3,6 +3,7 @@ default knows_knife_exists = False
 default knows_red_hair = False
 default knows_miss_milk = False
 default knows_miss_parentage = False
+default knows_nurse_maid_sisters = False
 
 default loop_count = 0
 
