@@ -13,29 +13,31 @@ label talk_maid:
 
 label talk_maid_menu:
 
+    show maid smile at character_speak
+
     menu:
 
         "Ask about the missing kitchen knife" if not knows_knife_exists and not knows_knife_taken:
 
-            maid "There was a knife in the kitchen this evening."
+            maid @ smile look away "What do you mean?{w=.3} The knife should still be there."
 
-            player "There isn’t one now."
+            player "Not anymore."
 
-            maid "Then your eyes are better than mine."
+            maid shocked look away "I—{w=.2}I don’t understand.{w=.3} I saw it there earlier."
 
             $ knows_knife_exists = True
 
         "Ask who took the knife" if knows_knife_exists and not knows_knife_taken:
 
-            maid "I clean the kitchen.{w=.3} I didn’t take it."
+            maid @ smile look away "I clean the kitchen.{w=.3} I didn’t take it."
 
             player "You know whose hands it was in."
 
-            maid "You know a great deal for a man who arrived this evening."
+            maid neutral "You know a great deal for a man who arrived this evening."
 
-            player "Someone in this house saw him with it."
+            player "Someone in this house saw who had it."
 
-            maid "You should be more careful...{w=.3} nobody in this house forgives being named."
+            maid shocked look away "You should be more careful...{w=.3} nobody in this house forgives being named."
 
             $ knows_knife_taken = True
 
