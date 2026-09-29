@@ -5,7 +5,7 @@ define DEATH_HOURS = [
     {"minutes": clock_time("22:30"), "character": "miss", "room": "pond", "hint": "death_miss_hint", "resolved": "resolved_miss", "label": "death_miss"},
 ]
 
-define KNIFE_TAKEN_MINUTES = clock_time("19:00")
+define KNIFE_TAKEN_TIME = clock_time("18:30")
 
 define HINT_DEFERRED_ROOMS = (
     "basement",

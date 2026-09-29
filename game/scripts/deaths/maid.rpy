@@ -44,11 +44,7 @@ label death_maid_found:
     "She tries to speak,{w=.1} but only blood spills from her mouth."
     "You notice multiple stab wounds on her body."
 
-    if knows_knife_taken:
-
-        player "The kitchen knife.{w=.3} I knew who had it,{w=.1} and I never stopped that person."
-
-    elif confirmed_knife_gone:
+    if confirmed_knife_gone:
 
         player "The kitchen knife.{w=.3} I knew it was gone,{w=.1} and I didn’t go look for it."
 

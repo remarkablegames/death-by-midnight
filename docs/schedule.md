@@ -31,7 +31,7 @@ A character is **present** in a room when that room is entered during one of the
 | **Butler Ben** | interior entrance | — | manor door | manor door | living room | living room |
 | **Nurse Nora** | kitchen | kitchen | kitchen | kitchen | kitchen | bedroom |
 | **Miss Mia** | living room | kitchen | kitchen | kitchen | pond | pond |
-| **Maid Madelyn** | hallway left | hallway left | backyard | kitchen | hallway right, then bedroom | bedroom |
+| **Maid Madelyn** | hallway left, then kitchen | kitchen | backyard | kitchen | hallway right, then bedroom | bedroom |
 
 <!-- prettier-ignore-end -->
 
@@ -39,8 +39,9 @@ A character is **present** in a room when that room is entered during one of the
 
 Each window is pinned to a death hour, because the hour has to be survivable and the aftermath has to be readable.
 
-- **Madelyn is in the west hallway until 7:30, and the grounds from 7:30 to 8:30.** Handing her the knife is one of two ways to close the 7:30 hour, and the west hallway is where she can be handed it. The backyard window is the 7:30 death hour: the direct route from the house to the manor door crosses it, so a player reacting to the crash passes her on the way. That is deliberate. The schedule never contains the murder (`story.md`), and she is standing outside with her back to the house at the moment she is stabbed through the door.
-- **Madelyn is in the kitchen only for the 8:30 hour.** She kills Nora there, and the 8:30 night has both women in the kitchen. She leaves at 9:30 rather than sitting in the most contested room in the house for ninety minutes, which is what the previous placement did.
+- **Madelyn is in the kitchen from 6:30 to 7:00, which is when the knife is taken.**
+- **Madelyn is unplaceable from 7:00 to 7:30, and you never see her at the moment she dies.** The same alibi gap as Ben's, run on the victim rather than the hand. She reappears in the backyard at 7:30.
+- **Madelyn is in the kitchen for the 8:30 hour, and leaves at 9:30.** She kills Nora there, so the 8:30 night has both women in the kitchen, and she does not linger in the most contested room in the house.
 - **Ben is at the manor door from 7:30, and you never see him there.** The hall is his post until 7:00 and he is unplaceable for the half hour after. A player who sees him at 7:25 and finds the hall empty at 7:35 has bracketed the murder, and one who hears the 7:30 hint beside him has been handed an alibi.
 - **Mia is in the kitchen until 9:30, then the pond.** The kitchen is where the milk is and where the pantry observation happens; the pond is where she dies at 10:30. Her diary is only recoverable from the pond before midnight, so the window leaves room to read it and then find her.
 - **Nora holds the kitchen until 10 p.m.** She is there when the 8:30 hour fires, and she moves to the bedroom afterwards, which is where the current placement already had her.

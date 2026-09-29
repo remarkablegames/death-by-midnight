@@ -51,7 +51,8 @@ define CHARACTER_SCHEDULE = [
     ("miss", "smile", .7, clock_time("19:00"), clock_time("20:30"), "kitchen"),
     ("miss", "smile", .7, clock_time("20:30"), clock_time("24:00"), "pond"),
 
-    ("maid", "smile", .7, clock_time("18:00"), clock_time("19:30"), "hallway_left"),
+    ("maid", "smile", .7, clock_time("18:00"), clock_time("18:30"), "hallway_left"),
+    ("maid", "smile", .7, clock_time("18:30"), clock_time("19:00"), "kitchen"),
     ("maid", "smile", .5, clock_time("19:30"), clock_time("20:30"), "backyard"),
     ("maid", "smile", .7, clock_time("20:30"), clock_time("21:30"), "kitchen"),
     ("maid", "smile", .5, clock_time("21:30"), clock_time("22:00"), "hallway_right"),

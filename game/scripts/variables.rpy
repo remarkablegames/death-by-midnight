@@ -1,6 +1,5 @@
 default knows_affair = False
 default knows_knife_exists = False
-default knows_knife_taken = False
 default knows_red_hair = False
 default knows_miss_milk = False
 default knows_miss_parentage = False

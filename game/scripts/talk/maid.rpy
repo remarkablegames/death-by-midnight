@@ -17,29 +17,27 @@ label talk_maid_menu:
 
     menu:
 
-        "Ask about the missing kitchen knife" if not knows_knife_exists and not knows_knife_taken:
+        "Ask about the kitchen" if current_room == "kitchen":
 
-            maid @ smile look away "What do you mean?{w=.3} The knife should still be there."
+            maid @ smile look away "It’s the one room nobody’s left alone this evening."
 
-            player "Not anymore."
+            if not resolved_maid and clock.minutes >= KNIFE_TAKEN_TIME and not knows_knife_exists:
 
-            maid shocked look away "I—{w=.2}I don’t understand.{w=.3} I saw it there earlier."
+                player "Has anything gone missing?"
 
-            $ knows_knife_exists = True
+                maid "I haven’t stopped to look properly."
+                maid smile look away "..."
+                maid neutral "Wait."
 
-        "Ask who took the knife" if knows_knife_exists and not knows_knife_taken:
+                player "What?"
 
-            maid @ smile look away "I clean the kitchen.{w=.3} I didn’t take it."
+                maid "There was a knife on the board earlier.{w=.3} I laid it out myself."
 
-            player "You know whose hands it was in."
+                player "And now?"
 
-            maid neutral "You know a great deal for a man who arrived this evening."
+                maid shocked "I don’t know."
 
-            player "Someone in this house saw who had it."
-
-            maid shocked look away "You should be more careful...{w=.3} nobody in this house forgives being named."
-
-            $ knows_knife_taken = True
+                $ knows_knife_exists = True
 
         "Ask her about Nora" if not knows_nurse_maid_sisters:
 

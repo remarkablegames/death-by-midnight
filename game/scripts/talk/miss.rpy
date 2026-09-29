@@ -64,7 +64,7 @@ label talk_miss_menu:
             player "If you can have a little faith in me,{w=.2} then I’ll do my best."
 
             $ resolved_miss = True
-            $ renpy.notify(_("Mia will not go to the pond tonight"))
+            $ renpy.notify(_("Mia will look forward to tomorrow"))
 
         "Ask about her father" if gave_miss_milk and not knows_affair:
 

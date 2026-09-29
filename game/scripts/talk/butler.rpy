@@ -28,24 +28,6 @@ label talk_butler_menu:
 
                 butler neutral look away "If you’re looking for it,{w=.2} it should still be here."
 
-        "Ask about the missing kitchen knife" if not knows_knife_exists and not knows_knife_taken:
-
-            butler smile look away "I don’t know what you mean."
-
-            player "Something’s gone missing from the kitchen."
-
-            butler neutral "The kitchen falls under Madelyn’s domain.{w=.3} If something’s missing,{w=.1} you should ask her."
-
-            player "I’m asking you."
-
-            butler neutral look away "Then you suspect I know more than I do."
-
-            player "That sounds like a confession."
-
-            butler neutral "Careful.{w=.3} Observations can be mistaken for accusations."
-
-            $ knows_knife_exists = True
-
         "Ask about the locked basement door" if seen_basement_door and is_basement_locked:
 
             butler "That door has been locked since the Master died."
