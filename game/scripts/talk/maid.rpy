@@ -103,6 +103,30 @@ label talk_maid_menu:
 
                 maid happy "Don’t make it sound like there’s more to it than that."
 
+        "Tell her to leave Nora alone" if not resolved_nurse and knows_affair:
+
+            player "Whatever you’re thinking,{w=.3} it’s not worth it."
+
+            maid happy head tilt "I don’t know what you’re talking about."
+
+            player "I’m aware of what you’re planning to do."
+
+            maid shocked "{cps=10}..."
+            maid neutral "I’m only doing what I must."
+
+            player "For him?"
+
+            maid shocked look away "No..."
+
+            player "For yourself."
+
+            maid sad look away "{cps=10}..."
+
+            maid "Leave me alone now,{w=.3} detective."
+
+            $ resolved_nurse = True
+            $ renpy.notify("Madelyn changed her plans")
+
         "Nevermind":
 
             hide maid
