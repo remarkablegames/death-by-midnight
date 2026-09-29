@@ -62,6 +62,7 @@ init python:
             drag.snap(drag.start_x, drag.start_y, delay=0.25)
             renpy.notify("That won’t open the door")
             return None
+        renpy.sound.play("ui/drop_004.ogg")
         return ("give", drags[0].drag_name, drop.drag_name)
 
 

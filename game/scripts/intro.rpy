@@ -6,7 +6,7 @@ label intro:
     show screen intro_butler_greet(enabled=False)
     with Fade(1, 0, 1)
 
-    pause .3
+    pause .2
 
     player "Looks like the butler’s waiting outside."
     player "I should talk to him."
