@@ -31,6 +31,8 @@ label death_butler:
 
 label death_butler_found:
 
+    $ knows_death_butler = True
+
     play sound piano_horror
 
     show butler creepy bloody at character_speak

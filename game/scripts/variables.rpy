@@ -3,6 +3,10 @@ default asked_butler_about_loop = False
 
 default knows_affair = False
 default knows_basement_locked = False
+default knows_death_butler = False
+default knows_death_maid = False
+default knows_death_miss = False
+default knows_death_nurse = False
 default knows_knife_exists = False
 default knows_maid_plans = False
 default knows_miss_milk = False
@@ -25,6 +29,7 @@ default door_drop_active = False
 default milk_beat_shown = False
 default gave_miss_milk = False
 default diary_recent_entry = ""
+
 default is_interactable = True
 default scene_characters = []
 default current_room = ""

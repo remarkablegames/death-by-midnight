@@ -29,6 +29,8 @@ label death_nurse:
 
 label death_nurse_found:
 
+    $ knows_death_nurse = True
+
     play sound string_hit3
 
     hide maid shocked

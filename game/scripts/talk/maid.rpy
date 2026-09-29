@@ -17,7 +17,7 @@ label talk_maid_menu:
 
     menu:
 
-        "Ask who would want to kill you" if loop_count > 1 and not asked_maid_about_death:
+        "Ask who would want to kill you" if knows_death_maid and not asked_maid_about_death:
 
             player "Who in this house would want you dead?"
 

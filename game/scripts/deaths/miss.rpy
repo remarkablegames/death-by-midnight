@@ -32,6 +32,8 @@ label death_miss:
 
 label death_miss_found:
 
+    $ knows_death_miss = True
+
     play sound string_hit2
 
     show miss creepy bloody at character_speak

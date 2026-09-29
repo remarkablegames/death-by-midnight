@@ -30,6 +30,8 @@ label death_maid:
 
 label death_maid_found:
 
+    $ knows_death_maid = True
+
     play sound string_hit1
 
     show maid shocked head tilt bloody at character_speak
