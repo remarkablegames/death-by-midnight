@@ -12,7 +12,7 @@ label explore_kitchen:
     if not resolved_maid and clock.minutes < KNIFE_TAKEN_MINUTES:
         show screen item_kitchen_knife onlayer master zorder 0
 
-    if not milk_taken:
+    if clock.is_night_light and not inventory.has_picked_up("milk"):
         show screen item_milk onlayer master zorder 0
 
     call death_hint
@@ -75,7 +75,6 @@ screen item_milk():
         sensitive is_interactable
         action [
             Hide("item_milk"),
-            SetVariable("milk_taken", True),
             Function(inventory.add, "milk"),
             Function(renpy.notify, "Picked up milk"),
             Jump("explore_kitchen"),

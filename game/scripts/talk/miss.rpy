@@ -8,7 +8,7 @@ label talk_miss:
     if context:
         "[context]"
 
-    if milk_taken and not milk_beat_shown and current_room == "kitchen":
+    if current_room == "kitchen" and inventory.has_picked_up("milk") and not milk_beat_shown:
 
         $ milk_beat_shown = True
 

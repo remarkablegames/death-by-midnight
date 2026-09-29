@@ -4,9 +4,7 @@ label loop_start:
 
     $ clock = Clock(Clock.START_MINUTES)
 
-    $ inventory.items = []
-    $ inventory.given = []
-    $ inventory.picked_up = []
+    $ inventory = Inventory()
 
     $ scene_characters = []
 
@@ -17,7 +15,6 @@ label loop_start:
     $ is_basement_locked = True
     $ door_drop_active = False
 
-    $ milk_taken = False
     $ milk_beat_shown = False
     $ confirmed_knife_gone = False
     $ gave_miss_milk = False

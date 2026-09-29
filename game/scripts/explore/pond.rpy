@@ -60,7 +60,7 @@ init python:
 
         if gave_miss_milk:
             return _("“I’m grateful to the person who brought me milk today.”")
-        elif milk_taken:
+        elif inventory.has_picked_up("milk"):
             return _("“They took the milk. Not that it mattered. I didn’t want it anyway.”")
         else:
             return _("“I wish they paid more attention to me. Father is always with Madelyn. I feel like he’s hiding something.”")
