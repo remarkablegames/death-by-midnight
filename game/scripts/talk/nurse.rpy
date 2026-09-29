@@ -72,7 +72,7 @@ label talk_nurse_menu:
 
             player "There are photographs in the Master’s camera.{w=.3} One shows a young man with red hair, standing right beside you."
 
-            nurse sad look away "..."
+            nurse sad look away "{cps=10}..."
 
             player "Mia has his hair.{w=.3} There’s no other red hair in this house."
 

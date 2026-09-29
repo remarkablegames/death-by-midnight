@@ -46,7 +46,7 @@ label talk_butler_menu:
 
             player "She’s your wife’s sister."
 
-            butler "..."
+            butler "{cps=10}..."
 
             show butler neutral look away
 
@@ -74,7 +74,7 @@ label talk_butler_menu:
 
             butler "At this point,{w=.3} all I’m looking forward to is the reading of the will."
 
-        "Do you remember me?" if loop_count > 1:
+        "Do you remember me?" if loop_count == 2:
 
             player "Do you remember having a conversation like this before?"
 

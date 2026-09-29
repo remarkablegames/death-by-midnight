@@ -61,7 +61,7 @@ label give_scroll_to_nurse:
 
     nurse @ smile look away "Let me see..."
 
-    nurse neutral "..."
+    nurse neutral "{cps=10}..."
 
     if not accused_nurse and clock.minutes >= clock_time("20:30"):
 
@@ -410,7 +410,7 @@ label give_diary_to_miss:
         "Yes":
             miss "I can tell."
 
-            player "I..."
+            player "{cps=10}I..."
 
             miss "Don’t look at me like that.{w=.3} This stays between us."
 

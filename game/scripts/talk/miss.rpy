@@ -49,13 +49,13 @@ label talk_miss_menu:
 
                     player "I kept asking who would want to hurt you,{w=.2} and I realized I’ve been asking the wrong question."
 
-                    miss sad look away "..."
+                    miss sad look away "{cps=10}..."
 
                 "Say nothing":
 
-                    player "..."
+                    player "{cps=10}..."
 
-                    miss sad look away "..."
+                    miss sad look away "{cps=10}..."
 
             player "Is there anything I can do?"
 
@@ -72,7 +72,7 @@ label talk_miss_menu:
 
             miss neutral "The manor door,{w=.3} then Madelyn’s."
 
-            player "..."
+            player "{cps=10}..."
 
             miss sad look away "He spends more time with Madelyn than with me."
 

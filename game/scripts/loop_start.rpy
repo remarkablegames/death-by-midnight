@@ -65,7 +65,7 @@ label loop_start:
 
         "The same silence.{w=.3} The same cold air.{w=.3} The same sight of the butler standing right in front of you."
 
-        player "I was just here.{w=.5} Did I...{w=.3} loop?"
+        player "I was just here.{w=.5} Did I...{w=.3} go back in time?"
 
         "Your pulse quickens."
 

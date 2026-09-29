@@ -17,6 +17,32 @@ label talk_maid_menu:
 
     menu:
 
+        "Ask who would want to kill you" if loop_count == 2:
+
+            player "Who in this house would want you dead?"
+
+            maid shocked "That’s a strange question to ask a maid."
+
+            player "Does anyone come to mind?"
+
+            maid @ shocked look away "{cps=10}..."
+
+            maid sad "No one."
+
+            player "You hesitated."
+
+            maid @ sad look away "I think about being replaced.{w=.3} It’s not the same as being killed."
+
+            player "Who would replace you?"
+
+            maid @ sad look away "{cps=10}..."
+
+            maid sad "I have no one to name.{w=.3} And I wouldn’t want to."
+
+            player "You should be careful."
+
+            maid "I will."
+
         "Ask about the kitchen" if current_room == "kitchen":
 
             maid @ smile look away "It’s the one room nobody’s left alone this evening."
@@ -26,7 +52,7 @@ label talk_maid_menu:
                 player "Has anything gone missing?"
 
                 maid "I haven’t stopped to look properly."
-                maid smile look away "..."
+                maid smile look away "{cps=10}..."
                 maid neutral "Wait."
 
                 player "What?"
