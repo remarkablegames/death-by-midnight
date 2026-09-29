@@ -12,7 +12,7 @@ label explore_living_room:
         scene bg living room evening
         $ character_tint = COLOR_TRANSPARENT
 
-    if not inventory.has_picked_up("coffee"):
+    if not inventory.has_picked_up("coffee") and clock.minutes >= clock_time("19:30"):
         show screen item_coffee onlayer master zorder 0
 
     call death_hint
