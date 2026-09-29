@@ -92,6 +92,24 @@ label talk_miss_menu:
 
             player "I see."
 
+        "Ask her about the Master":
+
+            player "Did you know him?{w=.3} The man whose final wishes everyone is waiting to hear."
+
+            miss neutral "He was the one I was supposed to be afraid of."
+
+            player "Were you afraid of him?"
+
+            miss sad look away "He used to let me sit in his study.{w=.3} No one else was allowed in."
+
+            player "And now?"
+
+            miss sad "Now they keep it locked."
+
+            player "You must miss him."
+
+            miss sad look away "I’m not sure."
+
         "Nevermind":
 
             hide miss
