@@ -56,6 +56,24 @@ label talk_butler_menu:
 
             $ knows_nurse_maid_sisters = True
 
+        "Ask about the Master":
+
+            butler neutral "He was the Master of this house."
+
+            player "What was your relationship with him?"
+
+            butler neutral look away "He treated me like a younger brother."
+
+            player "And you?"
+
+            butler neutral "I treated him as I would anyone else."
+
+            player "Were you close?"
+
+            butler neutral look away "Somewhat."
+
+            butler "At this point,{w=.3} all I’m looking forward to is the reading of the will."
+
         "Do you remember me?" if loop_count > 1:
 
             player "Do you remember having a conversation like this before?"
@@ -63,8 +81,6 @@ label talk_butler_menu:
             butler neutral "What do you mean?{w=.3} We only met a while ago...{w=.2} didn’t we?"
 
             player "Yes,{w=.1} forget I asked."
-
-            show butler smile
 
         "Nevermind":
 
