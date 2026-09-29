@@ -56,11 +56,11 @@ Each closes one cause on the death ladder in `docs/story.md`. A cause closed in 
 | Item | Where | Verb |
 | --- | --- | --- |
 | Cup with residue | Study | Proves Ben died by poison, not by a knife, and by a hand other than Madelyn's |
-| Coffee (Nora's) | Living room | The poison vehicle. Swapping or destroying it empties the 9:30 hour |
+| Coffee (Nora's) | Living room | The poison vehicle. Swapping or destroying it empties the 8:30 hour |
 
 <!-- prettier-ignore-end -->
 
-Prevention is not knowledge. Knowing the affair does not close the 9:30 hour. Only never having said it aloud, or removing the coffee, does.
+Prevention is not knowledge. Knowing the affair does not close the 8:30 hour. Only never having said it aloud, or removing the coffee, does.
 
 ## Endgame items
 

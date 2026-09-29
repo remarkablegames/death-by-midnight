@@ -28,7 +28,7 @@ A character is **present** in a room when that room is entered during one of the
 
 | Character | 18:00-19:00 | 19:00-19:30 | 19:30-20:30 | 20:30-21:30 | 21:30-22:30 | 22:30-24:00 |
 | --- | --- | --- | --- | --- | --- | --- |
-| **Butler Ben** | interior entrance | — | manor door | manor door | living room | living room |
+| **Butler Ben** | interior entrance | — | manor door | living room | living room | living room |
 | **Nurse Nora** | kitchen | kitchen | kitchen | kitchen | kitchen | bedroom |
 | **Miss Mia** | living room | kitchen | kitchen | kitchen | pond | pond |
 | **Maid Madelyn** | hallway left, then kitchen | kitchen | backyard | kitchen | hallway right, then bedroom | bedroom |
@@ -41,8 +41,8 @@ Each window is pinned to a death hour, because the hour has to be survivable and
 
 - **Madelyn is in the kitchen from 6:30 to 7:00, which is when the knife is taken.**
 - **Madelyn is unplaceable from 7:00 to 7:30, and you never see her at the moment she dies.** The same alibi gap as Ben's, run on the victim rather than the hand. She reappears in the backyard at 7:30.
-- **Madelyn is in the kitchen for the 8:30 hour, and leaves at 9:30.** She kills Nora there, so the 8:30 night has both women in the kitchen, and she does not linger in the most contested room in the house.
-- **Ben is at the manor door from 7:30, and you never see him there.** The hall is his post until 7:00 and he is unplaceable for the half hour after. A player who sees him at 7:25 and finds the hall empty at 7:35 has bracketed the murder, and one who hears the 7:30 hint beside him has been handed an alibi.
+- **Madelyn is in the kitchen for the 9:30 hour.** She kills Nora there, so the 9:30 night has both women in the kitchen. The window opens an hour before the hour fires, which is what makes the hour survivable: the player has the whole 8:30 hour to reach her.
+- **Ben is at the manor door from 7:30 to 8:30, and you never see him kill.** The hall is his post until 7:00 and he is unplaceable for the half hour after, which is the gap that brackets Madelyn's murder. He moves to the living room at 8:30, which is where he is found.
 - **Mia is in the kitchen until 9:30, then the pond.** The kitchen is where the milk is and where the pantry observation happens; the pond is where she dies at 10:30. Her diary is only recoverable from the pond before midnight, so the window leaves room to read it and then find her.
-- **Nora holds the kitchen until 10 p.m.** She is there when the 8:30 hour fires, and she moves to the bedroom afterwards, which is where the current placement already had her.
+- **Nora holds the kitchen until 10 p.m.** She is there when the 9:30 hour fires, and she moves to the bedroom afterwards, which is where the current placement already had her.
 - **Madelyn and Nora share the bedroom from 10 p.m.** The house is winding down, and it keeps the two of them findable together for the late game.

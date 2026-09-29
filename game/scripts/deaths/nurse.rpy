@@ -50,7 +50,7 @@ label death_nurse_found:
 
     play sound tick_tock
 
-    "The clock strikes half past eight."
+    "The clock strikes half past nine."
 
     play music fractal_fragments2
 

@@ -41,8 +41,8 @@ init python:
 
 define CHARACTER_SCHEDULE = [
     ("butler", "smile", .2, clock_time("18:00"), clock_time("19:00"), "interior_entrance"),
-    ("butler", "smile", .7, clock_time("19:30"), clock_time("21:30"), "manor_door"),
-    ("butler", "smile", .3, clock_time("21:30"), clock_time("24:00"), "living_room"),
+    ("butler", "smile", .7, clock_time("19:30"), clock_time("20:30"), "manor_door"),
+    ("butler", "smile", .3, clock_time("20:30"), clock_time("24:00"), "living_room"),
 
     ("nurse", "smile", .2, clock_time("18:00"), clock_time("22:00"), "kitchen"),
     ("nurse", "smile", .3, clock_time("22:00"), clock_time("24:00"), "bedroom"),

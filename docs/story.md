@@ -43,15 +43,15 @@ So **preventing a death does not stop the night, it moves it.** Closing the 7:30
 | Hour | Who | Cause | Resolved by |
 | --- | --- | --- | --- |
 | 7:30 p.m. | Madelyn | Ben stabs her at the manor door with the kitchen knife | Taking the knife out of the kitchen, or handing it to Madelyn, before 7 p.m. |
-| 8:30 p.m. | Nora | Redirection only. Madelyn, alive and furious, strangles her in the kitchen with her own head covering, and denies it in front of you | Never accusing her |
-| 9:30 p.m. | Ben | Nora poisons the coffee as he crosses the living room | The coffee, or never speaking the affair aloud |
+| 9:30 p.m. | Nora | Redirection only. Madelyn, alive and furious, strangles her in the kitchen with her own head covering, and denies it in front of you | Never accusing her |
+| 8:30 p.m. | Ben | Nora poisons the coffee as he crosses the living room | The coffee, or never speaking the affair aloud |
 | 10:30 p.m. | Mia | Suicide at the pond, arranged to read as the first death | Her journal, then the conversation it unlocks |
 
 <!-- prettier-ignore-end -->
 
 Three further rules about the slot:
 
-- **A death is not required to be witnessed.** It fires whether or not you are in the room. Madelyn is *found* dead, not watched. Being elsewhere at 8:30 is how Nora dies.
+- **A death is not required to be witnessed.** It fires whether or not you are in the room. Madelyn is *found* dead, not watched. Being elsewhere at 9:30 is how Nora dies.
 - **The death summons you, it does not cut to the body.** When an hour fires, `clock.advance` records it in `pending_death` and calls a `death_<id>_hint` label instead of the death scene. That beat is a sound, a line of narration, or someone fetching you, and it names the room. Nothing is found until you walk there, and the walk costs the clock, so the hour you failed to prevent becomes time you spend learning about it. The night still ends on the body, never before.
 - **The schedule does not contain murders.** `docs/schedule.md` tells you where someone can be found, which is not where they get killed. Every death is a movement the placement table does not show.
 - **No death weapon survives the night.** The knife leaves the kitchen at 7 p.m. and is never found, because finding it would have resolved the hour. The strangulation leaves nothing to hold. The poison is in a cup the victim chooses to drink from. The detective spends the night hunting a murder weapon and the truth is never one.
@@ -63,8 +63,8 @@ Three further rules about the slot:
 | Cause | Prevention | The trap |
 | --- | --- | --- |
 | Madelyn, 7:30 | Take the knife from the kitchen, or give it to Madelyn, before 7 p.m. | Holding the manor door is not prevention. The hour resolves on the knife, not on you standing there. |
-| Nora, 8:30 | Never accuse Nora while Madelyn is alive | Any accusation can turn Madelyn, and Madelyn is the most dangerous thing in the house |
-| Ben, 9:30 | Swap or destroy the coffee, or keep the affair unspoken | Learning the affair is required for the true ending. Saying it aloud is what kills him. |
+| Nora, 9:30 | Never accuse Nora while Madelyn is alive | Any accusation can turn Madelyn, and Madelyn is the most dangerous thing in the house |
+| Ben, 8:30 | Swap or destroy the coffee, or keep the affair unspoken | Learning the affair is required for the true ending. Saying it aloud is what kills him. |
 | Mia, 10:30 | Her journal, then the conversation it unlocks | Knowledge that never becomes conversation is not prevention |
 
 <!-- prettier-ignore-end -->
@@ -87,7 +87,7 @@ The rule for a time-loop story is that each loop adds knowledge rather than repe
 | Night | What happens | What the detective learns |
 | --- | --- | --- |
 | Madelyn | Stabbed at the manor door at 7:30. The kitchen knife is gone. No foreknowledge, and no reason to have gone back for it. | An hour and a place. The shape of the night. |
-| Ben | Madelyn saved, and the 8:30 hour opens. Nora poisons his coffee at 9:30 because she overheard the affair resolved. | Disclosure kills. Learning a secret is not the same as being able to keep it. |
+| Ben | Madelyn saved, and the 8:30 hour opens. Nora poisons his coffee at 8:30 because she overheard the affair resolved. | Disclosure kills. Learning a secret is not the same as being able to keep it. |
 | Mia | The earlier hours resolved, and Mia at the pond at 10:30 has worked out enough to stop wanting to be alive. | The pattern breaks. He stops asking who kills and starts asking what he caused. |
 | Midnight | Everything resolved except you. The reading begins in the entrance hall. | Why he is bound, what the clause collects, and that he signed the Master's death once already. |
 
@@ -107,11 +107,11 @@ The coffee is in the living room and Ben is findable at the manor door, and he c
 
 ### The Mia night
 
-Madelyn alive, Ben alive, the 8:30 hour resolved, and Mia at the pond at 10:30. She has worked out enough of the truth to stop wanting to be alive. The pond is where you learned how to read a scene, and the scene has been arranged to be read the same way. For a long time you will not be able to tell that there is no murderer here.
+Madelyn alive, Ben alive, the 8:30 and 9:30 hours resolved, and Mia at the pond at 10:30. She has worked out enough of the truth to stop wanting to be alive. The pond is where you learned how to read a scene, and the scene has been arranged to be read the same way. For a long time you will not be able to tell that there is no murderer here.
 
 ### The fail state, which is not a fail state
 
-Accuse the wrong person and the slot redirects. Madelyn, alive and furious, is the worst thing in the house, and Nora dies at 8:30 by her own jealousy. None of that is a special case. It is what the slot does when you point it at the wrong person, and it is the same fire the whole time.
+Accuse the wrong person and the slot redirects. Madelyn, alive and furious, is the worst thing in the house, and Nora dies at 9:30 by her own jealousy. None of that is a special case. It is what the slot does when you point it at the wrong person, and it is the same fire the whole time.
 
 ### The midnight night
 
@@ -144,7 +144,7 @@ At the reading you have one decision, and the clause only ever asked for a name.
 - That the kitchen knife is the weapon, and where it went.
 - That Madelyn and Nora are sisters.
 - That Nora's poison is meant for the man, not for the family.
-- That resolving the affair aloud is what loads the 9:30 hour.
+- That resolving the affair aloud is what loads the 8:30 hour.
 - That Mia is the Master's daughter.
 - That the will binds its executor, and that the executor is you.
 - That you have been in this house before, and what you signed.

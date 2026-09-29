@@ -49,7 +49,7 @@ label death_butler_found:
 
     play sound tick_tock
 
-    "The clock strikes half past nine."
+    "The clock strikes half past eight."
 
     play music fractal_fragments2
 

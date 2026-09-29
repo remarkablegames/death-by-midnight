@@ -46,7 +46,7 @@
 - **Private goal:** Win Ben's love and replace Nora as his wife
 - **Secret:** She is having an affair with Ben, and he kills her for it at the manor door at 7:30 if the detective does not stop him
 - **Possible secret:** She suspects that Ben is not Mia's biological father
-- **If she survives:** Accuse the wrong person and she kills Nora in the kitchen at 8:30 by her own jealousy
+- **If she survives:** Accuse the wrong person and she kills Nora in the kitchen at 9:30 by her own jealousy
 - **Fear:** Being abandoned, ignored, or trapped in her low social position
 - **Misbelief:** She believes taking Ben away from Nora will prove that she is more deserving of love
 - **Personality:** Distant, observant, resentful, and emotionally guarded
@@ -79,7 +79,7 @@
 - **Public goal:** Keep the family safe and prevent the household from falling apart
 - **Private goal:** Protect Mia from the truth while secretly hoping someone will acknowledge the harm done to her
 - **Secret:** The Master took advantage of her, and she has concealed the circumstances surrounding Mia's birth
-- **Poison:** She puts it in Ben's coffee at 9:30 the moment she overhears the affair and misunderstanding it
+- **Poison:** She puts it in Ben's coffee at 8:30 the moment she overhears the affair and misunderstanding it
 - **Possible secret:** She suspects that Mia is the Master's daughter but has chosen not to reveal it
 - **Fear:** Losing Mia, being abandoned by Ben, or exposing the family to scandal
 - **Misbelief:** She believes silently enduring pain is the same as protecting the people she loves
@@ -140,8 +140,8 @@ Design rule: a character's _public goal_ should be what they claim to want, whil
 Who benefits from each death:
 
 - **Madelyn's death** benefits no one in the will; it invites suspicion, most of all on Ben
-- **Ben's death** the detective reads as benefiting Nora, freed from a husband who controls her; it is in fact the one death she causes, and she causes it at 9:30 believing she is the one protecting the family
-- **Nora's death** benefits Madelyn; with the rival wife gone, she steps into the place beside Ben; it is the death that most clearly rewards her, yet she commits it at 8:30 not by calculation but in blind rage, and only because a wrong accusation put her there: the benefit is real, the plotting is not
+- **Ben's death** the detective reads as benefiting Nora, freed from a husband who controls her; it is in fact the one death she causes, and she causes it at 8:30 believing she is the one protecting the family
+- **Nora's death** benefits Madelyn; with the rival wife gone, she steps into the place beside Ben; it is the death that most clearly rewards her, yet she commits it at 9:30 not by calculation but in blind rage, and only because a wrong accusation put her there: the benefit is real, the plotting is not
 - **Mia's death** the detective reads as benefiting Ben: the true heir dead, the estate falls to the Master's brother whichever will is read; it makes him the standing suspect yet again in the very loop that should have cleared him. The truth is that it benefits no one, and the reading he does of it is the same mistake he makes about himself.
 
 Mystery's core tension: deaths have clear beneficiaries, but the beneficiaries aren't necessary the killers.
