@@ -39,6 +39,10 @@ jobs:
       - name: Build web
         run: renpy-launcher web_build . --destination web
 
+      - name: Hide Ren'Py menu
+        run: |
+          sed -i 's|#ContextContainer {|#ContextContainer { display: none;|' web/index.html
+
       - name: Page test
         uses: remarkablemark/page-test-action@v1
         with:
