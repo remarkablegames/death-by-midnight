@@ -69,10 +69,8 @@ cd death-by-midnight
 
 Replace the assets:
 
-- [ ] `game/gui/window_icon.png`
 - [ ] [`icon.icns`](https://anyconv.com/png-to-icns-converter/)
 - [ ] [`icon.ico`](https://anyconv.com/png-to-ico-converter/)
-- [ ] `web-icon.png`
 - [ ] `web-presplash.webp`
 
 ## Run
