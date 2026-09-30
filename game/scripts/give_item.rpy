@@ -63,7 +63,7 @@ label give_scroll_to_nurse:
 
     nurse neutral "{cps=10}..."
 
-    if not accused_nurse and clock.minutes >= clock_time("20:30"):
+    if resolved_nurse and not inventory.has_picked_up("basement_key"):
 
         "She reads it without hurrying.{w=.3} The only part that stops her is the date at the top."
 
