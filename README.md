@@ -25,15 +25,14 @@ Or download for desktop:
 ### Art
 
 - [3DModelsCC0](https://3dmodelscc0.itch.io/)
-- [Free Visual Novel Backgrounds (Mansion Pack)](https://potat0master.itch.io/free-visual-novel-backgrounds-mansion-pack)
-- [Tea Stained Paper Textures](https://majcher.itch.io/tea-stained-paper-textures)
+- [Free Visual Novel Backgrounds (Mansion Pack)](https://potat0master.itch.io/free-visual-novel-backgrounds-mansion-pack) by [Potat0Master](https://potat0master.itch.io/)
 - [Vector Books Icon Pack](https://vedasir.itch.io/vector-books-icon-pack)
 - [Visual Novel Horror Asset Pack](https://kalaverita.itch.io/visual-novel-horror-asset-pack) by [Kalaverita](https://kalaverita.itch.io/)
 
 ### Audio
 
 - [Free music pack](https://sinetient.itch.io/free-music-pack) by [Sinetient](https://sinetient.itch.io/)
-- [Kenney](https://kenney.nl/assets/interface-sounds)
+- [Kenney Interface Sounds](https://kenney.nl/assets/interface-sounds)
 - [Love & Terror [BGM Pack - Vol 01]](https://melancholy-marionette.itch.io/love-terror-vol-01-bgm-pack) by [Melancholy Marionette](https://melancholy-marionette.itch.io/)
 - [Sound effects from Pixabay](https://pixabay.com/sound-effects/)
 - [Text/Dialogue Bleeps Pack](https://dmochas-assets.itch.io/dmochas-bleeps-pack)
