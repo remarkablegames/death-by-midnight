@@ -12,6 +12,7 @@
 
 Play in your browser:
 
+- [itch.io](https://remarkablegames.itch.io/death-by-midnight)
 - [remarkablegames](https://remarkablegames.org/death-by-midnight/)
 
 Or download for desktop:
