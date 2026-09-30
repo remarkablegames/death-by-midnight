@@ -30,6 +30,7 @@ default milk_beat_shown = False
 default gave_miss_milk = False
 default diary_recent_entry = ""
 
+default character_tint = COLOR_TRANSPARENT
 default is_interactable = True
 default scene_characters = []
 default current_room = ""

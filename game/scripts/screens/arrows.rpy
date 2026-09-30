@@ -14,7 +14,7 @@ style arrow_button_dark is arrow_button:
 screen arrow_button(arrow, label, xalign, yalign, minutes=0):
 
     textbutton arrow:
-        text_style ("arrow_button_dark" if clock.is_night_dark else "arrow_button")
+        text_style ("arrow_button" if character_tint == COLOR_TRANSPARENT else "arrow_button_dark")
         xalign xalign 
         yalign yalign
         action [
