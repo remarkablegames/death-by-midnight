@@ -8,7 +8,7 @@
 [![build](https://github.com/remarkablegames/death-by-midnight/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/death-by-midnight/actions/workflows/build.yml)
 [![lint](https://github.com/remarkablegames/death-by-midnight/actions/workflows/lint.yml/badge.svg)](https://github.com/remarkablegames/death-by-midnight/actions/workflows/lint.yml)
 
-💀 Death by Midnight.
+🕛 **Death by Midnight** is a time-loop murder mystery. You're a detective hired to read a dead man's will at midnight—but when something terrible happens, the night resets. Trapped in an endless cycle, you must uncover the truth, stop the murders, and escape the loop.
 
 Play in your browser:
 
@@ -19,6 +19,21 @@ Or download for desktop:
 - [Windows](https://github.com/remarkablegames/death-by-midnight/releases/latest/download/win.zip)
 - [Mac](https://github.com/remarkablegames/death-by-midnight/releases/latest/download/mac.zip)
 - [Linux](https://github.com/remarkablegames/death-by-midnight/releases/latest/download/linux.tar.bz2)
+
+## Features
+
+- An in-game clock where every action advances time
+- Point-and-click exploration
+- Interact with characters and unlock new dialogue
+- Collect and use inventory items
+- Multiple endings, including good, bad, and true endings
+- Estimated playtime: 15–30 minutes (3,000+ words)
+
+## Warnings
+
+- Jumpscares
+- Depictions of death, murder, and suicide
+- Blood
 
 ## Credits
 
