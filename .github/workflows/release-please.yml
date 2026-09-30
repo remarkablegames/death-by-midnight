@@ -56,7 +56,10 @@ jobs:
           done
 
       - name: Build web
-        run: renpy-launcher web_build . --destination ../dists/web
+        run: |
+          renpy-launcher web_build . --destination ../dists/web
+          # hide menu
+          sed -i 's|#ContextContainer {|#ContextContainer { display: none;|' ../dists/web/index.html
 
       - name: Setup butler
         uses: remarkablegames/setup-butler@v3
@@ -107,7 +110,10 @@ jobs:
           -delete
 
       - name: Build web
-        run: renpy-launcher web_build . --destination dist
+        run: |
+          renpy-launcher web_build . --destination dist
+          # hide menu
+          sed -i 's|#ContextContainer {|#ContextContainer { display: none;|' dist/index.html
 
       - name: Upload to Wavedash
         uses: remarkablegames/wavedash-action@v1

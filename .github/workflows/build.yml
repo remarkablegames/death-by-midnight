@@ -37,10 +37,9 @@ jobs:
         run: renpy-launcher distribute . --dest ../dists
 
       - name: Build web
-        run: renpy-launcher web_build . --destination web
-
-      - name: Hide Ren'Py menu
         run: |
+          renpy-launcher web_build . --destination web
+          # hide menu
           sed -i 's|#ContextContainer {|#ContextContainer { display: none;|' web/index.html
 
       - name: Page test
