@@ -50,7 +50,7 @@ screen item_scroll():
     imagebutton:
         idle "images/items/scroll.webp"
         style "item_button"
-        at item_button(zoom=.14, xalign=.02, yalign=.54, matrixcolor=TintMatrix(item_tint))
+        at item_button(zoom=.13, xalign=.033, yalign=.549, matrixcolor=TintMatrix(item_tint))
         sensitive is_interactable
         action [
             Play("sound", "audio/sfx/paper.ogg"),

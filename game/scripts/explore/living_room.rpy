@@ -43,7 +43,7 @@ screen item_coffee():
     elif clock.is_night_light:
         $ item_tint = COLOR_TINT_GREY
     else:
-        $ item_tint = "#ffe59a"
+        $ item_tint = COLOR_TRANSPARENT
 
     imagebutton:
         idle "images/items/coffee.webp"
@@ -52,6 +52,7 @@ screen item_coffee():
         sensitive is_interactable
         action [
             Hide("item_coffee"),
+            SetVariable("resolved_butler", True),
             Function(inventory.add, "coffee"),
             Function(renpy.notify, "Picked up coffee"),
             Jump("explore_living_room"),
