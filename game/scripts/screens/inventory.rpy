@@ -81,56 +81,56 @@ define INVENTORY_ITEMS = {
         "scroll",
         _("Scroll"),
         "images/items/scroll.webp",
-        _("An aged parchment, creased from being tucked away in the rafters. In curling ink, it reads:\n\n“To whoever finds this: the will you seek is not the one they will read aloud. Follow the truth to whoever holds the real document.”"),
+        _("An aged parchment, creased from being tucked away in the rafters. In curling ink, it reads:\n\n“To whoever finds this: the will you seek is not the one they’ll read aloud. Follow the truth to where the true document awaits.”"),
     ),
 
     "basement_key": InventoryItem(
         "basement_key",
         _("Key"),
         "images/items/key.webp",
-        _("A silver key."),
+        _("An iron key with an ornate design."),
     ),
 
     "kitchen_knife": InventoryItem(
         "kitchen_knife",
         _("Kitchen Knife"),
         "images/items/kitchen_knife.webp",
-        _("An old kitchen knife that’s starting to rust."),
+        _("A kitchen knife with rust creeping along the blade."),
     ),
 
     "coffee": InventoryItem(
         "coffee",
         _("Coffee"),
         "images/items/coffee.webp",
-        _("A half-finished cup of brew from the living room. It has a sweet and chemical taste."),
+        _("A half-finished cup of brew, left in the living room. It smells sweet, but something chemical lingers beneath it."),
     ),
 
     "milk": InventoryItem(
         "milk",
         _("Milk"),
         "images/items/milk.webp",
-        _("A carton of milk from the kitchen. It smells faintly sour."),
+        _("A carton of milk from the the kitchen. It smells faintly sour."),
     ),
 
     "diary": InventoryItem(
         "diary",
         _("Diary"),
         "images/items/diary.webp",
-        _("Someone’s journal, left behind by the pond."),
+        _("Someone’s journal left behind by the pond."),
     ),
 
     "camera": InventoryItem(
         "camera",
         _("Camera"),
         "images/items/camera.webp",
-        _("Contains pictures of the young Master. Looks like before he went bald, he had a full head of red hair."),
+        _("Pictures of the young Master, back when he still had a full head of red hair."),
     ),
 
     "will": InventoryItem(
         "will",
-        _("The True Will"),
+        _("True Will"),
         "images/items/will.webp",
-        _("The Master’s real will, hidden where no one could read it until the truth came out. It names his true heir, and binds the night to repeat until the family’s history is confessed before the reading."),
+        _("The Master’s true will, hidden until the truth could be revealed. It names his rightful heir and binds the night to repeat until the family’s history is confessed before the reading."),
     ),
 }
 

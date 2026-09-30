@@ -48,7 +48,7 @@ screen item_camera():
         action [
             Hide("item_camera"),
             Function(inventory.add, "camera"),
-            Function(renpy.notify, "Picked up camera"),
+            Function(renpy.notify, "Picked up the camera"),
             Jump("explore_bedroom"),
         ]
 
@@ -62,6 +62,6 @@ screen item_key():
         action [
             Hide("item_key"),
             Function(inventory.add, "basement_key"),
-            Function(renpy.notify, "Picked up key"),
+            Function(renpy.notify, "Picked up the key"),
             Jump("explore_bedroom"),
         ]

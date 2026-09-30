@@ -56,6 +56,6 @@ screen item_scroll():
             Play("sound", "audio/sfx/paper.ogg"),
             Hide("item_scroll"),
             Function(inventory.add, "scroll"),
-            Function(renpy.notify, "Picked up scroll"),
+            Function(renpy.notify, "Picked up the scroll"),
             Jump("explore_interior_entrance"),
         ]

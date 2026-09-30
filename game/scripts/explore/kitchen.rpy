@@ -53,7 +53,7 @@ screen item_kitchen_knife():
             Hide("item_kitchen_knife"),
             Function(inventory.add, "kitchen_knife"),
             SetVariable("resolved_maid", True),
-            Function(renpy.notify, "Picked up kitchen knife"),
+            Function(renpy.notify, "Picked up the kitchen knife"),
             Jump("explore_kitchen"),
         ]
 
@@ -73,6 +73,6 @@ screen item_milk():
         action [
             Hide("item_milk"),
             Function(inventory.add, "milk"),
-            Function(renpy.notify, "Picked up milk"),
+            Function(renpy.notify, "Picked up the milk"),
             Jump("explore_kitchen"),
         ]

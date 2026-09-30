@@ -54,6 +54,6 @@ screen item_coffee():
             Hide("item_coffee"),
             SetVariable("resolved_butler", True),
             Function(inventory.add, "coffee"),
-            Function(renpy.notify, "Picked up coffee"),
+            Function(renpy.notify, "Picked up the coffee"),
             Jump("explore_living_room"),
         ]

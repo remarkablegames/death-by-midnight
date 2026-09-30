@@ -59,11 +59,11 @@ init python:
     def diary_recent_entry_text():
 
         if gave_miss_milk:
-            return _("“I’m grateful to the person who brought me milk today.”")
+            return _("“I’m glad someone brought me milk today.”")
         elif inventory.has_picked_up("milk"):
-            return _("“They took the milk. Not that it mattered. I didn’t want it anyway.”")
+            return _("“They took the milk away. I didn’t really want it anyway.”")
         else:
-            return _("“I wish they paid more attention to me. Father is always with Madelyn. I wish he spent more time with me.”")
+            return _("“I wish they noticed me more. Father is always with Madelyn. I wish he would spend more time with me.”")
 
     def diary_entry_hints_affair():
         return not gave_miss_milk and not inventory.has_picked_up("milk")
@@ -72,7 +72,7 @@ init python:
 
         store.diary_recent_entry = diary_recent_entry_text()
         inventory.add("diary")
-        renpy.notify(_("Picked up diary"))
+        renpy.notify(_("Picked up the diary"))
 
     def diary_description():
 
@@ -83,18 +83,18 @@ init python:
 
         text += _(
             "\n\nAn older page:\n"
-            "“Mother says there are mixtures that heal and mixtures that harm. Knowing which is which is the difference between a cure or a toxin.”"
+            "“Mother says there are mixtures that heal and mixtures that harm. Knowing which is which is the difference between a cure and a toxin.”"
         )
 
         if knows_red_hair:
             text += _(
                 "\n\nA middle page, the ink smudged:\n"
-                "“Mother says my red hair must come from some ancestor long ago. I wonder which one.”"
+                "“Mother says my red hair must come from someone in our family. I wonder who.”"
             )
 
         text += _(
             "\n\nLast page:\n"
-            "“I smile at dinner and everyone believes it. I’m so tired of acting. Sometimes I come to the pond so no one can see me.”"
+            "“I smile at dinner and everyone believes it. I’m so tired of acting. Sometimes I wish I could disappear.”"
         )
 
         return text
