@@ -1,0 +1,45 @@
+# Changelog
+
+## 1.0.0 (2026-09-30)
+
+### Features
+
+* **audio:** play main_menu_music stone_walls_intro.ogg ([941d06c](https://github.com/remarkablegames/death-by-midnight/commit/941d06c797895d18c362cf95ebd09252c15b3739))
+* **audio:** play voice bleep for characters ([8fec1e0](https://github.com/remarkablegames/death-by-midnight/commit/8fec1e03f47c38e02ac90b4216f27ef18c548f26))
+* **audio:** stop main menu music and play sound footsteps for arrows ([1e3b5b5](https://github.com/remarkablegames/death-by-midnight/commit/1e3b5b52ecaeaf6b49fbd1b34f395523bd111bfc))
+* **scripts:** add character intro ([b95a1d9](https://github.com/remarkablegames/death-by-midnight/commit/b95a1d91ca0f561af15b4e4b3adbab9a274b76b1))
+* **scripts:** add character tint for night dark ([f66fe8b](https://github.com/remarkablegames/death-by-midnight/commit/f66fe8be7334da7d6e7ba5a0d0b9f66f353d82ff))
+* **scripts:** add end incomplete ([bbce0f5](https://github.com/remarkablegames/death-by-midnight/commit/bbce0f56e9a8ad03b6d299cd514b90620a06fecd))
+* **scripts:** add loop choice for talk butler menu ([87ab5c6](https://github.com/remarkablegames/death-by-midnight/commit/87ab5c6b7484b76e1fbe826691c93ec6f38a1cda))
+* **scripts:** add loop start dialogue ([734bfab](https://github.com/remarkablegames/death-by-midnight/commit/734bfabce1e9bd188718cf903a40f8606587c848))
+* **scripts:** advance talk by 5 minutes ([e9ccacd](https://github.com/remarkablegames/death-by-midnight/commit/e9ccacde816ddf0bef0106b5b0342a00eb3dc871))
+* **scripts:** don't show death hint in basement ([b3000c8](https://github.com/remarkablegames/death-by-midnight/commit/b3000c84a4b7774bf77637f5562dbb7cee095aa9))
+* **scripts:** have butler confiscate knife and improve give dialogue ([e79b307](https://github.com/remarkablegames/death-by-midnight/commit/e79b307c2571c9d918ddd13b6f94b5663184d23b))
+* **scripts:** improve affair dialogue ([60e7397](https://github.com/remarkablegames/death-by-midnight/commit/60e7397b8b7af91af4577420006fb8cfeb739086))
+* **scripts:** improve butler death ([7546ac0](https://github.com/remarkablegames/death-by-midnight/commit/7546ac01bd2990d9435ee2565789b768218ac997))
+* **scripts:** improve end ([cdc93dd](https://github.com/remarkablegames/death-by-midnight/commit/cdc93dd236585b6ff82c9775e1780a9021d63f12))
+* **scripts:** improve end ([4e302ba](https://github.com/remarkablegames/death-by-midnight/commit/4e302bad47c94d6264373cb542d987f80279eaca))
+* **scripts:** improve inventory descriptions and diary entries ([1efe870](https://github.com/remarkablegames/death-by-midnight/commit/1efe87038b2e567897b37bdfff274bfad0442fa0))
+* **scripts:** improve maid and knife dialogue ([75f96cd](https://github.com/remarkablegames/death-by-midnight/commit/75f96cdcb55e27ba9db2c3d202a3956153e5f6b5))
+* **scripts:** improve maid death ([dfb15be](https://github.com/remarkablegames/death-by-midnight/commit/dfb15be559712dd2d34c7e0774525fdf183117fb))
+* **scripts:** improve miss death ([66f60a4](https://github.com/remarkablegames/death-by-midnight/commit/66f60a49d91b713484d782a5245b4cfcf3da7711))
+* **scripts:** improve nurse death ([75a239c](https://github.com/remarkablegames/death-by-midnight/commit/75a239ca324b3f9b245d64482f2914b0ded31fe4))
+* **scripts:** play ambience music in explore ([569ecb7](https://github.com/remarkablegames/death-by-midnight/commit/569ecb7cc3bb6c8de4faa88caaa50471b0d6bc5a))
+* **scripts:** play ambient night sounds ([70a812d](https://github.com/remarkablegames/death-by-midnight/commit/70a812de900c72a5c847ec0d2ce5c2322a4bde27))
+* **scripts:** play different music in true ending ([b9adb75](https://github.com/remarkablegames/death-by-midnight/commit/b9adb7544421e7c2bd7071c9aa667f0436193883))
+* **scripts:** play door sounds and fix screen items ([6df0d08](https://github.com/remarkablegames/death-by-midnight/commit/6df0d08cced574789819a1a79a02460e5fc68eb3))
+* **scripts:** play drop sound for inventory item ([25cb948](https://github.com/remarkablegames/death-by-midnight/commit/25cb9482f738368f200fc44a4de6c2eb5f3e3fb3))
+* **scripts:** play music in start and intro ([6a0899d](https://github.com/remarkablegames/death-by-midnight/commit/6a0899d3b8606ad7f37e3bceb4bc8135c422ae38))
+* **scripts:** play sounds and music in end ([63b89eb](https://github.com/remarkablegames/death-by-midnight/commit/63b89eb0884ed7acf5a785c88e6a675c08e9d3be))
+* **scripts:** play sounds and music in maid death ([4a34249](https://github.com/remarkablegames/death-by-midnight/commit/4a342497f95a566b2ba14c4bc528f4812a057d8a))
+* **scripts:** remove death depends and always trigger it ([8f2f520](https://github.com/remarkablegames/death-by-midnight/commit/8f2f520d090295e0159f69f1fec877038386db1e))
+* **scripts:** show death hints ([80bf52a](https://github.com/remarkablegames/death-by-midnight/commit/80bf52a75879beb52b218579f40cece88e3e03f0))
+* **scripts:** update talk maid ([4615131](https://github.com/remarkablegames/death-by-midnight/commit/46151317ca10d359565c27363d9a1cd98a3f8140))
+
+### Bug Fixes
+
+* **scripts:** don't jump to end for first death ([b558692](https://github.com/remarkablegames/death-by-midnight/commit/b55869286611c460721e0057798bad902ab7ebd9))
+* **scripts:** don't show dead character ([bc9d7f0](https://github.com/remarkablegames/death-by-midnight/commit/bc9d7f03ba003469237c484c7dcbc54c6be963c4))
+* **scripts:** fix resolved butler ([983a92a](https://github.com/remarkablegames/death-by-midnight/commit/983a92ac031c0bee8d31ea98f219242d7b3bf2e3))
+* **scripts:** make basement door not interactable during dialogue ([b593999](https://github.com/remarkablegames/death-by-midnight/commit/b59399904559feb4cdf33af3d47ade7695256d21))
+* **scripts:** update butler schedule and hide screens during talk ([8092019](https://github.com/remarkablegames/death-by-midnight/commit/8092019e16683529e72c8682af5fb59a3b197d70))
