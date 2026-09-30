@@ -23,7 +23,7 @@ label give_scroll_to_maid:
 
     player "Here,{w=.1} take the scroll.{w=.3} I think you should see it."
 
-    maid shocked "This is the Master’s handwriting...{w=.3} I’ve seen it on his private notes."
+    maid neutral "This is the Master’s handwriting...{w=.3} I’ve seen it on his private notes."
 
     $ inventory.add("scroll")
     $ renpy.notify("Madelyn handed the scroll back to you")
@@ -145,7 +145,7 @@ label give_basement_key_to_nurse:
 
     player "Do you know what this key unlocks?"
 
-    nurse "Where did you find this?{w=.3} Put it away before anyone sees you with it."
+    nurse smile look away "Where did you find this?{w=.3} Put it away before anyone sees you with it."
 
     $ inventory.add("basement_key")
     $ renpy.notify("Nora handed the key back to you")
@@ -179,7 +179,7 @@ label give_will_to_maid:
 
     player "Hey,{w=.1} does this look like the True Will?"
 
-    maid shocked "So you found it after all."
+    maid neutral "So you found it after all."
     maid "I knew it existed,{w=.2} but I never dared search for it."
     maid shocked look away "Give it here before someone walks in."
 
@@ -229,7 +229,7 @@ label give_milk_to_butler:
 
     player "Is the milk expired?"
 
-    butler "Looks like it.{w=.3} But keep it in the fridge,{w=.1} someone might still drink it."
+    butler neutral "Looks like it.{w=.3} But keep it in the fridge,{w=.1} someone might still drink it."
 
     $ inventory.add("milk")
     $ renpy.notify("Ben handed the milk back to you")
