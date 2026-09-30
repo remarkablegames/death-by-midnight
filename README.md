@@ -67,12 +67,6 @@ git clone https://github.com/remarkablegames/death-by-midnight.git
 cd death-by-midnight
 ```
 
-Replace the assets:
-
-- [ ] [`icon.icns`](https://anyconv.com/png-to-icns-converter/)
-- [ ] [`icon.ico`](https://anyconv.com/png-to-ico-converter/)
-- [ ] `web-presplash.webp`
-
 ## Run
 
 Launch the project:
