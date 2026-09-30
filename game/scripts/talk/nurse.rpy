@@ -38,8 +38,6 @@ label talk_nurse_menu:
 
         "Accuse her of poisoning him" if knows_affair and inventory.has("coffee") and not accused_nurse:
 
-            $ accused_nurse = True
-
             player "You knew about the two of them.{w=.3} You were standing in the kitchen when he took the coffee."
 
             nurse neutral "I just happened to be in the kitchen at the time."
@@ -49,6 +47,8 @@ label talk_nurse_menu:
             nurse @ twitch look away "He does.{w=.3} So does everyone in this house,{w=.1} detective,{w=.2} including you."
 
             nurse "Be careful what you accuse people of.{w=.3} Doors lock from the outside here."
+
+            $ accused_nurse = True
 
         "Tell her about Ben and Madelyn" if knows_affair and not disclosed_affair:
 
@@ -68,8 +68,6 @@ label talk_nurse_menu:
 
         "Show her the photograph in the camera" if knows_red_hair and not knows_miss_parentage:
 
-            $ knows_miss_parentage = True
-
             player "There are photographs in the Master’s camera.{w=.3} One shows a young man with red hair, standing right beside you."
 
             nurse sad look away "{cps=10}..."
@@ -87,6 +85,28 @@ label talk_nurse_menu:
             "She folds her hands very tightly,{w=.2} as if holding something shut."
 
             nurse "The Master is her father.{w=.5} No one else can know."
+
+            $ knows_miss_parentage = True
+
+        "Ask about the Master":
+
+            nurse neutral "He’s not someone I discuss with guests."
+
+            player "I came here because of him."
+
+            nurse sad look away "Then you’ll have to ask someone else."
+
+            player "Were you fond of him?"
+
+            nurse neutral "I served under him."
+
+            player "That isn’t what I asked."
+
+            nurse sad "I did my duty.{w=.3} That’s not the same thing as caring about him."
+
+            player "Nora—"
+
+            nurse sad look away "No.{w=.3} I’ve said enough."
 
         "Nevermind":
 
