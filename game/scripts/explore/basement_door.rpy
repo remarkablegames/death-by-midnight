@@ -58,12 +58,13 @@ screen interactable_door():
 
 label explore_basement_door_locked:
 
+    $ is_interactable = False
+    $ knows_basement_locked = True
+
     play sound door_locked
 
     show screen time_display
     show screen inventory_hud
-
-    $ knows_basement_locked = True
 
     player "The door is locked."
 
@@ -84,12 +85,13 @@ label explore_basement_door_locked:
 
 label basement_door_unlock:
 
-    hide screen inventory_hud
-    hide screen interactable_door
-
+    $ is_interactable = False
     $ is_basement_locked = False
     $ door_drop_active = False
     $ inventory.remove("basement_key")
+
+    hide screen inventory_hud
+    hide screen interactable_door
 
     play sound door_unlocked
 

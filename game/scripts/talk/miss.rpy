@@ -8,7 +8,7 @@ label talk_miss:
     if context:
         "[context]"
 
-    if current_room == "kitchen" and inventory.has_picked_up("milk") and not milk_beat_shown:
+    if current_room == "kitchen" and inventory.has_picked_up("milk") and not milk_beat_shown and not gave_miss_milk:
 
         $ milk_beat_shown = True
 
@@ -45,7 +45,7 @@ label talk_miss_menu:
 
                     miss "I think so..."
 
-                "Tell her about your investigation":
+                "Tell her about your investigation" if knows_death_miss:
 
                     player "I kept asking who would want to hurt you,{w=.2} and I realized I’ve been asking the wrong question."
 

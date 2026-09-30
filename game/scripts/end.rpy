@@ -116,22 +116,26 @@ label ending_miss:
 
     if knows_miss_parentage and inventory.has("will"):
 
-        "The photograph in the camera,{w=.1} the red hair,{w=.1} the truth Nora carried alone,{w=.1} and the Master’s own will to back it."
-        "Every thread comes taut at once."
+        "The photograph in the camera,{w=.1} the red hair,{w=.1} the truth Nora carried alone,{w=.1} and the Master’s own will to support it."
+        "Every piece falls into place."
 
-        miss "Me?{w=.3} I never—"
+        miss shocked "Me?{w=.5} I never—"
+
+        show miss shocked look away
 
         "She stops."
-        "The reading holds,{w=.1} because you named her with proof,{w=.1} and the proof is as clear as the night itself."
+        "The reading holds,{w=.1} because you spoke her name with proof,{w=.1} and the proof is as clear as the night itself."
+
+        show miss shocked
 
         player "The estate passes to the Master’s true heir."
-        player "The clause has nothing left to collect."
+        player "The clause is fulfilled."
 
-        "Mia’s parentage is named aloud, and no one in the hall can dispute it."
+        "Mia’s parentage is named aloud,{w=.1} and no one in the hall can dispute it."
 
-        miss "I’m not pretending anymore.{w=.3} I’m just...{w=.3} me."
+        miss smile "I don’t have to pretend anymore.{w=.3} I can finally be myself."
 
-        "You leave having told her the truth and let her keep it."
+        "You leave having told her the truth,{w=.1} and let her decide what to do with it."
 
         jump ending_true
 
@@ -142,8 +146,11 @@ label ending_miss:
         player "None."
 
         "The clause waits."
-        "It does not find you convincing."
-        "Someone laughs,{w=.1} low and cruel,{w=.1} and the moment passes."
+        "No evidence follows."
+
+        show miss sad
+
+        "Someone laughs,{w=.2} low and cruel,{w=.2} and the moment passes."
 
         jump ending_bad
 
@@ -152,18 +159,19 @@ label ending_miss:
         miss "Me?{w=.3} I’m not the one the Master—"
 
         "The reading does not hold."
-        "You named the girl the will does not name,{w=.1} and the clause will not bend the instrument to fit the wish."
+        "You named a girl the will does not name."
+        "The clause will not bend the Master’s words to suit your claim."
 
         jump ending_bad
 
     else:
 
-        "The hall laughs.{w=.5} Then silence fills the room."
+        "The hall laughs.{w=.5} Then the room falls silent."
 
         miss neutral "Don’t."
 
         "That’s all the answer she gets."
-        "The clause is unsatisfied,{w=.1} and the reading closes on nothing."
+        "The clause is unsatisfied,{w=.2} and the reading ends in silence."
 
         jump ending_bad
 
@@ -179,17 +187,16 @@ label ending_butler:
     if inventory.has("will") and knows_affair:
 
         "The reading holds."
-        "Ben takes the manor and all family secrets are buried under it."
+        "Ben gets the manor...{w=.3} and with it,{w=.2} every family secret buried beneath it."
 
         jump ending_good
 
     elif inventory.has("will"):
 
-        "The True Will is in your hands,{w=.1} but you do not name the affair with it."
-        "You hand a dead man’s estate to his brother,{w=.1} and the will lets it stand because the will does not care why."
-
+        "The True Will is in your hands,{w=.2} but you do not name the affair with it."
+        "You hand a dead man’s estate to his brother,{w=.2} and the will permits it.{w=.3} It does not care why."
         "The reading holds."
-        "Ben takes the manor and all family secrets are buried under it."
+        "Ben takes the manor—{w=.2}and all the family secrets buried beneath it."
 
         jump ending_good
 
@@ -197,8 +204,8 @@ label ending_butler:
 
         butler creepy "It’s about time."
 
-        "You feel that something’s amiss,{w=.1} but you can’t quite put your finger on what it is."
-        "You leave having let it stand."
+        "You feel that something’s amiss,{w=.1} but you can’t quite put your finger on what."
+        "You leave it unchallenged."
 
         jump ending_good
 
@@ -213,36 +220,39 @@ label ending_nurse:
 
     if inventory.has("will") and knows_miss_parentage:
 
+        show nurse smile
+
         "The True Will is in your hands and you have pieced together the evidence."
 
-        player "The girl is the Master’s,{w=.1} and the nurse kept it as a secret."
-        player "Nora is the mother and the estate is the daughter’s."
+        player "The girl is the Master’s,{w=.2} and the nurse kept the truth secret."
+        player "Nora is the mother,{w=.2} so the estate belongs to the daughter."
 
-        "It is the cleanest reading of the three and it costs Nora everything she buried to keep."
+        "It’s the cleanest reading of the three,{w=.2} and it costs Nora everything she buried to keep."
 
-        "The reading holds. The house goes to Mia,{w=.1} and Nora keeps the child she saved by lying."
+        "The reading holds.{w=.3} The house goes to Mia,{w=.1} and Nora keeps the child she saved by lying."
 
         jump ending_true
 
     elif inventory.has("will"):
 
         nurse sad "It’s a mistake."
-        nurse @ sad look away "The Master left this to his family."
+        nurse @ sad look away "The Master left the estate to his family."
 
         "The reading does not hold."
-        "You named the nurse,{w=.1} and the clause finds no heir in it,{w=.1} and the night closes on your error."
+        "You named the nurse,{w=.2} but the clause names no heir,{w=.2} and the night closes on your error."
 
         jump ending_bad
 
     else:
 
         nurse sad "It’s a mistake."
-        nurse sad look away "Ask the will,{w=.2} not me."
+        nurse sad look away "Ask the will,{w=.3} not me."
 
-        "You have not seen the will."
+        "You have not read the will."
         "You have asked a woman who has spent her life holding a house together to hand it to herself."
-        "And she has told you plainly...{w=.3} it’s a mistake."
-        "The reading does not hold and the clause is unsatisfied."
+        "And she told you plainly...{w=.5} it’s a mistake."
+        "The reading does not hold."
+        "The clause remains unsatisfied."
 
         jump ending_bad
 
@@ -258,29 +268,33 @@ label ending_maid:
     if inventory.has("will") and knows_affair:
 
         "The True Will is in your hands and you name the affair with it."
-        "You give the manor to the woman who was under it the whole time."
+        "You give the manor to the woman who served it all these years."
         "The maid.{w=.3} Ben’s lover.{w=.3} Mia’s aunt."
 
-        maid shocked "You’re not serious."
+        show maid shocked 
+
+        "The maid stares at you,{w=.1} stunned."
+
+        maid "You’re not serious."
 
         player "I am."
 
-        "You’re entirely serious and the will does not stop you."
-        "The reading holds."
-        "Madelyn takes a house that was never hers and the family watches the one person they never counted on walk out with everything."
+        "You do not hesitate.{w=.3} The will accepts your decision."
+        "Madelyn inherits a house that was never truly hers,{w=.3} while the family watches the one person they never counted on walk away with everything."
 
         jump ending_good
 
     elif inventory.has("will"):
 
-        "The True Will is in your hands,{w=.1} and it does not name a maid,{w=.1} and you name her anyway."
+        "The True Will is in your hands.{w=.3} It names no maid,{w=.3} but you name her anyway."
 
         maid shocked "On what grounds?"
 
         player "There are no grounds."
 
-        "The will is real and it does not say her name."
+        "The will is genuine.{w=.3} It does not bear her name."
         "The reading does not hold."
+        "The clause remains unsatisfied."
 
         jump ending_bad
 
@@ -290,9 +304,10 @@ label ending_maid:
         maid @ shocked look away "Check the will."
 
         "You have not seen the will."
-        "You have named a maid in a room full of people who have never once thought about whether she deserved anything."
+        "You have named a maid in a room full of people who have never once considered whether she deserved anything."
         "Now they’re laughing."
-        "The reading does not hold and the clause is unsatisfied."
+        "The reading does not hold."
+        "The clause remains unsatisfied."
 
         jump ending_bad
 
@@ -300,16 +315,16 @@ label ending_maid:
 label ending_true:
 
     stop music fadeout 2
-    play music misery1
-    queue music misery2
-    queue music misery3
+    play music misery1 volume .7
+    queue music misery2 volume .7
+    queue music misery3 volume .7
 
     scene black
     with fade
 
     "The reading is complete."
     "Mia is the Master’s heir,{w=.2} named and proven."
-    "The night releases the man who read it."
+    "The night releases the person who read it."
     "You leave the manor at dawn."
     "Behind you,{w=.2} the house is already arguing about what you did,{w=.2} and none of it is about the will."
 
