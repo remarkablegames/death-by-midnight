@@ -37,10 +37,10 @@ jobs:
       - name: Delete unnecessary files
         run: >
           find . -type f
-          ! -name 'icon.*'
-          ! -name 'progressive_download.txt'
-          ! -name 'version.txt'
-          ! -name 'web-*'
+          ! -name './icon.*'
+          ! -name './progressive_download.txt'
+          ! -name './version.txt'
+          ! -name './web-*'
           ! -path '*/.*'
           ! -path './game/*'
           -delete
@@ -101,10 +101,9 @@ jobs:
       - name: Delete unnecessary files
         run: >
           find . -type f
-          ! -name 'icon.*'
-          ! -name 'progressive_download.txt'
-          ! -name 'version.txt'
-          ! -name 'web-*'
+          ! -name './icon.*'
+          ! -name './progressive_download.txt'
+          ! -name './web-*'
           ! -path '*/.*'
           ! -path './game/*'
           -delete
