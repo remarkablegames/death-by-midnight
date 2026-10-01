@@ -8,7 +8,11 @@
 [![build](https://github.com/remarkablegames/death-by-midnight/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/death-by-midnight/actions/workflows/build.yml)
 [![lint](https://github.com/remarkablegames/death-by-midnight/actions/workflows/lint.yml/badge.svg)](https://github.com/remarkablegames/death-by-midnight/actions/workflows/lint.yml)
 
-🕛 **Death by Midnight** is a time-loop murder mystery. You're a detective hired to read a dead man's will at midnight—but when something terrible happens, the night resets. Trapped in an endless cycle, you must uncover the truth, stop the murders, and escape the loop.
+🕛 **Death by Midnight** is a time-loop murder mystery where the night resets every time someone dies.
+
+> You're a detective hired to read a dead man's will at midnight—but when someone dies, the night resets.
+>
+> Trapped in an endless cycle, you must uncover the truth, prevent the deaths, and escape the loop.
 
 Play in your browser:
 
