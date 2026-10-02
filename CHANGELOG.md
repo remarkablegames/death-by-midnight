@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/remarkablegames/death-by-midnight/compare/v1.0.0...v1.0.1) (2026-10-02)
+
+
+### Performance Improvements
+
+* **images:** remove unused bg basement dark and item book ([8dc0486](https://github.com/remarkablegames/death-by-midnight/commit/8dc0486822141186b2cafff7f5046e1968a56982))
+* **images:** remove unused character sprites ([a1def07](https://github.com/remarkablegames/death-by-midnight/commit/a1def0783ef49e3996005060fccd0c1458f15cbb))
+
 ## 1.0.0 (2026-09-30)
 
 ### Features
